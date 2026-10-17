@@ -1,0 +1,38 @@
+{
+  "target": "테스트 대상",
+  "currency": "KRW",
+  "fx": null,
+  "duration_weeks": 10,
+  "hours_estimated": false,
+  "curriculum_summary": "합성 테스트 데이터.",
+  "topik_claim": "언급 없음",
+  "topik_guarantee": false,
+  "channel": "자사 사이트",
+  "differentiator": "테스트",
+  "source_type": "official",
+  "published_at": "2013-03",
+  "confidence": "A",
+  "checked_at": "2026-10-17",
+  "id": "c4",
+  "name": "테스트 기관 4",
+  "segment": "사설학원",
+  "price_raw": "250,000원 / 20시간",
+  "price_amount": 250000,
+  "total_hours": 20,
+  "price_per_hour_krw": 12500,
+  "source_urls": [
+    "https://example.com/c4"
+  ],
+  "evidence": [
+    {
+      "field": "price_raw",
+      "quote": "250,000원 / 20시간",
+      "url": "https://example.com/c4"
+    },
+    {
+      "field": "total_hours",
+      "quote": "시수 원문",
+      "url": "https://example.com/c4"
+    }
+  ]
+}

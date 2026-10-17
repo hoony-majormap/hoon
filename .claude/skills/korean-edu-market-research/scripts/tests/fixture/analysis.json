@@ -1,0 +1,33 @@
+{
+  "conclusions": [
+    {
+      "text": "테스트 결론",
+      "refs": [
+        "c1",
+        "c2"
+      ]
+    }
+  ],
+  "gaps": [
+    {
+      "title": "테스트 빈틈",
+      "description": "합성 데이터 기반 테스트 문장.",
+      "refs": [
+        "c2",
+        "c6"
+      ]
+    }
+  ],
+  "proposal": {
+    "name": "테스트 상품",
+    "target": "테스트",
+    "curriculum": "테스트",
+    "price_krw": 480000,
+    "total_hours": 48,
+    "differentiator": "테스트",
+    "rationale": "테스트",
+    "refs": [
+      "c1"
+    ]
+  }
+}

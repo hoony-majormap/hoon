@@ -1,0 +1,38 @@
+{
+  "target": "테스트 대상",
+  "currency": "KRW",
+  "fx": null,
+  "duration_weeks": 10,
+  "hours_estimated": false,
+  "curriculum_summary": "합성 테스트 데이터.",
+  "topik_claim": "언급 없음",
+  "topik_guarantee": false,
+  "channel": "자사 사이트",
+  "differentiator": "테스트",
+  "source_type": "official",
+  "published_at": "2026-08-01",
+  "confidence": "A",
+  "checked_at": "2026-10-17",
+  "id": "c6",
+  "name": "테스트 기관 6",
+  "segment": "공공무료",
+  "price_raw": "무료 / 9주 주2회 2시간",
+  "price_amount": 0,
+  "total_hours": 36,
+  "price_per_hour_krw": 0,
+  "source_urls": [
+    "https://example.com/c6"
+  ],
+  "evidence": [
+    {
+      "field": "price_raw",
+      "quote": "무료 / 9주 주2회 2시간",
+      "url": "https://example.com/c6"
+    },
+    {
+      "field": "total_hours",
+      "quote": "시수 원문",
+      "url": "https://example.com/c6"
+    }
+  ]
+}

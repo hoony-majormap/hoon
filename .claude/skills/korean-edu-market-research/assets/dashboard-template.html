@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>__TITLE__</title>
+<style>
+  :root {
+    color-scheme: light;
+    --page: #f9f9f7;
+    --surface: #fcfcfb;
+    --ink: #0b0b0b;
+    --ink-2: #52514e;
+    --muted: #898781;
+    --grid: #e1e0d9;
+    --axis: #c3c2b7;
+    --border: rgba(11, 11, 11, 0.10);
+    --series-1: #2a78d6;  /* 공공·대학 */
+    --series-2: #eb6834;  /* 사설·플랫폼 */
+    --good: #0ca30c;
+    --warning: #fab219;
+    --critical: #d03b3b;
+    --badge-a: #e3f1e3;
+    --badge-b: #fdf1d6;
+    --badge-c: #f7e1e1;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --page: #0d0d0d;
+      --surface: #1a1a19;
+      --ink: #f0efec;
+      --ink-2: #c3c2b7;
+      --grid: #2c2c2a;
+      --axis: #383835;
+      --border: rgba(255, 255, 255, 0.10);
+      --series-1: #3987e5;
+      --series-2: #d95926;
+      --badge-a: #1d331d;
+      --badge-b: #3a3018;
+      --badge-c: #3d2020;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --page: #0d0d0d;
+    --surface: #1a1a19;
+    --ink: #f0efec;
+    --ink-2: #c3c2b7;
+    --grid: #2c2c2a;
+    --axis: #383835;
+    --border: rgba(255, 255, 255, 0.10);
+    --series-1: #3987e5;
+    --series-2: #d95926;
+    --badge-a: #1d331d;
+    --badge-b: #3a3018;
+    --badge-c: #3d2020;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--page);
+    color: var(--ink);
+    font: 15px/1.6 system-ui, -apple-system, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+    word-break: keep-all;
+  }
+  main { max-width: 1080px; margin: 0 auto; padding: 32px 16px 64px; }
+  h1 { font-size: 24px; line-height: 1.3; margin: 0 0 4px; }
+  h2 { font-size: 17px; margin: 40px 0 12px; }
+  p { margin: 0 0 8px; }
+  .sub { color: var(--ink-2); }
+  .muted { color: var(--muted); font-size: 13px; }
+  .panel {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px;
+  }
+  .alerts { display: grid; gap: 8px; margin-top: 16px; }
+  .alert {
+    border-left: 4px solid var(--warning);
+    background: var(--surface);
+    border-radius: 8px;
+    padding: 10px 14px;
+  }
+  .alert.critical { border-left-color: var(--critical); }
+  .cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-top: 24px; }
+  .card .label { color: var(--ink-2); font-size: 13px; }
+  .card .value { font-size: 26px; font-weight: 650; margin: 2px 0; }
+  .card .note { color: var(--muted); font-size: 12px; }
+  .card.emph { border: 2px solid var(--ink-2); }
+  .chart-wrap { position: relative; }
+  #chart { display: block; width: 100%; height: auto; overflow: visible; }
+  .legend { display: flex; flex-wrap: wrap; gap: 16px; font-size: 13px; color: var(--ink-2); margin-bottom: 8px; }
+  .legend span { display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
+  .legend svg { flex: none; width: 12px; height: 12px; }
+  .tooltip {
+    position: absolute;
+    pointer-events: none;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+    padding: 8px 10px;
+    font-size: 13px;
+    max-width: 260px;
+    display: none;
+  }
+  .table-scroll { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--grid); vertical-align: top; }
+  th { color: var(--ink-2); font-weight: 600; white-space: nowrap; }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .badge {
+    display: inline-block;
+    min-width: 22px;
+    padding: 0 6px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 650;
+    text-align: center;
+  }
+  .badge.A { background: var(--badge-a); }
+  .badge.B { background: var(--badge-b); }
+  .badge.C { background: var(--badge-c); }
+  .flag { color: var(--muted); font-size: 12px; }
+  .gaps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+  .gaps h3, .proposal h3 { font-size: 15px; margin: 0 0 6px; }
+  .proposal dl { display: grid; grid-template-columns: 96px 1fr; gap: 6px 12px; margin: 0; }
+  .proposal dt { color: var(--ink-2); }
+  .proposal dd { margin: 0; }
+  footer { margin-top: 48px; font-size: 13px; color: var(--ink-2); }
+  footer ol { padding-left: 20px; }
+  footer li { word-break: break-all; }
+  a { color: var(--series-1); }
+  .checks li { list-style: none; margin-left: -20px; }
+  @media (max-width: 860px) {
+    .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .gaps { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 480px) {
+    .card .value { font-size: 21px; }
+    .proposal dl { grid-template-columns: 1fr; }
+    .proposal dt { margin-top: 6px; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1 id="title"></h1>
+    <p class="sub" id="subtitle"></p>
+    <div class="alerts" id="alerts"></div>
+  </header>
+
+  <section class="cards" id="cards"></section>
+
+  <h2>가격 포지셔닝</h2>
+  <div class="panel">
+    <p class="muted">X = 시간당 원가, Y = 총 학습시간. 본문(A/B 등급) 항목만 표시한다. 빈 칸 안이 빈 구간이다.</p>
+    <div class="legend" id="legend"></div>
+    <div class="chart-wrap" id="chart-wrap">
+      <svg id="chart" role="img" aria-label="시간당 원가 대비 총 학습시간 산점도"></svg>
+      <div class="tooltip" id="tooltip"></div>
+    </div>
+  </div>
+
+  <h2>경쟁사 비교</h2>
+  <div class="panel table-scroll">
+    <table id="compare"></table>
+  </div>
+
+  <h2>시장 빈틈</h2>
+  <div class="gaps" id="gaps"></div>
+
+  <h2>우리 상품 제안</h2>
+  <div class="panel proposal" id="proposal"></div>
+
+  <footer id="footer"></footer>
+</main>
+
+<script id="data" type="application/json">__DATA_JSON__</script>
+<script>
+(function () {
+  "use strict";
+  var D = JSON.parse(document.getElementById("data").textContent);
+  var meta = D.meta, stats = D.stats, comps = D.competitors, analysis = D.analysis || {};
+  var body = comps.filter(function (c) { return c.section === "body"; });
+  var byId = {};
+  comps.forEach(function (c) { byId[c.id] = c; });
+
+  function el(tag, attrs, text) {
+    var n = document.createElement(tag);
+    for (var k in attrs || {}) n.setAttribute(k, attrs[k]);
+    if (text != null) n.textContent = text;
+    return n;
+  }
+  function svgEl(tag, attrs) {
+    var n = document.createElementNS("http://www.w3.org/2000/svg", tag);
+    for (var k in attrs) n.setAttribute(k, attrs[k]);
+    return n;
+  }
+  function won(n) { return n == null ? "미확인" : Math.round(n).toLocaleString("ko-KR") + "원"; }
+  function hrs(c) {
+    if (c.total_hours == null) return "미확인";
+    return c.total_hours + "h" + (c.hours_estimated ? " (추정)" : "");
+  }
+  function refNames(refs) {
+    return (refs || []).filter(function (r) { return byId[r]; }).map(function (r) { return byId[r].name; }).join(", ");
+  }
+
+  // 헤더
+  document.getElementById("title").textContent = meta.keyword + " — 경쟁 상품 대시보드";
+  document.getElementById("subtitle").textContent =
+    "실행일 " + meta.run_date + " · 분석 대상 " + stats.total_candidates_analyzed + "곳 (본문 " +
+    stats.body_count + " / 부록 " + stats.appendix_count + " / 제외 " + stats.excluded_count + ")";
+  var alerts = document.getElementById("alerts");
+  function alert(text, critical) {
+    alerts.appendChild(el("div", { "class": "alert" + (critical ? " critical" : "") }, text));
+  }
+  if (!D.check.passed) alert("🚫 완료 판정 미통과 — 이 결과는 위험물이다. 하단 판정 항목을 확인할 것.", true);
+  if ((meta.selection || {}).mode === "auto") alert("⚠️ 경쟁사 자동 선정됨 — 검토 필요");
+  if (!meta.verified_by_agent) alert("⚠️ 검증 에이전트를 거치지 않았다");
+
+  // 지표 카드. 출처 확인 비율을 첫 칸에 둔다 — 신뢰도를 숨기지 않는다.
+  var cards = [
+    { label: "출처 확인 비율", value: Math.round(stats.verified_ratio * 100) + "%",
+      note: "A/B 등급 ÷ 전체 분석 대상 (기준 " + Math.round(meta.rules.min_verified_ratio * 100) + "%)", emph: true },
+    { label: "시간당 원가 중앙값", value: won(stats.pph_median),
+      note: "유료 " + stats.paid_count + "곳, 무료 " + stats.free_count + "곳 제외" },
+    { label: "가격 스프레드", value: stats.pph_spread ? stats.pph_spread + "배" : "—",
+      note: stats.pph_min != null ? won(stats.pph_min) + " ~ " + won(stats.pph_max) : "유료 항목 부족" },
+    { label: "TOPIK 급수 보장", value: stats.topik_guarantee_count + "곳", note: "본문 항목 중" }
+  ];
+  var cardBox = document.getElementById("cards");
+  cards.forEach(function (c) {
+    var card = el("div", { "class": "panel card" + (c.emph ? " emph" : "") });
+    card.appendChild(el("div", { "class": "label" }, c.label));
+    card.appendChild(el("div", { "class": "value" }, c.value));
+    card.appendChild(el("div", { "class": "note" }, c.note));
+    cardBox.appendChild(card);
+  });
+
+  // 산점도
+  var SECTORS = [
+    { key: "공공·대학", color: "var(--series-1)", shape: "circle" },
+    { key: "사설·플랫폼", color: "var(--series-2)", shape: "square" }
+  ];
+  var legend = document.getElementById("legend");
+  function marker(shape, color, hollow, size) {
+    var s = svgEl("svg", { width: size, height: size, viewBox: "0 0 12 12" });
+    var attrs = { fill: hollow ? "none" : color, stroke: color, "stroke-width": 2 };
+    s.appendChild(shape === "circle"
+      ? svgEl("circle", Object.assign({ cx: 6, cy: 6, r: 4.5 }, attrs))
+      : svgEl("rect", Object.assign({ x: 1.5, y: 1.5, width: 9, height: 9, rx: 1.5 }, attrs)));
+    return s;
+  }
+  SECTORS.forEach(function (s) {
+    var item = el("span");
+    item.appendChild(marker(s.shape, s.color, false, 12));
+    item.appendChild(document.createTextNode(s.key));
+    legend.appendChild(item);
+  });
+  var est = el("span");
+  est.appendChild(marker("circle", "var(--ink-2)", true, 12));
+  est.appendChild(document.createTextNode("빈 표식 = 시수 추정"));
+  legend.appendChild(est);
+
+  var points = body.filter(function (c) { return c.price_per_hour_krw != null && c.total_hours != null; });
+  var svg = document.getElementById("chart");
+  // 좁은 화면에서 viewBox가 통째로 축소되면 글자가 안 읽힌다. 컨테이너 폭에 맞춰 좌표계를 잡는다.
+  var W = Math.max(300, Math.min(960, document.getElementById("chart-wrap").clientWidth || 960));
+  var narrow = W < 600;
+  var H = narrow ? 320 : 420, M = { t: 16, r: narrow ? 12 : 24, b: 48, l: narrow ? 52 : 64 };
+  svg.setAttribute("viewBox", "0 0 " + W + " " + H);
+  var TICKS = 4;
+  function niceStep(raw) {
+    if (raw <= 0) return 1;
+    var p = Math.pow(10, Math.floor(Math.log10(raw)));
+    var steps = [1, 1.5, 2, 2.5, 3, 4, 5, 6, 8, 10];
+    for (var i = 0; i < steps.length; i++) if (steps[i] * p >= raw) return steps[i] * p;
+    return 10 * p;
+  }
+  var xMax = TICKS * niceStep(Math.max.apply(null, points.map(function (p) { return p.price_per_hour_krw; }).concat([1])) * 1.1 / TICKS);
+  var yMax = TICKS * niceStep(Math.max.apply(null, points.map(function (p) { return p.total_hours; }).concat([1])) * 1.1 / TICKS);
+  function sx(v) { return M.l + (v / xMax) * (W - M.l - M.r); }
+  function sy(v) { return H - M.b - (v / yMax) * (H - M.t - M.b); }
+  for (var i = 0; i <= TICKS; i++) {
+    var xv = xMax * i / TICKS, yv = yMax * i / TICKS;
+    svg.appendChild(svgEl("line", { x1: M.l, x2: W - M.r, y1: sy(yv), y2: sy(yv), stroke: i ? "var(--grid)" : "var(--axis)", "stroke-width": 1 }));
+    var yl = svgEl("text", { x: M.l - 8, y: sy(yv) + 4, "text-anchor": "end", fill: "var(--muted)", "font-size": 12 });
+    yl.textContent = Math.round(yv) + "h";
+    svg.appendChild(yl);
+    var xl = svgEl("text", { x: sx(xv), y: H - M.b + 18, "text-anchor": "middle", fill: "var(--muted)", "font-size": 12 });
+    xl.textContent = xv >= 10000 ? (xv / 10000).toLocaleString("ko-KR", { maximumFractionDigits: 1 }) + "만원"
+      : Math.round(xv).toLocaleString("ko-KR") + "원";
+    svg.appendChild(xl);
+  }
+  var xt = svgEl("text", { x: (M.l + W - M.r) / 2, y: H - 8, "text-anchor": "middle", fill: "var(--ink-2)", "font-size": 13 });
+  xt.textContent = "시간당 원가 (KRW/h)";
+  svg.appendChild(xt);
+  var yt = svgEl("text", { x: 14, y: (M.t + H - M.b) / 2, "text-anchor": "middle", fill: "var(--ink-2)", "font-size": 13,
+    transform: "rotate(-90 14 " + (M.t + H - M.b) / 2 + ")" });
+  yt.textContent = "총 학습시간";
+  if (!narrow) svg.appendChild(yt);  // 좁은 화면에서는 눈금의 "h"가 축 이름을 대신한다
+
+  var tip = document.getElementById("tooltip"), wrap = document.getElementById("chart-wrap");
+  function showTip(c, evt) {
+    tip.innerHTML = "";
+    tip.appendChild(el("strong", null, c.name));
+    [c.segment + " · 신뢰도 " + c.confidence, "원가격: " + c.price_raw, "총 시수: " + hrs(c),
+     "시간당: " + won(c.price_per_hour_krw)].forEach(function (t) { tip.appendChild(el("div", null, t)); });
+    tip.style.display = "block";
+    var r = wrap.getBoundingClientRect();
+    var x = evt.clientX - r.left + 12, y = evt.clientY - r.top + 12;
+    if (x + tip.offsetWidth > r.width) x = Math.max(0, x - tip.offsetWidth - 24);
+    tip.style.left = x + "px";
+    tip.style.top = y + "px";
+  }
+  function hideTip() { tip.style.display = "none"; }
+  // 좁은 화면에서는 직접 라벨이 겹친다. 탭 툴팁과 아래 비교표가 식별을 맡는다.
+  var labelled = !narrow && points.length <= 8;
+  points.forEach(function (c) {
+    var s = SECTORS[c.sector === "공공·대학" ? 0 : 1];
+    var x = sx(c.price_per_hour_krw), y = sy(c.total_hours);
+    var g = svgEl("g", { tabindex: 0, role: "img", "aria-label": c.name + ", 시간당 " + won(c.price_per_hour_krw) + ", " + hrs(c) });
+    var attrs = { fill: c.hours_estimated ? "var(--surface)" : s.color, stroke: s.color, "stroke-width": 2 };
+    // 겹치는 표식을 구분하는 표면색 링
+    g.appendChild(s.shape === "circle"
+      ? svgEl("circle", { cx: x, cy: y, r: 9, fill: "var(--surface)" })
+      : svgEl("rect", { x: x - 8, y: y - 8, width: 16, height: 16, rx: 3, fill: "var(--surface)" }));
+    g.appendChild(s.shape === "circle"
+      ? svgEl("circle", Object.assign({ cx: x, cy: y, r: 6 }, attrs))
+      : svgEl("rect", Object.assign({ x: x - 5.5, y: y - 5.5, width: 11, height: 11, rx: 2 }, attrs)));
+    g.appendChild(svgEl("circle", { cx: x, cy: y, r: 16, fill: "transparent" }));
+    if (labelled) {
+      var t = svgEl("text", { x: x + 12, y: y + 4, fill: "var(--ink-2)", "font-size": 12 });
+      t.textContent = c.name.length > 14 ? c.name.slice(0, 13) + "…" : c.name;
+      g.appendChild(t);
+    }
+    g.addEventListener("mousemove", function (e) { showTip(c, e); });
+    g.addEventListener("mouseleave", hideTip);
+    g.addEventListener("focus", function () {
+      var b = g.getBoundingClientRect();
+      showTip(c, { clientX: b.left + b.width / 2, clientY: b.top });
+    });
+    g.addEventListener("blur", hideTip);
+    svg.appendChild(g);
+  });
+  if (!points.length) {
+    var none = svgEl("text", { x: W / 2, y: H / 2, "text-anchor": "middle", fill: "var(--muted)", "font-size": 14 });
+    none.textContent = "표시할 본문 항목이 없다 (시간당 원가·시수가 확인된 A/B 등급 없음)";
+    svg.appendChild(none);
+  }
+
+  // 비교표 (산점도의 표 보기 역할도 한다)
+  var table = document.getElementById("compare");
+  var head = el("tr");
+  ["상품", "세그먼트", "원가격", "총 시수", "시간당", "신뢰도", "출처"].forEach(function (h) { head.appendChild(el("th", null, h)); });
+  table.appendChild(el("thead")).appendChild(head);
+  var tbody = table.appendChild(el("tbody"));
+  body.slice().sort(function (a, b) {
+    return (a.price_per_hour_krw == null) - (b.price_per_hour_krw == null) || (a.price_per_hour_krw || 0) - (b.price_per_hour_krw || 0);
+  }).forEach(function (c) {
+    var tr = el("tr");
+    var name = el("td", null, c.name);
+    if (c.flags.length) { name.appendChild(el("br")); name.appendChild(el("span", { "class": "flag" }, c.flags.join(", "))); }
+    tr.appendChild(name);
+    tr.appendChild(el("td", null, c.segment));
+    tr.appendChild(el("td", null, c.price_raw));
+    tr.appendChild(el("td", { "class": "num" }, hrs(c)));
+    tr.appendChild(el("td", { "class": "num" }, won(c.price_per_hour_krw)));
+    var badge = el("td");
+    badge.appendChild(el("span", { "class": "badge " + c.confidence }, c.confidence));
+    tr.appendChild(badge);
+    var src = el("td");
+    c.source_urls.forEach(function (u, i) {
+      if (i) src.appendChild(document.createTextNode(" "));
+      src.appendChild(el("a", { href: u, target: "_blank", rel: "noopener" }, "[" + (i + 1) + "]"));
+    });
+    tr.appendChild(src);
+    tbody.appendChild(tr);
+  });
+  if (!body.length) {
+    var empty = el("tr");
+    empty.appendChild(el("td", { colspan: 7, "class": "muted" }, "본문 항목 없음 — 부록을 확인할 것"));
+    tbody.appendChild(empty);
+  }
+
+  // 빈틈 카드
+  var gaps = document.getElementById("gaps");
+  (analysis.gaps || []).forEach(function (g, i) {
+    var card = el("div", { "class": "panel" });
+    card.appendChild(el("h3", null, (i + 1) + ". " + g.title));
+    card.appendChild(el("p", null, g.description));
+    card.appendChild(el("p", { "class": "muted" }, "근거: " + refNames(g.refs)));
+    gaps.appendChild(card);
+  });
+
+  // 제안 카드
+  var p = analysis.proposal || {};
+  var prop = document.getElementById("proposal");
+  prop.appendChild(el("h3", null, p.name || "제안 없음"));
+  var dl = prop.appendChild(el("dl"));
+  var pph = p.price_krw != null && p.total_hours ? Math.round(p.price_krw / p.total_hours) : null;
+  [["대상", p.target], ["커리큘럼", p.curriculum],
+   ["가격", won(p.price_krw) + " / " + (p.total_hours || "?") + "h → 시간당 " + won(pph) + " (시장 중앙값 " + won(stats.pph_median) + ")"],
+   ["차별점", p.differentiator], ["근거", p.rationale]].forEach(function (row) {
+    if (!row[1]) return;
+    dl.appendChild(el("dt", null, row[0]));
+    dl.appendChild(el("dd", null, row[1]));
+  });
+
+  // 푸터: 판정, 경고, 전체 출처
+  var foot = document.getElementById("footer");
+  foot.appendChild(el("h2", null, "완료 판정"));
+  var checks = foot.appendChild(el("ul", { "class": "checks" }));
+  D.check.items.forEach(function (it) {
+    checks.appendChild(el("li", null, (it.ok ? "✅ " : "❌ ") + it.label + " — " + it.detail));
+  });
+  var warn = [];
+  comps.forEach(function (c) {
+    if (c.hours_estimated) warn.push(c.name + ": 시수 추정 — " + (c.hours_basis || ""));
+    if (c.price_per_hour_krw == null) warn.push(c.name + ": 시간당 원가 계산 불가 — " + c.pph_unavailable_reason);
+    if (c.section === "appendix") warn.push(c.name + ": 신뢰도 C로 본문 제외 (" + c.flags.join(", ") + ")");
+  });
+  D.excluded.forEach(function (e) { warn.push(e.name + ": 제외 — " + e.reason); });
+  if (warn.length) {
+    foot.appendChild(el("h2", null, "미확인·추정 항목"));
+    var wl = foot.appendChild(el("ul"));
+    warn.forEach(function (w) { wl.appendChild(el("li", null, w)); });
+  }
+  foot.appendChild(el("h2", null, "전체 출처"));
+  var ol = foot.appendChild(el("ol"));
+  comps.forEach(function (c) {
+    c.source_urls.forEach(function (u) {
+      var li = el("li", null, c.name + " — ");
+      li.appendChild(el("a", { href: u, target: "_blank", rel: "noopener" }, u));
+      li.appendChild(document.createTextNode(" (발행 " + c.published_at + ", 확인 " + c.checked_at + ")"));
+      ol.appendChild(li);
+    });
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+{
+  "target": "테스트 대상",
+  "currency": "KRW",
+  "fx": null,
+  "duration_weeks": 10,
+  "hours_estimated": false,
+  "curriculum_summary": "합성 테스트 데이터.",
+  "topik_claim": "언급 없음",
+  "topik_guarantee": false,
+  "channel": "자사 사이트",
+  "differentiator": "테스트",
+  "source_type": "official",
+  "published_at": "2026-08-01",
+  "confidence": "A",
+  "checked_at": "2026-10-17",
+  "id": "c7",
+  "name": "테스트 기관 7",
+  "segment": "과외",
+  "price_raw": "시간당 30,000원",
+  "price_amount": 30000,
+  "total_hours": 1,
+  "price_per_hour_krw": 30000,
+  "source_urls": [],
+  "evidence": [
+    {
+      "field": "price_raw",
+      "quote": "시간당 30,000원",
+      "url": "https://example.com/c7"
+    },
+    {
+      "field": "total_hours",
+      "quote": "시수 원문",
+      "url": "https://example.com/c7"
+    }
+  ]
+}

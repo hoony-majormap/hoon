@@ -1,0 +1,33 @@
+{
+  "target": "테스트 대상",
+  "currency": "KRW",
+  "fx": null,
+  "duration_weeks": 10,
+  "hours_estimated": false,
+  "curriculum_summary": "합성 테스트 데이터.",
+  "topik_claim": "언급 없음",
+  "topik_guarantee": false,
+  "channel": "자사 사이트",
+  "differentiator": "테스트",
+  "source_type": "snippet",
+  "published_at": "date_unknown",
+  "confidence": "C",
+  "checked_at": "2026-10-17",
+  "id": "c5",
+  "name": "테스트 기관 5",
+  "segment": "앱",
+  "price_raw": "월 9,900원",
+  "price_amount": 9900,
+  "total_hours": null,
+  "price_per_hour_krw": null,
+  "evidence": [
+    {
+      "field": "price_raw",
+      "quote": "월 9,900원",
+      "url": "https://example.com/c5"
+    }
+  ],
+  "source_urls": [
+    "https://example.com/c5"
+  ]
+}

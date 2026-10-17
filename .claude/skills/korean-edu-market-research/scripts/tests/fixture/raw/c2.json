@@ -1,0 +1,39 @@
+{
+  "target": "테스트 대상",
+  "currency": "KRW",
+  "fx": null,
+  "duration_weeks": 10,
+  "hours_estimated": true,
+  "curriculum_summary": "합성 테스트 데이터.",
+  "topik_claim": "4급 미달 시 재수강 무료",
+  "topik_guarantee": true,
+  "channel": "자사 사이트",
+  "differentiator": "테스트",
+  "source_type": "aggregator",
+  "published_at": "2026-08-01",
+  "confidence": "A",
+  "checked_at": "2026-10-17",
+  "id": "c2",
+  "name": "테스트 기관 2",
+  "segment": "사설학원",
+  "price_raw": "320,000원 / 8주",
+  "price_amount": 320000,
+  "total_hours": 16,
+  "hours_basis": "주 1회 2시간 × 8주로 추정",
+  "price_per_hour_krw": 20000,
+  "source_urls": [
+    "https://example.com/c2"
+  ],
+  "evidence": [
+    {
+      "field": "price_raw",
+      "quote": "320,000원 / 8주",
+      "url": "https://example.com/c2"
+    },
+    {
+      "field": "total_hours",
+      "quote": "시수 원문",
+      "url": "https://example.com/c2"
+    }
+  ]
+}

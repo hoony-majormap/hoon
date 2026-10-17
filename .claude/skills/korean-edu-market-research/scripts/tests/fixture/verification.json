@@ -1,0 +1,31 @@
+{
+  "c1": {
+    "flags": [],
+    "recommended_confidence": "A",
+    "notes": null
+  },
+  "c2": {
+    "flags": [],
+    "recommended_confidence": "B",
+    "notes": null
+  },
+  "c3": {
+    "flags": [
+      "unverifiable"
+    ],
+    "recommended_confidence": "B",
+    "notes": "원문 접근 불가"
+  },
+  "c4": {
+    "flags": [
+      "newer_source_exists"
+    ],
+    "recommended_confidence": "C",
+    "notes": null
+  },
+  "c6": {
+    "flags": [],
+    "recommended_confidence": "A",
+    "notes": null
+  }
+}

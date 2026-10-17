@@ -1,0 +1,42 @@
+{
+  "target": "테스트 대상",
+  "currency": "USD",
+  "fx": {
+    "rate_to_krw": 1400,
+    "as_of": "2026-10-17",
+    "source_url": "https://example.com/fx"
+  },
+  "duration_weeks": 10,
+  "hours_estimated": false,
+  "curriculum_summary": "합성 테스트 데이터.",
+  "topik_claim": "언급 없음",
+  "topik_guarantee": false,
+  "channel": "자사 사이트",
+  "differentiator": "테스트",
+  "source_type": "press",
+  "published_at": "2026-08-01",
+  "confidence": "B",
+  "checked_at": "2026-10-17",
+  "id": "c3",
+  "name": "테스트 기관 3",
+  "segment": "온라인코스",
+  "price_raw": "$80 / 8주, 주 1회 2시간",
+  "price_amount": 80,
+  "total_hours": 16,
+  "price_per_hour_krw": 5000,
+  "source_urls": [
+    "https://example.com/c3"
+  ],
+  "evidence": [
+    {
+      "field": "price_raw",
+      "quote": "$80 / 8주, 주 1회 2시간",
+      "url": "https://example.com/c3"
+    },
+    {
+      "field": "total_hours",
+      "quote": "시수 원문",
+      "url": "https://example.com/c3"
+    }
+  ]
+}
