@@ -44,7 +44,7 @@
 | `SUPABASE_URL` | `https://recajgmjuhintkpazkfi.supabase.co` (majormap-studio) |
 | `SUPABASE_SERVICE_ROLE_KEY` | Supabase → Project Settings → API Keys의 service_role(또는 secret) 키 |
 
-크론과 웹의 '다시 만들기' 버튼은 워크플로가 **기본 브랜치(main)** 에 있어야 동작합니다.
+크론과 웹의 '다시 만들기' 버튼은 워크플로가 **저장소 기본 브랜치**(현재 `claude/new-hoon-repository-up5bmo`)에 있어야 동작합니다. 이 작업 브랜치를 기본 브랜치에 합치면 켜집니다.
 
 ### Vercel 환경변수 (웹 — 프로젝트 `mm-insta-studio`, Root Directory `MM_Insta/web`)
 
@@ -54,6 +54,7 @@
 | `SUPABASE_PUBLISHABLE_KEY` | ✓ | publishable 키 (읽기 전용, 서버에서만 사용) |
 | `APP_PASSWORD` |  | 설정하면 접속 시 비밀번호를 묻습니다 (아이디는 아무거나) |
 | `GITHUB_TOKEN` |  | '지금 만들기/다시 만들기' 버튼용. fine-grained 토큰, 이 저장소 **Actions: Read and write** |
+| `GITHUB_REF` |  | 워크플로를 실행할 브랜치 = 기본 브랜치 (설정됨: `claude/new-hoon-repository-up5bmo`) |
 
 ### Supabase (majormap-studio, 적용 완료)
 

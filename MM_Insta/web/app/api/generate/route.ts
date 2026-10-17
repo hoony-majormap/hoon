@@ -10,7 +10,7 @@ export async function POST(req: Request) {
 
   const repo = process.env.GITHUB_REPO ?? "hoony-majormap/hoon";
   const workflow = process.env.GITHUB_WORKFLOW ?? "mm-insta-generate.yml";
-  const ref = process.env.GITHUB_REF ?? "main";
+  const ref = process.env.GITHUB_REF ?? "claude/new-hoon-repository-up5bmo"; // 저장소 기본 브랜치
   const res = await fetch(`https://api.github.com/repos/${repo}/actions/workflows/${workflow}/dispatches`, {
     method: "POST",
     headers: {
