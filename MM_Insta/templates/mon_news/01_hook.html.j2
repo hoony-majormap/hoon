@@ -1,0 +1,50 @@
+{% extends "base.html.j2" %}
+{# 01 훅 — 네이비 배경, 3줄 헤드라인(강조 줄 레드), 캐릭터 2인 대화 #}
+{% block style %}
+<style>
+.kicker {
+  align-self: flex-start;
+  margin-top: 96px;
+  padding: 12px 30px;
+  background: var(--mint);
+  color: var(--navy);
+  font-size: calc(30px * var(--fs));
+  font-weight: 800;
+  transform: skewX(-18deg);
+}
+.kicker span { display: inline-block; transform: skewX(18deg); }
+.headline { margin-top: 52px; }
+.hl-line {
+  display: block;
+  font-size: calc(116px * var(--fs));
+  font-weight: 900;
+  line-height: 1.16;
+  letter-spacing: -3px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.hl-line.hi { color: var(--red); }
+.sub {
+  margin-top: 30px;
+  font-size: calc(38px * var(--fs));
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--mint);
+}
+.content .dialogue { margin-top: auto; }
+</style>
+{% endblock %}
+{% block deco %}
+<div class="skew" style="right:-140px; top:-60px; width:420px; height:820px; background:#26324F;"></div>
+<div class="skew" style="right:60px; top:380px; width:40px; height:300px; background:var(--red);"></div>
+{% endblock %}
+{% block content %}
+<div class="kicker" data-fit><span>{{ slide.kicker }}</span></div>
+<h1 class="headline">
+  {%- for line in slide.headline %}
+  <span class="hl-line{{ ' hi' if loop.index == slide.highlight_line }}" data-fit>{{ line }}</span>
+  {%- endfor %}
+</h1>
+<p class="sub" data-fit data-max-lines="2">{{ slide.sub }}</p>
+{{ dialogue(slide.dialogue) }}
+{% endblock %}

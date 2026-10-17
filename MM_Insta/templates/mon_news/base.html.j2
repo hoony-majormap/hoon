@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>{{ slide.no }} · {{ slide.layout }}</title>
+<style>
+{% for w, file in fonts %}
+@font-face {
+  font-family: "Wanted Sans";
+  font-weight: {{ w }};
+  font-style: normal;
+  font-display: block;
+  src: url("{{ asset_root }}/fonts/{{ file }}") format("woff2");
+}
+{% endfor %}
+</style>
+<link rel="stylesheet" href="{{ template_root }}/style.css">
+{% block style %}{% endblock %}
+</head>
+<body>
+{% macro dialogue(lines) -%}
+<div class="dialogue">
+  {%- for d in lines %}
+  <div class="say say-{{ d.who }}">
+    <img class="avatar" src="{{ characters[d.who] }}" alt="{{ d.who }}">
+    <div class="bubble" data-fit data-max-lines="2">
+      <span class="name">{{ 'May 선배' if d.who == 'may' else 'Polar' }}</span>
+      <p>{{ d.text }}</p>
+    </div>
+  </div>
+  {%- endfor %}
+</div>
+{%- endmacro %}
+<main class="slide bg-{{ bg }}" id="slide">
+  {% block deco %}{% endblock %}
+  <header class="topbar">
+    <img class="logo" src="{{ asset_root }}/logo/{{ logo }}" alt="MAJOR MAP">
+    <span class="page"><b>{{ '%02d' % slide.no }}</b> / {{ '%02d' % total }}</span>
+  </header>
+  <section class="content">
+    {% block content %}{% endblock %}
+  </section>
+  {% if source_line %}<footer class="source" data-fit>{{ source_line }}</footer>{% endif %}
+</main>
+</body>
+</html>

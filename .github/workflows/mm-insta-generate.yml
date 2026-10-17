@@ -1,0 +1,49 @@
+# 메이저맵 인스타 카드뉴스 — MVP 수동 실행 (기획안 §9: 로컬 또는 Actions 수동 실행)
+# 1단계에서 schedule: cron "0 10 * * *" (19:00 KST) 생성 워크플로로 확장한다.
+name: MM_Insta · 카드뉴스 생성 (수동)
+
+on:
+  workflow_dispatch:
+    inputs:
+      source:
+        description: "소재 선택 방식"
+        type: choice
+        options: [notion-latest, notion-page, demo]
+        default: notion-latest
+      page_id:
+        description: "notion-page일 때 아카이브 페이지 id"
+        required: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: MM_Insta
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: MM_Insta/requirements.txt
+      - run: pip install -r requirements.txt
+      - run: python -m playwright install --with-deps chromium
+      - run: python -m pytest -q
+      - name: 카드뉴스 생성
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          SOURCE: ${{ inputs.source }}
+          PAGE_ID: ${{ inputs.page_id }}
+        run: |
+          case "$SOURCE" in
+            notion-latest) python -m mm_insta.pipeline --notion-latest ;;
+            notion-page)   python -m mm_insta.pipeline --notion-page "$PAGE_ID" ;;
+            demo)          python -m mm_insta.pipeline --topic-file fixtures/topics/trend_2028_rules.json --offline fixtures/demo/trend_2028_rules ;;
+          esac
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: cardnews-${{ github.run_id }}
+          path: MM_Insta/out/

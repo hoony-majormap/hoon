@@ -1,0 +1,54 @@
+{% extends "base.html.j2" %}
+{# 04 비교 — 화이트 배경, 지금 vs 바뀐 뒤 최대 4행 표 #}
+{% block style %}
+<style>
+.title { margin-top: 56px; }
+.table { margin-top: 44px; border-radius: 28px; overflow: hidden; border: 3px solid var(--navy); }
+.row {
+  display: grid;
+  grid-template-columns: 300px 1fr 64px 1fr;
+  align-items: center;
+  min-height: 164px;
+  padding: 0 32px;
+}
+.row + .row { border-top: 2px solid var(--line); }
+.row:nth-child(odd):not(.head) { background: var(--gray-bg); }
+.head {
+  min-height: 84px;
+  background: var(--navy);
+  color: var(--white);
+  font-size: calc(32px * var(--fs));
+  font-weight: 800;
+}
+.head .next { color: var(--red); background: var(--white); padding: 6px 18px; border-radius: 12px; justify-self: start; }
+.cell { padding: 18px 10px; font-size: calc(34px * var(--fs)); font-weight: 700; line-height: 1.32; }
+.cell.item { font-weight: 800; color: var(--navy); }
+.cell.now { color: var(--ink-2); }
+.cell.next { color: var(--red); font-weight: 900; }
+.arrow { text-align: center; font-size: calc(40px * var(--fs)); font-weight: 900; color: var(--red); }
+.content .dialogue { margin-top: auto; }
+</style>
+{% endblock %}
+{% block deco %}
+<div class="skew" style="right:-120px; bottom:-60px; width:300px; height:460px; background:var(--gray-bg);"></div>
+{% endblock %}
+{% block content %}
+<h2 class="title" data-fit data-max-lines="2">{{ slide.title }}</h2>
+<div class="table">
+  <div class="row head">
+    <span class="cell">구분</span>
+    <span class="cell" data-fit>{{ slide.col_now }}</span>
+    <span></span>
+    <span class="cell next" data-fit>{{ slide.col_next }}</span>
+  </div>
+  {%- for r in slide.rows %}
+  <div class="row">
+    <span class="cell item" data-fit data-max-lines="2">{{ r.item }}</span>
+    <span class="cell now" data-fit data-max-lines="2">{{ r.now }}</span>
+    <span class="arrow">→</span>
+    <span class="cell next" data-fit data-max-lines="2">{{ r.next }}</span>
+  </div>
+  {%- endfor %}
+</div>
+{{ dialogue(slide.dialogue) }}
+{% endblock %}

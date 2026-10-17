@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- PLACEHOLDER: 브랜드 캐릭터 원본(polar.png)으로 교체하세요. Polar 후배 · 북극곰 · 호들갑 -->
+  <circle cx="48" cy="58" r="24" fill="#FFFFFF" stroke="#D5DBE5" stroke-width="4"/>
+  <circle cx="152" cy="58" r="24" fill="#FFFFFF" stroke="#D5DBE5" stroke-width="4"/>
+  <circle cx="48" cy="58" r="11" fill="#F4C9C2"/>
+  <circle cx="152" cy="58" r="11" fill="#F4C9C2"/>
+  <ellipse cx="100" cy="112" rx="76" ry="68" fill="#FFFFFF" stroke="#D5DBE5" stroke-width="4"/>
+  <!-- 동그랗게 뜬 눈 -->
+  <circle cx="72" cy="104" r="11" fill="#202B45"/>
+  <circle cx="128" cy="104" r="11" fill="#202B45"/>
+  <circle cx="76" cy="100" r="4" fill="#FFFFFF"/>
+  <circle cx="132" cy="100" r="4" fill="#FFFFFF"/>
+  <ellipse cx="100" cy="136" rx="28" ry="20" fill="#F4F5F7"/>
+  <ellipse cx="100" cy="128" rx="10" ry="7" fill="#202B45"/>
+  <ellipse cx="100" cy="148" rx="7" ry="8" fill="#EA5645"/>
+  <ellipse cx="56" cy="128" rx="10" ry="6" fill="#F4C9C2" opacity=".8"/>
+  <ellipse cx="144" cy="128" rx="10" ry="6" fill="#F4C9C2" opacity=".8"/>
+</svg>

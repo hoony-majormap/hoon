@@ -1,0 +1,52 @@
+{% extends "base.html.j2" %}
+{# 05 행동 — 레드 배경, 흰 단계 카드 3개 (흰 글씨는 24px 이상 굵게만) #}
+{% block style %}
+<style>
+.title { margin-top: 56px; font-size: calc(68px * var(--fs)); }
+.steps { display: flex; flex-direction: column; gap: 28px; margin-top: 56px; }
+.step {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 40px 44px;
+  border-radius: 28px;
+  background: var(--white);
+  color: var(--navy);
+}
+.num {
+  flex: none;
+  width: 84px;
+  height: 84px;
+  display: grid;
+  place-items: center;
+  background: var(--navy);
+  color: var(--white);
+  font-size: 44px;
+  font-weight: 900;
+  transform: skewX(-18deg);
+}
+.num span { transform: skewX(18deg); }
+.step h3 { font-size: calc(46px * var(--fs)); font-weight: 900; letter-spacing: -1px; }
+.step p { margin-top: 10px; font-size: calc(33px * var(--fs)); font-weight: 600; line-height: 1.4; color: var(--ink-2); }
+.content .dialogue { margin-top: auto; }
+.bg-red .source { background: var(--white); color: var(--navy); padding: 8px 18px; border-radius: 12px; align-self: flex-start; }
+</style>
+{% endblock %}
+{% block deco %}
+<div class="skew" style="right:-180px; top:-80px; width:420px; height:1500px; background:#E04B3A;"></div>
+{% endblock %}
+{% block content %}
+<h2 class="title" data-fit data-max-lines="2">{{ slide.title }}</h2>
+<div class="steps">
+  {%- for s in slide.steps %}
+  <div class="step">
+    <div class="num"><span>{{ loop.index }}</span></div>
+    <div>
+      <h3 data-fit data-max-lines="1">{{ s.title }}</h3>
+      <p data-fit data-max-lines="2">{{ s.desc }}</p>
+    </div>
+  </div>
+  {%- endfor %}
+</div>
+{{ dialogue(slide.dialogue) }}
+{% endblock %}

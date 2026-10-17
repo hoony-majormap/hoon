@@ -1,0 +1,157 @@
+{
+  "run_date": "2026-10-19",
+  "series": "MON_NEWS",
+  "topic_id": "3fc6af6c-8bcc-812b-a8af-d5557d0c7abf",
+  "topic_title": "[2027정시] 성균관대 1503명(40.7%) ‘축소’.. 다군 사범계열 40명 ‘학생부100% 정성평가’",
+  "mode": "offline-fixture",
+  "pass": true,
+  "attempts": [
+    {
+      "attempt": 1,
+      "gates": [
+        {
+          "gate": "G1",
+          "pass": true,
+          "violations": [],
+          "warnings": []
+        },
+        {
+          "gate": "G2",
+          "pass": true,
+          "violations": [],
+          "warnings": [],
+          "max_overlap_ratio": 0.0,
+          "ngram": 6
+        },
+        {
+          "gate": "G3",
+          "pass": true,
+          "violations": [],
+          "warnings": [],
+          "engine": "code (금칙어·글자 수·구조) — LLM 톤 판정은 1단계"
+        }
+      ]
+    }
+  ],
+  "g4": {
+    "gate": "G4",
+    "pass": true,
+    "violations": [],
+    "warnings": [],
+    "slides": [
+      {
+        "slide": 1,
+        "font_scale": 1.0,
+        "overflow": [],
+        "font": {
+          "loaded_weights": [
+            "600",
+            "700",
+            "800",
+            "900"
+          ],
+          "check_700": true,
+          "check_900": true
+        },
+        "pass": true
+      },
+      {
+        "slide": 2,
+        "font_scale": 1.0,
+        "overflow": [],
+        "font": {
+          "loaded_weights": [
+            "500",
+            "700",
+            "800",
+            "900"
+          ],
+          "check_700": true,
+          "check_900": true
+        },
+        "pass": true
+      },
+      {
+        "slide": 3,
+        "font_scale": 1.0,
+        "overflow": [],
+        "font": {
+          "loaded_weights": [
+            "500",
+            "700",
+            "800",
+            "900"
+          ],
+          "check_700": true,
+          "check_900": true
+        },
+        "pass": true
+      },
+      {
+        "slide": 4,
+        "font_scale": 1.0,
+        "overflow": [],
+        "font": {
+          "loaded_weights": [
+            "500",
+            "700",
+            "800",
+            "900"
+          ],
+          "check_700": true,
+          "check_900": true
+        },
+        "pass": true
+      },
+      {
+        "slide": 5,
+        "font_scale": 1.0,
+        "overflow": [],
+        "font": {
+          "loaded_weights": [
+            "600",
+            "700",
+            "800",
+            "900"
+          ],
+          "check_700": true,
+          "check_900": true
+        },
+        "pass": true
+      },
+      {
+        "slide": 6,
+        "font_scale": 1.0,
+        "overflow": [],
+        "font": {
+          "loaded_weights": [
+            "500",
+            "700",
+            "800",
+            "900"
+          ],
+          "check_700": true,
+          "check_900": true
+        },
+        "pass": true
+      }
+    ]
+  },
+  "steps": [
+    {
+      "step": "소재",
+      "status": "ok",
+      "duration_ms": 0
+    },
+    {
+      "step": "G1·G2·G3 (시도 1)",
+      "status": "ok",
+      "duration_ms": 0
+    },
+    {
+      "step": "렌더러+G4",
+      "status": "ok",
+      "duration_ms": 2734
+    }
+  ]
+}

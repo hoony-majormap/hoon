@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- PLACEHOLDER: 브랜드 캐릭터 원본(may.png)으로 교체하세요. May 선배 · 회청색 고양이 · 시큰둥 -->
+  <path d="M38 78 L52 22 L88 56 Z" fill="#7C8AA5"/>
+  <path d="M162 78 L148 22 L112 56 Z" fill="#7C8AA5"/>
+  <path d="M50 66 L56 38 L76 56 Z" fill="#F2B7AE"/>
+  <path d="M150 66 L144 38 L124 56 Z" fill="#F2B7AE"/>
+  <ellipse cx="100" cy="112" rx="72" ry="64" fill="#8F9CB5"/>
+  <ellipse cx="100" cy="132" rx="40" ry="30" fill="#E9EDF3"/>
+  <!-- 반쯤 감긴 눈 -->
+  <path d="M60 104 Q74 98 88 104" stroke="#202B45" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M112 104 Q126 98 140 104" stroke="#202B45" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <rect x="62" y="104" width="24" height="9" rx="4.5" fill="#202B45"/>
+  <rect x="114" y="104" width="24" height="9" rx="4.5" fill="#202B45"/>
+  <path d="M94 124 L106 124 L100 131 Z" fill="#EA5645"/>
+  <path d="M88 140 Q100 136 112 140" stroke="#202B45" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M36 126 L62 128 M36 138 L62 134 M164 126 L138 128 M164 138 L138 134" stroke="#5B6478" stroke-width="3" stroke-linecap="round"/>
+</svg>
