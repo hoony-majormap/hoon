@@ -22,6 +22,19 @@
 
 미리보기용 아티팩트는 외부 스타일시트를 Google Fonts만 허용하므로 Wanted Sans 링크를 빼고 폴백 서체로 게시합니다. 레포 파일은 Wanted Sans를 그대로 로드합니다.
 
+## 배포 (Vercel)
+
+| 항목 | 값 |
+| --- | --- |
+| 주소 | https://majormap-hrm-onboarding.vercel.app |
+| Vercel 팀 / 프로젝트 | Hoon's projects / `majormap-hrm-onboarding` |
+| 소스 | GitHub `hoony-majormap/hoon`, 브랜치 `claude/nice-feynman-yk530l`, 루트 디렉터리 `docs/hrm-onboarding` |
+| 설정 | 프레임워크 없음(정적 HTML), 빌드 명령 없음 |
+| 접근 보호 | 팀 기본값(Vercel Authentication, 커스텀 도메인 제외 보호) |
+
+- 이 프로젝트는 Git 저장소와 자동 연동되어 있지 않습니다. `index.html`을 고친 뒤에는 Vercel에서 다시 배포해야 반영됩니다.
+- 레포 기본 브랜치에는 이 폴더가 없으므로, 자동 배포를 켜려면 먼저 이 브랜치를 기본 브랜치에 병합하세요.
+
 ## 원본과 범위
 
 | 항목 | 내용 |
