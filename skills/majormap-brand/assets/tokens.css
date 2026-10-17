@@ -1,0 +1,34 @@
+/* MAJOR MAP brand tokens — BI manual guide 2025-12-10 */
+:root {
+  /* 전용 색상 */
+  --mm-red: #EA5645;        /* PANTONE 2034C */
+  /* 보조 색상 */
+  --mm-navy: #202B45;       /* PANTONE 648C */
+  --mm-mint: #90C6B4;       /* PANTONE 572C */
+  /* 확장(배경) 색상 — PDF 샘플링 값 */
+  --mm-red-light-1: #FF6456;
+  --mm-red-light-2: #FF746B;
+  --mm-teal: #168091;
+  --mm-sky: #92B8F4;
+  --mm-yellow: #EFDF7F;
+  --mm-paper: #F6F7F8;
+  --mm-white: #FFFFFF;
+  --mm-black: #000000;
+
+  --mm-font: "Wanted Sans Variable", "Wanted Sans", "Pretendard", -apple-system, BlinkMacSystemFont, sans-serif;
+  --mm-weight-regular: 400;
+  --mm-weight-medium: 500;
+  --mm-weight-semibold: 600;
+  --mm-weight-bold: 700;
+  --mm-weight-extrabold: 800;
+  --mm-weight-black: 900;
+  --mm-weight-extrablack: 950;
+}
+
+/* Tailwind config 예시
+theme: { extend: {
+  colors: { mm: { red: '#EA5645', navy: '#202B45', mint: '#90C6B4', teal: '#168091',
+                  sky: '#92B8F4', yellow: '#EFDF7F', paper: '#F6F7F8' } },
+  fontFamily: { sans: ['"Wanted Sans Variable"', '"Wanted Sans"', 'Pretendard', 'sans-serif'] },
+} }
+*/
