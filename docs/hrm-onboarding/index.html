@@ -1,0 +1,840 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>메이저맵 HRM 첫걸음</title>
+<meta name="description" content="메이저맵 HRM(사내 메일 + 인사)을 처음 쓰는 직원을 위한 온보딩 가이드. 직원이 실제로 쓰는 기능만 담았습니다.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Hahmlet:wght@500;600;700&display=swap">
+<style>
+/* 레이아웃 콘셉트: 왼쪽 사이드바 메뉴를 가진 실제 HRM 화면처럼, 상단 고정 메뉴 + 긴 한 페이지. 한 번에 하나씩 보여주는 투어 모드. */
+:root {
+  --bg: #F5F7F6;
+  --surface: #FFFFFF;
+  --surface-2: #EDF2F0;
+  --fg: #1A2622;
+  --muted: #5C6B66;
+  --line: #D8E0DC;
+  --accent: #0E6B63;
+  --accent-ink: #FFFFFF;
+  --accent-soft: #DCEEEA;
+  --good: #2A7A4B;
+  --good-soft: #DFF1E4;
+  --warn: #9A6412;
+  --warn-soft: #F8EDD4;
+  --danger: #B0392E;
+  --danger-soft: #F9E1DE;
+  --badge-hr: #1F5FBF;
+  --badge-super: #1A2622;
+  --shadow: 0 1px 2px rgba(20, 40, 35, .06), 0 8px 24px rgba(20, 40, 35, .08);
+  --font-body: "IBM Plex Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", sans-serif;
+  --font-display: "Hahmlet", "Apple SD Gothic Neo", "Nanum Myeongjo", serif;
+  --radius: 12px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0E1614; --surface: #15201D; --surface-2: #1C2925; --fg: #E4ECE9; --muted: #99A9A3; --line: #273833;
+    --accent: #5FC8BB; --accent-ink: #0B1715; --accent-soft: #163331;
+    --good: #6CCB8E; --good-soft: #163A26; --warn: #E2B563; --warn-soft: #3A2E13; --danger: #F08C80; --danger-soft: #42201C;
+    --badge-hr: #7FA9F0; --badge-super: #E4ECE9;
+    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.35);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0E1614; --surface: #15201D; --surface-2: #1C2925; --fg: #E4ECE9; --muted: #99A9A3; --line: #273833;
+  --accent: #5FC8BB; --accent-ink: #0B1715; --accent-soft: #163331;
+  --good: #6CCB8E; --good-soft: #163A26; --warn: #E2B563; --warn-soft: #3A2E13; --danger: #F08C80; --danger-soft: #42201C;
+  --badge-hr: #7FA9F0; --badge-super: #E4ECE9;
+  --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.35);
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; animation: none !important; } }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font-family: var(--font-body); font-size: 16px; line-height: 1.7; letter-spacing: -0.01em;
+  -webkit-font-smoothing: antialiased;
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 60; background: var(--surface); }
+h1, h2, h3, h4 { margin: 0; line-height: 1.3; text-wrap: balance; }
+h1 { font-family: var(--font-display); font-weight: 600; font-size: clamp(30px, 5vw, 46px); letter-spacing: -0.02em; }
+h2 { font-family: var(--font-display); font-weight: 600; font-size: clamp(24px, 3.4vw, 32px); letter-spacing: -0.02em; }
+h3 { font-size: 19px; font-weight: 600; }
+h4 { font-size: 16px; font-weight: 600; }
+p { margin: 0; }
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+code, kbd { font-family: var(--font-body); font-size: .92em; background: var(--surface-2); border: 1px solid var(--line); border-radius: 6px; padding: 1px 6px; white-space: nowrap; }
+ul, ol { margin: 0; padding-left: 1.3em; }
+li + li { margin-top: 6px; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+
+.wrap { max-width: 1080px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+
+/* 상단 메뉴 */
+.topbar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50; background: var(--surface); border-bottom: 1px solid var(--line); }
+.topbar .wrap { display: flex; align-items: center; gap: 16px; min-height: 60px; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 600; white-space: nowrap; }
+.brand .mark { width: 28px; height: 28px; border-radius: 8px; background: var(--accent); color: var(--accent-ink); display: grid; place-items: center; font-family: var(--font-display); font-weight: 700; font-size: 15px; }
+.brand small { color: var(--muted); font-weight: 500; font-size: 13px; }
+.nav { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; flex: 1; min-width: 0; }
+.nav::-webkit-scrollbar { display: none; }
+.nav a { color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 500; padding: 8px 10px; border-radius: 8px; white-space: nowrap; }
+.nav a:hover { background: var(--surface-2); color: var(--fg); }
+.nav a.active { color: var(--accent); background: var(--accent-soft); }
+.btn { font: inherit; font-size: 14px; font-weight: 600; border-radius: 10px; padding: 9px 14px; border: 1px solid var(--line); background: var(--surface); color: var(--fg); cursor: pointer; white-space: nowrap; text-decoration: none; display: inline-block; }
+.btn:hover { background: var(--surface-2); }
+.btn.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.btn.primary:hover { filter: brightness(1.05); }
+.btn.ghost { border-color: transparent; background: transparent; color: var(--muted); }
+
+/* 히어로 */
+.hero { padding-block: 56px 40px; }
+.hero .wrap { display: grid; grid-template-columns: 1.3fr 1fr; gap: 40px; align-items: start; }
+.eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); }
+.eyebrow::before { content: ""; width: 18px; height: 2px; background: var(--accent); }
+.lead { font-size: 18px; color: var(--muted); max-width: 34em; margin-top: 18px; }
+.hero-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 26px; }
+.addr { display: inline-flex; align-items: center; gap: 10px; margin-top: 22px; padding: 10px 14px; border: 1px dashed var(--line); border-radius: 10px; background: var(--surface); font-size: 15px; }
+.addr strong { font-weight: 600; }
+.copy { font: inherit; font-size: 13px; color: var(--accent); background: none; border: 0; cursor: pointer; font-weight: 600; padding: 2px 6px; border-radius: 6px; }
+.copy:hover { background: var(--accent-soft); }
+
+/* 체크리스트 카드 */
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); }
+.check-card { padding: 22px; }
+.check-card header { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; margin-bottom: 14px; }
+.check-card header span { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.progress { height: 6px; border-radius: 99px; background: var(--surface-2); overflow: hidden; margin-bottom: 14px; }
+.progress i { display: block; height: 100%; width: 0; background: var(--accent); border-radius: 99px; transition: width .25s ease; }
+.checks { list-style: none; padding: 0; display: grid; gap: 4px; }
+.checks li { margin: 0; }
+.checks label { display: grid; grid-template-columns: 20px 1fr; gap: 12px; align-items: start; padding: 8px 10px; border-radius: 8px; cursor: pointer; font-size: 15px; }
+.checks label:hover { background: var(--surface-2); }
+.checks input { width: 18px; height: 18px; margin: 4px 0 0; accent-color: var(--accent); }
+.checks input:checked + span { color: var(--muted); text-decoration: line-through; text-decoration-color: var(--line); }
+.checks small { display: block; color: var(--muted); font-size: 13px; }
+.check-card footer { margin-top: 12px; font-size: 13px; color: var(--muted); display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap; }
+
+/* 하루 흐름 */
+.flow { padding-block: 10px 40px; }
+.flow-strip { display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; }
+.flow-step { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px; position: relative; text-decoration: none; color: inherit; display: block; }
+.flow-step:hover { border-color: var(--accent); }
+.flow-step .t { font-size: 12px; color: var(--muted); letter-spacing: .04em; font-variant-numeric: tabular-nums; }
+.flow-step .n { font-weight: 600; margin-top: 6px; }
+.flow-step .d { font-size: 13px; color: var(--muted); margin-top: 4px; }
+
+/* 섹션 공통 */
+section.feature { padding-block: 44px; border-top: 1px solid var(--line); }
+.sec-head { display: grid; grid-template-columns: 1fr auto; gap: 16px 32px; align-items: end; margin-bottom: 26px; }
+.sec-head .where { font-size: 13px; color: var(--muted); display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.sec-head .where code { background: var(--surface); }
+.one-line { font-size: 17px; color: var(--muted); margin-top: 10px; max-width: 40em; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; align-items: start; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; align-items: start; }
+.block { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px 22px; min-width: 0; }
+.block h3, .block h4 { margin-bottom: 10px; }
+.block > p { color: var(--muted); font-size: 15px; }
+.block ul { font-size: 15px; }
+
+/* 단계 리스트 */
+.steps { list-style: none; padding: 0; counter-reset: s; display: grid; gap: 10px; }
+.steps li { counter-increment: s; display: grid; grid-template-columns: 30px 1fr; gap: 12px; align-items: start; margin: 0; font-size: 15px; }
+.steps li::before { content: counter(s); width: 28px; height: 28px; border-radius: 50%; background: var(--accent-soft); color: var(--accent); font-weight: 700; font-size: 13px; display: grid; place-items: center; margin-top: 1px; font-variant-numeric: tabular-nums; }
+.steps b { font-weight: 600; }
+.steps small { display: block; color: var(--muted); font-size: 13.5px; margin-top: 2px; }
+
+/* 콜아웃 */
+.note { display: grid; grid-template-columns: auto 1fr; gap: 12px; align-items: start; padding: 14px 16px; border-radius: 10px; font-size: 14.5px; border: 1px solid transparent; }
+.note .ic { width: 22px; height: 22px; border-radius: 6px; display: grid; place-items: center; font-size: 12px; font-weight: 700; flex: none; margin-top: 2px; }
+.note.tip { background: var(--accent-soft); color: var(--fg); } .note.tip .ic { background: var(--accent); color: var(--accent-ink); }
+.note.good { background: var(--good-soft); } .note.good .ic { background: var(--good); color: #fff; }
+.note.warn { background: var(--warn-soft); } .note.warn .ic { background: var(--warn); color: #fff; }
+.note.danger { background: var(--danger-soft); } .note.danger .ic { background: var(--danger); color: #fff; }
+.note b { font-weight: 600; }
+
+/* 배지·칩 */
+.badge { display: inline-block; font-size: 12px; font-weight: 600; padding: 1px 8px; border-radius: 99px; border: 1px solid var(--line); vertical-align: middle; white-space: nowrap; }
+.badge.hr { color: #fff; background: var(--badge-hr); border-color: var(--badge-hr); }
+.badge.super { color: var(--bg); background: var(--badge-super); border-color: var(--badge-super); }
+.badge.team { background: var(--accent-soft); color: var(--accent); border-color: transparent; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: 13px; padding: 3px 10px; border-radius: 99px; background: var(--surface-2); border: 1px solid var(--line); }
+.status { display: inline-block; font-size: 12.5px; font-weight: 600; padding: 2px 9px; border-radius: 6px; }
+.status.wait { background: var(--warn-soft); color: var(--warn); }
+.status.ok { background: var(--good-soft); color: var(--good); }
+.status.no { background: var(--danger-soft); color: var(--danger); }
+.status.neutral { background: var(--surface-2); color: var(--muted); }
+
+/* 메일 목록 모형 */
+.mock { border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: var(--surface); font-size: 13.5px; }
+.mock .bar { display: flex; align-items: center; gap: 10px; padding: 10px 12px; background: var(--surface-2); border-bottom: 1px solid var(--line); font-weight: 600; }
+.mock .bar .cnt { color: var(--muted); font-weight: 500; font-variant-numeric: tabular-nums; }
+.mock .bar .tog { margin-left: auto; display: flex; gap: 2px; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; font-size: 12px; font-weight: 500; }
+.mock .bar .tog span { padding: 2px 8px; } .mock .bar .tog span.on { background: var(--surface); font-weight: 600; }
+.mock .row { display: grid; grid-template-columns: 18px 18px 1fr auto; gap: 10px; align-items: center; padding: 9px 12px; border-bottom: 1px solid var(--line); }
+.mock .row:last-child { border-bottom: 0; }
+.mock .row .star { color: var(--warn); }
+.mock .row .from { font-weight: 600; }
+.mock .row .subj { color: var(--muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.mock .row .meta { color: var(--muted); font-variant-numeric: tabular-nums; font-size: 12.5px; white-space: nowrap; }
+.mock .row.unread .from, .mock .row.unread .subj { color: var(--fg); }
+.mock .legend { padding: 10px 12px; color: var(--muted); font-size: 12.5px; border-top: 1px dashed var(--line); background: var(--surface-2); }
+
+/* 연차 수치 모형 */
+.kpi { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+.kpi div { background: var(--surface-2); border-radius: 8px; padding: 10px 12px; }
+.kpi .k { font-size: 12px; color: var(--muted); }
+.kpi .v { font-size: 20px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.kpi .v small { font-size: 12px; color: var(--muted); font-weight: 500; }
+
+/* 상태 흐름 */
+.pipe { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-size: 14px; }
+.pipe .arr { color: var(--muted); }
+
+/* 폴더 표, 참조 표 */
+.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+th, td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: 13px; color: var(--muted); font-weight: 600; background: var(--surface-2); white-space: nowrap; }
+tr:last-child td { border-bottom: 0; }
+td code { white-space: nowrap; }
+
+/* FAQ */
+details { border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+details + details { margin-top: 8px; }
+summary { cursor: pointer; padding: 14px 18px; font-weight: 600; list-style: none; display: flex; justify-content: space-between; gap: 12px; align-items: center; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; color: var(--muted); font-weight: 500; font-size: 18px; line-height: 1; }
+details[open] summary::after { content: "–"; }
+details .body { padding: 0 18px 16px; color: var(--muted); font-size: 15px; }
+details .body b { color: var(--fg); font-weight: 600; }
+
+/* 용어 */
+.terms { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.term { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; font-size: 14.5px; min-width: 0; }
+.term b { display: block; font-weight: 600; margin-bottom: 4px; }
+.term span { color: var(--muted); }
+
+footer.site { padding-block: 30px 50px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13.5px; }
+footer.site .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+
+/* 투어 */
+#tour-mask { position: fixed; inset: 0; z-index: 90; display: none; pointer-events: none; }
+#tour-mask.on { display: block; }
+#tour-hole { position: absolute; border-radius: 14px; box-shadow: 0 0 0 9999px rgba(10, 20, 18, .62); transition: all .25s ease; pointer-events: none; }
+#tour-pop { position: absolute; z-index: 95; width: min(380px, calc(100vw - 32px)); background: var(--surface); color: var(--fg); border: 1px solid var(--line); border-radius: 12px; box-shadow: var(--shadow); padding: 16px 18px; display: none; pointer-events: auto; }
+#tour-pop.on { display: block; }
+#tour-pop .k { font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+#tour-pop h4 { margin: 4px 0 6px; }
+#tour-pop p { font-size: 14.5px; color: var(--muted); }
+#tour-pop .acts { display: flex; gap: 8px; margin-top: 14px; align-items: center; }
+#tour-pop .acts .sp { flex: 1; }
+.tour-target-highlight { position: relative; z-index: 92; }
+
+@media (max-width: 900px) {
+  .hero .wrap { grid-template-columns: 1fr; }
+  .flow-strip { grid-template-columns: repeat(2, 1fr); }
+  .grid-3 { grid-template-columns: 1fr 1fr; }
+  .terms { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  .hero { padding-block: 36px 28px; }
+  .grid-2, .grid-3, .terms { grid-template-columns: 1fr; }
+  .flow-strip { grid-template-columns: 1fr; }
+  .kpi { grid-template-columns: 1fr 1fr; }
+  .sec-head { grid-template-columns: 1fr; align-items: start; }
+  .brand small { display: none; }
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <div class="brand"><span class="mark">M</span> 메이저맵 HRM <small>직원 온보딩</small></div>
+    <nav class="nav" id="nav" aria-label="섹션 메뉴">
+      <a href="#start">시작하기</a>
+      <a href="#mail">메일</a>
+      <a href="#attendance">출퇴근</a>
+      <a href="#leave">휴가</a>
+      <a href="#approvals">결재함</a>
+      <a href="#calendar">캘린더</a>
+      <a href="#docs">문서·증명서</a>
+      <a href="#people">조직·직원</a>
+      <a href="#ref">빠른 참조</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <button class="btn primary" id="tour-start" type="button">3분 투어</button>
+  </div>
+</header>
+
+<section class="hero" id="start">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow">첫날부터 바로 쓰는 법</span>
+      <h1 style="margin-top:14px">메일 열고, 출근 찍고,<br>휴가 신청하기까지.</h1>
+      <p class="lead">메이저맵 HRM은 사내 웹메일(@majormap.net)과 인사 업무를 한 화면에서 처리하는 자체 서비스입니다. 이 페이지는 직원이 실제로 쓰는 기능만 골라, 화면 순서대로 설명합니다. 관리자 전용 메뉴는 다루지 않습니다.</p>
+      <div class="addr">
+        <span>접속 주소</span>
+        <strong id="addr-text">https://mail.majormap.net</strong>
+        <button class="copy" type="button" data-copy="https://mail.majormap.net">복사</button>
+      </div>
+      <div class="hero-actions">
+        <a class="btn primary" href="#account">계정 만들기부터 보기</a>
+        <a class="btn" href="#leave">휴가 신청 방법으로 건너뛰기</a>
+      </div>
+      <div class="note tip" style="margin-top:26px; max-width:38em">
+        <span class="ic">i</span>
+        <div><b>관리자 전용 탭이 안 보여도 정상입니다.</b> 탭이나 버튼 옆에 파란 <span class="badge hr">운영관리자</span> 배지가 있으면 HR 관리자 전용, 검은 <span class="badge super">슈퍼 관리자</span> 배지가 있으면 메일 관리자 전용 기능입니다. 일반 직원에게는 숨겨지거나 비활성화됩니다.</div>
+      </div>
+    </div>
+
+    <aside class="card check-card" id="checklist" aria-label="첫날 체크리스트">
+      <header>
+        <h3>첫날 체크리스트</h3>
+        <span id="check-count">0 / 7</span>
+      </header>
+      <div class="progress"><i id="check-bar"></i></div>
+      <ul class="checks">
+        <li><label><input type="checkbox" id="ck1" data-ck><span>가입 신청 후 승인 메일을 받고 로그인했어요<small>승인 전에는 로그인이 되지 않습니다.</small></span></label></li>
+        <li><label><input type="checkbox" id="ck2" data-ck><span>계정 관리에서 휴대폰 번호를 등록했어요<small>오른쪽 상단 내 이름 → 계정 관리. 조직 연락망에 표시됩니다.</small></span></label></li>
+        <li><label><input type="checkbox" id="ck3" data-ck><span>메일 서명을 저장했어요<small>다음에 쓰는 메일부터 자동으로 들어갑니다.</small></span></label></li>
+        <li><label><input type="checkbox" id="ck4" data-ck><span>내가 받는 팀 메일 주소를 확인했어요<small>조직·직원 → 팀 메일 탭.</small></span></label></li>
+        <li><label><input type="checkbox" id="ck5" data-ck><span>인사 홈에서 오늘 첫 출근을 찍었어요<small>근무 장소 선택 → 출근.</small></span></label></li>
+        <li><label><input type="checkbox" id="ck6" data-ck><span>연차 잔여량을 한 번 확인했어요<small>사용 가능 · 신청 중 · 사용 · 만료 예정.</small></span></label></li>
+        <li><label><input type="checkbox" id="ck7" data-ck><span>결재함에서 내 신청함 위치를 익혔어요<small>휴가·정정·증명서 결과는 모두 여기서 봅니다.</small></span></label></li>
+      </ul>
+      <footer>
+        <span>체크 상태는 이 브라우저에만 저장됩니다.</span>
+        <button class="btn ghost" type="button" id="check-reset">초기화</button>
+      </footer>
+    </aside>
+  </div>
+</section>
+
+<section class="flow">
+  <div class="wrap">
+    <div class="flow-strip" id="flow">
+      <a class="flow-step" href="#attendance"><div class="t">09:00</div><div class="n">출근 찍기</div><div class="d">인사 홈 → 근무 장소 → 출근</div></a>
+      <a class="flow-step" href="#mail"><div class="t">하루 내내</div><div class="n">메일 처리</div><div class="d">받은편지함 · 팀 메일 · 새 메일</div></a>
+      <a class="flow-step" href="#leave"><div class="t">필요할 때</div><div class="n">휴가 신청</div><div class="d">유형 → 단위 → 날짜 → 미리 계산 → 제출</div></a>
+      <a class="flow-step" href="#approvals"><div class="t">알림 오면</div><div class="n">결재 확인</div><div class="d">내 신청함에서 승인·반려 결과 확인</div></a>
+      <a class="flow-step" href="#attendance"><div class="t">18:00</div><div class="n">퇴근 찍기</div><div class="d">누락했다면 근태에서 정정 신청</div></a>
+    </div>
+  </div>
+</section>
+
+<!-- 계정 -->
+<section class="feature" id="account">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>계정과 로그인</h2>
+        <p class="one-line">회사 메일 주소로 가입하고, 승인과 계정 연결이 끝나면 인사 기능이 내 기준으로 움직입니다.</p>
+      </div>
+      <div class="where">위치 <code>오른쪽 상단 내 이름</code></div>
+    </div>
+    <div class="grid-2">
+      <div class="block">
+        <h3>계정이 만들어지는 3단계</h3>
+        <ol class="steps">
+          <li><div><b>가입 신청</b><small><code>이름@majormap.net</code> 주소로 신청합니다. 이때 <b>복구 이메일</b>을 함께 등록합니다. 비밀번호를 잊었을 때 쓰이며 암호화되어 저장됩니다.</small></div></li>
+          <li><div><b>관리자 승인</b><small>슈퍼 관리자가 신청을 검토해 승인합니다. 승인 전에는 로그인할 수 없습니다.</small></div></li>
+          <li><div><b>직원 정보와 계정 연결</b><small>HR 담당자가 내 직원 정보에 메일 계정을 연결합니다. 연결이 끝나야 인사 홈·휴가·결재가 내 이름으로 동작합니다.</small></div></li>
+        </ol>
+        <div class="note warn" style="margin-top:14px"><span class="ic">!</span><div>로그인은 되는데 인사 홈에 내 정보가 없다면 3단계가 아직 안 된 상태입니다. HR 담당자에게 계정 연결을 요청하세요.</div></div>
+      </div>
+      <div class="block">
+        <h3>계정 관리에서 할 수 있는 것</h3>
+        <ul>
+          <li><b>직접 수정</b>: 휴대폰 번호(조직 연락망에 표시, 비우고 저장하면 삭제), 생년월일(본인과 HR 관리자만 봄). <code>본인 정보 저장</code>으로 저장합니다.</li>
+          <li><b>읽기 전용</b>: 이름·메일 계정·권한은 관리자에게, 입사일·사번·소속·직책은 HR 담당자에게 변경을 요청합니다.</li>
+          <li><b>창 하단 버튼</b>: 메일 서명 설정 · 메일 자동 전달 설정 · 로그아웃 후 비밀번호 재설정.</li>
+        </ul>
+        <h4 style="margin-top:18px">비밀번호를 잊었을 때</h4>
+        <p>로그아웃한 뒤 로그인 화면에서 가입 때 등록한 <b>복구 이메일로 인증</b>해 재설정합니다. 어떤 복구 이메일을 등록했는지 기억나지 않으면 슈퍼 관리자가 확인해 알려줄 수 있습니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 메일 -->
+<section class="feature" id="mail">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>메일</h2>
+        <p class="one-line">받은편지함을 읽고, 팀 주소로도 보내고, 큰 첨부는 링크로. 쓰다 멈춰도 20초 뒤 자동 저장됩니다.</p>
+      </div>
+      <div class="where">위치 <code>/mail</code> <code>/mail/compose</code></div>
+    </div>
+
+    <div class="grid-2">
+      <div class="block">
+        <h3>받은편지함 읽는 법</h3>
+        <div class="mock" aria-label="받은편지함 화면 예시">
+          <div class="bar">받은편지함 <span class="cnt">736 / 770</span><div class="tog"><span class="on">전체</span><span>안읽음</span></div></div>
+          <div class="row unread"><span>☐</span><span class="star">★</span><span><span class="from">hello@majormap.net</span> <span class="badge team">팀 메일</span> <span class="subj">10월 워크숍 일정 안내 – 장소와 시간이 확정되어…</span></span><span class="meta">📎 · 4 · 09:12</span></div>
+          <div class="row"><span>☐</span><span>☆</span><span><span class="from">강지원</span> <span class="subj">[결재] 휴가 신청이 승인되었습니다</span></span><span class="meta">어제</span></div>
+          <div class="row"><span>☐</span><span>☆</span><span><span class="from">서형민</span> <span class="subj">근로계약서 배포 안내 – 문서 메뉴에서 확인 후…</span></span><span class="meta">10/15</span></div>
+          <div class="legend">제목 줄의 <b>736 / 770</b>은 안 읽음 / 전체 건수입니다. 행 끝 숫자(4)는 같은 대화의 메일 수, 📎는 첨부, <b>팀 메일</b> 배지는 팀 대표 주소로 받은 메일입니다. 한 페이지에 40통씩 보입니다.</div>
+        </div>
+        <ul style="margin-top:14px">
+          <li>상단 검색창은 <b>제목·주소·요약</b>으로 찾습니다. 옆 회전 아이콘은 목록 새로고침입니다.</li>
+          <li>행의 체크박스를 고르면 <b>읽음 · 안읽음 · 중요 · 보관 · 스팸신고 · 휴지통 · 답장 · 전달</b> 도구가 켜집니다. 맨 왼쪽 체크박스는 보이는 메일 모두 선택입니다.</li>
+          <li>메일을 열면 <code>&lt;</code> <code>&gt;</code>로 이전·다음 메일로 바로 넘어갑니다.</li>
+        </ul>
+      </div>
+
+      <div class="block">
+        <h3>새 메일 보내기</h3>
+        <ol class="steps">
+          <li><div><b>보내는 사람</b><small>기본은 내 개인 주소. 드롭다운에서 내가 속한 팀 대표 주소(hello@, hr@ 등)로 바꿔 보낼 수 있습니다.</small></div></li>
+          <li><div><b>받는 사람</b><small>쉼표로 여러 주소를 넣습니다. 오른쪽 <code>참조 · 숨은 참조</code>를 누르면 CC/BCC 칸이 열립니다.</small></div></li>
+          <li><div><b>제목과 본문</b><small>글꼴·굵게·색·목록·링크·이미지 같은 서식 편집기를 지원합니다.</small></div></li>
+          <li><div><b>첨부파일</b><small>한도는 <b>64개 / 3.5 MB</b>입니다. 큰 파일은 링크로 공유하세요.</small></div></li>
+          <li><div><b>보내기</b><small>작성 중 20초 동안 손을 멈추면 자동으로 임시 저장됩니다. <code>임시 저장</code>으로 직접 저장도 됩니다.</small></div></li>
+        </ol>
+        <div class="note tip" style="margin-top:14px"><span class="ic">i</span><div><b>서명은 한 번만 설정하면 됩니다.</b> 새 메일 화면의 <code>서명 설정</code> 또는 계정 관리 → 메일 서명 설정에서 최대 4,000자까지 저장합니다. 다음 메일부터 자동으로 들어가고 답장·전달에도 붙습니다.</div></div>
+      </div>
+    </div>
+
+    <div class="grid-2" style="margin-top:18px">
+      <div class="block">
+        <h3>메일을 열었을 때 주의할 점</h3>
+        <ul>
+          <li><b>외부 이미지는 기본 차단</b>됩니다. 발신자 추적을 막기 위한 설정이니, 믿을 수 있는 메일에서만 <code>외부 이미지 보기</code>를 누르세요. <code>텍스트로 보기</code>를 누르면 HTML 없이 본문만 봅니다.</li>
+          <li>팀 메일로 받은 경우 제목 아래에 "팀 메일 xxx@majormap.net를 통해 받음" 안내가 뜹니다. <b>답장은 내 개인 주소로 나갑니다.</b></li>
+        </ul>
+        <h3 style="margin-top:20px">팀 메일이란</h3>
+        <p><code>dev@</code>, <code>design@</code>, <code>hr@</code>처럼 조직마다 대표 주소가 있습니다. 이 주소로 온 메일은 그 조직 소속(주 소속·겸직) 직원 모두의 받은편지함에 각각 들어오고 <span class="badge team">팀 메일</span> 배지가 붙습니다. 하위 조직은 자동으로 포함되지 않습니다. 내가 어떤 팀 주소를 받는지는 <b>조직·직원 → 팀 메일</b> 탭에서 확인합니다.</p>
+      </div>
+      <div class="block">
+        <h3>외부 메일함에서도 받기 (자동 전달)</h3>
+        <p>계정 관리 → <code>메일 자동 전달 설정</code>.</p>
+        <ul style="margin-top:8px">
+          <li>외부 주소 <b>한 개</b>를 등록하고 인증을 마치면 상태가 <code>전달 중</code>으로 바뀝니다. 주소를 바꾸면 자동 전달이 꺼지고 새 주소 인증부터 다시 합니다.</li>
+          <li>이 메일함에도 사본이 남습니다. 본문과 첨부가 함께 가지만 <b>과거 메일과 공용·별칭 주소로 받은 메일은 전달되지 않습니다.</b></li>
+          <li><code>자동 전달 끄기</code>, <code>전달 주소 삭제</code> 버튼으로 언제든 멈출 수 있습니다.</li>
+        </ul>
+        <div class="note danger" style="margin-top:14px"><span class="ic">!</span><div>받는 쪽 외부 메일함에 "회사 주소로 다시 전달" 규칙이 있으면 무한 전달이 됩니다. 그 규칙은 꺼 두세요.</div></div>
+      </div>
+    </div>
+
+    <h3 style="margin:26px 0 12px">폴더별로 알아둘 것</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>폴더</th><th>무엇이 있나</th><th>알아둘 것</th></tr></thead>
+        <tbody>
+          <tr><td><b>보낸편지함</b></td><td>내가 보낸 메일</td><td>받는 주소·제목·보낸 날짜가 보이고 다시 전달할 수 있습니다.</td></tr>
+          <tr><td><b>보관함</b></td><td>받은편지함에서 치우되 남겨둘 메일</td><td>다른 메일 서비스에서 내려받은 <b>.eml 백업을 가져오기</b>할 수 있습니다(폴더째 또는 파일). 같은 메일은 한 번만 들어가고, 중간에 멈춰도 이어서 올립니다.</td></tr>
+          <tr><td><b>스팸</b></td><td>스팸 신고한 메일</td><td>잘못 분류됐으면 선택 후 <code>받은편지함으로</code>.</td></tr>
+          <tr><td><b>휴지통</b></td><td>지운 메일</td><td><b>30일 후 자동으로 영구 삭제</b>됩니다. <code>휴지통 비우기</code>는 즉시 영구 삭제라 되돌릴 수 없습니다. 복원은 <code>받은편지함으로</code> / <code>보낸편지함으로</code>.</td></tr>
+          <tr><td><b>중요</b></td><td>★ 표시한 메일</td><td>목록에서 별을 누르면 바로 들어옵니다.</td></tr>
+          <tr><td><b>임시보관함</b></td><td>작성 중 저장된 메일</td><td>클릭하면 이어서 작성합니다.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- 출퇴근 -->
+<section class="feature" id="attendance">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>인사 홈과 출퇴근</h2>
+        <p class="one-line">인사 홈은 하루의 시작 화면입니다. 위에서부터 오늘의 출퇴근 → 잔여 휴가 → 바로가기 → 인사 알림 순으로 보입니다.</p>
+      </div>
+      <div class="where">위치 <code>/hr</code> <code>/hr/attendance</code></div>
+    </div>
+    <div class="grid-3">
+      <div class="block">
+        <h3>출근·퇴근 찍기</h3>
+        <ol class="steps">
+          <li><div><b>근무 장소 선택</b><small>사무실 · 재택 · 출장 중 하나.</small></div></li>
+          <li><div><b>출근</b><small>서버가 한국 시간 기준으로 시각을 기록합니다.</small></div></li>
+          <li><div><b>퇴근</b><small>출근 전에는 퇴근 버튼이 비활성입니다. 아래에 오늘의 출근·퇴근 시각이 표시됩니다.</small></div></li>
+        </ol>
+        <div class="note warn" style="margin-top:14px"><span class="ic">!</span><div><b>퇴근을 깜빡했다면</b> 근태 메뉴의 월별 근태표에서 <code>근태 정정</code>으로 실제 확인된 시각을 적어 신청합니다. 정정은 결재 대상이라 결재함으로 들어갑니다.</div></div>
+      </div>
+      <div class="block">
+        <h3>근무시간 변경 신청</h3>
+        <p>출퇴근 카드 오른쪽 <code>근무시간 변경 신청</code> 버튼.</p>
+        <ol class="steps" style="margin-top:10px">
+          <li><div><b>적용 시작일, 변경 출근·퇴근 시간, 변경 사유</b><small>자정까지 근무면 24:00으로 입력합니다. 사유는 필수입니다.</small></div></li>
+          <li><div><b>변경 내용 미리보기</b><small>창 아래에 적용일 기준 현재 근무시간표(기본 09:00~18:00, 월~금, 휴게 12:00~13:00)가 뜹니다. 미리보기를 해야 제출 버튼이 켜집니다.</small></div></li>
+          <li><div><b>신청 제출</b><small>적용일이나 시간을 바꾸면 미리보기를 다시 해야 합니다.</small></div></li>
+        </ol>
+      </div>
+      <div class="block">
+        <h3>연차 잔여량 읽는 법</h3>
+        <div class="kpi" aria-label="연차 잔여량 예시">
+          <div><div class="k">사용 가능</div><div class="v">11.5<small> 일</small></div></div>
+          <div><div class="k">신청 중</div><div class="v">1<small> 일</small></div></div>
+          <div><div class="k">사용</div><div class="v">4.5<small> 일</small></div></div>
+          <div><div class="k">만료 예정</div><div class="v">0<small> 일</small></div></div>
+        </div>
+        <ul style="margin-top:12px">
+          <li><code>잔여 휴가 구분</code>에서 <b>연차</b>와 <b>대체휴가</b> 원장을 바꿔 봅니다.</li>
+          <li>차감은 분 단위로 계산하고 <b>8시간 = 1일</b>로 환산해 보여줍니다. 반반차 2시간은 0.25일입니다.</li>
+          <li><code>▶ 발생·만료별 잔여량 확인</code>: 언제 생겨서 언제 만료되는지. <code>▶ 연차 원장 확인</code>: 일자별 사용 내역과 부여·사용·만료 기록.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="note tip" style="margin-top:18px"><span class="ic">i</span><div><b>인사 알림</b>은 인사 홈 맨 아래에 있습니다. 결재 결과 등 나에게 온 알림이 쌓이고, <code>새로고침</code>으로 갱신합니다. 바로가기(휴가 신청·잔여량 / 받은 결재함 / 내 문서·증명서)도 같은 화면에 있습니다.</div></div>
+  </div>
+</section>
+
+<!-- 휴가 -->
+<section class="feature" id="leave">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>휴가</h2>
+        <p class="one-line">유형과 단위를 고르고, 사용량을 미리 계산한 뒤 제출합니다. 승인은 내 팀장이 하고, 결과는 Slack으로 옵니다.</p>
+      </div>
+      <div class="where">위치 <code>/hr/leave</code></div>
+    </div>
+    <div class="grid-2">
+      <div class="block">
+        <h3>휴가 신청, 한 번에 끝내기</h3>
+        <ol class="steps">
+          <li><div><b>오른쪽 위 <code>휴가 신청</code> 클릭</b></div></li>
+          <li><div><b>휴가 유형 선택</b><small>연차 · 경조사 · 예비군 · 생일반차 · 병가 · 대체휴가. 연차만 연차를 차감하고, 병가는 무급, 나머지는 유급이며 차감이 없습니다.</small></div></li>
+          <li><div><b>사용 단위 선택</b><small>종일 · 오전 반차 · 오후 반차 · 반차 시간 직접 지정 · 반반차.</small></div></li>
+          <li><div><b>시작일 · 종료일 입력</b><small>안내 박스에 내 결재 조건(승인자 이름 등)이 표시됩니다.</small></div></li>
+          <li><div><b>신청 사유 입력</b><small>필수입니다. 사유는 신청을 처리하는 담당자에게만 보이고 Slack 연차 게시판에는 올라가지 않습니다.</small></div></li>
+          <li><div><b><code>사용량 미리 계산</code></b><small>차감량(일·시간)을 확인합니다. 이 단계를 거쳐야 제출 버튼이 켜집니다.</small></div></li>
+          <li><div><b><code>신청 제출</code></b><small>제출하면 결재선과 내용이 고정됩니다. 고치려면 철회한 뒤 다시 신청합니다.</small></div></li>
+        </ol>
+      </div>
+      <div style="display:grid; gap:18px">
+        <div class="block">
+          <h3>승인은 이렇게 됩니다</h3>
+          <div class="note good"><span class="ic">✓</span><div>내 휴가는 <b>주 소속 팀장이 단독 승인</b>합니다. 지정된 HR 담당자는 열람하고 필요할 때 대리 승인합니다. 승인되면 나에게 결과 알림이 가고, Slack 연차 게시판 채널에 자동으로 게시됩니다(사유는 게시되지 않음).</div></div>
+          <h4 style="margin-top:16px">상태 흐름</h4>
+          <div class="pipe">
+            <span class="status wait">대기</span><span class="arr">→</span><span class="status ok">승인</span><span class="arr">또는</span><span class="status no">반려</span>
+          </div>
+          <p style="font-size:14px; color:var(--muted); margin-top:8px">내가 거둬들이면 <span class="status neutral">철회</span>, 승인 후 취소하면 <span class="status neutral">취소</span>로 바뀝니다. <b>내 신청</b> 탭에서 확인하고, <code>결재 상세</code>로 결재선과 처리 이력을 봅니다.</p>
+        </div>
+        <div class="block">
+          <h3>승인된 휴가를 취소하려면</h3>
+          <p>내 신청 탭의 작업 열에서 취소 신청을 하면 <b>"휴가 취소" 결재가 따로 생성</b>됩니다. 취소 결재가 끝날 때까지 기존 차감은 그대로 유지됩니다.</p>
+        </div>
+      </div>
+    </div>
+    <div class="grid-3" style="margin-top:18px">
+      <div class="block"><h4>과거 이력 탭</h4><p>이전 시스템에서 이관한 휴가 이력입니다. 조회 전용이며 현재 잔여량에는 반영되지 않습니다.</p></div>
+      <div class="block"><h4>내 연차 사용계획서 탭</h4><p>HR이 계획서를 배정하면 여기서 작성해 제출합니다. 계획서 제출과 실제 휴가 승인은 별개입니다.</p></div>
+      <div class="block"><h4>팀 부재 일정 탭</h4><p>승인된 팀원 휴가 목록입니다. 개인 사유와 증빙은 표시되지 않습니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 결재함 -->
+<section class="feature" id="approvals">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>결재함</h2>
+        <p class="one-line">휴가 · 휴가 취소 · 근태 정정 · 근무시간 변경 · 증명서 신청, 다섯 가지가 모두 한 결재함에 모입니다.</p>
+      </div>
+      <div class="where">위치 <code>/hr/approvals</code></div>
+    </div>
+    <div class="grid-2">
+      <div class="block">
+        <h3>탭은 이렇게 나뉩니다</h3>
+        <ul>
+          <li><b>내 신청함</b>: 내가 올린 건. 직원이 가장 자주 보는 탭입니다.</li>
+          <li><b>받은 결재함</b>: 내가 처리해야 할 건. 팀장이거나 대리 승인자로 지정된 경우에만 쌓입니다.</li>
+          <li><b>처리 이력</b>: 끝난 건.</li>
+          <li><b>대리 승인 가능</b>: 내가 열람·대리 승인자로 지정된 건.</li>
+        </ul>
+        <p style="margin-top:12px"><code>신청 유형</code> 필터로 근무시간 변경 · 휴가 · 휴가 취소 · 근태 정정 · 증명서만 골라 볼 수 있습니다.</p>
+        <div class="chips" style="margin-top:14px">
+          <span class="status wait">대기</span><span class="status ok">승인</span><span class="status no">반려</span><span class="status neutral">철회</span><span class="status neutral">확정</span>
+        </div>
+      </div>
+      <div class="block">
+        <h3>결재 상세 창에서 보이는 것</h3>
+        <ul>
+          <li>신청 정보: 시작·종료일, 휴가 단위, 사유, 사용량, 실제 차감 시간대.</li>
+          <li><b>결재선과 열람 담당자</b> 목록. 예: <code>1. 박성철 현재 담당자 대기</code> / <code>2. 강지원 열람·대리 승인</code>.</li>
+          <li>내가 현재 담당자이면 <b>승인 / 반려</b> 버튼과 사유 입력이 보입니다. 반려 사유는 신청자에게 전달됩니다.</li>
+        </ul>
+        <div class="note tip" style="margin-top:14px"><span class="ic">i</span><div><code>확정 · 승인 불필요</code>로 표시된 건은 팀장 본인 신청이거나 승인 면제 대상입니다. 담당자는 열람만 합니다.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 캘린더 -->
+<section class="feature" id="calendar">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>캘린더</h2>
+        <p class="one-line">휴가, 공휴일, 회사 일정, 내 개인 일정을 한 달력에서 봅니다.</p>
+      </div>
+      <div class="where">위치 <code>/hr/calendar</code></div>
+    </div>
+    <div class="grid-2">
+      <div class="block">
+        <h3>보는 법</h3>
+        <ul>
+          <li>상단 <b>휴가 / 공휴일 / 회사 / 개인</b> 버튼은 표시 필터입니다. 눌러서 켜고 끕니다.</li>
+          <li><code>‹ 오늘 ›</code>로 달을 옮기고, 오른쪽에서 <b>월간 · 목록 · 삭제된 일정</b> 뷰를 바꿉니다.</li>
+          <li>날짜 칸을 클릭하면 그날의 일정 상세가 열립니다. 예: <code>이수한 · 연차 · 종일</code>.</li>
+        </ul>
+      </div>
+      <div class="block">
+        <h3>일정 추가하기</h3>
+        <ol class="steps">
+          <li><div><b>종류 선택</b><small><b>회사 일정</b>(전 직원 공개) 또는 <b>개인 일정</b>(본인만). 개인 일정 제목은 암호화되어 본인만 봅니다.</small></div></li>
+          <li><div><b>제목, 시작일, 종료일</b></div></li>
+          <li><div><b>시간이 있는 일정이면 <code>종일</code> 해제</b><small>시간이 있는 일정은 하루 안에서만 등록되고, 자정까지는 24:00으로 입력합니다.</small></div></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 문서·증명서 -->
+<section class="feature" id="docs">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>문서와 증명서</h2>
+        <p class="one-line">HR이 배포한 문서를 확인하고, 재직·경력증명서를 신청해 승인 뒤 PDF로 받습니다.</p>
+      </div>
+      <div class="where">위치 <code>/hr/documents</code></div>
+    </div>
+    <div class="grid-2">
+      <div class="block">
+        <h3>배포 문서 탭</h3>
+        <p>근로계약서, 규정처럼 HR이 나에게 배포한 문서의 목록·버전·만료일·<b>내 확인</b> 여부가 보입니다. 작업 열에서 열람하고 확인 처리를 합니다. 확인 여부는 HR 쪽에도 표시되니 받은 문서는 바로 확인해 두세요.</p>
+      </div>
+      <div class="block">
+        <h3>증명서 신청</h3>
+        <ol class="steps">
+          <li><div><b>증명서 탭 → <code>증명서 신청</code></b></div></li>
+          <li><div><b>유형 선택</b><small>재직증명서 · 경력증명서.</small></div></li>
+          <li><div><b>발급 용도 입력 (필수) → <code>신청 제출</code></b><small>신청 시점의 인사 정보와 발급번호가 고정됩니다.</small></div></li>
+          <li><div><b>승인 후 인쇄 또는 PDF 저장</b><small>결재는 주 소속 팀장 → HR 담당자 순으로 가고, 최종 승인된 뒤에 받을 수 있습니다. 목록에서 유형·발급번호·결재 상태·신청일을 확인합니다.</small></div></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 조직·직원 -->
+<section class="feature" id="people">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>조직·직원 열람</h2>
+        <p class="one-line">동료 연락처를 찾고, 조직도와 내가 받는 팀 메일 주소를 확인합니다.</p>
+      </div>
+      <div class="where">위치 <code>/hr/people</code></div>
+    </div>
+    <div class="grid-3">
+      <div class="block">
+        <h4>직원 명부 탭</h4>
+        <p>이름·사번 검색, 조직 필터, 조회 기준일. 이름을 클릭하면 사번·입사일·직무·고용 형태·소속 이력이 담긴 프로필 창이 열립니다. 전화번호와 개인 이메일은 조직 연락망용으로 전 직원에게 보이고, 생년월일은 본인과 HR만 봅니다.</p>
+      </div>
+      <div class="block">
+        <h4>조직도 탭</h4>
+        <p>조직별 인원수와 팀장, 상위 조직을 포함한 조직 목록입니다. 내 팀장이 누구인지, 곧 내 휴가 승인자가 누구인지 여기서 확인할 수 있습니다.</p>
+      </div>
+      <div class="block">
+        <h4>팀 메일 탭</h4>
+        <p>팀 대표 주소와 수신 인원·상태입니다. 내가 어떤 팀 주소를 받는지 확인하는 곳이며, 수정·삭제는 관리자만 합니다. <code>전달 복구</code> 탭과 <code>직원 등록</code> 버튼은 관리자용입니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 빠른 참조 -->
+<section class="feature" id="ref">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>빠른 참조</h2>
+        <p class="one-line">직원이 쓰는 메뉴만 모았습니다. 왼쪽 사이드바 순서와 같습니다.</p>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>메뉴</th><th>주소</th><th>여기서 하는 일</th></tr></thead>
+        <tbody>
+          <tr><td><b>새 메일</b></td><td><code>/mail/compose</code></td><td>작성 · 팀 주소로 발신 · 참조/숨은 참조 · 첨부 64개/3.5MB · 20초 자동 임시 저장 · 서명</td></tr>
+          <tr><td><b>받은편지함 등 폴더</b></td><td><code>/mail?folder=…</code></td><td>검색 · 안읽음 필터 · 일괄 처리 · 보관함 .eml 가져오기 · 휴지통 30일 보관</td></tr>
+          <tr><td><b>인사 홈</b></td><td><code>/hr</code></td><td>출퇴근 · 근무시간 변경 신청 · 연차 잔여량 · 인사 알림</td></tr>
+          <tr><td><b>조직·직원</b></td><td><code>/hr/people</code></td><td>직원 명부 · 조직도 · 팀 메일 확인</td></tr>
+          <tr><td><b>근태</b></td><td><code>/hr/attendance</code></td><td>월별 근태 조회 · 근태 정정 신청</td></tr>
+          <tr><td><b>휴가</b></td><td><code>/hr/leave</code></td><td>휴가 신청 · 내 신청 · 과거 이력 · 사용계획서 · 팀 부재 일정</td></tr>
+          <tr><td><b>캘린더</b></td><td><code>/hr/calendar</code></td><td>휴가·공휴일·회사·개인 일정 보기 · 일정 추가</td></tr>
+          <tr><td><b>결재함</b></td><td><code>/hr/approvals</code></td><td>내 신청함 · 받은 결재함 · 처리 이력 · 대리 승인</td></tr>
+          <tr><td><b>문서</b></td><td><code>/hr/documents</code></td><td>배포 문서 확인 · 증명서 신청</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:13.5px; color:var(--muted); margin-top:10px">연차 사용촉진 · 입퇴사 · 리포트 · 인사 설정 · 관리 메뉴는 관리자 전용이라 이 페이지에서 다루지 않습니다.</p>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="feature" id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <h2>자주 묻는 질문</h2>
+        <p class="one-line">막히면 먼저 여기를 보세요. 그래도 안 되면 HR 담당자에게 문의합니다.</p>
+      </div>
+    </div>
+    <details><summary>휴가를 냈는데 담당자가 안 보여요</summary><div class="body">조직도에서 내 주 소속 팀의 팀장이 <b>미지정</b>인지 확인하세요. 팀장이 없으면 신청이 HR 담당자에게 갑니다. 직원별 결재선에 HR 담당자도 지정되지 않았다면 HR에 요청해야 합니다.</div></details>
+    <details><summary>팀 메일이 나한테 안 와요</summary><div class="body">조직·직원 → 팀 메일 탭에서 내 조직 주소의 수신 인원에 내가 포함되는지 확인하세요. 하위 조직은 자동으로 포함되지 않습니다. 소속이 맞는데도 안 오면 HR 담당자가 전달 복구 화면에서 내 건의 상태를 확인할 수 있습니다.</div></details>
+    <details><summary>외부 메일함으로 자동 전달이 안 돼요</summary><div class="body">계정 관리 → 메일 자동 전달에서 상태가 <b>전달 중</b>인지, 주소 인증을 마쳤는지 확인하세요. 팀 메일까지 전달받으려면 HR이 팀 주소 설정에서 "구성원의 개인 자동 전달 설정 적용"을 켜 두어야 합니다. 과거 메일은 전달되지 않습니다.</div></details>
+    <details><summary>연차 잔여가 이상해요</summary><div class="body">인사 홈 또는 휴가 화면의 <b>발생·만료별 잔여량 확인</b>과 <b>연차 원장 확인</b>으로 부여·사용 내역을 대조하세요. 신청 중인 휴가는 "신청 중"으로 따로 잡힙니다. 과거 이력 탭은 조회용이라 잔여에 반영되지 않습니다. 그래도 맞지 않으면 HR에 문의합니다.</div></details>
+    <details><summary>휴가 승인 Slack 알림이 안 와요</summary><div class="body">Slack 연결은 HR이 인사 설정에서 관리합니다. 내 Slack 수신자가 지정되어 있는지 HR 담당자에게 확인을 요청하세요. 결재 결과는 Slack과 별개로 인사 홈의 인사 알림과 결재함 내 신청함에서도 볼 수 있습니다.</div></details>
+    <details><summary>실수로 휴지통을 비웠어요</summary><div class="body"><b>복구할 수 없습니다.</b> 휴지통 비우기는 즉시 영구 삭제입니다. 비우기 전이라면 30일 안에 <b>받은편지함으로</b> 또는 <b>보낸편지함으로</b>로 복원할 수 있습니다.</div></details>
+    <details><summary>비밀번호를 잊었어요</summary><div class="body">로그아웃한 뒤 로그인 화면에서 가입 때 등록한 복구 이메일로 인증해 재설정합니다. 어떤 복구 이메일을 등록했는지 모르면 슈퍼 관리자가 계정 승인 목록에서 확인해 알려줄 수 있습니다.</div></details>
+    <details><summary>휴가 신청 내용을 잘못 썼어요</summary><div class="body">제출된 신청은 결재선과 내용이 고정됩니다. 내 신청 탭에서 <b>철회</b>한 뒤 다시 신청하세요. 이미 승인된 휴가라면 취소 신청을 하면 "휴가 취소" 결재가 따로 생성되고, 완료될 때까지 차감은 유지됩니다.</div></details>
+
+    <h3 style="margin:34px 0 12px">알아두면 좋은 용어</h3>
+    <div class="terms">
+      <div class="term"><b>주 소속 / 겸직</b><span>직원은 주 소속 조직 1개와 여러 겸직 조직을 가집니다. 휴가 승인자는 주 소속 기준, 팀 메일은 주 소속·겸직 모두 받습니다.</span></div>
+      <div class="term"><b>팀 메일</b><span>조직에 붙은 대표 주소. 받은 시점의 구성원 각자 사서함으로 복사됩니다.</span></div>
+      <div class="term"><b>원장</b><span>연차와 대체휴가별 잔여량 장부. 부여·신청 중·사용·만료를 분 단위로 기록합니다.</span></div>
+      <div class="term"><b>만료 경계일</b><span>사용 가능한 마지막 날의 다음 날.</span></div>
+      <div class="term"><b>확정 · 승인 불필요</b><span>팀장 본인 또는 승인 면제자의 신청 상태. 담당자는 열람만 합니다.</span></div>
+      <div class="term"><b>운영관리자 · 슈퍼 관리자 배지</b><span>각각 HR 관리자 전용, 메일 관리자 전용 기능 표시. 직원에게는 보이지 않습니다.</span></div>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <span>기준 문서: 2026-10-17 메이저맵 HRM 사용 매뉴얼 (Part A 일반 임직원용)</span>
+    <span>화면 문구는 실제 서비스를 기준으로 하되, 서비스 업데이트에 따라 달라질 수 있습니다.</span>
+  </div>
+</footer>
+
+<!-- 투어 -->
+<div id="tour-mask" aria-hidden="true"><div id="tour-hole"></div></div>
+<div id="tour-pop" role="dialog" aria-modal="false" aria-labelledby="tour-title">
+  <div class="k" id="tour-k"></div>
+  <h4 id="tour-title"></h4>
+  <p id="tour-text"></p>
+  <div class="acts">
+    <button class="btn ghost" type="button" id="tour-skip">그만 보기</button>
+    <span class="sp"></span>
+    <button class="btn" type="button" id="tour-prev">이전</button>
+    <button class="btn primary" type="button" id="tour-next">다음</button>
+  </div>
+</div>
+
+<script>
+(function () {
+  // 복사 버튼
+  document.querySelectorAll('.copy').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var t = b.getAttribute('data-copy');
+      var done = function () { var o = b.textContent; b.textContent = '복사됨'; setTimeout(function () { b.textContent = o; }, 1400); };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(t).then(done, function () { selectText(); done(); });
+      } else { selectText(); done(); }
+      function selectText() {
+        var el = document.getElementById('addr-text'); if (!el) return;
+        var r = document.createRange(); r.selectNodeContents(el);
+        var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      }
+    });
+  });
+
+  // 체크리스트 (이 브라우저에만 저장)
+  var KEY = 'hrm-onboarding-checks';
+  var boxes = Array.prototype.slice.call(document.querySelectorAll('[data-ck]'));
+  var count = document.getElementById('check-count'), bar = document.getElementById('check-bar');
+  function load() { try { var s = JSON.parse(localStorage.getItem(KEY) || '{}'); boxes.forEach(function (b) { b.checked = !!s[b.id]; }); } catch (e) {} }
+  function save() { try { var s = {}; boxes.forEach(function (b) { s[b.id] = b.checked; }); localStorage.setItem(KEY, JSON.stringify(s)); } catch (e) {} }
+  function render() { var n = boxes.filter(function (b) { return b.checked; }).length; count.textContent = n + ' / ' + boxes.length; bar.style.width = (n / boxes.length * 100) + '%'; }
+  load(); render();
+  boxes.forEach(function (b) { b.addEventListener('change', function () { save(); render(); }); });
+  document.getElementById('check-reset').addEventListener('click', function () { boxes.forEach(function (b) { b.checked = false; }); save(); render(); });
+
+  // 현재 섹션 강조
+  var links = Array.prototype.slice.call(document.querySelectorAll('#nav a'));
+  var targets = links.map(function (a) { return document.querySelector(a.getAttribute('href')); }).filter(Boolean);
+  function setActive() {
+    var y = window.scrollY + 90, cur = targets[0];
+    targets.forEach(function (t) { if (t.offsetTop <= y) cur = t; });
+    links.forEach(function (a) { a.classList.toggle('active', a.getAttribute('href') === '#' + cur.id); });
+  }
+  if (targets.length) { setActive(); window.addEventListener('scroll', setActive, { passive: true }); }
+
+  // 3분 투어 (한 번에 하나씩 비추기)
+  var steps = [
+    { sel: '#checklist', title: '첫날 체크리스트', text: '오늘 할 일 7가지입니다. 체크하면 이 브라우저에 저장되니 하나씩 지워 가세요.' },
+    { sel: '#flow', title: '하루 흐름', text: '출근 → 메일 → 휴가 신청 → 결재 확인 → 퇴근. 각 칸을 누르면 해당 설명으로 이동합니다.' },
+    { sel: '#account .grid-2', title: '계정 연결이 먼저', text: '가입 → 승인 → 직원 정보 연결. 세 번째가 끝나야 인사 홈이 내 이름으로 동작합니다.' },
+    { sel: '#mail .mock', title: '받은편지함 읽기', text: '736 / 770은 안 읽음 / 전체. 팀 메일 배지는 팀 대표 주소로 받은 메일입니다.' },
+    { sel: '#attendance .grid-3', title: '출근 찍기와 연차 보기', text: '근무 장소 → 출근 → 퇴근. 연차는 8시간 = 1일로 환산해 보여줍니다.' },
+    { sel: '#leave .steps', title: '휴가 신청 7단계', text: '사용량 미리 계산을 눌러야 제출 버튼이 켜집니다. 제출 후에는 내용이 고정됩니다.' },
+    { sel: '#approvals .grid-2', title: '결재함', text: '휴가·정정·증명서 결과는 모두 내 신청함에서 봅니다.' },
+    { sel: '#faq details', title: '막히면 FAQ', text: '담당자가 안 보일 때, 팀 메일이 안 올 때, 연차가 이상할 때 먼저 확인할 것들입니다.' }
+  ];
+  var mask = document.getElementById('tour-mask'), hole = document.getElementById('tour-hole'), pop = document.getElementById('tour-pop');
+  var kEl = document.getElementById('tour-k'), tEl = document.getElementById('tour-title'), xEl = document.getElementById('tour-text');
+  var prevBtn = document.getElementById('tour-prev'), nextBtn = document.getElementById('tour-next');
+  var i = -1, curEl = null;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function place() {
+    if (!curEl) return;
+    var r = curEl.getBoundingClientRect(), pad = 10;
+    var top = r.top + window.scrollY - pad, left = r.left + window.scrollX - pad;
+    hole.style.top = (r.top - pad) + 'px'; hole.style.left = (r.left - pad) + 'px';
+    hole.style.width = (r.width + pad * 2) + 'px'; hole.style.height = (r.height + pad * 2) + 'px';
+    var popH = pop.offsetHeight || 160, below = r.bottom + 14 + popH < window.innerHeight;
+    var pTop = below ? (r.bottom + window.scrollY + 14) : Math.max(window.scrollY + 76, r.top + window.scrollY - popH - 14);
+    var pLeft = Math.min(Math.max(16, left), Math.max(16, window.innerWidth - pop.offsetWidth - 16));
+    pop.style.top = pTop + 'px'; pop.style.left = pLeft + 'px';
+  }
+  function show(n) {
+    if (n < 0 || n >= steps.length) return end();
+    i = n; var s = steps[i]; var el = document.querySelector(s.sel); if (!el) return show(n + 1);
+    if (curEl) curEl.classList.remove('tour-target-highlight');
+    curEl = el; curEl.classList.add('tour-target-highlight');
+    kEl.textContent = (i + 1) + ' / ' + steps.length; tEl.textContent = s.title; xEl.textContent = s.text;
+    prevBtn.disabled = i === 0; nextBtn.textContent = i === steps.length - 1 ? '끝내기' : '다음';
+    mask.classList.add('on'); pop.classList.add('on');
+    var r = el.getBoundingClientRect();
+    window.scrollTo({ top: r.top + window.scrollY - 110, behavior: reduce ? 'auto' : 'smooth' });
+    place(); setTimeout(place, reduce ? 0 : 350); setTimeout(place, 700);
+    nextBtn.focus();
+  }
+  function end() { mask.classList.remove('on'); pop.classList.remove('on'); if (curEl) curEl.classList.remove('tour-target-highlight'); curEl = null; i = -1; }
+  document.getElementById('tour-start').addEventListener('click', function () { show(0); });
+  nextBtn.addEventListener('click', function () { show(i + 1); });
+  prevBtn.addEventListener('click', function () { show(i - 1); });
+  document.getElementById('tour-skip').addEventListener('click', end);
+  document.addEventListener('keydown', function (e) {
+    if (i < 0) return;
+    if (e.key === 'Escape') end();
+    else if (e.key === 'ArrowRight' || e.key === 'Enter') { e.preventDefault(); show(i + 1); }
+    else if (e.key === 'ArrowLeft') { e.preventDefault(); show(i - 1); }
+  });
+  window.addEventListener('resize', place); window.addEventListener('scroll', place, { passive: true });
+})();
+</script>
+</body>
+</html>
