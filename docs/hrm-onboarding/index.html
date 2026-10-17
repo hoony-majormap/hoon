@@ -5,49 +5,63 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>메이저맵 HRM 첫걸음</title>
 <meta name="description" content="메이저맵 HRM(사내 메일 + 인사)을 처음 쓰는 직원을 위한 온보딩 가이드. 직원이 실제로 쓰는 기능만 담았습니다.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Hahmlet:wght@500;600;700&display=swap">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='345.984 257.258 63.609 47.922'%3E%3Cpath fill='%23EA5645' d='M404.402 257.258H394.07l-10.297 26.351V257.258h-16.664l-10.023 25.652-.719-8.891h-10.383l2.41 31.16h11.055l13.941-35.73-.086 35.73h11.946l13.96-35.73-.085 35.73h10.383l.086-47.922z'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/wanteddev/wanted-sans@v1.0.3/packages/wanted-sans/fonts/webfonts/variable/split/WantedSansVariable.min.css">
 <style>
-/* 레이아웃 콘셉트: 왼쪽 사이드바 메뉴를 가진 실제 HRM 화면처럼, 상단 고정 메뉴 + 긴 한 페이지. 한 번에 하나씩 보여주는 투어 모드. */
+/* 레이아웃 콘셉트: 왼쪽 사이드바 메뉴를 가진 실제 HRM 화면처럼, 상단 고정 메뉴 + 긴 한 페이지. 한 번에 하나씩 보여주는 투어 모드.
+   색·서체: 메이저맵 BI 가이드(2025-12-10) — Major Map Red #EA5645 / Navy #202B45 / Mint #90C6B4 / Paper #F6F7F8, 서체 Wanted Sans. */
 :root {
-  --bg: #F5F7F6;
+  --brand-red: #EA5645;
+  --brand-navy: #202B45;
+  --brand-mint: #90C6B4;
+  --brand-sky: #92B8F4;
+  --bg: #F6F7F8;
   --surface: #FFFFFF;
-  --surface-2: #EDF2F0;
-  --fg: #1A2622;
-  --muted: #5C6B66;
-  --line: #D8E0DC;
-  --accent: #0E6B63;
+  --surface-2: #EEF0F3;
+  --fg: #202B45;
+  --muted: #5E6779;
+  --line: #DCE0E7;
+  --accent: #EA5645;
   --accent-ink: #FFFFFF;
-  --accent-soft: #DCEEEA;
-  --good: #2A7A4B;
-  --good-soft: #DFF1E4;
+  --accent-soft: #FDECE9;
+  --mint-soft: #E4F2EC;
+  --good: #2F7A5C;
+  --good-soft: #E4F2EC;
   --warn: #9A6412;
-  --warn-soft: #F8EDD4;
-  --danger: #B0392E;
-  --danger-soft: #F9E1DE;
+  --warn-soft: #F9EFD6;
+  --danger: #C23A2B;
+  --danger-soft: #FDECE9;
   --badge-hr: #1F5FBF;
-  --badge-super: #1A2622;
-  --shadow: 0 1px 2px rgba(20, 40, 35, .06), 0 8px 24px rgba(20, 40, 35, .08);
-  --font-body: "IBM Plex Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", sans-serif;
-  --font-display: "Hahmlet", "Apple SD Gothic Neo", "Nanum Myeongjo", serif;
+  --badge-super: #202B45;
+  --band: #202B45;
+  --band-fg: #FFFFFF;
+  --band-muted: #90C6B4;
+  --btn2-bg: #202B45;
+  --btn2-fg: #FFFFFF;
+  --shadow: 0 1px 2px rgba(32, 43, 69, .06), 0 8px 24px rgba(32, 43, 69, .08);
+  --font-body: "Wanted Sans Variable", "Wanted Sans", "Pretendard", -apple-system, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --font-display: var(--font-body);
   --radius: 12px;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #0E1614; --surface: #15201D; --surface-2: #1C2925; --fg: #E4ECE9; --muted: #99A9A3; --line: #273833;
-    --accent: #5FC8BB; --accent-ink: #0B1715; --accent-soft: #163331;
-    --good: #6CCB8E; --good-soft: #163A26; --warn: #E2B563; --warn-soft: #3A2E13; --danger: #F08C80; --danger-soft: #42201C;
-    --badge-hr: #7FA9F0; --badge-super: #E4ECE9;
+    --bg: #161D30; --surface: #202B45; --surface-2: #28344F; --fg: #F2F4F8; --muted: #AAB3C5; --line: #34405C;
+    --accent: #EA5645; --accent-ink: #FFFFFF; --accent-soft: #46303A; --mint-soft: #26413F;
+    --good: #90C6B4; --good-soft: #26413F; --warn: #EFDF7F; --warn-soft: #3F3A22; --danger: #FF746B; --danger-soft: #4A2A2C;
+    --badge-hr: #92B8F4; --badge-super: #F2F4F8;
+    --band: #0F1526; --band-fg: #F2F4F8; --band-muted: #90C6B4;
+    --btn2-bg: #F2F4F8; --btn2-fg: #202B45;
     --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.35);
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #0E1614; --surface: #15201D; --surface-2: #1C2925; --fg: #E4ECE9; --muted: #99A9A3; --line: #273833;
-  --accent: #5FC8BB; --accent-ink: #0B1715; --accent-soft: #163331;
-  --good: #6CCB8E; --good-soft: #163A26; --warn: #E2B563; --warn-soft: #3A2E13; --danger: #F08C80; --danger-soft: #42201C;
-  --badge-hr: #7FA9F0; --badge-super: #E4ECE9;
+  --bg: #161D30; --surface: #202B45; --surface-2: #28344F; --fg: #F2F4F8; --muted: #AAB3C5; --line: #34405C;
+  --accent: #EA5645; --accent-ink: #FFFFFF; --accent-soft: #46303A; --mint-soft: #26413F;
+  --good: #90C6B4; --good-soft: #26413F; --warn: #EFDF7F; --warn-soft: #3F3A22; --danger: #FF746B; --danger-soft: #4A2A2C;
+  --badge-hr: #92B8F4; --badge-super: #F2F4F8;
+  --band: #0F1526; --band-fg: #F2F4F8; --band-muted: #90C6B4;
+  --btn2-bg: #F2F4F8; --btn2-fg: #202B45;
   --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.35);
   color-scheme: dark;
 }
@@ -62,12 +76,13 @@ body {
 }
 body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 60; background: var(--surface); }
 h1, h2, h3, h4 { margin: 0; line-height: 1.3; text-wrap: balance; }
-h1 { font-family: var(--font-display); font-weight: 600; font-size: clamp(30px, 5vw, 46px); letter-spacing: -0.02em; }
-h2 { font-family: var(--font-display); font-weight: 600; font-size: clamp(24px, 3.4vw, 32px); letter-spacing: -0.02em; }
-h3 { font-size: 19px; font-weight: 600; }
-h4 { font-size: 16px; font-weight: 600; }
+h1 { font-family: var(--font-display); font-weight: 800; font-size: clamp(30px, 5vw, 46px); letter-spacing: -0.03em; }
+h2 { font-family: var(--font-display); font-weight: 700; font-size: clamp(24px, 3.4vw, 32px); letter-spacing: -0.025em; }
+h3 { font-size: 19px; font-weight: 700; }
+h4 { font-size: 16px; font-weight: 700; }
 p { margin: 0; }
-a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+a { color: var(--fg); text-decoration-color: var(--accent); text-decoration-thickness: 1.5px; text-underline-offset: 3px; }
+a:hover { color: var(--accent); }
 code, kbd { font-family: var(--font-body); font-size: .92em; background: var(--surface-2); border: 1px solid var(--line); border-radius: 6px; padding: 1px 6px; white-space: nowrap; }
 ul, ol { margin: 0; padding-left: 1.3em; }
 li + li { margin-top: 6px; }
@@ -78,8 +93,8 @@ li + li { margin-top: 6px; }
 /* 상단 메뉴 */
 .topbar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50; background: var(--surface); border-bottom: 1px solid var(--line); }
 .topbar .wrap { display: flex; align-items: center; gap: 16px; min-height: 60px; }
-.brand { display: flex; align-items: center; gap: 10px; font-weight: 600; white-space: nowrap; }
-.brand .mark { width: 28px; height: 28px; border-radius: 8px; background: var(--accent); color: var(--accent-ink); display: grid; place-items: center; font-family: var(--font-display); font-weight: 700; font-size: 15px; }
+.brand { display: flex; align-items: center; gap: 10px; font-weight: 700; white-space: nowrap; }
+.brand .mark { width: 30px; height: 22px; display: block; flex: none; }
 .brand small { color: var(--muted); font-weight: 500; font-size: 13px; }
 .nav { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; flex: 1; min-width: 0; }
 .nav::-webkit-scrollbar { display: none; }
@@ -87,16 +102,20 @@ li + li { margin-top: 6px; }
 .nav a:hover { background: var(--surface-2); color: var(--fg); }
 .nav a.active { color: var(--accent); background: var(--accent-soft); }
 .btn { font: inherit; font-size: 14px; font-weight: 600; border-radius: 10px; padding: 9px 14px; border: 1px solid var(--line); background: var(--surface); color: var(--fg); cursor: pointer; white-space: nowrap; text-decoration: none; display: inline-block; }
-.btn:hover { background: var(--surface-2); }
-.btn.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
-.btn.primary:hover { filter: brightness(1.05); }
+.btn:hover { background: var(--surface-2); color: var(--fg); }
+.btn.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); font-weight: 700; }
+.btn.primary:hover { background: #D94B3B; border-color: #D94B3B; color: var(--accent-ink); }
+.btn.navy { background: var(--btn2-bg); color: var(--btn2-fg); border-color: var(--btn2-bg); }
+.btn.navy:hover { background: var(--btn2-bg); border-color: var(--btn2-bg); color: var(--btn2-fg); opacity: .9; }
 .btn.ghost { border-color: transparent; background: transparent; color: var(--muted); }
 
 /* 히어로 */
-.hero { padding-block: 56px 40px; }
-.hero .wrap { display: grid; grid-template-columns: 1.3fr 1fr; gap: 40px; align-items: start; }
-.eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); }
+.hero { padding-block: 56px 40px; position: relative; overflow: hidden; }
+.hero .motif { position: absolute; right: -4%; top: -18%; width: min(52vw, 640px); height: auto; opacity: .06; pointer-events: none; z-index: 0; }
+.hero .wrap { display: grid; grid-template-columns: 1.3fr 1fr; gap: 40px; align-items: start; position: relative; z-index: 1; }
+.eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 12.5px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--accent); }
 .eyebrow::before { content: ""; width: 18px; height: 2px; background: var(--accent); }
+.sec-label { font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; font-variant-numeric: tabular-nums; }
 .lead { font-size: 18px; color: var(--muted); max-width: 34em; margin-top: 18px; }
 .hero-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 26px; }
 .addr { display: inline-flex; align-items: center; gap: 10px; margin-top: 22px; padding: 10px 14px; border: 1px dashed var(--line); border-radius: 10px; background: var(--surface); font-size: 15px; }
@@ -152,8 +171,8 @@ section.feature { padding-block: 44px; border-top: 1px solid var(--line); }
 /* 콜아웃 */
 .note { display: grid; grid-template-columns: auto 1fr; gap: 12px; align-items: start; padding: 14px 16px; border-radius: 10px; font-size: 14.5px; border: 1px solid transparent; }
 .note .ic { width: 22px; height: 22px; border-radius: 6px; display: grid; place-items: center; font-size: 12px; font-weight: 700; flex: none; margin-top: 2px; }
-.note.tip { background: var(--accent-soft); color: var(--fg); } .note.tip .ic { background: var(--accent); color: var(--accent-ink); }
-.note.good { background: var(--good-soft); } .note.good .ic { background: var(--good); color: #fff; }
+.note.tip { background: var(--mint-soft); color: var(--fg); } .note.tip .ic { background: var(--brand-mint); color: var(--brand-navy); }
+.note.good { background: var(--good-soft); } .note.good .ic { background: var(--brand-navy); color: #fff; }
 .note.warn { background: var(--warn-soft); } .note.warn .ic { background: var(--warn); color: #fff; }
 .note.danger { background: var(--danger-soft); } .note.danger .ic { background: var(--danger); color: #fff; }
 .note b { font-weight: 600; }
@@ -162,7 +181,7 @@ section.feature { padding-block: 44px; border-top: 1px solid var(--line); }
 .badge { display: inline-block; font-size: 12px; font-weight: 600; padding: 1px 8px; border-radius: 99px; border: 1px solid var(--line); vertical-align: middle; white-space: nowrap; }
 .badge.hr { color: #fff; background: var(--badge-hr); border-color: var(--badge-hr); }
 .badge.super { color: var(--bg); background: var(--badge-super); border-color: var(--badge-super); }
-.badge.team { background: var(--accent-soft); color: var(--accent); border-color: transparent; }
+.badge.team { background: var(--mint-soft); color: var(--good); border-color: transparent; }
 .chips { display: flex; flex-wrap: wrap; gap: 6px; }
 .chip { font-size: 13px; padding: 3px 10px; border-radius: 99px; background: var(--surface-2); border: 1px solid var(--line); }
 .status { display: inline-block; font-size: 12.5px; font-weight: 600; padding: 2px 9px; border-radius: 6px; }
@@ -221,8 +240,12 @@ details .body b { color: var(--fg); font-weight: 600; }
 .term b { display: block; font-weight: 600; margin-bottom: 4px; }
 .term span { color: var(--muted); }
 
-footer.site { padding-block: 30px 50px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13.5px; }
-footer.site .wrap { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+footer.site { padding-block: 40px 56px; background: var(--band); color: var(--band-fg); font-size: 13.5px; position: relative; overflow: hidden; }
+footer.site .motif { position: absolute; right: -2%; bottom: -30%; width: min(40vw, 420px); height: auto; opacity: .14; pointer-events: none; }
+footer.site .wrap { display: grid; grid-template-columns: auto 1fr; gap: 16px 28px; align-items: start; position: relative; }
+footer.site .mark { width: 42px; height: 32px; display: block; }
+footer.site .meta { display: grid; gap: 4px; color: var(--band-muted); }
+footer.site .meta b { color: var(--band-fg); font-weight: 700; font-size: 15px; }
 
 /* 투어 */
 #tour-mask { position: fixed; inset: 0; z-index: 90; display: none; pointer-events: none; }
@@ -250,6 +273,7 @@ footer.site .wrap { display: flex; justify-content: space-between; gap: 12px; fl
   .kpi { grid-template-columns: 1fr 1fr; }
   .sec-head { grid-template-columns: 1fr; align-items: start; }
   .brand small { display: none; }
+  footer.site .wrap { grid-template-columns: 1fr; }
 }
 </style>
 </head>
@@ -257,7 +281,7 @@ footer.site .wrap { display: flex; justify-content: space-between; gap: 12px; fl
 
 <header class="topbar">
   <div class="wrap">
-    <div class="brand"><span class="mark">M</span> 메이저맵 HRM <small>직원 온보딩</small></div>
+    <div class="brand"><svg class="mark" viewBox="345.984 257.258 63.609 47.922" role="img" aria-label="MAJOR MAP"><path fill="#EA5645" d="M 404.402344 257.257812 L 394.070312 257.257812 L 383.773438 283.609375 L 383.773438 257.257812 L 367.109375 257.257812 L 357.085938 282.910156 L 356.367188 274.019531 L 345.984375 274.019531 L 348.394531 305.179688 L 359.449219 305.179688 L 373.390625 269.449219 L 373.304688 305.179688 L 385.25 305.179688 L 399.210938 269.449219 L 399.125 305.179688 L 409.507812 305.179688 L 409.59375 257.257812 Z"/></svg> 메이저맵 HRM <small>직원 온보딩</small></div>
     <nav class="nav" id="nav" aria-label="섹션 메뉴">
       <a href="#start">시작하기</a>
       <a href="#mail">메일</a>
@@ -275,9 +299,10 @@ footer.site .wrap { display: flex; justify-content: space-between; gap: 12px; fl
 </header>
 
 <section class="hero" id="start">
+  <svg class="motif" viewBox="345.984 257.258 63.609 47.922" aria-hidden="true" focusable="false"><path fill="#EA5645" d="M 404.402344 257.257812 L 394.070312 257.257812 L 383.773438 283.609375 L 383.773438 257.257812 L 367.109375 257.257812 L 357.085938 282.910156 L 356.367188 274.019531 L 345.984375 274.019531 L 348.394531 305.179688 L 359.449219 305.179688 L 373.390625 269.449219 L 373.304688 305.179688 L 385.25 305.179688 L 399.210938 269.449219 L 399.125 305.179688 L 409.507812 305.179688 L 409.59375 257.257812 Z"/></svg>
   <div class="wrap">
     <div>
-      <span class="eyebrow">첫날부터 바로 쓰는 법</span>
+      <span class="eyebrow">Onboarding · 첫날부터 바로 쓰는 법</span>
       <h1 style="margin-top:14px">메일 열고, 출근 찍고,<br>휴가 신청하기까지.</h1>
       <p class="lead">메이저맵 HRM은 사내 웹메일(@majormap.net)과 인사 업무를 한 화면에서 처리하는 자체 서비스입니다. 이 페이지는 직원이 실제로 쓰는 기능만 골라, 화면 순서대로 설명합니다. 관리자 전용 메뉴는 다루지 않습니다.</p>
       <div class="addr">
@@ -287,7 +312,7 @@ footer.site .wrap { display: flex; justify-content: space-between; gap: 12px; fl
       </div>
       <div class="hero-actions">
         <a class="btn primary" href="#account">계정 만들기부터 보기</a>
-        <a class="btn" href="#leave">휴가 신청 방법으로 건너뛰기</a>
+        <a class="btn navy" href="#leave">휴가 신청 방법으로 건너뛰기</a>
       </div>
       <div class="note tip" style="margin-top:26px; max-width:38em">
         <span class="ic">i</span>
@@ -335,6 +360,7 @@ footer.site .wrap { display: flex; justify-content: space-between; gap: 12px; fl
   <div class="wrap">
     <div class="sec-head">
       <div>
+        <div class="sec-label">01 · Account</div>
         <h2>계정과 로그인</h2>
         <p class="one-line">회사 메일 주소로 가입하고, 승인과 계정 연결이 끝나면 인사 기능이 내 기준으로 움직입니다.</p>
       </div>
@@ -369,6 +395,7 @@ footer.site .wrap { display: flex; justify-content: space-between; gap: 12px; fl
   <div class="wrap">
     <div class="sec-head">
       <div>
+        <div class="sec-label">02 · Mail</div>
         <h2>메일</h2>
         <p class="one-line">받은편지함을 읽고, 팀 주소로도 보내고, 큰 첨부는 링크로. 쓰다 멈춰도 20초 뒤 자동 저장됩니다.</p>
       </div>
@@ -449,6 +476,7 @@ footer.site .wrap { display: flex; justify-content: space-between; gap: 12px; fl
   <div class="wrap">
     <div class="sec-head">
       <div>
+        <div class="sec-label">03 · Attendance</div>
         <h2>인사 홈과 출퇴근</h2>
         <p class="one-line">인사 홈은 하루의 시작 화면입니다. 위에서부터 오늘의 출퇴근 → 잔여 휴가 → 바로가기 → 인사 알림 순으로 보입니다.</p>
       </div>
@@ -497,6 +525,7 @@ footer.site .wrap { display: flex; justify-content: space-between; gap: 12px; fl
   <div class="wrap">
     <div class="sec-head">
       <div>
+        <div class="sec-label">04 · Leave</div>
         <h2>휴가</h2>
         <p class="one-line">유형과 단위를 고르고, 사용량을 미리 계산한 뒤 제출합니다. 승인은 내 팀장이 하고, 결과는 Slack으로 옵니다.</p>
       </div>
@@ -544,6 +573,7 @@ footer.site .wrap { display: flex; justify-content: space-between; gap: 12px; fl
   <div class="wrap">
     <div class="sec-head">
       <div>
+        <div class="sec-label">05 · Approvals</div>
         <h2>결재함</h2>
         <p class="one-line">휴가 · 휴가 취소 · 근태 정정 · 근무시간 변경 · 증명서 신청, 다섯 가지가 모두 한 결재함에 모입니다.</p>
       </div>
@@ -581,6 +611,7 @@ footer.site .wrap { display: flex; justify-content: space-between; gap: 12px; fl
   <div class="wrap">
     <div class="sec-head">
       <div>
+        <div class="sec-label">06 · Calendar</div>
         <h2>캘린더</h2>
         <p class="one-line">휴가, 공휴일, 회사 일정, 내 개인 일정을 한 달력에서 봅니다.</p>
       </div>
@@ -612,6 +643,7 @@ footer.site .wrap { display: flex; justify-content: space-between; gap: 12px; fl
   <div class="wrap">
     <div class="sec-head">
       <div>
+        <div class="sec-label">07 · Documents</div>
         <h2>문서와 증명서</h2>
         <p class="one-line">HR이 배포한 문서를 확인하고, 재직·경력증명서를 신청해 승인 뒤 PDF로 받습니다.</p>
       </div>
@@ -640,6 +672,7 @@ footer.site .wrap { display: flex; justify-content: space-between; gap: 12px; fl
   <div class="wrap">
     <div class="sec-head">
       <div>
+        <div class="sec-label">08 · People</div>
         <h2>조직·직원 열람</h2>
         <p class="one-line">동료 연락처를 찾고, 조직도와 내가 받는 팀 메일 주소를 확인합니다.</p>
       </div>
@@ -667,6 +700,7 @@ footer.site .wrap { display: flex; justify-content: space-between; gap: 12px; fl
   <div class="wrap">
     <div class="sec-head">
       <div>
+        <div class="sec-label">Quick Reference</div>
         <h2>빠른 참조</h2>
         <p class="one-line">직원이 쓰는 메뉴만 모았습니다. 왼쪽 사이드바 순서와 같습니다.</p>
       </div>
@@ -696,6 +730,7 @@ footer.site .wrap { display: flex; justify-content: space-between; gap: 12px; fl
   <div class="wrap">
     <div class="sec-head">
       <div>
+        <div class="sec-label">FAQ</div>
         <h2>자주 묻는 질문</h2>
         <p class="one-line">막히면 먼저 여기를 보세요. 그래도 안 되면 HR 담당자에게 문의합니다.</p>
       </div>
@@ -722,9 +757,14 @@ footer.site .wrap { display: flex; justify-content: space-between; gap: 12px; fl
 </section>
 
 <footer class="site">
+  <svg class="motif" viewBox="345.984 257.258 63.609 47.922" aria-hidden="true" focusable="false"><path fill="#92B8F4" d="M 404.402344 257.257812 L 394.070312 257.257812 L 383.773438 283.609375 L 383.773438 257.257812 L 367.109375 257.257812 L 357.085938 282.910156 L 356.367188 274.019531 L 345.984375 274.019531 L 348.394531 305.179688 L 359.449219 305.179688 L 373.390625 269.449219 L 373.304688 305.179688 L 385.25 305.179688 L 399.210938 269.449219 L 399.125 305.179688 L 409.507812 305.179688 L 409.59375 257.257812 Z"/></svg>
   <div class="wrap">
-    <span>기준 문서: 2026-10-17 메이저맵 HRM 사용 매뉴얼 (Part A 일반 임직원용)</span>
-    <span>화면 문구는 실제 서비스를 기준으로 하되, 서비스 업데이트에 따라 달라질 수 있습니다.</span>
+    <svg class="mark" viewBox="345.984 257.258 63.609 47.922" role="img" aria-label="MAJOR MAP"><path fill="#EA5645" d="M 404.402344 257.257812 L 394.070312 257.257812 L 383.773438 283.609375 L 383.773438 257.257812 L 367.109375 257.257812 L 357.085938 282.910156 L 356.367188 274.019531 L 345.984375 274.019531 L 348.394531 305.179688 L 359.449219 305.179688 L 373.390625 269.449219 L 373.304688 305.179688 L 385.25 305.179688 L 399.210938 269.449219 L 399.125 305.179688 L 409.507812 305.179688 L 409.59375 257.257812 Z"/></svg>
+    <div class="meta">
+      <b>메이저맵 HRM 직원 온보딩</b>
+      <span>기준 문서: 2026-10-17 메이저맵 HRM 사용 매뉴얼 (Part A 일반 임직원용)</span>
+      <span>화면 문구는 실제 서비스를 기준으로 하되, 서비스 업데이트에 따라 달라질 수 있습니다.</span>
+    </div>
   </div>
 </footer>
 
