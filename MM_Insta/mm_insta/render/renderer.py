@@ -15,7 +15,7 @@ from pathlib import Path
 from jinja2 import Environment, FileSystemLoader, StrictUndefined
 from PIL import Image
 
-from ..config import ASSETS_DIR, BRAND, CARD_H, CARD_W, FONT_SHRINK_STEP, JPEG_QUALITY, SERIES, TEMPLATES_DIR
+from ..config import ASSETS_DIR, BRAND, CARD_H, CARD_W, FONT_SHRINK_STEP, JPEG_QUALITY, TEMPLATES_DIR
 from ..models import fact_map, refs_in, resolve
 
 TEMPLATE_FILES = {
@@ -25,8 +25,12 @@ TEMPLATE_FILES = {
     "compare": "04_compare.html.j2",
     "action": "05_action.html.j2",
     "cta": "06_cta.html.j2",
+    "trend_item": "trend_item.html.j2",
+    "career": "career.html.j2",
 }
-BACKGROUNDS = {"hook": "navy", "big_number": "offwhite", "detail": "mint", "compare": "white", "action": "red", "cta": "navy"}
+BACKGROUNDS = {"hook": "navy", "big_number": "offwhite", "detail": "mint", "compare": "white", "action": "red",
+               "cta": "navy", "career": "red"}
+TREND_ITEM_BACKGROUNDS = ["offwhite", "mint", "white"]  # 유행 01·02·03
 # BI '색상 활용 규정': 흰·네이비 배경 → 레드 로고 / 레드·민트 배경 → 화이트 로고
 LOGOS = {"navy": "logo_text.png", "offwhite": "logo_text.png", "white": "logo_text.png",
          "red": "logo_text_white.png", "mint": "logo_text_white.png"}
@@ -124,18 +128,23 @@ def _characters() -> dict[str, str]:
 
 def build_html(script: dict, html_dir: Path) -> list[Path]:
     facts = fact_map(script)
-    series = SERIES.get(script["series"], {})
-    env = Environment(loader=FileSystemLoader(TEMPLATES_DIR / "mon_news"), autoescape=True, undefined=StrictUndefined)
+    env = Environment(loader=FileSystemLoader(TEMPLATES_DIR / "cards"), autoescape=True, undefined=StrictUndefined)
     all_refs = refs_in(script["slides"]) | refs_in(script["caption"])
+    trend = script.get("track") == "trend"
+    src = script.get("source") or {}
+    all_sources = _sources(all_refs, facts) if all_refs else []
+    if trend and src.get("name"):
+        all_sources = [f"{src['name']}({_fmt_date(src.get('date', ''))})"] + [s for s in all_sources if not s.startswith(src["name"])]
     common = {
         "asset_root": _uri(ASSETS_DIR),
-        "template_root": _uri(TEMPLATES_DIR / "mon_news"),
+        "template_root": _uri(TEMPLATES_DIR / "cards"),
         "fonts": FONTS,
         "characters": _characters(),
         "total": len(script["slides"]),
         "site": BRAND["site"],
-        "next_label": series.get("next", "다음 회"),
-        "all_sources": " · ".join(_sources(all_refs, facts)) if all_refs else "",
+        "next_label": script.get("next_label") or "다음 회",
+        "all_sources": " · ".join(all_sources),
+        "source_note": "내용은 메이저맵이 학생 눈높이로 재구성했습니다." if trend else "수치는 메이저맵이 재가공했습니다.",
     }
     html_dir.mkdir(parents=True, exist_ok=True)
     paths = []
@@ -159,7 +168,9 @@ def build_html(script: dict, html_dir: Path) -> list[Path]:
         source_line = ""
         if refs and layout != "cta":
             source_line = "출처: " + " · ".join(_sources(refs, facts)) + " · 메이저맵 재가공"
-        bg = BACKGROUNDS[layout]
+        elif trend and layout == "trend_item" and src.get("name"):
+            source_line = f"출처: {src['name']}({_fmt_date(src.get('date', ''))}) · 메이저맵 재구성"
+        bg = TREND_ITEM_BACKGROUNDS[(slide["index"] - 1) % 3] if layout == "trend_item" else BACKGROUNDS[layout]
         html = env.get_template(TEMPLATE_FILES[layout]).render(
             slide=slide, bg=bg, logo=LOGOS[bg], source_line=source_line, **common
         )

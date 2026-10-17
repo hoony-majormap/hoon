@@ -1,112 +1,108 @@
-# MM_Insta — 메이저맵 인스타 카드뉴스 자동 생성 에이전트
+# MM_Insta — 메이저맵 인스타 카드뉴스 스튜디오
 
-기획안 v1(2026-10-17)의 **§9 2시간 MVP** 구현입니다.
+평일마다 그날 올릴 인스타 카드뉴스(6장 + 본문 + 해시태그)를 AI가 만들어 두고, 올리는 사람은 웹페이지에서 **클릭으로 사진·본문·해시태그를 복사해 그대로 올리는** 서비스입니다.
 
-> 명령 한 번에, 노션 소재 1건이 메이저맵 브랜드 카드 6장(JPEG) + 캡션 + 출처 JSON으로 나온다.
-
-![샘플: 2028 입시 룰 변화](samples/trend_2028_rules/01.jpg)
-
-| 샘플 | 소재 | 결과 |
+| 요일 | 편 | 소재 |
 |---|---|---|
-| [`samples/trend_2028_rules`](samples/trend_2028_rules) | 부록 C 샘플 — 노션 트렌드 리포트 §4 (2028 개편) | G1~G4 통과 |
-| [`samples/skku_2027_jungsi`](samples/skku_2027_jungsi) | 아카이브 기사 — 성균관대 2027 정시 (학생부100%) | G1~G4 통과 |
+| 월·수·금 | **입시 브리핑** | 노션 「2026-10-17_최근 입시 트렌드」 리포트 주제 섹션 → 다 쓰면 「베리타스알파 구독자 기사 아카이브」 |
+| 화·목 | **요즘 트렌드** (고등학생 톤) | 노션 「캐릿 아티클 아카이브」 — 유행중·유행예감 우선, 유행지남 제외 |
 
-샘플의 `facts.json`·작가 원고는 API 키 없이 렌더·게이트를 검증하려고 미리 써 둔 **오프라인 고정 데이터**입니다 (`fixtures/demo/`). 실제 운영에서는 Claude가 같은 형식으로 생성합니다.
+![10/19~10/23 초기 카드](web/public/seed/2026-10-20/01.jpg)
 
----
-
-## 파이프라인
+## 흐름
 
 ```
-① 소재 ── 노션 아카이브 DB (또는 로컬 JSON)
-② 팩트 추출기 (Claude Sonnet 5.5) ── facts.json: 값·주장·출처·기준일·링크
-③ 작가 May·Polar (Claude Sonnet 5.5) ── 6장 원고. 숫자는 {f1}처럼 팩트 id로만 씀
-④ 검수 G1 팩트 · G2 원문유사도 · G3 톤·글자수 ── 실패 시 사유를 피드백으로 1회 재작성
-⑤ 렌더러 ── HTML 템플릿 → 헤드리스 Chromium 캡처 → JPEG 1080×1350 ×6
-   └ G4 렌더 검사 ── 글자 넘침·줄 수·캔버스 밖·Wanted Sans 로드 → 넘치면 글자 0.9배 축소 후 재검사
+[GitHub Actions] 월~금 06:00 KST
+  ① 요일로 편 결정 → 노션에서 안 쓴 소재 1건 선택
+  ② 팩트 추출 (Claude Sonnet 5.5) — 숫자마다 출처·기준일
+  ③ 작가 May·Polar (Claude Sonnet 5.5) — 입시: 6장 브리핑 / 트렌드: 유행 3개 + 진로 연결
+  ④ 자동 검수 G1 숫자 · G2 원문 베끼기 · G3 톤·글자 수 → 탈락 시 사유를 주고 1회 재작성
+  ⑤ HTML 템플릿 → 1080×1350 JPEG 6장 + G4 넘침·폰트 검사
+  ⑥ Supabase 저장 (insta_posts 행 + insta-cards 이미지)
+        ↓
+[웹 · Vercel] 인스타 스튜디오
+  이번 주 월~금 보드 → 날짜 클릭 → 사진 공유/저장/복사 · 본문·해시태그 복사 · '올렸어요' 표시
 ```
 
-**숫자는 코드가 넣습니다.** 작가는 `{f3}`만 쓰고 렌더러가 `facts.json` 값으로 바꿉니다. G1은 (a) 팩트 값의 숫자가 소재 원문에 있는지, (b) 원고에 직접 쓴 숫자가 없는지, (c) 없는 팩트를 참조하지 않는지 검사합니다. 학년 표기(고1·고2)만 예외입니다.
+**숫자는 코드가 넣습니다.** 작가는 `{f3}`처럼 팩트 번호만 쓰고, 원고에 숫자를 직접 쓰면 G1에서 탈락합니다. 검수를 통과하지 못하면 그날 카드는 `생성 실패`로 남고 웹에서 다시 만들 수 있습니다.
 
-| 게이트 | 이 MVP에서 | 1단계에서 추가 |
+## 웹 — 올리는 사람이 하는 일
+
+1. 스튜디오 접속 → 오늘 날짜 카드 클릭
+2. **휴대폰**: 아래 `사진 6장 공유 + 본문 복사` → 공유창에서 인스타그램 선택 → 본문 칸에 붙여넣기
+   **PC**: `6장 모두 저장` → 인스타 웹에서 6장 선택 → `본문 + 해시태그 한 번에 복사` 후 붙여넣기
+3. 올렸으면 `인스타에 올렸어요` → 보드에 ✓ 업로드 완료 표시
+
+## 설정
+
+### GitHub Secrets (생성용 — 저장소 Settings → Secrets and variables → Actions)
+
+| 이름 | 값 |
+|---|---|
+| `ANTHROPIC_API_KEY` | Claude API 키 |
+| `NOTION_TOKEN` | 노션 통합 토큰. 리포트 페이지·베리타스 아카이브 DB·캐릿 아카이브 DB를 이 통합에 **연결**해야 읽힘 |
+| `SUPABASE_URL` | `https://recajgmjuhintkpazkfi.supabase.co` (majormap-studio) |
+| `SUPABASE_SERVICE_ROLE_KEY` | Supabase → Project Settings → API Keys의 service_role(또는 secret) 키 |
+
+크론과 웹의 '다시 만들기' 버튼은 워크플로가 **기본 브랜치(main)** 에 있어야 동작합니다.
+
+### Vercel 환경변수 (웹 — 프로젝트 `mm-insta-studio`, Root Directory `MM_Insta/web`)
+
+| 이름 | 필수 | 값 |
 |---|---|---|
-| G1 팩트 | 코드 (숫자 대조, 바꿔 말하기는 경고) | LLM 의미 대조 |
-| G2 원문 유사도 | 코드 (6어절 연속 일치) | 기사 원문 텍스트로 비교 |
-| G3 톤·안전 | 코드 (금칙어·슬롯별 글자 수·장 구조) | Haiku 5.5 톤 판정 |
-| G4 렌더 | 코드 (DOM 넘침·줄 수·폰트·이미지·해상도·JPEG) | — |
+| `SUPABASE_URL` | ✓ | 위와 같음 |
+| `SUPABASE_PUBLISHABLE_KEY` | ✓ | publishable 키 (읽기 전용, 서버에서만 사용) |
+| `APP_PASSWORD` |  | 설정하면 접속 시 비밀번호를 묻습니다 (아이디는 아무거나) |
+| `GITHUB_TOKEN` |  | '지금 만들기/다시 만들기' 버튼용. fine-grained 토큰, 이 저장소 **Actions: Read and write** |
 
-게이트가 하나라도 실패하면 종료 코드 2로 끝나며 **발행 금지** 상태입니다 (§13-2).
+### Supabase (majormap-studio, 적용 완료)
 
-## 빠른 시작
+- `public.insta_posts` — 날짜당 1행. 웹은 읽기만(RLS), 쓰기는 service_role
+- `public.insta_set_posted(id, bool)` — 웹의 '올렸어요' 표시만 바꾸는 RPC
+- Storage `insta-cards` (공개) — `YYYY-MM-DD/v{버전}/01~06.jpg`
+- 스키마: [`supabase/migrations/20261017_insta_studio.sql`](supabase/migrations/20261017_insta_studio.sql)
+
+## 로컬 실행
 
 ```bash
 cd MM_Insta
-pip install -r requirements.txt
-python -m playwright install chromium        # 이미 Chromium이 있으면 .env에 MM_CHROMIUM_PATH 지정
-cp .env.example .env                         # ANTHROPIC_API_KEY, NOTION_TOKEN 입력
+pip install -r requirements.txt && python -m playwright install chromium
+cp .env.example .env    # 키 입력
 
-# API 키 없이 데모 (고정 원고로 렌더·게이트만)
-python -m mm_insta.pipeline --topic-file fixtures/topics/trend_2028_rules.json \
-    --offline fixtures/demo/trend_2028_rules
+python -m mm_insta.pipeline --date 2026-10-26              # 그 날짜 편으로 생성 (out/에 저장)
+python -m mm_insta.pipeline --date 2026-10-26 --publish    # + Supabase 저장
+python -m mm_insta.pipeline --date 2026-10-27 --page <노션 페이지 id>   # 소재 직접 지정
+python -m mm_insta.pipeline --date 2026-10-20 --topic-file fixtures/seed/2026-10-20/topic.json \
+    --offline fixtures/seed/2026-10-20                     # API 키 없이 저장된 원고로 렌더
+python -m pytest -q
 
-# 실제 생성 — 아카이브에서 고1·2 키워드 최신 미사용 기사 1건 자동 선택
-python -m mm_insta.pipeline --notion-latest
-
-# 특정 기사 / 로컬 소재
-python -m mm_insta.pipeline --notion-page 3fc6af6c8bcc812ba8afd5557d0c7abf
-python -m mm_insta.pipeline --topic-file fixtures/topics/skku_2027_jungsi.json
-
-python -m pytest -q                          # 게이트·렌더·LLM 배선 테스트
+cd web && npm install && cp .env.example .env.local && npm run dev
 ```
-
-노션: [통합(integration)](https://www.notion.so/my-integrations)을 만들고 「📚 베리타스알파 구독자 기사 아카이브」 DB에 연결(공유)해야 `NOTION_TOKEN`으로 읽을 수 있습니다. `--notion-latest`는 키워드 `2028 개편`·`학생부 정성평가`·`반도체·AI·첨단`·`무전공·자유전공`·`수능최저` 기사 중 최신순으로 고르고, 통과한 소재 id를 `out/used_topics.json`에 기록해 중복을 피합니다.
-
-### 출력 (`out/<날짜>_<제목>/`)
-
-| 파일 | 내용 |
-|---|---|
-| `01.jpg`~`06.jpg` | 1080×1350 JPEG (인스타 캐러셀 규격) |
-| `caption.txt` | 캡션 + 출처 + 원문 링크 + 해시태그 |
-| `facts.json` | 팩트 목록 (id·값·주장·출처·기준일·링크·derived_from) |
-| `script.json` | 부록 A 형식 카드 스크립트 (렌더러 입력) |
-| `gate_report.json` | 시도별 G1~G3 결과, G4 장별 결과, 단계별 소요 시간 |
-| `topic.json`, `writer.json`, `html/` | 디버그용 원재료 |
 
 ## 구조
 
 ```
 MM_Insta/
 ├── mm_insta/
-│   ├── pipeline.py          # 오케스트레이터 (CLI)
-│   ├── config.py            # 브랜드 토큰·규격·모델·글자 수 제한·금칙어
-│   ├── models.py            # Topic / Fact / 작가 출력 / script.json 변환
-│   ├── llm.py               # Claude 호출: 구조화 출력 + 시스템 프롬프트 캐시 + 거절 시 서버측 폴백
-│   ├── sources/notion.py    # 아카이브 DB 읽기 (Notion API)
-│   ├── agents/prompts.py    # 팩트 추출기·작가 May·Polar 지침 (부록 B)
+│   ├── pipeline.py          # 오케스트레이터 CLI (요일→편, 생성, --publish)
+│   ├── config.py            # 요일 규칙·브랜드·글자 수 제한·금칙어
+│   ├── models.py            # 소재·팩트·작가 출력(입시/트렌드) → script.json
+│   ├── sources/notion.py    # 리포트 섹션 · 베리타스 아카이브 · 캐릿 아카이브
+│   ├── agents/              # 팩트 추출기·작가 프롬프트(편별)
 │   ├── gates/text_gates.py  # G1·G2·G3
-│   └── render/renderer.py   # HTML → PNG → JPEG + G4
-├── templates/mon_news/      # 디자이너가 고치는 곳: style.css + 01~06 템플릿
-├── assets/                  # Wanted Sans(OFL), 로고(레드·화이트), 캐릭터
-├── fixtures/                # 소재 2건 + 오프라인 데모 원고
-├── samples/                 # 데모 결과물
-├── supabase/migrations/     # 1단계용 스키마 (아직 미적용)
-└── tests/
+│   ├── render/renderer.py   # HTML → JPEG + G4
+│   └── store.py             # Supabase 업로드·저장
+├── templates/cards/         # 카드 디자인 (style.css + 장별 템플릿) — 디자이너가 고치는 곳
+├── assets/                  # Wanted Sans(OFL), 로고, 캐릭터(임시)
+├── web/                     # Next.js 인스타 스튜디오 (Vercel)
+├── fixtures/seed/           # 10/19~10/23 초기 카드 원고 (웹에 미리 올라가 있음)
+├── supabase/                # 스키마 + 시드 행
+└── tests/                   # 게이트·렌더·요일·저장 흐름 테스트
 ```
 
-워크플로: 저장소 루트 [`.github/workflows/mm-insta-generate.yml`](../.github/workflows/mm-insta-generate.yml) — 수동 실행(workflow_dispatch), 결과물은 Artifact로 업로드. 저장소 Secrets에 `ANTHROPIC_API_KEY`, `NOTION_TOKEN` 필요.
+## 알아둘 것
 
-## 디자인 메모
-
-- 서체 **Wanted Sans** (OFL, npm `wanted-sans@1.0.3`의 woff2)를 저장소에 포함 → 실행 서버에 폰트가 없어도 동일하게 렌더. G4가 로드 여부를 확인합니다.
-- 로고 색 규정: 흰·네이비·오프화이트 배경 → 레드 로고 / 레드·민트 배경 → 화이트 로고.
-- 흰 글씨 on 레드(3.55:1)는 24px 이상 굵은 글씨에만. 레드 장의 출처 줄은 흰 면 위 네이비 글씨.
-- 사선 모티프 `skewX(-18deg)`: 키커·majormap.net 버튼·단계 번호·배경 면.
-- 템플릿 글자 크기는 모두 `calc(Npx * var(--fs))` — G4 넘침 시 `--fs: 0.9`로 1단계 축소.
-
-## 아직 남은 것
-
-- **캐릭터**: `assets/characters/may.svg`·`polar.svg`는 임시 그림입니다. 브랜드 원본을 `may.png`·`polar.png`로 넣으면 자동으로 그쪽을 씁니다. (오픈 이슈: 포즈·표정 3~4종 추가)
-- **실 API 검증**: 이 환경에는 API 키·노션 토큰이 없어 LLM·노션 경로는 가짜 클라이언트 테스트(`tests/test_llm_wiring.py`)로만 확인했습니다. 키를 넣고 `--notion-latest`로 첫 실행 후 결과를 봐 주세요.
-- **원문 문장 육안 확인** (DoD 4번째 항목): G2는 노션의 자체 요약과 비교합니다. 베리타스 원문과의 비교는 사람이 봐야 합니다.
-- **1단계** (§10): 노션 '소재 DB' 신설·적재, 화~금 템플릿 4종, G1 LLM부·G3 Haiku 판정, 예비 소재 3세트, Actions 크론(19:00 KST), Supabase 저장(위 스키마), 슬랙 알림.
-- **2단계**: 인스타 Graph API 발행 — 메타 앱·권한 신청이 리드타임이 가장 길어 **지금 시작**해야 합니다 (§8-1).
+- **10/19~10/23 초기 카드 5건**은 API 키 없이도 웹이 바로 보이도록 미리 써 둔 원고입니다(`mode: seed`, 이미지는 웹앱에 포함). 10/26부터는 Actions가 만듭니다.
+- **캐릭터**: `assets/characters/may.svg`·`polar.svg`는 임시 그림입니다. 원본을 `may.png`·`polar.png`로 넣으면 자동으로 바뀝니다.
+- **출처·저작권**: 베리타스알파·캐릿 원문 문장은 쓰지 않고(G2 검사), 카드와 본문에 출처와 원문 링크를 붙입니다. 출처 표기 문구는 법무 확인 권장.
+- **트렌드 편 검수**: 밈·유행은 맥락이 빨리 바뀌니, 화·목 카드는 올리기 전에 한 번 읽어 봐 주세요.

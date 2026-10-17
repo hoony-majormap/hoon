@@ -126,50 +126,53 @@ def g3_tone_limits(script: dict) -> dict:
     if not ("polar" in whos and "may" in whos):
         v.append("slides[1].dialogue: Polar 질문 + May 한 줄 대화가 필요")
 
-    big = s["big_number"]
-    check("slides[2].label", big["label"], "label")
-    check("slides[2].line", big["line"], "big_line")
-    if len(FACT_REF.findall(big["number"])) != 1 or FACT_REF.sub("", big["number"]).strip():
-        v.append("slides[2].number: 큰 숫자는 팩트 참조 정확히 1개여야 함")
-    if bool(big["bar_left"]) != bool(big["bar_right"]):
-        v.append("slides[2].bar: 왼쪽·오른쪽은 함께 쓰거나 함께 비워야 함")
+    if script.get("track", "admissions") == "trend":
+        _g3_trend(script, check, v)
+    else:
+        big = s["big_number"]
+        check("slides[2].label", big["label"], "label")
+        check("slides[2].line", big["line"], "big_line")
+        if len(FACT_REF.findall(big["number"])) != 1 or FACT_REF.sub("", big["number"]).strip():
+            v.append("slides[2].number: 큰 숫자는 팩트 참조 정확히 1개여야 함")
+        if bool(big["bar_left"]) != bool(big["bar_right"]):
+            v.append("slides[2].bar: 왼쪽·오른쪽은 함께 쓰거나 함께 비워야 함")
 
-    det = s["detail"]
-    check("slides[3].change.title", det["change"]["title"], "panel_title")
-    check("slides[3].change.note", det["change"]["note"], "panel_note")
-    check("slides[3].dots.title", det["dots"]["title"], "panel_title")
-    check("slides[3].dots.note", det["dots"]["note"], "panel_note")
-    for key in ("before", "after"):
-        if len(FACT_REF.findall(det["change"][key])) != 1:
-            v.append(f"slides[3].change.{key}: 팩트 참조 1개가 필요")
-    if det["dots"]["filled"] or det["dots"]["total"]:
-        try:
-            filled = _first_int(resolve(det["dots"]["filled"], facts))
-            total = _first_int(resolve(det["dots"]["total"], facts))
-            if not 0 < filled <= total <= 20:
-                v.append(f"slides[3].dots: {filled}/{total} — 0 < 칠한 수 ≤ 전체 ≤ 20 이어야 함")
-        except ValueError:
-            v.append("slides[3].dots: filled/total 값에서 정수를 읽을 수 없음")
+        det = s["detail"]
+        check("slides[3].change.title", det["change"]["title"], "panel_title")
+        check("slides[3].change.note", det["change"]["note"], "panel_note")
+        check("slides[3].dots.title", det["dots"]["title"], "panel_title")
+        check("slides[3].dots.note", det["dots"]["note"], "panel_note")
+        for key in ("before", "after"):
+            if len(FACT_REF.findall(det["change"][key])) != 1:
+                v.append(f"slides[3].change.{key}: 팩트 참조 1개가 필요")
+        if det["dots"]["filled"] or det["dots"]["total"]:
+            try:
+                filled = _first_int(resolve(det["dots"]["filled"], facts))
+                total = _first_int(resolve(det["dots"]["total"], facts))
+                if not 0 < filled <= total <= 20:
+                    v.append(f"slides[3].dots: {filled}/{total} — 0 < 칠한 수 ≤ 전체 ≤ 20 이어야 함")
+            except ValueError:
+                v.append("slides[3].dots: filled/total 값에서 정수를 읽을 수 없음")
 
-    cmp_ = s["compare"]
-    if not 1 <= len(cmp_["rows"]) <= LIMITS["compare_rows"]:
-        v.append(f"slides[4].rows: {len(cmp_['rows'])}행 (1~{LIMITS['compare_rows']}행)")
-    for i, row in enumerate(cmp_["rows"]):
-        for k in ("item", "now", "next"):
-            check(f"slides[4].rows[{i}].{k}", row[k], "compare_cell")
-    check("slides[4].col_now", cmp_["col_now"], "compare_cell")
-    check("slides[4].col_next", cmp_["col_next"], "compare_cell")
+        cmp_ = s["compare"]
+        if not 1 <= len(cmp_["rows"]) <= LIMITS["compare_rows"]:
+            v.append(f"slides[4].rows: {len(cmp_['rows'])}행 (1~{LIMITS['compare_rows']}행)")
+        for i, row in enumerate(cmp_["rows"]):
+            for k in ("item", "now", "next"):
+                check(f"slides[4].rows[{i}].{k}", row[k], "compare_cell")
+        check("slides[4].col_now", cmp_["col_now"], "compare_cell")
+        check("slides[4].col_next", cmp_["col_next"], "compare_cell")
 
-    act = s["action"]
-    if len(act["steps"]) != 3:
-        v.append(f"slides[5].steps: {len(act['steps'])}개 ≠ 3개")
-    for i, st in enumerate(act["steps"]):
-        check(f"slides[5].steps[{i}].title", st["title"], "action_title")
-        check(f"slides[5].steps[{i}].desc", st["desc"], "action_desc")
+        act = s["action"]
+        if len(act["steps"]) != 3:
+            v.append(f"slides[5].steps: {len(act['steps'])}개 ≠ 3개")
+        for i, st in enumerate(act["steps"]):
+            check(f"slides[5].steps[{i}].title", st["title"], "action_title")
+            check(f"slides[5].steps[{i}].desc", st["desc"], "action_desc")
 
     cta = s["cta"]
-    check("slides[6].teaser", cta["teaser"], "teaser")
-    check("slides[6].headline", cta["headline"], "title")
+    check(f"slides[{cta['no']}].teaser", cta["teaser"], "teaser")
+    check(f"slides[{cta['no']}].headline", cta["headline"], "title")
 
     if _len(resolve(script["caption"], facts)) > LIMITS["caption"]:
         v.append(f"caption: {_len(resolve(script['caption'], facts))}자 > {LIMITS['caption']}자")
@@ -179,6 +182,30 @@ def g3_tone_limits(script: dict) -> dict:
         if not t.startswith("#") or " " in t:
             v.append(f"hashtags: '{t}' 형식 오류")
     return _result("G3", v, engine="code (금칙어·글자 수·구조) — LLM 톤 판정은 1단계")
+
+
+def _g3_trend(script: dict, check, v: list[str]) -> None:
+    items = [sl for sl in script["slides"] if sl["layout"] == "trend_item"]
+    if len(items) != 3:
+        v.append(f"trend_item: {len(items)}장 ≠ 3장")
+    for sl in items:
+        p = f"slides[{sl['no']}]"
+        check(f"{p}.name", sl["name"], "trend_name")
+        check(f"{p}.what", sl["what"], "trend_text")
+        check(f"{p}.why", sl["why"], "trend_text")
+        if len(sl["dialogue"]) > 1:
+            v.append(f"{p}.dialogue: 유행 장은 말풍선 1개까지")
+    career = next((sl for sl in script["slides"] if sl["layout"] == "career"), None)
+    if not career:
+        v.append("career 장이 없음")
+        return
+    p = f"slides[{career['no']}]"
+    if len(career["links"]) != 3:
+        v.append(f"{p}.links: {len(career['links'])}개 ≠ 3개")
+    for i, link in enumerate(career["links"]):
+        check(f"{p}.links[{i}].field", link["field"], "career_field")
+        check(f"{p}.links[{i}].reason", link["reason"], "career_reason")
+    check(f"{p}.tip", career["tip"], "career_tip")
 
 
 def _first_int(text: str) -> int:

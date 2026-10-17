@@ -49,6 +49,7 @@ def test_rewrite_once_with_gate_feedback(monkeypatch, tmp_path):
 
     code = pipeline.main([
         "--topic-file", str(ROOT / "fixtures/topics/trend_2028_rules.json"),
+        "--date", "2026-10-19",
         "--out", str(tmp_path),
     ])
     report = json.loads((tmp_path / "gate_report.json").read_text())

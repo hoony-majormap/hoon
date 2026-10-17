@@ -1,0 +1,63 @@
+{% extends "base.html.j2" %}
+{# 트렌드 05 — 진로 연결: 학과·직업 3개 + 오늘 해볼 것 (레드 배경, 흰 글씨는 24px 이상 굵게만) #}
+{% block style %}
+<style>
+.title { margin-top: 56px; font-size: calc(64px * var(--fs)); }
+.links { display: flex; flex-direction: column; gap: 22px; margin-top: 44px; }
+.link {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 32px 40px;
+  border-radius: 28px;
+  background: var(--white);
+  color: var(--navy);
+}
+.num {
+  flex: none;
+  width: 76px;
+  height: 76px;
+  display: grid;
+  place-items: center;
+  background: var(--navy);
+  color: var(--white);
+  font-size: 40px;
+  font-weight: 900;
+  transform: skewX(-18deg);
+}
+.num span { transform: skewX(18deg); }
+.link h3 { font-size: calc(44px * var(--fs)); font-weight: 900; letter-spacing: -1px; }
+.link p { margin-top: 8px; font-size: calc(31px * var(--fs)); font-weight: 600; line-height: 1.4; color: var(--ink-2); }
+.tip {
+  align-self: flex-start;
+  margin-top: 28px;
+  padding: 18px 30px;
+  border-radius: 999px;
+  background: var(--navy);
+  font-size: calc(32px * var(--fs));
+  font-weight: 800;
+}
+.tip b { color: var(--mint); margin-right: 10px; }
+.content .dialogue { margin-top: auto; }
+.bg-red .source { background: var(--white); color: var(--navy); padding: 8px 18px; border-radius: 12px; align-self: flex-start; }
+</style>
+{% endblock %}
+{% block deco %}
+<div class="skew" style="right:-180px; top:-80px; width:420px; height:1500px; background:#E04B3A;"></div>
+{% endblock %}
+{% block content %}
+<h2 class="title" data-fit data-max-lines="2">{{ slide.title }}</h2>
+<div class="links">
+  {%- for l in slide.links %}
+  <div class="link">
+    <div class="num"><span>{{ loop.index }}</span></div>
+    <div>
+      <h3 data-fit data-max-lines="1">{{ l.field }}</h3>
+      <p data-fit data-max-lines="2">{{ l.reason }}</p>
+    </div>
+  </div>
+  {%- endfor %}
+</div>
+<div class="tip" data-fit data-max-lines="1"><b>오늘 해볼 것</b>{{ slide.tip }}</div>
+{{ dialogue(slide.dialogue) }}
+{% endblock %}

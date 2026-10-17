@@ -15,7 +15,7 @@ class Topic(BaseModel):
 
     id: str
     title: str
-    series: str = "MON_NEWS"
+    track: str = "admissions"  # admissions(월·수·금) | trend(화·목)
     source_name: str = "베리타스알파"
     source_type: str = "베리타스 아카이브"
     url: str = ""
@@ -138,22 +138,64 @@ class WriterOutput(BaseModel):
     hashtags: list[str] = Field(description="5개 이내, '#' 포함")
 
 
-LAYOUT_ORDER = ["hook", "big_number", "detail", "compare", "action", "cta"]
+# ── ③ 작가 출력 — 트렌드 트랙 (화·목) ────────────────────────
+class TrendItem(BaseModel):
+    name: str = Field(description="유행 이름 (짧게)")
+    what: str = Field(description="이게 뭐냐면 — 처음 듣는 고등학생에게 한 줄 설명")
+    why: str = Field(description="왜 뜨냐면 — 10대 시선의 인기 이유")
+    dialogue: list[Line] = Field(description="0~1개")
 
 
-def to_script(topic: Topic, facts: list[Fact], out: WriterOutput, kicker: str) -> dict:
-    """작가 출력 → 부록 A의 script.json 형식 (렌더러 입력)."""
-    slides = []
-    for no, layout in enumerate(LAYOUT_ORDER, start=1):
-        body = getattr(out, layout).model_dump()
-        slide = {"no": no, "layout": layout, **body}
-        if layout == "hook":
-            slide["kicker"] = kicker
-        slides.append(slide)
+class CareerLink(BaseModel):
+    field: str = Field(description="실제 학과명 또는 직업명")
+    reason: str = Field(description="이 유행과 어떻게 이어지는지 한 줄")
+
+
+class CareerSlide(BaseModel):
+    title: str
+    links: list[CareerLink] = Field(description="정확히 3개")
+    tip: str = Field(description="오늘 해볼 것 한 줄")
+    dialogue: list[Line] = Field(description="0~1개")
+
+
+class TrendWriterOutput(BaseModel):
+    hook: HookSlide
+    items: list[TrendItem] = Field(description="정확히 3개 — 소재 속 유행 셋")
+    career: CareerSlide
+    cta: CtaSlide
+    caption: str = Field(description="300자 이내 캡션 본문 (출처 링크·해시태그 제외)")
+    hashtags: list[str] = Field(description="5개 이내, '#' 포함")
+
+
+ADMISSIONS_LAYOUTS = ["hook", "big_number", "detail", "compare", "action", "cta"]
+
+
+def to_script(topic: Topic, facts: list[Fact], out: WriterOutput | TrendWriterOutput, kicker: str,
+              next_label: str = "", post_date: str = "") -> dict:
+    """작가 출력 → script.json (렌더러 입력). 트랙마다 6장 구성이 다르다."""
+    slides: list[dict] = []
+    if isinstance(out, TrendWriterOutput):
+        slides.append({"layout": "hook", **out.hook.model_dump(), "kicker": kicker})
+        for i, item in enumerate(out.items, start=1):
+            slides.append({"layout": "trend_item", "index": i, **item.model_dump()})
+        slides.append({"layout": "career", **out.career.model_dump()})
+        slides.append({"layout": "cta", **out.cta.model_dump()})
+    else:
+        for layout in ADMISSIONS_LAYOUTS:
+            slide = {"layout": layout, **getattr(out, layout).model_dump()}
+            if layout == "hook":
+                slide["kicker"] = kicker
+            slides.append(slide)
+    for no, slide in enumerate(slides, start=1):
+        slide["no"] = no
     return {
-        "series": topic.series,
+        "track": topic.track,
+        "post_date": post_date,
         "topic_id": topic.id,
         "topic_title": topic.title,
+        "kicker": kicker,
+        "next_label": next_label,
+        "source": {"name": topic.source_name, "date": topic.published, "url": topic.url},
         "facts": [f.model_dump() for f in facts],
         "slides": slides,
         "caption": out.caption,
@@ -172,7 +214,7 @@ def iter_texts(script: dict) -> Iterator[tuple[str, str]]:
                 yield from walk(v, f"{path}[{i}]")
         elif isinstance(node, dict):
             for k, v in node.items():
-                if k in ("no", "layout", "who", "highlight_line", "kicker"):
+                if k in ("no", "layout", "who", "highlight_line", "kicker", "index"):
                     continue
                 yield from walk(v, f"{path}.{k}" if path else k)
 

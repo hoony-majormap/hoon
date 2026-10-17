@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+/* 메이저맵 브랜드 토큰 — 라이트 모드 전용. 임의값 클래스 대신 이 토큰을 쓴다. */
+@theme {
+  --breakpoint-*: initial;
+  --breakpoint-tablet: 680px;
+  --breakpoint-desktop: 1280px;
+
+  --font-sans: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+
+  --color-red-50: #fdeeec;
+  --color-red-100: #fbd9d4;
+  --color-red-500: #ea5645;
+  --color-red-600: #d64535;
+  --color-red-700: #b8372a;
+  --color-navy-50: #eef0f5;
+  --color-navy-100: #d9dde8;
+  --color-navy-300: #8f98b0;
+  --color-navy-500: #5b6478;
+  --color-navy-800: #202b45;
+  --color-navy-900: #141c32;
+  --color-mint-50: #eef7f3;
+  --color-mint-100: #d6ece4;
+  --color-mint-500: #90c6b4;
+  --color-mint-700: #4f8c77;
+  --color-gray-0: #ffffff;
+  --color-gray-50: #f4f5f7;
+  --color-gray-100: #e9ebef;
+  --color-gray-200: #d5dbe5;
+  --color-gray-500: #8a93a6;
+
+  /* 시맨틱 */
+  --color-surface: var(--color-gray-0);
+  --color-surface-raised: var(--color-gray-0);
+  --color-canvas: var(--color-gray-50);
+  --color-text-primary: var(--color-navy-800);
+  --color-text-secondary: var(--color-navy-500);
+  --color-border-default: var(--color-gray-200);
+  --color-accent: var(--color-red-500);
+  --color-accent-hover: var(--color-red-600);
+  --color-accent-pressed: var(--color-red-700);
+  --color-success: #2f8a5f;
+  --color-warning: #c27c0e;
+  --color-danger: var(--color-red-600);
+
+  --container-page: 1120px;
+  --text-h1: 32px;
+  --text-h1--line-height: 1.4;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+}
+
+html {
+  background: var(--color-canvas);
+  color: var(--color-text-primary);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  word-break: keep-all;
+}
+
+h1, h2, h3 {
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-navy-800);
+  outline-offset: 2px;
+}
+
+/* 보조 버튼 — 테두리형 (주 버튼은 accent, 한 화면에 하나) */
+@utility btn-outline {
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border-default);
+  background: var(--color-surface);
+  padding: 0.5rem 0.875rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  &:hover { background: var(--color-gray-50); }
+  &:active { background: var(--color-gray-100); }
+}
+
+@utility grid-post {
+  grid-template-columns: minmax(0, 1fr) 400px;
+}

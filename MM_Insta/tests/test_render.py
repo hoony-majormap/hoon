@@ -30,3 +30,14 @@ def test_g4_catches_overflow_after_shrink(tmp_path):
     assert not g4["pass"]
     assert any("01장" in v and "가로 넘침" in v for v in g4["violations"])
     assert g4["slides"][0]["font_scale"] < 1  # 1단계 축소를 시도했음
+
+
+def test_trend_renders_and_credits_source(tmp_path):
+    from test_gates import load_seed
+
+    _, script = load_seed("2026-10-20")
+    jpgs, g4 = renderer.render(script, tmp_path)
+    assert g4["pass"], g4["violations"]
+    cta = (tmp_path / "html" / "06.html").read_text()
+    assert "캐릿" in cta and "학생 눈높이로 재구성" in cta
+    assert "출처: 캐릿" in (tmp_path / "html" / "02.html").read_text()

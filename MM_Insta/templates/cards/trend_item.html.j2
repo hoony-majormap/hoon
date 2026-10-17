@@ -1,0 +1,66 @@
+{% extends "base.html.j2" %}
+{# 트렌드 02~04 — 유행 하나씩: 이름 + '이게 뭐냐면' + '왜 뜨냐면' (배경 오프화이트/민트/화이트 순환) #}
+{% block style %}
+<style>
+.tag {
+  align-self: flex-start;
+  margin-top: 84px;
+  padding: 10px 28px;
+  background: var(--navy);
+  color: var(--white);
+  font-size: calc(28px * var(--fs));
+  font-weight: 800;
+  letter-spacing: 1px;
+  transform: skewX(-18deg);
+}
+.tag span { display: inline-block; transform: skewX(18deg); }
+.bg-mint .tag { background: var(--white); color: var(--navy); }
+.name {
+  margin-top: 30px;
+  font-size: calc(92px * var(--fs));
+  font-weight: 900;
+  line-height: 1.18;
+  letter-spacing: -2.5px;
+}
+.blocks { display: flex; flex-direction: column; gap: 28px; margin-top: 52px; }
+.block {
+  padding: 38px 44px 40px;
+  border-radius: 28px;
+  background: var(--white);
+  color: var(--navy);
+}
+.bg-white .block { background: var(--gray-bg); }
+.block b {
+  display: block;
+  font-size: calc(30px * var(--fs));
+  font-weight: 800;
+  color: var(--red);
+}
+.block p {
+  margin-top: 12px;
+  font-size: calc(42px * var(--fs));
+  font-weight: 700;
+  line-height: 1.42;
+  letter-spacing: -.5px;
+}
+.content .dialogue { margin-top: auto; }
+</style>
+{% endblock %}
+{% block deco %}
+<div class="skew" style="right:-150px; top:-60px; width:300px; height:300px; background:{{ 'rgba(255,255,255,.18)' if bg == 'mint' else 'var(--gray-bg)' }};"></div>
+{% endblock %}
+{% block content %}
+<div class="tag"><span>유행 {{ '%02d' % slide.index }}</span></div>
+<h2 class="name" data-fit data-max-lines="2">{{ slide.name }}</h2>
+<div class="blocks">
+  <div class="block">
+    <b>이게 뭐냐면</b>
+    <p data-fit data-max-lines="3">{{ slide.what }}</p>
+  </div>
+  <div class="block">
+    <b>왜 뜨냐면</b>
+    <p data-fit data-max-lines="3">{{ slide.why }}</p>
+  </div>
+</div>
+{{ dialogue(slide.dialogue) }}
+{% endblock %}

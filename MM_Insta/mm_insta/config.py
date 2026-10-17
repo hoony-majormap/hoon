@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import os
+from datetime import date, timedelta
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -47,10 +48,37 @@ FONT_SHRINK_STEP = 0.9  # G4 넘침 시 1단계 축소 비율
 MODEL_WRITER = os.environ.get("MM_MODEL_WRITER", "claude-sonnet-5-5")
 MODEL_FACTS = os.environ.get("MM_MODEL_FACTS", "claude-sonnet-5-5")
 
-# ── 시리즈 ──────────────────────────────────────────────────────
-SERIES = {
-    "MON_NEWS": {"kicker": "MON · 입시 뉴스 브리핑", "next": "내일(화) 학과탐구"},
+# ── 요일별 트랙 (월·수·금 입시 / 화·목 트렌드) ───────────────────
+TRACKS = {
+    "admissions": {"name": "입시 브리핑", "kicker": "입시 브리핑"},
+    "trend": {"name": "요즘 트렌드", "kicker": "요즘 뭐가 유행?"},
 }
+SCHEDULE = {0: "admissions", 1: "trend", 2: "admissions", 3: "trend", 4: "admissions"}  # weekday() 기준
+WEEK_EN = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"]
+WEEK_KO = "월화수목금토일"
+
+
+def track_for(d: date) -> str | None:
+    return SCHEDULE.get(d.weekday())
+
+
+def kicker_for(d: date, track: str) -> str:
+    return f"{WEEK_EN[d.weekday()]} · {TRACKS[track]['kicker']}"
+
+
+def next_post(d: date) -> tuple[date, str]:
+    n = d + timedelta(days=1)
+    while n.weekday() not in SCHEDULE:
+        n += timedelta(days=1)
+    return n, SCHEDULE[n.weekday()]
+
+
+def next_label(d: date) -> str:
+    """06장 'NEXT ·' 예고 라벨. 예: '내일(화) 요즘 트렌드', '다음 주 월요일 입시 브리핑'."""
+    n, track = next_post(d)
+    when = f"내일({WEEK_KO[n.weekday()]})" if (n - d).days == 1 else f"다음 주 {WEEK_KO[n.weekday()]}요일"
+    return f"{when} {TRACKS[track]['name']}"
+
 
 # ── 슬롯별 글자 수 제한 (부록 A, 공백 제외 글자 수) ───────────────
 LIMITS = {
@@ -71,6 +99,12 @@ LIMITS = {
     "action_desc": 24,
     "teaser": 24,
     "caption": 300,
+    # 트렌드 트랙
+    "trend_name": 14,
+    "trend_text": 40,
+    "career_field": 12,
+    "career_reason": 26,
+    "career_tip": 26,
     "hashtags": 5,
 }
 
