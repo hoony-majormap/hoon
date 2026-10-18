@@ -25,5 +25,25 @@
     "학생부 정성평가",
     "교대·사범"
   ],
-  "next_teaser_hint": ""
+  "next_teaser_hint": "",
+  "related": [
+    {
+      "id": 866,
+      "title": "[현 고1 필독] 2028 정시, '수능 100%' 공식 파괴! (서울대·경희대 분석)",
+      "url": "https://majormap.net/content/866",
+      "summary": "서울대·경희대 2028 정시 학생부 반영 확대 내용과 현 고1 대비 전략 정리",
+      "category": "교육뉴스",
+      "majors": "",
+      "views": 455
+    },
+    {
+      "id": 315,
+      "title": "정시 vs 수시, 언제 선택과 집중해야 할까?",
+      "url": "https://majormap.net/content/315",
+      "summary": "정시 파이터 선언 전 꼭 알아야 할 수시·내신을 포기하면 안 되는 이유 분석",
+      "category": "트렌드",
+      "majors": "",
+      "views": 1125
+    }
+  ]
 }

@@ -49,7 +49,11 @@ def test_publish_flow(monkeypatch, tmp_path):
     assert fake.uploads == [f"{day}/v3/0{i}.jpg" for i in range(1, 7)]
     assert len(final["image_urls"]) == 6 and final["hashtags"][0] == "#메이저맵"
     assert "캐릿" in final["caption"] and "#" not in final["caption"]
-    assert final["source_id"] == "3fc6af6c-8bcc-81f2-b4e3-cbba1f0cd34e"
+    assert final["source_id"] == "3fc6af6c-8bcc-81aa-acb4-cb787504d763"
+    # 캐릿 + 추가 리서치 출처, 메이저맵 연결 글이 본문에 붙는다
+    assert "콜린스 사전" in final["caption"] and "추가 취재" in final["caption"]
+    assert "메이저맵에서 더 보기" in final["caption"] and "https://majormap.net/content/528" in final["caption"]
+    assert final["script"]["research"] and final["script"]["related"][0]["id"] == 528
 
 
 def test_publish_records_failure(monkeypatch, tmp_path):

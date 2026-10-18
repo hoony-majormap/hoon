@@ -3,13 +3,14 @@
 G1 팩트체커(코드부) — 카드 속 모든 숫자가 facts.json에 있는가
 G2 원문 유사도 — 소재 원문과 연속 어절 n개 이상 겹치는가
 G3 톤·안전(코드부) — 금칙어, 슬롯별 글자 수, 장 구조
+G5 섞기(트렌드 편) — 캐릿 소재를 그대로 올리지 않는다: 캐릿 밖 리서치 팩트가 카드에 실리고, 캐릿 문장과 더 엄격하게 비교
 """
 from __future__ import annotations
 
 import re
 
-from ..config import BANNED_PHRASES, G2_NGRAM, LIMITS
-from ..models import FACT_REF, Topic, fact_map, iter_texts, resolve
+from ..config import BANNED_PHRASES, CAREET_DOMAINS, G2_NGRAM, G5_NGRAM, LIMITS
+from ..models import FACT_REF, Topic, fact_map, iter_texts, refs_in, resolve
 
 NUM = re.compile(r"\d+(?:[.,]\d+)*")
 # 학년 표기(고1·중3)는 통계가 아니므로 숫자 검사에서 뺀다
@@ -68,9 +69,9 @@ def _eojeol(text: str) -> list[str]:
     return [w for w in re.sub(r"[^\w%.,·]", " ", text).split() if w]
 
 
-def g2_similarity(script: dict, topic: Topic, n: int = G2_NGRAM) -> dict:
+def _overlaps(script: dict, source: str, n: int, label: str) -> tuple[list[str], float]:
     facts = fact_map(script)
-    src = _eojeol(topic.source_text())
+    src = _eojeol(source)
     src_grams = {tuple(src[i : i + n]) for i in range(len(src) - n + 1)}
     violations, max_ratio = [], 0.0
     for path, text in iter_texts(script):
@@ -81,8 +82,37 @@ def g2_similarity(script: dict, topic: Topic, n: int = G2_NGRAM) -> dict:
         hits = [g for g in grams if g in src_grams]
         max_ratio = max(max_ratio, len(hits) / len(grams))
         if hits:
-            violations.append(f"{path}: 원문과 {n}어절 연속 일치 — '{' '.join(hits[0])}'")
+            violations.append(f"{path}: {label}과 {n}어절 연속 일치 — '{' '.join(hits[0])}'")
+    return violations, max_ratio
+
+
+def g2_similarity(script: dict, topic: Topic, n: int = G2_NGRAM) -> dict:
+    violations, max_ratio = _overlaps(script, topic.source_text(), n, "원문")
     return _result("G2", violations, max_overlap_ratio=round(max_ratio, 3), ngram=n)
+
+
+# ── G5 (트렌드 편) ──────────────────────────────────────────────
+def _is_careet(source: str, url: str) -> bool:
+    return "캐릿" in source or any(d in (url or "") for d in CAREET_DOMAINS)
+
+
+def g5_mix(script: dict, topic: Topic, n: int = G5_NGRAM) -> dict:
+    """캐릿에서 온 소재는 그대로 올리지 않는다 — 다른 출처와 섞이고, 캐릿 문장과도 멀어야 게시."""
+    facts = fact_map(script)
+    violations, warnings = [], []
+    outside = [r for r in topic.research if r.url and not _is_careet(r.source, r.url)]
+    if not outside:
+        violations.append("캐릿 밖 리서치 출처가 없음 — 캐릿 소재만으로는 게시하지 않는다")
+    mixed = sorted(fid for fid in refs_in(script["slides"])
+                   if fid in facts and not _is_careet(facts[fid]["source"], facts[fid]["url"]))
+    if not mixed:
+        violations.append("카드에 캐릿 밖 출처의 팩트가 없음 — 리서치 팩트를 {fN}으로 1개 이상 써야 함")
+    copied, max_ratio = _overlaps(script, topic.trend_text(), n, "캐릿 원문")
+    violations += copied
+    if not topic.related:
+        warnings.append("메이저맵 연결 콘텐츠 없음 — 캡션에 '메이저맵에서 더 보기'가 빠짐")
+    return _result("G5", violations, warnings, research_sources=len(outside), research_facts=mixed,
+                   max_overlap_ratio=round(max_ratio, 3), ngram=n)
 
 
 # ── G3 (코드부) ────────────────────────────────────────────────
@@ -190,8 +220,11 @@ def _g3_trend(script: dict, check, v: list[str]) -> None:
         v.append(f"trend_item: {len(items)}장 ≠ 3장")
     for sl in items:
         p = f"slides[{sl['no']}]"
+        check(f"{p}.tag", sl.get("tag", ""), "trend_tag")
         check(f"{p}.name", sl["name"], "trend_name")
+        check(f"{p}.what_label", sl.get("what_label", ""), "trend_label")
         check(f"{p}.what", sl["what"], "trend_text")
+        check(f"{p}.why_label", sl.get("why_label", ""), "trend_label")
         check(f"{p}.why", sl["why"], "trend_text")
         if len(sl["dialogue"]) > 1:
             v.append(f"{p}.dialogue: 유행 장은 말풍선 1개까지")
@@ -216,7 +249,10 @@ def _first_int(text: str) -> int:
 
 
 def run_text_gates(script: dict, topic: Topic) -> list[dict]:
-    return [g1_facts(script, topic), g2_similarity(script, topic), g3_tone_limits(script)]
+    results = [g1_facts(script, topic), g2_similarity(script, topic), g3_tone_limits(script)]
+    if topic.track == "trend":
+        results.append(g5_mix(script, topic))
+    return results
 
 
 def feedback(results: list[dict]) -> list[str]:

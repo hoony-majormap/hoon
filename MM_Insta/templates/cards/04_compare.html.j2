@@ -1,5 +1,5 @@
 {% extends "base.html.j2" %}
-{# 04 비교 — 화이트 배경, 지금 vs 바뀐 뒤 최대 4행 표 #}
+{# 04 비교 — 화이트 배경, 지금 → 바뀐 뒤(change) 또는 A vs B(versus) 최대 4행 표 #}
 {% block style %}
 <style>
 .title { margin-top: 56px; }
@@ -26,6 +26,10 @@
 .cell.now { color: var(--ink-2); }
 .cell.next { color: var(--red); font-weight: 900; }
 .arrow { text-align: center; font-size: calc(40px * var(--fs)); font-weight: 900; color: var(--red); }
+.arrow.vs { font-size: calc(28px * var(--fs)); letter-spacing: -.5px; }
+/* versus: 두 쪽을 나란히 견줄 땐 한쪽만 강조하지 않는다 */
+.versus .cell.now, .versus .cell.next { color: var(--navy); font-weight: 800; }
+.versus .head .cell.next { color: var(--white); background: none; padding: 18px 10px; }
 .content .dialogue { margin-top: auto; }
 </style>
 {% endblock %}
@@ -34,7 +38,7 @@
 {% endblock %}
 {% block content %}
 <h2 class="title" data-fit data-max-lines="2">{{ slide.title }}</h2>
-<div class="table">
+<div class="table{{ ' versus' if slide.mode == 'versus' }}">
   <div class="row head">
     <span class="cell">구분</span>
     <span class="cell" data-fit>{{ slide.col_now }}</span>
@@ -45,7 +49,7 @@
   <div class="row">
     <span class="cell item" data-fit data-max-lines="2">{{ r.item }}</span>
     <span class="cell now" data-fit data-max-lines="2">{{ r.now }}</span>
-    <span class="arrow">→</span>
+    {% if slide.mode == 'versus' %}<span class="arrow vs">vs</span>{% else %}<span class="arrow">→</span>{% endif %}
     <span class="cell next" data-fit data-max-lines="2">{{ r.next }}</span>
   </div>
   {%- endfor %}

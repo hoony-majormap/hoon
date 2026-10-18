@@ -10,6 +10,27 @@ FACT_REF = re.compile(r"\{(f\d+)\}")
 
 
 # ── 소재 ────────────────────────────────────────────────────────
+class ResearchNote(BaseModel):
+    """캐릿 밖에서 찾은 근거 한 줄 (웹 리서치 결과). 캐릿 소재는 이것과 섞어야만 게시된다 (G5)."""
+
+    claim: str = Field(description="확인된 사실 한 줄 (자체 문장, 숫자는 원문 그대로)")
+    source: str = Field(description="매체·기관명")
+    date: str = Field(description="게시일 YYYY-MM-DD (모르면 빈 문자열)")
+    url: str = Field(description="원문 링크 — 검색 결과에 실제로 나온 URL만")
+
+
+class RelatedContent(BaseModel):
+    """메이저맵 콘텐츠 DB에서 찾은 연결 글 — 캡션의 '메이저맵에서 더 보기'."""
+
+    id: int
+    title: str
+    url: str
+    summary: str = ""
+    category: str = ""
+    majors: str = ""  # 관련 학과·직업
+    views: int = 0
+
+
 class Topic(BaseModel):
     """노션 아카이브 페이지 또는 로컬 JSON에서 읽은 소재 1건."""
 
@@ -26,11 +47,19 @@ class Topic(BaseModel):
     evidence: list[str] = Field(default_factory=list)  # "수치 = 출처명, 기준일" 형식
     keywords: list[str] = Field(default_factory=list)
     next_teaser_hint: str = ""
+    research: list[ResearchNote] = Field(default_factory=list)  # 추가 리서치 (트렌드 편 필수)
+    angle: str = ""  # 리서처가 제안한 섞는 각도
+    related: list[RelatedContent] = Field(default_factory=list)  # 메이저맵 연결 콘텐츠
+
+    def trend_text(self) -> str:
+        """노션 소재 원문만 (리서치 제외) — G5의 엄격한 베끼기 검사 대상."""
+        parts = [self.title, self.summary, *self.key_points, *self.check_points]
+        return "\n".join(p for p in parts if p)
 
     def source_text(self) -> str:
         """G2 원문 유사도 비교 대상 + 팩트 추출 입력."""
-        parts = [self.title, self.summary, *self.key_points, *self.check_points, *self.evidence]
-        return "\n".join(p for p in parts if p)
+        notes = [f"{n.claim} = {n.source}, {n.date}" for n in self.research]
+        return "\n".join(p for p in [self.trend_text(), *self.evidence, *notes] if p)
 
 
 # ── ② 팩트 추출기 출력 ─────────────────────────────────────────
@@ -104,6 +133,8 @@ class CompareRow(BaseModel):
 
 class CompareSlide(BaseModel):
     title: str
+    mode: Literal["change", "versus"] = Field(
+        default="change", description="change = 지금→바뀐 뒤(화살표), versus = 나란히 비교(vs)")
     col_now: str
     col_next: str
     rows: list[CompareRow]
@@ -140,9 +171,12 @@ class WriterOutput(BaseModel):
 
 # ── ③ 작가 출력 — 트렌드 트랙 (화·목) ────────────────────────
 class TrendItem(BaseModel):
-    name: str = Field(description="유행 이름 (짧게)")
-    what: str = Field(description="이게 뭐냐면 — 처음 듣는 고등학생에게 한 줄 설명")
-    why: str = Field(description="왜 뜨냐면 — 10대 시선의 인기 이유")
+    tag: str = Field(default="유행", description="장 위 꼬리표 (예: '유행', '팩트체크', '진짜 과학') — 뒤에 번호가 붙는다")
+    name: str = Field(description="이 장의 제목 (짧게)")
+    what_label: str = Field(default="이게 뭐냐면", description="첫 칸 제목")
+    what: str = Field(description="첫 칸 — 처음 듣는 고등학생에게 한 줄 설명")
+    why_label: str = Field(default="왜 뜨냐면", description="둘째 칸 제목 (예: '왜 뜨냐면', '알고 보면', '주의할 점')")
+    why: str = Field(description="둘째 칸 — 10대 시선의 이유 또는 리서치로 보탠 사실")
     dialogue: list[Line] = Field(description="0~1개")
 
 
@@ -160,7 +194,7 @@ class CareerSlide(BaseModel):
 
 class TrendWriterOutput(BaseModel):
     hook: HookSlide
-    items: list[TrendItem] = Field(description="정확히 3개 — 소재 속 유행 셋")
+    items: list[TrendItem] = Field(description="정확히 3개 — 유행 소개 + 리서치로 보탠 사실·관점")
     career: CareerSlide
     cta: CtaSlide
     caption: str = Field(description="300자 이내 캡션 본문 (출처 링크·해시태그 제외)")
@@ -196,6 +230,8 @@ def to_script(topic: Topic, facts: list[Fact], out: WriterOutput | TrendWriterOu
         "kicker": kicker,
         "next_label": next_label,
         "source": {"name": topic.source_name, "date": topic.published, "url": topic.url},
+        "research": [n.model_dump() for n in topic.research],
+        "related": [r.model_dump() for r in topic.related],
         "facts": [f.model_dump() for f in facts],
         "slides": slides,
         "caption": out.caption,

@@ -5,7 +5,7 @@
     "status": "ready",
     "title": "2028 대입 개편 — 정시 축소, 학생부 정성평가 확대",
     "headline": "수능 한 방 역전, 2028부턴 더 좁아진다",
-    "caption": "수능 한 방 역전, 2028부터는 점점 어려워져요. 2028학년도 대입은 10명 중 8명을 수시로 뽑고, SKY 정시도 5,105명에서 4,529명으로 줄어요. 정시에서도 학생부를 보는 대학이 늘어나니까, 고1·고2라면 '진로→과목→세특'을 한 줄로 잇는 연습부터 시작해요. 과목 고를 때 다시 꺼내 보게 저장해 두세요 📌\n\n📌 출처: 대교협 2028 시행계획 · 헤럴드경제 · 베리타스알파 · 메이저맵 트렌드 리포트 (수치는 메이저맵이 재가공)\n원문: https://www.heraldk.com/article/2026042919000056717\n원문: https://www.veritas-a.com/news/articleView.html?idxno=631785",
+    "caption": "수능 한 방 역전, 2028부터는 점점 어려워져요. 2028학년도 대입은 10명 중 8명을 수시로 뽑고, SKY 정시도 5,105명에서 4,529명으로 줄어요. 정시에서도 학생부를 보는 대학이 늘어나니까, 고1·고2라면 '진로→과목→세특'을 한 줄로 잇는 연습부터 시작해요. 과목 고를 때 다시 꺼내 보게 저장해 두세요 📌\n\n🔎 메이저맵에서 더 보기\n· 2028 대입 변화: 서울대가 예고한 합격의 열쇠 '과목'과 '태도' https://majormap.net/content/963\n· 고1 고교학점제 선택과목 가이드: 도대체 어떤 과목을 골라야할지 고민이라면(feat.신규 서비스 '나만의 과목 지도' 활용하기!✨) https://majormap.net/content/723\n\n📌 출처: 대교협 2028 시행계획 · 헤럴드경제 · 베리타스알파 · 메이저맵 트렌드 리포트 (수치는 메이저맵이 재가공)\n원문: https://www.heraldk.com/article/2026042919000056717\n원문: https://www.veritas-a.com/news/articleView.html?idxno=631785",
     "hashtags": [
       "#메이저맵",
       "#고1",
@@ -14,12 +14,12 @@
       "#입시뉴스"
     ],
     "image_urls": [
-      "/seed/2026-10-19/01.jpg",
-      "/seed/2026-10-19/02.jpg",
-      "/seed/2026-10-19/03.jpg",
-      "/seed/2026-10-19/04.jpg",
-      "/seed/2026-10-19/05.jpg",
-      "/seed/2026-10-19/06.jpg"
+      "/seed/2026-10-19/01.jpg?v=2",
+      "/seed/2026-10-19/02.jpg?v=2",
+      "/seed/2026-10-19/03.jpg?v=2",
+      "/seed/2026-10-19/04.jpg?v=2",
+      "/seed/2026-10-19/05.jpg?v=2",
+      "/seed/2026-10-19/06.jpg?v=2"
     ],
     "source_id": "report:3fc6af6c-8bcc-816d-a0c6-c44ad8f126aa#4",
     "source_url": "https://www.heraldk.com/article/2026042919000056717",
@@ -54,7 +54,29 @@
         "수능최저",
         "상위15개대"
       ],
-      "next_teaser_hint": ""
+      "next_teaser_hint": "",
+      "research": [],
+      "angle": "",
+      "related": [
+        {
+          "id": 963,
+          "title": "2028 대입 변화: 서울대가 예고한 합격의 열쇠 '과목'과 '태도'",
+          "url": "https://majormap.net/content/963",
+          "summary": "내신 5등급제 2028 대입에서 서울대가 강조한 교과 이수 충실도·전공 연계성과 학업 태도 정리",
+          "category": "교육뉴스",
+          "majors": "",
+          "views": 410
+        },
+        {
+          "id": 723,
+          "title": "고1 고교학점제 선택과목 가이드: 도대체 어떤 과목을 골라야할지 고민이라면(feat.신규 서비스 '나만의 과목 지도' 활용하기!✨)",
+          "url": "https://majormap.net/content/723",
+          "summary": "고교학점제 혼란 속 고1을 위한 서울대 가이드 활용 ‘교집합 과목’ 선택법과 내신 전략",
+          "category": "교육뉴스",
+          "majors": "",
+          "views": 661
+        }
+      ]
     },
     "facts": [
       {
@@ -196,6 +218,27 @@
         "date": "2026-10-17",
         "url": "https://www.heraldk.com/article/2026042919000056717"
       },
+      "research": [],
+      "related": [
+        {
+          "id": 963,
+          "title": "2028 대입 변화: 서울대가 예고한 합격의 열쇠 '과목'과 '태도'",
+          "url": "https://majormap.net/content/963",
+          "summary": "내신 5등급제 2028 대입에서 서울대가 강조한 교과 이수 충실도·전공 연계성과 학업 태도 정리",
+          "category": "교육뉴스",
+          "majors": "",
+          "views": 410
+        },
+        {
+          "id": 723,
+          "title": "고1 고교학점제 선택과목 가이드: 도대체 어떤 과목을 골라야할지 고민이라면(feat.신규 서비스 '나만의 과목 지도' 활용하기!✨)",
+          "url": "https://majormap.net/content/723",
+          "summary": "고교학점제 혼란 속 고1을 위한 서울대 가이드 활용 ‘교집합 과목’ 선택법과 내신 전략",
+          "category": "교육뉴스",
+          "majors": "",
+          "views": 661
+        }
+      ],
       "facts": [
         {
           "id": "f1",
@@ -390,6 +433,7 @@
         {
           "layout": "compare",
           "title": "지금 vs {f13}, 뭐가 달라져?",
+          "mode": "change",
           "col_now": "지금",
           "col_next": "{f13}부터",
           "rows": [
@@ -450,7 +494,7 @@
         {
           "layout": "cta",
           "headline": "저장해두고 다시 보기",
-          "teaser": "'L을 가져가'가 무슨 뜻인지 알려줄게",
+          "teaser": "말로 앱 만드는 '바이브코딩'이 뭐야?",
           "dialogue": [
             {
               "who": "polar",
@@ -625,96 +669,309 @@
         {
           "step": "렌더러+G4",
           "status": "ok",
-          "duration_ms": 2800
+          "duration_ms": 2731
         }
       ]
     },
     "mode": "seed",
-    "version": 1
+    "version": 2
   },
   {
     "post_date": "2026-10-20",
     "track": "trend",
     "status": "ready",
-    "title": "‘L을 가져가’가 대체 무슨 뜻? 요즘 밈 해독해 드림",
-    "headline": "'L을 가져가' 이게 대체 무슨 뜻이야?",
-    "caption": "댓글에 'L 가져가'가 보이면 무슨 뜻일까? 영어 'Take the L'에서 온 말로, 졌을 땐 쿨하게 인정하자는 뜻이래요. 엄빠 세대 말투를 흉내 내는 '늙크크 말투', 슬쩍 자랑하는 댓글 밈까지 한 번에 정리했어요. 밈도 파고들면 언어학·미디어 공부가 된다는 사실! 친구한테 공유해서 같이 알아 두기 📌\n\n📌 출처: 캐릿 (내용은 메이저맵이 학생 눈높이로 재구성)\n원문: https://www.careet.net/2008",
+    "title": "뜨개질 타이핑 사이트",
+    "headline": "말로 하면 앱이 뚝딱? 바이브코딩",
+    "caption": "말로 시키면 AI가 코드를 짜 주는 '바이브코딩', 콜린스 사전 2025년 올해의 단어로 뽑힐 만큼 대세예요. 지하철역 이름을 치는 타자 게임 같은 미니 웹게임도 계속 나오고 있죠. 그런데 개발자 46%는 AI 결과물의 정확도를 못 믿는대요. 만드는 건 AI가 도와줘도, 읽고 고치는 힘은 내 몫! 오늘 AI한테 작은 웹페이지 하나 부탁하고 코드 설명까지 들어 보기 💻 (이름·연락처를 받는 기능은 만들지 말기!)\n\n🔎 메이저맵에서 더 보기\n· 무료로 똑똑하게! 고등학생을 위한 AI 툴 추천 리스트 (2025 최신판) https://majormap.net/content/528\n· 2025학년도 경쟁률 1위! AI학과 & 인공지능학과, 소개 및 준비 방법(근데 재학생들의 이야기를 곁들인🔥) https://majormap.net/content/505\n\n📌 출처: 캐릿 · 카파시 X 게시물 · 콜린스 사전 · 스택오버플로 개발자 설문 · 베라코드 (캐릿 트렌드에 메이저맵이 추가 취재를 더해 재구성)\n원문: https://x.com/karpathy/status/1886192184808149383\n원문: https://blog.collinsdictionary.com/language-lovers/collins-word-of-the-year-2025-ai-meets-authenticity-as-society-shifts/\n원문: https://stackoverflow.co/company/press/archive/stack-overflow-2025-developer-survey/\n원문: https://www.businesswire.com/news/home/20250730694951/en/AI-Generated-Code-Poses-Major-Security-Risks-in-Nearly-Half-of-All-Development-Tasks-Veracode-Research-Reveals",
     "hashtags": [
       "#메이저맵",
-      "#요즘밈",
-      "#밈해독",
+      "#바이브코딩",
+      "#AI코딩",
       "#고등학생",
       "#진로탐색"
     ],
     "image_urls": [
-      "/seed/2026-10-20/01.jpg",
-      "/seed/2026-10-20/02.jpg",
-      "/seed/2026-10-20/03.jpg",
-      "/seed/2026-10-20/04.jpg",
-      "/seed/2026-10-20/05.jpg",
-      "/seed/2026-10-20/06.jpg"
+      "/seed/2026-10-20/01.jpg?v=2",
+      "/seed/2026-10-20/02.jpg?v=2",
+      "/seed/2026-10-20/03.jpg?v=2",
+      "/seed/2026-10-20/04.jpg?v=2",
+      "/seed/2026-10-20/05.jpg?v=2",
+      "/seed/2026-10-20/06.jpg?v=2"
     ],
-    "source_id": "3fc6af6c-8bcc-81f2-b4e3-cbba1f0cd34e",
-    "source_url": "https://www.careet.net/2008",
-    "source_name": "캐릿",
+    "source_id": "3fc6af6c-8bcc-81aa-acb4-cb787504d763",
+    "source_url": null,
+    "source_name": "캐릿 + 추가 취재 5곳",
     "topic": {
-      "id": "3fc6af6c-8bcc-81f2-b4e3-cbba1f0cd34e",
-      "title": "‘L을 가져가’가 대체 무슨 뜻? 요즘 밈 해독해 드림",
+      "id": "3fc6af6c-8bcc-81aa-acb4-cb787504d763",
+      "title": "뜨개질 타이핑 사이트",
       "track": "trend",
       "source_name": "캐릿",
-      "source_type": "캐릿 아카이브",
-      "url": "https://www.careet.net/2008",
-      "published": "2026-10-15",
-      "summary": "'L을 가져가'는 영어 'Take the L(패배를 인정해)'에서 온 표현으로 실패·손해 상황에 쓰임",
+      "source_type": "캐릿 마이크로 트렌드",
+      "url": "",
+      "published": "2026-10-07",
+      "summary": "SNS에서 타자 게임 형식의 바이브 코딩 사이트들이 꾸준히 바이럴되는 중",
       "key_points": [
-        "'L을 가져가'는 영어 'Take the L(패배를 인정해)'에서 온 표현으로 실패·손해 상황에 쓰임",
-        "'늙크크 말투'는 '안 봐도 비디오다'처럼 윗세대 말투를 흉내 내는 콘텐츠 유행",
-        "'부라는 게 숨긴다고 숨겨지는 것도 아니고'는 은근한 자랑을 재치 있게 표현하는 댓글 밈",
-        "래퍼 스윙스 칭찬 글에서 파생된 '멋있는 것 같아... 팬은 ❌' 밈",
-        "치이카와 캐릭터 관련 밈도 함께 정리"
+        "SNS에서 타자 게임 형식의 바이브 코딩 사이트들이 꾸준히 바이럴되는 중",
+        "대표 사례인 '메트로 타이핑'은 지하철역 이름을 빠르게 입력하는 게임으로, 소개 게시물이 엑스에서 653만 회 조회",
+        "최근엔 글자를 입력하면 그 글자가 뜨개질로 떠지는 사이트가 SNS에서 화제",
+        "타자 게임에 요즘 인기 취미인 뜨개질을 더한 콘셉트로 좋은 반응을 얻음"
       ],
       "check_points": [],
       "evidence": [
-        "‘L을 가져가’가 대체 무슨 뜻? 요즘 밈 해독해 드림 = 캐릿, 2026-10-15"
+        "뜨개질 타이핑 사이트 = 캐릿, 2026-10-07"
       ],
       "keywords": [
-        "요즘 뜨는 밈",
-        "유행중"
+        "인스타그램"
       ],
-      "next_teaser_hint": ""
+      "next_teaser_hint": "",
+      "research": [
+        {
+          "claim": "안드레이 카파시가 2025년 2월 X 글에서 '바이브코딩'이라는 말을 처음 썼다",
+          "source": "카파시 X 게시물",
+          "date": "2025-02-02",
+          "url": "https://x.com/karpathy/status/1886192184808149383"
+        },
+        {
+          "claim": "콜린스 사전이 2025년 올해의 단어로 'vibe coding'을 골랐다. 뜻은 자연어로 지시해 AI가 코드 작성을 돕게 하는 것",
+          "source": "콜린스 사전",
+          "date": "2025-11-06",
+          "url": "https://blog.collinsdictionary.com/language-lovers/collins-word-of-the-year-2025-ai-meets-authenticity-as-society-shifts/"
+        },
+        {
+          "claim": "개발자 84%가 개발에 AI 도구를 쓰고 있거나 쓸 계획이고, 46%는 AI 결과물의 정확성을 믿지 않는다",
+          "source": "스택오버플로 개발자 설문",
+          "date": "2025-07-29",
+          "url": "https://stackoverflow.co/company/press/archive/stack-overflow-2025-developer-survey/"
+        },
+        {
+          "claim": "100개 넘는 AI 모델에 코딩 과제를 시킨 실험에서 안전한 방법 대신 위험한 방법을 고른 비율이 45%였다",
+          "source": "베라코드",
+          "date": "2025-07-30",
+          "url": "https://www.businesswire.com/news/home/20250730694951/en/AI-Generated-Code-Poses-Major-Security-Risks-in-Nearly-Half-of-All-Development-Tasks-Veracode-Research-Reveals"
+        },
+        {
+          "claim": "메트로 타이핑은 지하철역 이름을 순서대로 치며 노선을 달리는 타자 게임 앱이다",
+          "source": "App Store",
+          "date": "",
+          "url": "https://apps.apple.com/kr/app/%EB%A9%94%ED%8A%B8%EB%A1%9C-%ED%83%80%EC%9D%B4%ED%95%91/id6791242489"
+        }
+      ],
+      "angle": "말로 앱 만드는 시대, 그래도 코드를 읽을 줄 아는 사람이 이긴다",
+      "related": [
+        {
+          "id": 528,
+          "title": "무료로 똑똑하게! 고등학생을 위한 AI 툴 추천 리스트 (2025 최신판)",
+          "url": "https://majormap.net/content/528",
+          "summary": "고등학생이 무료로 활용할 수 있는 상황별 AI 툴(요약·검색·이미지·글쓰기·번역·발표) 추천 리스트",
+          "category": "트렌드",
+          "majors": "",
+          "views": 2132
+        },
+        {
+          "id": 505,
+          "title": "2025학년도 경쟁률 1위! AI학과 & 인공지능학과, 소개 및 준비 방법(근데 재학생들의 이야기를 곁들인🔥)",
+          "url": "https://majormap.net/content/505",
+          "summary": "2025학년도 경쟁률 1위 AI학과·인공지능학과의 배우는 내용, 재학생 경험, 고교 준비 방법 소개",
+          "category": "학과탐구",
+          "majors": "AI학과, 인공지능학과, AI·빅데이터학과, AI 전문가",
+          "views": 595
+        }
+      ]
     },
-    "facts": [],
+    "facts": [
+      {
+        "id": "f1",
+        "value": "653만 회",
+        "claim": "메트로 타이핑 소개 게시물의 엑스 조회수",
+        "source": "캐릿",
+        "as_of": "2026-10-07",
+        "url": "",
+        "derived_from": ""
+      },
+      {
+        "id": "f2",
+        "value": "2025년 2월",
+        "claim": "카파시가 '바이브코딩'이란 말을 처음 쓴 때",
+        "source": "카파시 X 게시물",
+        "as_of": "2025-02-02",
+        "url": "https://x.com/karpathy/status/1886192184808149383",
+        "derived_from": ""
+      },
+      {
+        "id": "f3",
+        "value": "2025년 올해의 단어",
+        "claim": "콜린스 사전이 vibe coding에 붙인 타이틀",
+        "source": "콜린스 사전",
+        "as_of": "2025-11-06",
+        "url": "https://blog.collinsdictionary.com/language-lovers/collins-word-of-the-year-2025-ai-meets-authenticity-as-society-shifts/",
+        "derived_from": ""
+      },
+      {
+        "id": "f4",
+        "value": "84%",
+        "claim": "AI 도구를 쓰거나 쓸 계획인 개발자 비율",
+        "source": "스택오버플로 개발자 설문",
+        "as_of": "2025-07-29",
+        "url": "https://stackoverflow.co/company/press/archive/stack-overflow-2025-developer-survey/",
+        "derived_from": ""
+      },
+      {
+        "id": "f5",
+        "value": "46%",
+        "claim": "AI 결과물의 정확성을 믿지 않는 개발자 비율",
+        "source": "스택오버플로 개발자 설문",
+        "as_of": "2025-07-29",
+        "url": "https://stackoverflow.co/company/press/archive/stack-overflow-2025-developer-survey/",
+        "derived_from": ""
+      },
+      {
+        "id": "f6",
+        "value": "45%",
+        "claim": "보안업체 실험에서 AI가 위험한 코드 방식을 고른 과제 비율",
+        "source": "베라코드",
+        "as_of": "2025-07-30",
+        "url": "https://www.businesswire.com/news/home/20250730694951/en/AI-Generated-Code-Poses-Major-Security-Risks-in-Nearly-Half-of-All-Development-Tasks-Veracode-Research-Reveals",
+        "derived_from": ""
+      }
+    ],
     "script": {
       "track": "trend",
       "post_date": "2026-10-20",
-      "topic_id": "3fc6af6c-8bcc-81f2-b4e3-cbba1f0cd34e",
-      "topic_title": "‘L을 가져가’가 대체 무슨 뜻? 요즘 밈 해독해 드림",
+      "topic_id": "3fc6af6c-8bcc-81aa-acb4-cb787504d763",
+      "topic_title": "뜨개질 타이핑 사이트",
       "kicker": "TUE · 요즘 뭐가 유행?",
       "next_label": "내일(수) 입시 브리핑",
       "source": {
         "name": "캐릿",
-        "date": "2026-10-15",
-        "url": "https://www.careet.net/2008"
+        "date": "2026-10-07",
+        "url": ""
       },
-      "facts": [],
+      "research": [
+        {
+          "claim": "안드레이 카파시가 2025년 2월 X 글에서 '바이브코딩'이라는 말을 처음 썼다",
+          "source": "카파시 X 게시물",
+          "date": "2025-02-02",
+          "url": "https://x.com/karpathy/status/1886192184808149383"
+        },
+        {
+          "claim": "콜린스 사전이 2025년 올해의 단어로 'vibe coding'을 골랐다. 뜻은 자연어로 지시해 AI가 코드 작성을 돕게 하는 것",
+          "source": "콜린스 사전",
+          "date": "2025-11-06",
+          "url": "https://blog.collinsdictionary.com/language-lovers/collins-word-of-the-year-2025-ai-meets-authenticity-as-society-shifts/"
+        },
+        {
+          "claim": "개발자 84%가 개발에 AI 도구를 쓰고 있거나 쓸 계획이고, 46%는 AI 결과물의 정확성을 믿지 않는다",
+          "source": "스택오버플로 개발자 설문",
+          "date": "2025-07-29",
+          "url": "https://stackoverflow.co/company/press/archive/stack-overflow-2025-developer-survey/"
+        },
+        {
+          "claim": "100개 넘는 AI 모델에 코딩 과제를 시킨 실험에서 안전한 방법 대신 위험한 방법을 고른 비율이 45%였다",
+          "source": "베라코드",
+          "date": "2025-07-30",
+          "url": "https://www.businesswire.com/news/home/20250730694951/en/AI-Generated-Code-Poses-Major-Security-Risks-in-Nearly-Half-of-All-Development-Tasks-Veracode-Research-Reveals"
+        },
+        {
+          "claim": "메트로 타이핑은 지하철역 이름을 순서대로 치며 노선을 달리는 타자 게임 앱이다",
+          "source": "App Store",
+          "date": "",
+          "url": "https://apps.apple.com/kr/app/%EB%A9%94%ED%8A%B8%EB%A1%9C-%ED%83%80%EC%9D%B4%ED%95%91/id6791242489"
+        }
+      ],
+      "related": [
+        {
+          "id": 528,
+          "title": "무료로 똑똑하게! 고등학생을 위한 AI 툴 추천 리스트 (2025 최신판)",
+          "url": "https://majormap.net/content/528",
+          "summary": "고등학생이 무료로 활용할 수 있는 상황별 AI 툴(요약·검색·이미지·글쓰기·번역·발표) 추천 리스트",
+          "category": "트렌드",
+          "majors": "",
+          "views": 2132
+        },
+        {
+          "id": 505,
+          "title": "2025학년도 경쟁률 1위! AI학과 & 인공지능학과, 소개 및 준비 방법(근데 재학생들의 이야기를 곁들인🔥)",
+          "url": "https://majormap.net/content/505",
+          "summary": "2025학년도 경쟁률 1위 AI학과·인공지능학과의 배우는 내용, 재학생 경험, 고교 준비 방법 소개",
+          "category": "학과탐구",
+          "majors": "AI학과, 인공지능학과, AI·빅데이터학과, AI 전문가",
+          "views": 595
+        }
+      ],
+      "facts": [
+        {
+          "id": "f1",
+          "value": "653만 회",
+          "claim": "메트로 타이핑 소개 게시물의 엑스 조회수",
+          "source": "캐릿",
+          "as_of": "2026-10-07",
+          "url": "",
+          "derived_from": ""
+        },
+        {
+          "id": "f2",
+          "value": "2025년 2월",
+          "claim": "카파시가 '바이브코딩'이란 말을 처음 쓴 때",
+          "source": "카파시 X 게시물",
+          "as_of": "2025-02-02",
+          "url": "https://x.com/karpathy/status/1886192184808149383",
+          "derived_from": ""
+        },
+        {
+          "id": "f3",
+          "value": "2025년 올해의 단어",
+          "claim": "콜린스 사전이 vibe coding에 붙인 타이틀",
+          "source": "콜린스 사전",
+          "as_of": "2025-11-06",
+          "url": "https://blog.collinsdictionary.com/language-lovers/collins-word-of-the-year-2025-ai-meets-authenticity-as-society-shifts/",
+          "derived_from": ""
+        },
+        {
+          "id": "f4",
+          "value": "84%",
+          "claim": "AI 도구를 쓰거나 쓸 계획인 개발자 비율",
+          "source": "스택오버플로 개발자 설문",
+          "as_of": "2025-07-29",
+          "url": "https://stackoverflow.co/company/press/archive/stack-overflow-2025-developer-survey/",
+          "derived_from": ""
+        },
+        {
+          "id": "f5",
+          "value": "46%",
+          "claim": "AI 결과물의 정확성을 믿지 않는 개발자 비율",
+          "source": "스택오버플로 개발자 설문",
+          "as_of": "2025-07-29",
+          "url": "https://stackoverflow.co/company/press/archive/stack-overflow-2025-developer-survey/",
+          "derived_from": ""
+        },
+        {
+          "id": "f6",
+          "value": "45%",
+          "claim": "보안업체 실험에서 AI가 위험한 코드 방식을 고른 과제 비율",
+          "source": "베라코드",
+          "as_of": "2025-07-30",
+          "url": "https://www.businesswire.com/news/home/20250730694951/en/AI-Generated-Code-Poses-Major-Security-Risks-in-Nearly-Half-of-All-Development-Tasks-Veracode-Research-Reveals",
+          "derived_from": ""
+        }
+      ],
       "slides": [
         {
           "layout": "hook",
           "headline": [
-            "'L을 가져가'",
-            "이게 대체",
-            "무슨 뜻이야?"
+            "말로 하면",
+            "앱이 뚝딱?",
+            "바이브코딩"
           ],
           "highlight_line": 3,
-          "sub": "요즘 댓글창 밈, 뜻 알고 쓰자",
+          "sub": "SNS에 도는 미니 웹게임, 요즘은 AI랑 같이 만든다",
           "dialogue": [
             {
               "who": "polar",
-              "text": "선배, 댓글에 L 가져가래요. 뭐예요?"
+              "text": "선배, 저도 말로만 게임 만들 수 있어요?"
             },
             {
               "who": "may",
-              "text": "…모르고 쓰면 그게 L이야."
+              "text": "…만들 순 있어. 읽을 줄 알아야 쓸 만하지."
             }
           ],
           "kicker": "TUE · 요즘 뭐가 유행?",
@@ -723,13 +980,16 @@
         {
           "layout": "trend_item",
           "index": 1,
-          "name": "L을 가져가",
-          "what": "영어 'Take the L'에서 온 말. 졌으면 쿨하게 인정하라는 뜻",
-          "why": "시험 망친 날, 지각한 날 같은 웃픈 순간을 한마디로 정리해 줘서",
+          "tag": "유행",
+          "name": "메트로 타이핑",
+          "what_label": "이게 뭐냐면",
+          "what": "지하철역 이름을 노선 순서대로 빨리 치는 타자 게임 사이트",
+          "why_label": "얼마나 퍼졌냐면",
+          "why": "소개 글이 엑스에서 {f1} 조회됐고, 뜨개질 타이핑 같은 변형도 나왔어",
           "dialogue": [
             {
               "who": "polar",
-              "text": "저 오늘 단어 시험… L 가져갈게요."
+              "text": "등굣길 노선은 눈 감고도 쳐요!"
             }
           ],
           "no": 2
@@ -737,13 +997,16 @@
         {
           "layout": "trend_item",
           "index": 2,
-          "name": "늙크크 말투",
-          "what": "'안 봐도 비디오' 같은 엄빠 세대 말투를 일부러 흉내 내며 노는 것",
-          "why": "어색하게 따라 할수록 웃기고, 친구랑 같이 쓰면 바로 드립이 돼서",
+          "tag": "팩트체크",
+          "name": "바이브코딩 뜻",
+          "what_label": "어디서 왔냐면",
+          "what": "AI 연구자 카파시가 {f2}에 처음 쓴 말. 말로 시키면 AI가 코드를 짜",
+          "why_label": "얼마나 대세냐면",
+          "why": "콜린스 사전이 뽑은 {f3}. 그만큼 전 세계가 주목 중",
           "dialogue": [
             {
               "who": "may",
-              "text": "그 말투, 담임쌤도 쓰시던데."
+              "text": "…사전에 오를 정도면 이미 대세야."
             }
           ],
           "no": 3
@@ -751,39 +1014,42 @@
         {
           "layout": "trend_item",
           "index": 3,
-          "name": "숨겨지지 않는 부",
-          "what": "자랑 안 하는 척하면서 슬쩍 자랑할 때 붙이는 댓글 한 줄",
-          "why": "대놓고 하는 자랑보다 덜 얄밉고, 보는 사람도 같이 웃게 돼서",
+          "tag": "주의",
+          "name": "그대로 믿으면 곤란",
+          "what_label": "알고 보면",
+          "what": "개발자 {f4}가 AI 도구를 쓰거나 쓸 계획인데, {f5}는 정확도를 못 믿는대",
+          "why_label": "그래서",
+          "why": "한 보안업체 실험에선 과제의 {f6}에서 AI가 위험한 코드를 골랐어",
           "dialogue": [
             {
-              "who": "polar",
-              "text": "제 새 필통도 숨겨지지가 않네요?"
+              "who": "may",
+              "text": "…그래서 코드를 읽을 줄 아는 사람이 이겨."
             }
           ],
           "no": 4
         },
         {
           "layout": "career",
-          "title": "이 밈, 진로로 이으면?",
+          "title": "말로 코딩하는 시대, 진로는?",
           "links": [
             {
-              "field": "언어학과",
-              "reason": "말이 생기고 뜻이 바뀌는 과정을 연구해"
+              "field": "컴퓨터공학과",
+              "reason": "AI가 짠 코드를 읽고 고치는 힘을 길러"
             },
             {
-              "field": "미디어커뮤니케이션학과",
-              "reason": "사람들이 왜 이걸 퍼뜨리는지 분석해"
+              "field": "정보보호학과",
+              "reason": "AI 코드 속 보안 구멍을 찾아 막아"
             },
             {
-              "field": "콘텐츠 마케터",
-              "reason": "유행하는 말투로 공감 가는 콘텐츠를 만들어"
+              "field": "UX 디자이너",
+              "reason": "사람이 쓰기 편한 화면을 설계해"
             }
           ],
-          "tip": "메이저맵에서 언어학과 찾아보기",
+          "tip": "AI로 급식 메뉴 뽑기 페이지 만들어 보기",
           "dialogue": [
             {
-              "who": "may",
-              "text": "밈도 파고들면 전공이 돼."
+              "who": "polar",
+              "text": "만들고 나면 코드 설명도 해 달라고 할게요!"
             }
           ],
           "no": 5
@@ -801,11 +1067,11 @@
           "no": 6
         }
       ],
-      "caption": "댓글에 'L 가져가'가 보이면 무슨 뜻일까? 영어 'Take the L'에서 온 말로, 졌을 땐 쿨하게 인정하자는 뜻이래요. 엄빠 세대 말투를 흉내 내는 '늙크크 말투', 슬쩍 자랑하는 댓글 밈까지 한 번에 정리했어요. 밈도 파고들면 언어학·미디어 공부가 된다는 사실! 친구한테 공유해서 같이 알아 두기 📌",
+      "caption": "말로 시키면 AI가 코드를 짜 주는 '바이브코딩', 콜린스 사전 {f3}로 뽑힐 만큼 대세예요. 지하철역 이름을 치는 타자 게임 같은 미니 웹게임도 계속 나오고 있죠. 그런데 개발자 {f5}는 AI 결과물의 정확도를 못 믿는대요. 만드는 건 AI가 도와줘도, 읽고 고치는 힘은 내 몫! 오늘 AI한테 작은 웹페이지 하나 부탁하고 코드 설명까지 들어 보기 💻 (이름·연락처를 받는 기능은 만들지 말기!)",
       "hashtags": [
         "#메이저맵",
-        "#요즘밈",
-        "#밈해독",
+        "#바이브코딩",
+        "#AI코딩",
         "#고등학생",
         "#진로탐색"
       ]
@@ -813,8 +1079,8 @@
     "gate_report": {
       "post_date": "2026-10-20",
       "track": "trend",
-      "topic_id": "3fc6af6c-8bcc-81f2-b4e3-cbba1f0cd34e",
-      "topic_title": "‘L을 가져가’가 대체 무슨 뜻? 요즘 밈 해독해 드림",
+      "topic_id": "3fc6af6c-8bcc-81aa-acb4-cb787504d763",
+      "topic_title": "뜨개질 타이핑 사이트",
       "mode": "offline-fixture",
       "pass": true,
       "attempts": [
@@ -841,6 +1107,22 @@
               "violations": [],
               "warnings": [],
               "engine": "code (금칙어·글자 수·구조) — LLM 톤 판정은 1단계"
+            },
+            {
+              "gate": "G5",
+              "pass": true,
+              "violations": [],
+              "warnings": [],
+              "research_sources": 5,
+              "research_facts": [
+                "f2",
+                "f3",
+                "f4",
+                "f5",
+                "f6"
+              ],
+              "max_overlap_ratio": 0.0,
+              "ngram": 5
             }
           ]
         }
@@ -958,17 +1240,17 @@
         {
           "step": "G1·G2·G3 (시도 1)",
           "status": "ok",
-          "duration_ms": 0
+          "duration_ms": 1
         },
         {
           "step": "렌더러+G4",
           "status": "ok",
-          "duration_ms": 2885
+          "duration_ms": 2841
         }
       ]
     },
     "mode": "seed",
-    "version": 1
+    "version": 2
   },
   {
     "post_date": "2026-10-21",
@@ -976,7 +1258,7 @@
     "status": "ready",
     "title": "[2027정시] 성균관대 1503명(40.7%) ‘축소’.. 다군 사범계열 40명 ‘학생부100% 정성평가’",
     "headline": "정시는 수능? 이제 학생부만 본다",
-    "caption": "성균관대 2027학년도 정시에서 사범계열 다군 40명은 수능을 최저기준으로만 보고, 점수는 학생부 100%로 매겨요. 정시 전체 인원도 1,628명에서 1,503명으로 줄었고요. '정시=수능' 공식이 조금씩 깨지는 중! 고1·고2라면 지금 수업 기록부터 챙겨 두세요. 저장해두고 다시 보기 📌\n\n📌 출처: 베리타스알파 (수치는 메이저맵이 재가공)\n원문: https://www.veritas-a.com/news/articleView.html?idxno=626631",
+    "caption": "성균관대 2027학년도 정시에서 사범계열 다군 40명은 수능을 최저기준으로만 보고, 점수는 학생부 100%로 매겨요. 정시 전체 인원도 1,628명에서 1,503명으로 줄었고요. '정시=수능' 공식이 조금씩 깨지는 중! 고1·고2라면 지금 수업 기록부터 챙겨 두세요. 저장해두고 다시 보기 📌\n\n🔎 메이저맵에서 더 보기\n· [현 고1 필독] 2028 정시, '수능 100%' 공식 파괴! (서울대·경희대 분석) https://majormap.net/content/866\n· 정시 vs 수시, 언제 선택과 집중해야 할까? https://majormap.net/content/315\n\n📌 출처: 베리타스알파 (수치는 메이저맵이 재가공)\n원문: https://www.veritas-a.com/news/articleView.html?idxno=626631",
     "hashtags": [
       "#메이저맵",
       "#고1",
@@ -985,12 +1267,12 @@
       "#입시뉴스"
     ],
     "image_urls": [
-      "/seed/2026-10-21/01.jpg",
-      "/seed/2026-10-21/02.jpg",
-      "/seed/2026-10-21/03.jpg",
-      "/seed/2026-10-21/04.jpg",
-      "/seed/2026-10-21/05.jpg",
-      "/seed/2026-10-21/06.jpg"
+      "/seed/2026-10-21/01.jpg?v=2",
+      "/seed/2026-10-21/02.jpg?v=2",
+      "/seed/2026-10-21/03.jpg?v=2",
+      "/seed/2026-10-21/04.jpg?v=2",
+      "/seed/2026-10-21/05.jpg?v=2",
+      "/seed/2026-10-21/06.jpg?v=2"
     ],
     "source_id": "3fc6af6c-8bcc-812b-a8af-d5557d0c7abf",
     "source_url": "https://www.veritas-a.com/news/articleView.html?idxno=626631",
@@ -1022,7 +1304,29 @@
         "학생부 정성평가",
         "교대·사범"
       ],
-      "next_teaser_hint": ""
+      "next_teaser_hint": "",
+      "research": [],
+      "angle": "",
+      "related": [
+        {
+          "id": 866,
+          "title": "[현 고1 필독] 2028 정시, '수능 100%' 공식 파괴! (서울대·경희대 분석)",
+          "url": "https://majormap.net/content/866",
+          "summary": "서울대·경희대 2028 정시 학생부 반영 확대 내용과 현 고1 대비 전략 정리",
+          "category": "교육뉴스",
+          "majors": "",
+          "views": 455
+        },
+        {
+          "id": 315,
+          "title": "정시 vs 수시, 언제 선택과 집중해야 할까?",
+          "url": "https://majormap.net/content/315",
+          "summary": "정시 파이터 선언 전 꼭 알아야 할 수시·내신을 포기하면 안 되는 이유 분석",
+          "category": "트렌드",
+          "majors": "",
+          "views": 1125
+        }
+      ]
     },
     "facts": [
       {
@@ -1164,6 +1468,27 @@
         "date": "2026-09-08",
         "url": "https://www.veritas-a.com/news/articleView.html?idxno=626631"
       },
+      "research": [],
+      "related": [
+        {
+          "id": 866,
+          "title": "[현 고1 필독] 2028 정시, '수능 100%' 공식 파괴! (서울대·경희대 분석)",
+          "url": "https://majormap.net/content/866",
+          "summary": "서울대·경희대 2028 정시 학생부 반영 확대 내용과 현 고1 대비 전략 정리",
+          "category": "교육뉴스",
+          "majors": "",
+          "views": 455
+        },
+        {
+          "id": 315,
+          "title": "정시 vs 수시, 언제 선택과 집중해야 할까?",
+          "url": "https://majormap.net/content/315",
+          "summary": "정시 파이터 선언 전 꼭 알아야 할 수시·내신을 포기하면 안 되는 이유 분석",
+          "category": "트렌드",
+          "majors": "",
+          "views": 1125
+        }
+      ],
       "facts": [
         {
           "id": "f1",
@@ -1358,6 +1683,7 @@
         {
           "layout": "compare",
           "title": "작년 vs 올해, 사범계열 다군",
+          "mode": "change",
           "col_now": "작년",
           "col_next": "{f12}학년도",
           "rows": [
@@ -1413,7 +1739,7 @@
         {
           "layout": "cta",
           "headline": "저장해두고 다시 보기",
-          "teaser": "코딩 몰라도 앱 만든다는 그 유행",
+          "teaser": "세종대왕이 지하철을? AI 영상 구별법",
           "dialogue": [
             {
               "who": "polar",
@@ -1585,94 +1911,235 @@
         {
           "step": "렌더러+G4",
           "status": "ok",
-          "duration_ms": 2833
+          "duration_ms": 2720
         }
       ]
     },
     "mode": "seed",
-    "version": 1
+    "version": 2
   },
   {
     "post_date": "2026-10-22",
     "track": "trend",
     "status": "ready",
-    "title": "바이브코딩으로 앱스토어 1위, 나도 가능할까? SNS에서 바이럴된 웹사이트 아이디어 모음",
-    "headline": "아이디어만 있으면 앱을 만든다?",
-    "caption": "코딩을 잘 몰라도 아이디어 하나로 서비스를 만드는 '바이브코딩'이 화제예요. 엑스 조회수 4천만 회를 넘긴 일본 '이미지 튀김' 사이트, 해 보고 바로 공유하는 테스트·선물형 사이트까지 모아 봤어요. 오늘은 내가 만들고 싶은 앱 이름부터 지어 볼까요? 컴퓨터공학·UX디자인이 궁금하다면 저장해 두기 📌\n\n📌 출처: 캐릿 (내용은 메이저맵이 학생 눈높이로 재구성)\n원문: https://www.careet.net/2006",
+    "title": "세계관오류",
+    "headline": "세종대왕이 지하철을? AI 영상 시대",
+    "caption": "세종대왕이 지하철을 타고, 조선에 치킨이 등장하는 AI 영상 보셨나요? 재밌지만 진짜처럼 믿으면 곤란해요. 2026년 1월부터 시행된 AI 기본법은 표시 의무를 AI 사업자에게 두고 있어서, 개인이 올린 영상엔 라벨이 없을 수도 있대요. 라벨 확인 → 깜빡임·입 모양·그림자 → 그 시대에 없던 물건 찾기, 이 순서만 기억해요. 남의 얼굴을 합성해 퍼뜨리는 장난은 범죄가 될 수 있다는 것도 꼭! 🔍\n\n🔎 메이저맵에서 더 보기\n· [주제탐구] 불법합성방, 딥페이크 범죄 | 인공지능과 윤리적 교육, 피해자 상담과 법률 https://majormap.net/content/336\n· 😺: “AI 시대, 우린 무엇을 해야 할까?” (대체불가 역량 5가지) https://majormap.net/content/906\n\n📌 출처: 캐릿 · 정책브리핑 · 과학기술정보통신부 · YouTube 공식 블로그 (캐릿 트렌드에 메이저맵이 추가 취재를 더해 재구성)\n원문: https://www.korea.kr/news/policyNewsView.do?newsId=148958380\n원문: https://www.korea.kr/briefing/pressReleaseView.do?newsId=156740669\n원문: https://blog.youtube/news-and-events/improving-ai-labels-for-viewers-and-creators/",
     "hashtags": [
       "#메이저맵",
-      "#바이브코딩",
-      "#요즘트렌드",
-      "#고등학생",
-      "#진로탐색"
+      "#AI영상",
+      "#AI리터러시",
+      "#팩트체크",
+      "#고등학생"
     ],
     "image_urls": [
-      "/seed/2026-10-22/01.jpg",
-      "/seed/2026-10-22/02.jpg",
-      "/seed/2026-10-22/03.jpg",
-      "/seed/2026-10-22/04.jpg",
-      "/seed/2026-10-22/05.jpg",
-      "/seed/2026-10-22/06.jpg"
+      "/seed/2026-10-22/01.jpg?v=2",
+      "/seed/2026-10-22/02.jpg?v=2",
+      "/seed/2026-10-22/03.jpg?v=2",
+      "/seed/2026-10-22/04.jpg?v=2",
+      "/seed/2026-10-22/05.jpg?v=2",
+      "/seed/2026-10-22/06.jpg?v=2"
     ],
-    "source_id": "3fc6af6c-8bcc-8163-8508-d33361fe29db",
-    "source_url": "https://www.careet.net/2006",
-    "source_name": "캐릿",
+    "source_id": "3fc6af6c-8bcc-81c0-9abd-ef9f9cf12841",
+    "source_url": null,
+    "source_name": "캐릿 + 추가 취재 5곳",
     "topic": {
-      "id": "3fc6af6c-8bcc-8163-8508-d33361fe29db",
-      "title": "바이브코딩으로 앱스토어 1위, 나도 가능할까? SNS에서 바이럴된 웹사이트 아이디어 모음",
+      "id": "3fc6af6c-8bcc-81c0-9abd-ef9f9cf12841",
+      "title": "세계관오류",
       "track": "trend",
       "source_name": "캐릿",
-      "source_type": "캐릿 아카이브",
-      "url": "https://www.careet.net/2006",
+      "source_type": "캐릿 마이크로 트렌드",
+      "url": "",
       "published": "2026-10-08",
-      "summary": "개인이 아이디어만으로 서비스를 만들어 앱스토어 상위권까지 오르는 '바이브코딩' 사례가 늘어나는 흐름",
+      "summary": "AI로 만든 콘텐츠를 주로 올리는 유튜브 채널 '세계관오류'가 주목받는 중",
       "key_points": [
-        "개인이 아이디어만으로 서비스를 만들어 앱스토어 상위권까지 오르는 '바이브코딩' 사례가 늘어나는 흐름",
-        "빈지브라우즈, 플레이 뮤직 띠어리, 메쿠루 등 콘셉트가 뚜렷한 웹사이트 소개",
-        "일본 '이미지 튀김(画像揚げ)'은 엑스 조회수 4천만 회 이상을 기록하며 바이럴",
-        "번 시디, 브러시 째무, 흔들흔들 쉐이커 스튜디오처럼 아날로그·감성 경험을 웹으로 옮긴 사례",
-        "태국 점성술, 색감 인지 테스트(dialed.gg), 링크 부케 등 테스트·선물형 사이트도 인기"
+        "AI로 만든 콘텐츠를 주로 올리는 유튜브 채널 '세계관오류'가 주목받는 중",
+        "세종대왕, 안중근 의사 등 역사 인물이 현대 한국에 나타나면 어떤 일이 생길지 AI로 구현한 영상이 대표적",
+        "반대로 핫팩·치킨 같은 현대 물건을 과거로 가져갔을 때의 상황을 상상한 영상도 제작",
+        "10월 초에 올라온 영상들이 60만~70만 조회수를 기록하며 급부상",
+        "AI로 로맨스 판타지처럼 현실에서 찍기 어려운 장면을 구현한 콘텐츠가 잇달아 화제가 되는 흐름"
       ],
       "check_points": [],
       "evidence": [
-        "바이브코딩으로 앱스토어 1위, 나도 가능할까? = 캐릿, 2026-10-08"
+        "세계관오류 = 캐릿, 2026-10-08"
       ],
       "keywords": [
-        "일반"
+        "유튜브"
       ],
-      "next_teaser_hint": ""
+      "next_teaser_hint": "",
+      "research": [
+        {
+          "claim": "AI 기본법이 2026년 1월 22일부터 시행됐다",
+          "source": "정책브리핑",
+          "date": "2026-01-21",
+          "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148958380"
+        },
+        {
+          "claim": "AI 기본법 제31조는 생성형 AI 결과물임을 표시하고, 실제와 구분하기 어려운 딥페이크는 이용자가 분명히 알아보게 표시하도록 한다",
+          "source": "국가법령정보센터",
+          "date": "",
+          "url": "https://www.law.go.kr/LSW//lsSideInfoP.do?lsiSeq=282791&joNo=0031&joBrNo=00&docCls=jo&urlMode=lsScJoRltInfoR"
+        },
+        {
+          "claim": "표시 의무는 AI 사업자에게 있고, 개인 이용자나 유튜버는 의무 대상이 아니다",
+          "source": "과학기술정보통신부",
+          "date": "2026-01-22",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156740669"
+        },
+        {
+          "claim": "유튜브는 2026년 5월 AI 라벨을 개편해 쇼츠는 화면 위에 라벨을 띄우고, 공개하지 않은 영상에도 자동으로 라벨이 붙을 수 있게 했다",
+          "source": "YouTube 공식 블로그",
+          "date": "2026-05-27",
+          "url": "https://blog.youtube/news-and-events/improving-ai-labels-for-viewers-and-creators/"
+        },
+        {
+          "claim": "성적 허위영상물은 알면서 소지·시청만 해도 처벌하도록 성폭력처벌법이 바뀌었다",
+          "source": "뉴시스",
+          "date": "2024-09-25",
+          "url": "https://mobile.newsis.com/view/NISX20240925_0002898631"
+        }
+      ],
+      "angle": "라벨이 없다고 진짜는 아니다 — 재밌게 보되 거르는 힘은 보는 사람 몫",
+      "related": [
+        {
+          "id": 336,
+          "title": "[주제탐구] 불법합성방, 딥페이크 범죄 | 인공지능과 윤리적 교육, 피해자 상담과 법률",
+          "url": "https://majormap.net/content/336",
+          "summary": "텔레그램 불법합성방·딥페이크 범죄 이슈 정리와 윤리·법·상담 탐구주제 제시",
+          "category": "탐구주제",
+          "majors": "법학, 상담심리, 인공지능",
+          "views": 591
+        },
+        {
+          "id": 906,
+          "title": "😺: “AI 시대, 우린 무엇을 해야 할까?” (대체불가 역량 5가지)",
+          "url": "https://majormap.net/content/906",
+          "summary": "AI 시대 대체불가 인재가 되기 위한 핵심역량 5가지 소개",
+          "category": "트렌드",
+          "majors": "",
+          "views": 380
+        }
+      ]
     },
     "facts": [
       {
         "id": "f1",
-        "value": "4천만 회",
-        "claim": "일본 '이미지 튀김' 사이트의 엑스 조회수",
-        "source": "캐릿",
-        "as_of": "2026-10-08",
-        "url": "https://www.careet.net/2006",
+        "value": "2026년 1월",
+        "claim": "AI 기본법 시행 시점",
+        "source": "정책브리핑",
+        "as_of": "2026-01-21",
+        "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148958380",
+        "derived_from": ""
+      },
+      {
+        "id": "f2",
+        "value": "AI 사업자",
+        "claim": "AI 결과물 표시 의무가 있는 쪽 (개인 이용자·유튜버는 대상 아님)",
+        "source": "과학기술정보통신부",
+        "as_of": "2026-01-22",
+        "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156740669",
+        "derived_from": ""
+      },
+      {
+        "id": "f3",
+        "value": "2026년 5월",
+        "claim": "유튜브가 AI 라벨 표시 방식을 바꾼 때",
+        "source": "YouTube 공식 블로그",
+        "as_of": "2026-05-27",
+        "url": "https://blog.youtube/news-and-events/improving-ai-labels-for-viewers-and-creators/",
         "derived_from": ""
       }
     ],
     "script": {
       "track": "trend",
       "post_date": "2026-10-22",
-      "topic_id": "3fc6af6c-8bcc-8163-8508-d33361fe29db",
-      "topic_title": "바이브코딩으로 앱스토어 1위, 나도 가능할까? SNS에서 바이럴된 웹사이트 아이디어 모음",
+      "topic_id": "3fc6af6c-8bcc-81c0-9abd-ef9f9cf12841",
+      "topic_title": "세계관오류",
       "kicker": "THU · 요즘 뭐가 유행?",
       "next_label": "내일(금) 입시 브리핑",
       "source": {
         "name": "캐릿",
         "date": "2026-10-08",
-        "url": "https://www.careet.net/2006"
+        "url": ""
       },
+      "research": [
+        {
+          "claim": "AI 기본법이 2026년 1월 22일부터 시행됐다",
+          "source": "정책브리핑",
+          "date": "2026-01-21",
+          "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148958380"
+        },
+        {
+          "claim": "AI 기본법 제31조는 생성형 AI 결과물임을 표시하고, 실제와 구분하기 어려운 딥페이크는 이용자가 분명히 알아보게 표시하도록 한다",
+          "source": "국가법령정보센터",
+          "date": "",
+          "url": "https://www.law.go.kr/LSW//lsSideInfoP.do?lsiSeq=282791&joNo=0031&joBrNo=00&docCls=jo&urlMode=lsScJoRltInfoR"
+        },
+        {
+          "claim": "표시 의무는 AI 사업자에게 있고, 개인 이용자나 유튜버는 의무 대상이 아니다",
+          "source": "과학기술정보통신부",
+          "date": "2026-01-22",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156740669"
+        },
+        {
+          "claim": "유튜브는 2026년 5월 AI 라벨을 개편해 쇼츠는 화면 위에 라벨을 띄우고, 공개하지 않은 영상에도 자동으로 라벨이 붙을 수 있게 했다",
+          "source": "YouTube 공식 블로그",
+          "date": "2026-05-27",
+          "url": "https://blog.youtube/news-and-events/improving-ai-labels-for-viewers-and-creators/"
+        },
+        {
+          "claim": "성적 허위영상물은 알면서 소지·시청만 해도 처벌하도록 성폭력처벌법이 바뀌었다",
+          "source": "뉴시스",
+          "date": "2024-09-25",
+          "url": "https://mobile.newsis.com/view/NISX20240925_0002898631"
+        }
+      ],
+      "related": [
+        {
+          "id": 336,
+          "title": "[주제탐구] 불법합성방, 딥페이크 범죄 | 인공지능과 윤리적 교육, 피해자 상담과 법률",
+          "url": "https://majormap.net/content/336",
+          "summary": "텔레그램 불법합성방·딥페이크 범죄 이슈 정리와 윤리·법·상담 탐구주제 제시",
+          "category": "탐구주제",
+          "majors": "법학, 상담심리, 인공지능",
+          "views": 591
+        },
+        {
+          "id": 906,
+          "title": "😺: “AI 시대, 우린 무엇을 해야 할까?” (대체불가 역량 5가지)",
+          "url": "https://majormap.net/content/906",
+          "summary": "AI 시대 대체불가 인재가 되기 위한 핵심역량 5가지 소개",
+          "category": "트렌드",
+          "majors": "",
+          "views": 380
+        }
+      ],
       "facts": [
         {
           "id": "f1",
-          "value": "4천만 회",
-          "claim": "일본 '이미지 튀김' 사이트의 엑스 조회수",
-          "source": "캐릿",
-          "as_of": "2026-10-08",
-          "url": "https://www.careet.net/2006",
+          "value": "2026년 1월",
+          "claim": "AI 기본법 시행 시점",
+          "source": "정책브리핑",
+          "as_of": "2026-01-21",
+          "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148958380",
+          "derived_from": ""
+        },
+        {
+          "id": "f2",
+          "value": "AI 사업자",
+          "claim": "AI 결과물 표시 의무가 있는 쪽 (개인 이용자·유튜버는 대상 아님)",
+          "source": "과학기술정보통신부",
+          "as_of": "2026-01-22",
+          "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156740669",
+          "derived_from": ""
+        },
+        {
+          "id": "f3",
+          "value": "2026년 5월",
+          "claim": "유튜브가 AI 라벨 표시 방식을 바꾼 때",
+          "source": "YouTube 공식 블로그",
+          "as_of": "2026-05-27",
+          "url": "https://blog.youtube/news-and-events/improving-ai-labels-for-viewers-and-creators/",
           "derived_from": ""
         }
       ],
@@ -1680,20 +2147,20 @@
         {
           "layout": "hook",
           "headline": [
-            "아이디어만",
-            "있으면",
-            "앱을 만든다?"
+            "세종대왕이",
+            "지하철을?",
+            "AI 영상 시대"
           ],
           "highlight_line": 3,
-          "sub": "요즘 뜨는 '바이브코딩' 사이트 구경",
+          "sub": "역사 인물 AI 영상, 재밌게 보고 똑똑하게 거르는 법",
           "dialogue": [
             {
               "who": "polar",
-              "text": "선배, 코딩 못해도 앱 만들 수 있어요?"
+              "text": "선배, 세종대왕 브이로그 진짜 웃겨요!"
             },
             {
               "who": "may",
-              "text": "…요즘은 아이디어가 먼저야."
+              "text": "…웃긴 건 좋아. 진짜로 믿으면 곤란하지."
             }
           ],
           "kicker": "THU · 요즘 뭐가 유행?",
@@ -1702,13 +2169,16 @@
         {
           "layout": "trend_item",
           "index": 1,
-          "name": "바이브코딩",
-          "what": "AI한테 말로 설명하면서 서비스를 같이 만들어 가는 방식",
-          "why": "혼자서도 아이디어 하나로 앱스토어 상위권까지 간 사례가 나와서",
+          "tag": "유행",
+          "name": "역사 인물 AI 영상",
+          "what_label": "이게 뭐냐면",
+          "what": "세종대왕·독립운동가가 지금 한국에 오면? 같은 '만약에'를 AI로 만든 쇼츠",
+          "why_label": "왜 뜨냐면",
+          "why": "교과서 속 인물이 지하철 타는 장면처럼 시대가 꼬이는 반전이 웃겨서",
           "dialogue": [
             {
               "who": "polar",
-              "text": "저도 급식 메뉴 앱 만들고 싶어요!"
+              "text": "조선에 치킨 들고 가는 편도 봤어요!"
             }
           ],
           "no": 2
@@ -1716,13 +2186,16 @@
         {
           "layout": "trend_item",
           "index": 2,
-          "name": "이미지 튀김",
-          "what": "이미지를 '튀겨' 준다는 일본 웹사이트. 이름부터 궁금증 폭발",
-          "why": "엑스에서 조회수 {f1}를 넘길 만큼 다들 해 보고 공유해서",
+          "tag": "팩트체크",
+          "name": "라벨, 누가 붙여?",
+          "what_label": "법은 이렇대",
+          "what": "{f1}부터 시행된 AI 기본법, AI 결과물 표시 의무는 {f2}한테 있어",
+          "why_label": "그러니까",
+          "why": "개인이 올린 영상엔 라벨이 없을 수 있어. 결국 거르는 건 보는 사람 몫",
           "dialogue": [
             {
               "who": "may",
-              "text": "단순할수록 더 멀리 퍼져."
+              "text": "…라벨이 없다고 진짜라는 뜻은 아니야."
             }
           ],
           "no": 3
@@ -1730,39 +2203,42 @@
         {
           "layout": "trend_item",
           "index": 3,
-          "name": "테스트·선물형 사이트",
-          "what": "색감 테스트, 링크로 주는 꽃다발처럼 해 보고 바로 나누는 사이트",
-          "why": "결과를 친구한테 보내는 순간 같이 노는 놀이가 돼서",
+          "tag": "꿀팁",
+          "name": "AI 영상 거르기",
+          "what_label": "먼저 보기",
+          "what": "유튜브는 {f3}부터 쇼츠 화면 위에 AI 라벨을 띄워. 그것부터 확인",
+          "why_label": "그다음",
+          "why": "깜빡임·입 모양·그림자가 어색한지 보고, 그 시대에 없던 물건 찾기",
           "dialogue": [
             {
               "who": "polar",
-              "text": "제 색감 점수 친구한테 자랑해야지!"
+              "text": "조선에 콘센트 있으면 바로 AI네요!"
             }
           ],
           "no": 4
         },
         {
           "layout": "career",
-          "title": "이 유행, 진로로 이으면?",
+          "title": "AI 영상, 진로로 이으면?",
           "links": [
             {
-              "field": "컴퓨터공학과",
-              "reason": "아이디어를 실제로 돌아가는 서비스로 만들어"
+              "field": "사학과",
+              "reason": "영상 속 고증이 맞는지 따져 봐"
             },
             {
-              "field": "UX디자이너",
-              "reason": "사람들이 쓰고 싶게 화면과 경험을 설계해"
+              "field": "미디어커뮤니케이션학과",
+              "reason": "가짜 정보가 퍼지는 방식을 연구해"
             },
             {
-              "field": "디지털콘텐츠학과",
-              "reason": "공유하고 싶은 재미를 기획하고 만들어"
+              "field": "디지털포렌식 수사관",
+              "reason": "조작된 영상의 흔적을 찾아내"
             }
           ],
-          "tip": "내가 만들고 싶은 앱 이름 지어 보기",
+          "tip": "오늘 본 쇼츠 세 개, AI 라벨 찾아보기",
           "dialogue": [
             {
               "who": "may",
-              "text": "코드보다 '뭘 만들지'가 먼저야."
+              "text": "…보는 눈도 실력이야."
             }
           ],
           "no": 5
@@ -1780,20 +2256,20 @@
           "no": 6
         }
       ],
-      "caption": "코딩을 잘 몰라도 아이디어 하나로 서비스를 만드는 '바이브코딩'이 화제예요. 엑스 조회수 {f1}를 넘긴 일본 '이미지 튀김' 사이트, 해 보고 바로 공유하는 테스트·선물형 사이트까지 모아 봤어요. 오늘은 내가 만들고 싶은 앱 이름부터 지어 볼까요? 컴퓨터공학·UX디자인이 궁금하다면 저장해 두기 📌",
+      "caption": "세종대왕이 지하철을 타고, 조선에 치킨이 등장하는 AI 영상 보셨나요? 재밌지만 진짜처럼 믿으면 곤란해요. {f1}부터 시행된 AI 기본법은 표시 의무를 {f2}에게 두고 있어서, 개인이 올린 영상엔 라벨이 없을 수도 있대요. 라벨 확인 → 깜빡임·입 모양·그림자 → 그 시대에 없던 물건 찾기, 이 순서만 기억해요. 남의 얼굴을 합성해 퍼뜨리는 장난은 범죄가 될 수 있다는 것도 꼭! 🔍",
       "hashtags": [
         "#메이저맵",
-        "#바이브코딩",
-        "#요즘트렌드",
-        "#고등학생",
-        "#진로탐색"
+        "#AI영상",
+        "#AI리터러시",
+        "#팩트체크",
+        "#고등학생"
       ]
     },
     "gate_report": {
       "post_date": "2026-10-22",
       "track": "trend",
-      "topic_id": "3fc6af6c-8bcc-8163-8508-d33361fe29db",
-      "topic_title": "바이브코딩으로 앱스토어 1위, 나도 가능할까? SNS에서 바이럴된 웹사이트 아이디어 모음",
+      "topic_id": "3fc6af6c-8bcc-81c0-9abd-ef9f9cf12841",
+      "topic_title": "세계관오류",
       "mode": "offline-fixture",
       "pass": true,
       "attempts": [
@@ -1820,6 +2296,20 @@
               "violations": [],
               "warnings": [],
               "engine": "code (금칙어·글자 수·구조) — LLM 톤 판정은 1단계"
+            },
+            {
+              "gate": "G5",
+              "pass": true,
+              "violations": [],
+              "warnings": [],
+              "research_sources": 5,
+              "research_facts": [
+                "f1",
+                "f2",
+                "f3"
+              ],
+              "max_overlap_ratio": 0.0,
+              "ngram": 5
             }
           ]
         }
@@ -1937,17 +2427,17 @@
         {
           "step": "G1·G2·G3 (시도 1)",
           "status": "ok",
-          "duration_ms": 0
+          "duration_ms": 1
         },
         {
           "step": "렌더러+G4",
           "status": "ok",
-          "duration_ms": 2756
+          "duration_ms": 2571
         }
       ]
     },
     "mode": "seed",
-    "version": 1
+    "version": 2
   },
   {
     "post_date": "2026-10-23",
@@ -1955,7 +2445,7 @@
     "status": "ready",
     "title": "2027 수능 — N수생 급증과 사탐런",
     "headline": "수능 D-한 달, 선배들은 사탐으로 간다",
-    "caption": "올해 수능 지원자 10명 중 7명이 사탐만 골랐대요. 과탐만 고른 비율은 22.7%에서 14.2%로 뚝! 졸업생 지원자는 23년 만에 최다! 고1·고2는 2028학년도부터 통합수능이라 이런 과목 눈치싸움은 줄지만, 대신 내신과 학생부가 더 중요해져요. 11월 19일 수능 보는 선배들 응원하면서, 우리는 학생부 한 줄부터 📌\n\n📌 출처: 평가원 접수 결과(머니투데이) · 메이저맵 입시 트렌드 리포트 (수치는 메이저맵이 재가공)\n원문: https://www.mt.co.kr/policy/2026/09/08/2026090810102413804",
+    "caption": "올해 수능 지원자 10명 중 7명이 사탐만 골랐대요. 과탐만 고른 비율은 22.7%에서 14.2%로 뚝! 졸업생 지원자는 23년 만에 최다! 고1·고2는 2028학년도부터 통합수능이라 이런 과목 눈치싸움은 줄지만, 대신 내신과 학생부가 더 중요해져요. 11월 19일 수능 보는 선배들 응원하면서, 우리는 학생부 한 줄부터 📌\n\n🔎 메이저맵에서 더 보기\n· 사탐런, 진짜 전략이 될 수 있을까?– 2025학년도 입결로 보는 자연계 학생들의 ‘사탐런’ 입시 분석 https://majormap.net/content/552\n· 2026 수능총평 : 공통과목 변별력과 사탐런이라는 두 개의 축 https://majormap.net/content/887\n\n📌 출처: 평가원 접수 결과(머니투데이) · 메이저맵 입시 트렌드 리포트 (수치는 메이저맵이 재가공)\n원문: https://www.mt.co.kr/policy/2026/09/08/2026090810102413804",
     "hashtags": [
       "#메이저맵",
       "#고1",
@@ -1964,12 +2454,12 @@
       "#사탐런"
     ],
     "image_urls": [
-      "/seed/2026-10-23/01.jpg",
-      "/seed/2026-10-23/02.jpg",
-      "/seed/2026-10-23/03.jpg",
-      "/seed/2026-10-23/04.jpg",
-      "/seed/2026-10-23/05.jpg",
-      "/seed/2026-10-23/06.jpg"
+      "/seed/2026-10-23/01.jpg?v=2",
+      "/seed/2026-10-23/02.jpg?v=2",
+      "/seed/2026-10-23/03.jpg?v=2",
+      "/seed/2026-10-23/04.jpg?v=2",
+      "/seed/2026-10-23/05.jpg?v=2",
+      "/seed/2026-10-23/06.jpg?v=2"
     ],
     "source_id": "report:3fc6af6c-8bcc-816d-a0c6-c44ad8f126aa#1",
     "source_url": "https://www.mt.co.kr/policy/2026/09/08/2026090810102413804",
@@ -2001,7 +2491,29 @@
         "수능",
         "사탐런 대응"
       ],
-      "next_teaser_hint": ""
+      "next_teaser_hint": "",
+      "research": [],
+      "angle": "",
+      "related": [
+        {
+          "id": 552,
+          "title": "사탐런, 진짜 전략이 될 수 있을까?– 2025학년도 입결로 보는 자연계 학생들의 ‘사탐런’ 입시 분석",
+          "url": "https://majormap.net/content/552",
+          "summary": "2025학년도 입결로 본 자연계 ‘사탐런’ 현황·성과와 대학별 과탐 가산점, 선택 시 유의점 분석",
+          "category": "대학뉴스",
+          "majors": "",
+          "views": 1724
+        },
+        {
+          "id": 887,
+          "title": "2026 수능총평 : 공통과목 변별력과 사탐런이라는 두 개의 축",
+          "url": "https://majormap.net/content/887",
+          "summary": "7년 만 최다 응시, 사탐런, 준킬러 변별, EBS 연계 50%로 본 2026 수능 총평",
+          "category": "교육뉴스",
+          "majors": "",
+          "views": 364
+        }
+      ]
     },
     "facts": [
       {
@@ -2098,6 +2610,27 @@
         "date": "2026-10-17",
         "url": "https://www.mt.co.kr/policy/2026/09/08/2026090810102413804"
       },
+      "research": [],
+      "related": [
+        {
+          "id": 552,
+          "title": "사탐런, 진짜 전략이 될 수 있을까?– 2025학년도 입결로 보는 자연계 학생들의 ‘사탐런’ 입시 분석",
+          "url": "https://majormap.net/content/552",
+          "summary": "2025학년도 입결로 본 자연계 ‘사탐런’ 현황·성과와 대학별 과탐 가산점, 선택 시 유의점 분석",
+          "category": "대학뉴스",
+          "majors": "",
+          "views": 1724
+        },
+        {
+          "id": 887,
+          "title": "2026 수능총평 : 공통과목 변별력과 사탐런이라는 두 개의 축",
+          "url": "https://majormap.net/content/887",
+          "summary": "7년 만 최다 응시, 사탐런, 준킬러 변별, EBS 연계 50%로 본 2026 수능 총평",
+          "category": "교육뉴스",
+          "majors": "",
+          "views": 364
+        }
+      ],
       "facts": [
         {
           "id": "f1",
@@ -2247,6 +2780,7 @@
         {
           "layout": "compare",
           "title": "지금 고3 vs 고1·고2",
+          "mode": "change",
           "col_now": "지금 고3",
           "col_next": "고1·고2",
           "rows": [
@@ -2302,7 +2836,7 @@
         {
           "layout": "cta",
           "headline": "저장해두고 다시 보기",
-          "teaser": "다음 주엔 의대 지역의사제 이야기",
+          "teaser": "다음 주엔 요즘 뜨는 학과 이야기",
           "dialogue": [
             {
               "who": "polar",
@@ -2475,7 +3009,3296 @@
         {
           "step": "렌더러+G4",
           "status": "ok",
-          "duration_ms": 2684
+          "duration_ms": 2536
+        }
+      ]
+    },
+    "mode": "seed",
+    "version": 2
+  },
+  {
+    "post_date": "2026-10-26",
+    "track": "admissions",
+    "status": "ready",
+    "title": "학과 선호 — 의약 독주 속 반도체·AI·무전공",
+    "headline": "인기 학과 판도가 바뀌는 중",
+    "caption": "상위권 대학 자연계 톱은 여전히 의약계열 차지예요. 의약계열을 둔 12개대에선 지난 다섯 해 자연계 톱 60자리가 전부 의약이었죠. 그런데 그다음 자리는 달라졌어요. 반도체 계약학과는 2027학년도 수시 경쟁률 28.53:1로 역대 최고였고, 인문 톱이 무전공인 대학은 1곳에서 5곳으로 늘었어요(공동 포함). 어느 쪽이든 기본은 과목 실력! 관심 학과의 권장 과목부터 확인해 두세요 📌\n\n🔎 메이저맵에서 더 보기\n· AI 시대, 가장 확실한 기술직 반도체공학기술자 직업탐구 https://majormap.net/content/884\n· [자율전공] 지역별 무전공 학교 정보 정리, 어디 지원할지 고민인 학생 어서 오고! https://majormap.net/content/452\n\n📌 출처: 머니투데이 · 교육부 · 베리타스알파 (수치는 메이저맵이 재가공)\n원문: https://www.veritas-a.com/news/articleView.html?idxno=631785\n원문: https://www.mt.co.kr/policy/2026/09/11/2026091121522046272\n원문: https://www.seoul.co.kr/news/society/education-news/2024/05/31/20240531008008\n원문: https://www.veritas-a.com/news/articleView.html?idxno=630604",
+    "hashtags": [
+      "#메이저맵",
+      "#학과선택",
+      "#반도체",
+      "#무전공",
+      "#고1고2"
+    ],
+    "image_urls": [
+      "/seed/2026-10-26/01.jpg?v=1",
+      "/seed/2026-10-26/02.jpg?v=1",
+      "/seed/2026-10-26/03.jpg?v=1",
+      "/seed/2026-10-26/04.jpg?v=1",
+      "/seed/2026-10-26/05.jpg?v=1",
+      "/seed/2026-10-26/06.jpg?v=1"
+    ],
+    "source_id": "report:3fc6af6c-8bcc-816d-a0c6-c44ad8f126aa#5",
+    "source_url": "https://www.veritas-a.com/news/articleView.html?idxno=631785",
+    "source_name": "메이저맵 입시 트렌드 리포트 + 추가 취재 4곳",
+    "topic": {
+      "id": "report:3fc6af6c-8bcc-816d-a0c6-c44ad8f126aa#5",
+      "title": "학과 선호 — 의약 독주 속 반도체·AI·무전공",
+      "track": "admissions",
+      "source_name": "메이저맵 입시 트렌드 리포트",
+      "source_type": "트렌드 리포트",
+      "url": "https://www.veritas-a.com/news/articleView.html?idxno=631785",
+      "published": "2026-10-17",
+      "summary": "상위15개대 정시 입결에서 의약계열 독주가 이어지는 가운데 반도체·AI 학과와 무전공이 치고 올라왔다.",
+      "key_points": [
+        "상위15개대 2022~2026 정시 입결에서 의약계열을 둔 12개대의 자연 1위 60자리가 전부 의약계열이었다.",
+        "서강대 시스템반도체공학과는 2023~2026 4년 연속 자연 1위, 한국외대 AI융합학부는 3년 연속 자연 1·2위를 차지했다.",
+        "인문 1위가 무전공인 대학은 2022년 서울대 1곳에서 2026년 서울대·고려대(공동)·서강대·시립대·외대 5곳으로 늘었다.",
+        "신설 첫해 반짝한 뒤 밀려난 무전공 학과도 있어 대학별 편차가 크다."
+      ],
+      "check_points": [],
+      "evidence": [
+        "자연 1위 60자리 의약, 무전공 인문 1위 1곳→5곳 = 베리타스알파, 2026-10-17"
+      ],
+      "keywords": [
+        "학과 선호",
+        "반도체·AI·첨단",
+        "무전공·자유전공",
+        "상위15개대"
+      ],
+      "next_teaser_hint": "",
+      "research": [
+        {
+          "claim": "2027학년도 수시 반도체 계약학과(연세·고려·서강·성균관·한양대) 경쟁률이 28.53:1로 역대 최고였다(전년 23.90:1)",
+          "source": "머니투데이(종로학원 분석)",
+          "date": "2026-09-11",
+          "url": "https://www.mt.co.kr/policy/2026/09/11/2026091121522046272"
+        },
+        {
+          "claim": "2025학년도 수도권대·국립대 73개교가 신입생의 28.6%(37,935명)를 무전공으로 뽑는다. 전년 6.6%(9,925명)의 약 3.8배",
+          "source": "교육부(서울신문 보도)",
+          "date": "2024-05-31",
+          "url": "https://www.seoul.co.kr/news/society/education-news/2024/05/31/20240531008008"
+        },
+        {
+          "claim": "2025학년도 첨단분야 정원이 22개교에서 1,145명 늘었다",
+          "source": "한국일보",
+          "date": "2024-06-10",
+          "url": "https://www.hankookilbo.com/news/article/A2024061012140002565"
+        },
+        {
+          "claim": "반도체 계약학과는 졸업 후 삼성전자·SK하이닉스 입사로 이어지는 채용조건형이다",
+          "source": "파이낸셜뉴스",
+          "date": "2026-09-15",
+          "url": "https://www.fnnews.com/news/202609151822466228"
+        }
+      ],
+      "angle": "",
+      "related": [
+        {
+          "id": 884,
+          "title": "AI 시대, 가장 확실한 기술직 반도체공학기술자 직업탐구",
+          "url": "https://majormap.net/content/884",
+          "summary": "반도체공학기술자의 업무·역량·관련 학과·자격증·연봉과 고등학생 준비법 직업 탐구",
+          "category": "직업탐구",
+          "majors": "반도체공학기술자, 반도체 공정 엔지니어, 전자공학과, 반도체공학과, 재료공학과",
+          "views": 389
+        },
+        {
+          "id": 452,
+          "title": "[자율전공] 지역별 무전공 학교 정보 정리, 어디 지원할지 고민인 학생 어서 오고!",
+          "url": "https://majormap.net/content/452",
+          "summary": "2025학년도 정시 대비 메이저맵 ‘무전공(자유전공) 시리즈’ 지역별 11편 목차·링크 모음",
+          "category": "학과탐구",
+          "majors": "",
+          "views": 1581
+        }
+      ]
+    },
+    "facts": [
+      {
+        "id": "f1",
+        "value": "28.53:1",
+        "claim": "2027학년도 수시 반도체 계약학과 5곳 경쟁률 (역대 최고)",
+        "source": "머니투데이",
+        "as_of": "2026-09-11",
+        "url": "https://www.mt.co.kr/policy/2026/09/11/2026091121522046272",
+        "derived_from": ""
+      },
+      {
+        "id": "f2",
+        "value": "2027",
+        "claim": "반도체 계약학과 경쟁률의 기준 학년도",
+        "source": "머니투데이",
+        "as_of": "2026-09-11",
+        "url": "https://www.mt.co.kr/policy/2026/09/11/2026091121522046272",
+        "derived_from": ""
+      },
+      {
+        "id": "f3",
+        "value": "6.6%",
+        "claim": "2024학년도 무전공 선발 비율 (수도권대·국립대)",
+        "source": "교육부",
+        "as_of": "2024-05-30",
+        "url": "https://www.seoul.co.kr/news/society/education-news/2024/05/31/20240531008008",
+        "derived_from": ""
+      },
+      {
+        "id": "f4",
+        "value": "28.6%",
+        "claim": "2025학년도 무전공 선발 비율 (수도권대·국립대 73개교)",
+        "source": "교육부",
+        "as_of": "2024-05-30",
+        "url": "https://www.seoul.co.kr/news/society/education-news/2024/05/31/20240531008008",
+        "derived_from": ""
+      },
+      {
+        "id": "f5",
+        "value": "3.8배",
+        "claim": "무전공 선발 인원 증가 폭 (9,925명→37,935명)",
+        "source": "교육부",
+        "as_of": "2024-05-30",
+        "url": "https://www.seoul.co.kr/news/society/education-news/2024/05/31/20240531008008",
+        "derived_from": ""
+      },
+      {
+        "id": "f6",
+        "value": "2025",
+        "claim": "무전공 선발이 크게 늘어난 학년도",
+        "source": "교육부",
+        "as_of": "2024-05-30",
+        "url": "https://www.seoul.co.kr/news/society/education-news/2024/05/31/20240531008008",
+        "derived_from": ""
+      },
+      {
+        "id": "f7",
+        "value": "1곳",
+        "claim": "2022년 인문 1위가 무전공인 상위15개대 수",
+        "source": "베리타스알파",
+        "as_of": "2026-10-17",
+        "url": "https://www.veritas-a.com/news/articleView.html?idxno=630604",
+        "derived_from": ""
+      },
+      {
+        "id": "f8",
+        "value": "5곳",
+        "claim": "2026년 인문 1위가 무전공인 상위15개대 수 (공동 포함)",
+        "source": "베리타스알파",
+        "as_of": "2026-10-17",
+        "url": "https://www.veritas-a.com/news/articleView.html?idxno=630604",
+        "derived_from": ""
+      },
+      {
+        "id": "f9",
+        "value": "15개대",
+        "claim": "비교 대상 상위 대학 수",
+        "source": "베리타스알파",
+        "as_of": "2026-10-17",
+        "url": "https://www.veritas-a.com/news/articleView.html?idxno=630604",
+        "derived_from": ""
+      },
+      {
+        "id": "f10",
+        "value": "2022",
+        "claim": "비교 시작 연도",
+        "source": "베리타스알파",
+        "as_of": "2026-10-17",
+        "url": "https://www.veritas-a.com/news/articleView.html?idxno=630604",
+        "derived_from": ""
+      },
+      {
+        "id": "f11",
+        "value": "2026",
+        "claim": "비교 끝 연도",
+        "source": "베리타스알파",
+        "as_of": "2026-10-17",
+        "url": "https://www.veritas-a.com/news/articleView.html?idxno=630604",
+        "derived_from": ""
+      },
+      {
+        "id": "f12",
+        "value": "12개대",
+        "claim": "의약계열을 둔 상위15개대 수",
+        "source": "베리타스알파",
+        "as_of": "2026-10-17",
+        "url": "https://www.veritas-a.com/news/articleView.html?idxno=631785",
+        "derived_from": ""
+      },
+      {
+        "id": "f13",
+        "value": "60자리",
+        "claim": "다섯 해 동안의 자연 1위 자리 수 (전부 의약계열)",
+        "source": "베리타스알파",
+        "as_of": "2026-10-17",
+        "url": "https://www.veritas-a.com/news/articleView.html?idxno=631785",
+        "derived_from": ""
+      }
+    ],
+    "script": {
+      "track": "admissions",
+      "post_date": "2026-10-26",
+      "topic_id": "report:3fc6af6c-8bcc-816d-a0c6-c44ad8f126aa#5",
+      "topic_title": "학과 선호 — 의약 독주 속 반도체·AI·무전공",
+      "kicker": "MON · 입시 브리핑",
+      "next_label": "내일(화) 요즘 트렌드",
+      "source": {
+        "name": "메이저맵 입시 트렌드 리포트",
+        "date": "2026-10-17",
+        "url": "https://www.veritas-a.com/news/articleView.html?idxno=631785"
+      },
+      "research": [
+        {
+          "claim": "2027학년도 수시 반도체 계약학과(연세·고려·서강·성균관·한양대) 경쟁률이 28.53:1로 역대 최고였다(전년 23.90:1)",
+          "source": "머니투데이(종로학원 분석)",
+          "date": "2026-09-11",
+          "url": "https://www.mt.co.kr/policy/2026/09/11/2026091121522046272"
+        },
+        {
+          "claim": "2025학년도 수도권대·국립대 73개교가 신입생의 28.6%(37,935명)를 무전공으로 뽑는다. 전년 6.6%(9,925명)의 약 3.8배",
+          "source": "교육부(서울신문 보도)",
+          "date": "2024-05-31",
+          "url": "https://www.seoul.co.kr/news/society/education-news/2024/05/31/20240531008008"
+        },
+        {
+          "claim": "2025학년도 첨단분야 정원이 22개교에서 1,145명 늘었다",
+          "source": "한국일보",
+          "date": "2024-06-10",
+          "url": "https://www.hankookilbo.com/news/article/A2024061012140002565"
+        },
+        {
+          "claim": "반도체 계약학과는 졸업 후 삼성전자·SK하이닉스 입사로 이어지는 채용조건형이다",
+          "source": "파이낸셜뉴스",
+          "date": "2026-09-15",
+          "url": "https://www.fnnews.com/news/202609151822466228"
+        }
+      ],
+      "related": [
+        {
+          "id": 884,
+          "title": "AI 시대, 가장 확실한 기술직 반도체공학기술자 직업탐구",
+          "url": "https://majormap.net/content/884",
+          "summary": "반도체공학기술자의 업무·역량·관련 학과·자격증·연봉과 고등학생 준비법 직업 탐구",
+          "category": "직업탐구",
+          "majors": "반도체공학기술자, 반도체 공정 엔지니어, 전자공학과, 반도체공학과, 재료공학과",
+          "views": 389
+        },
+        {
+          "id": 452,
+          "title": "[자율전공] 지역별 무전공 학교 정보 정리, 어디 지원할지 고민인 학생 어서 오고!",
+          "url": "https://majormap.net/content/452",
+          "summary": "2025학년도 정시 대비 메이저맵 ‘무전공(자유전공) 시리즈’ 지역별 11편 목차·링크 모음",
+          "category": "학과탐구",
+          "majors": "",
+          "views": 1581
+        }
+      ],
+      "facts": [
+        {
+          "id": "f1",
+          "value": "28.53:1",
+          "claim": "2027학년도 수시 반도체 계약학과 5곳 경쟁률 (역대 최고)",
+          "source": "머니투데이",
+          "as_of": "2026-09-11",
+          "url": "https://www.mt.co.kr/policy/2026/09/11/2026091121522046272",
+          "derived_from": ""
+        },
+        {
+          "id": "f2",
+          "value": "2027",
+          "claim": "반도체 계약학과 경쟁률의 기준 학년도",
+          "source": "머니투데이",
+          "as_of": "2026-09-11",
+          "url": "https://www.mt.co.kr/policy/2026/09/11/2026091121522046272",
+          "derived_from": ""
+        },
+        {
+          "id": "f3",
+          "value": "6.6%",
+          "claim": "2024학년도 무전공 선발 비율 (수도권대·국립대)",
+          "source": "교육부",
+          "as_of": "2024-05-30",
+          "url": "https://www.seoul.co.kr/news/society/education-news/2024/05/31/20240531008008",
+          "derived_from": ""
+        },
+        {
+          "id": "f4",
+          "value": "28.6%",
+          "claim": "2025학년도 무전공 선발 비율 (수도권대·국립대 73개교)",
+          "source": "교육부",
+          "as_of": "2024-05-30",
+          "url": "https://www.seoul.co.kr/news/society/education-news/2024/05/31/20240531008008",
+          "derived_from": ""
+        },
+        {
+          "id": "f5",
+          "value": "3.8배",
+          "claim": "무전공 선발 인원 증가 폭 (9,925명→37,935명)",
+          "source": "교육부",
+          "as_of": "2024-05-30",
+          "url": "https://www.seoul.co.kr/news/society/education-news/2024/05/31/20240531008008",
+          "derived_from": ""
+        },
+        {
+          "id": "f6",
+          "value": "2025",
+          "claim": "무전공 선발이 크게 늘어난 학년도",
+          "source": "교육부",
+          "as_of": "2024-05-30",
+          "url": "https://www.seoul.co.kr/news/society/education-news/2024/05/31/20240531008008",
+          "derived_from": ""
+        },
+        {
+          "id": "f7",
+          "value": "1곳",
+          "claim": "2022년 인문 1위가 무전공인 상위15개대 수",
+          "source": "베리타스알파",
+          "as_of": "2026-10-17",
+          "url": "https://www.veritas-a.com/news/articleView.html?idxno=630604",
+          "derived_from": ""
+        },
+        {
+          "id": "f8",
+          "value": "5곳",
+          "claim": "2026년 인문 1위가 무전공인 상위15개대 수 (공동 포함)",
+          "source": "베리타스알파",
+          "as_of": "2026-10-17",
+          "url": "https://www.veritas-a.com/news/articleView.html?idxno=630604",
+          "derived_from": ""
+        },
+        {
+          "id": "f9",
+          "value": "15개대",
+          "claim": "비교 대상 상위 대학 수",
+          "source": "베리타스알파",
+          "as_of": "2026-10-17",
+          "url": "https://www.veritas-a.com/news/articleView.html?idxno=630604",
+          "derived_from": ""
+        },
+        {
+          "id": "f10",
+          "value": "2022",
+          "claim": "비교 시작 연도",
+          "source": "베리타스알파",
+          "as_of": "2026-10-17",
+          "url": "https://www.veritas-a.com/news/articleView.html?idxno=630604",
+          "derived_from": ""
+        },
+        {
+          "id": "f11",
+          "value": "2026",
+          "claim": "비교 끝 연도",
+          "source": "베리타스알파",
+          "as_of": "2026-10-17",
+          "url": "https://www.veritas-a.com/news/articleView.html?idxno=630604",
+          "derived_from": ""
+        },
+        {
+          "id": "f12",
+          "value": "12개대",
+          "claim": "의약계열을 둔 상위15개대 수",
+          "source": "베리타스알파",
+          "as_of": "2026-10-17",
+          "url": "https://www.veritas-a.com/news/articleView.html?idxno=631785",
+          "derived_from": ""
+        },
+        {
+          "id": "f13",
+          "value": "60자리",
+          "claim": "다섯 해 동안의 자연 1위 자리 수 (전부 의약계열)",
+          "source": "베리타스알파",
+          "as_of": "2026-10-17",
+          "url": "https://www.veritas-a.com/news/articleView.html?idxno=631785",
+          "derived_from": ""
+        }
+      ],
+      "slides": [
+        {
+          "layout": "hook",
+          "headline": [
+            "인기 학과",
+            "판도가",
+            "바뀌는 중"
+          ],
+          "highlight_line": 3,
+          "sub": "의약 다음 자리, 반도체·AI·무전공이 치고 올라왔어",
+          "dialogue": [
+            {
+              "who": "polar",
+              "text": "선배, 요즘 제일 핫한 학과가 뭐예요?"
+            },
+            {
+              "who": "may",
+              "text": "…의대 빼면 반도체랑 AI. 넘겨 봐."
+            }
+          ],
+          "kicker": "MON · 입시 브리핑",
+          "no": 1
+        },
+        {
+          "layout": "big_number",
+          "label": "반도체 계약학과 수시 경쟁률은?",
+          "number": "{f1}",
+          "line": "{f2}학년도, 역대 최고",
+          "bar_left": "",
+          "bar_left_label": "",
+          "bar_right": "",
+          "bar_right_label": "",
+          "dialogue": [
+            {
+              "who": "may",
+              "text": "…졸업하면 대기업 채용이 걸린 학과야."
+            }
+          ],
+          "no": 2
+        },
+        {
+          "layout": "detail",
+          "title": "무전공, 진짜 커졌어",
+          "change": {
+            "title": "무전공 선발 비율",
+            "before": "{f3}",
+            "after": "{f4}",
+            "note": "{f6}학년도 수도권·국립대, 인원 약 {f5}"
+          },
+          "dots": {
+            "title": "인문 톱이 무전공인 대학",
+            "filled": "{f8}",
+            "total": "{f9}",
+            "note": "{f10} {f7} → {f11} {f8}, 공동 포함"
+          },
+          "dialogue": [
+            {
+              "who": "polar",
+              "text": "들어가서 전공 고르는 게 인기라고요?!"
+            }
+          ],
+          "no": 3
+        },
+        {
+          "layout": "compare",
+          "title": "반도체·AI vs 무전공",
+          "mode": "versus",
+          "col_now": "반도체·AI",
+          "col_next": "무전공",
+          "rows": [
+            {
+              "item": "전공은 언제?",
+              "now": "입학할 때 정해",
+              "next": "입학 후 골라"
+            },
+            {
+              "item": "기본 과목",
+              "now": "수학·물리·정보",
+              "next": "진로 따라 달라"
+            },
+            {
+              "item": "요즘 기록",
+              "now": "계약학과 경쟁률 {f1}",
+              "next": "인문 톱 대학 {f8}"
+            },
+            {
+              "item": "꼭 볼 것",
+              "now": "채용·장학 조건",
+              "next": "고를 수 있는 전공"
+            }
+          ],
+          "dialogue": [
+            {
+              "who": "may",
+              "text": "…어느 쪽이든 과목 실력은 기본이야."
+            }
+          ],
+          "no": 4
+        },
+        {
+          "layout": "action",
+          "title": "오늘 딱 이것만 해",
+          "steps": [
+            {
+              "title": "학과 하나 찜하기",
+              "desc": "반도체·AI·자유전공 중 끌리는 곳 하나"
+            },
+            {
+              "title": "권장 과목 확인",
+              "desc": "어디가·입학처에서 권장 이수과목 찾기"
+            },
+            {
+              "title": "수강신청표에 체크",
+              "desc": "다음 학기 고를 과목에 미리 표시"
+            }
+          ],
+          "dialogue": [
+            {
+              "who": "polar",
+              "text": "학과 이름보다 과목이 먼저네요!"
+            }
+          ],
+          "no": 5
+        },
+        {
+          "layout": "cta",
+          "headline": "저장해두고 다시 보기",
+          "teaser": "게임 속 화석, 진짜 공룡이랑 비교하면?",
+          "dialogue": [
+            {
+              "who": "polar",
+              "text": "내일 것도 기대할게요!"
+            }
+          ],
+          "no": 6
+        }
+      ],
+      "caption": "상위권 대학 자연계 톱은 여전히 의약계열 차지예요. 의약계열을 둔 {f12}에선 지난 다섯 해 자연계 톱 {f13}가 전부 의약이었죠. 그런데 그다음 자리는 달라졌어요. 반도체 계약학과는 {f2}학년도 수시 경쟁률 {f1}로 역대 최고였고, 인문 톱이 무전공인 대학은 {f7}에서 {f8}으로 늘었어요(공동 포함). 어느 쪽이든 기본은 과목 실력! 관심 학과의 권장 과목부터 확인해 두세요 📌",
+      "hashtags": [
+        "#메이저맵",
+        "#학과선택",
+        "#반도체",
+        "#무전공",
+        "#고1고2"
+      ]
+    },
+    "gate_report": {
+      "post_date": "2026-10-26",
+      "track": "admissions",
+      "topic_id": "report:3fc6af6c-8bcc-816d-a0c6-c44ad8f126aa#5",
+      "topic_title": "학과 선호 — 의약 독주 속 반도체·AI·무전공",
+      "mode": "offline-fixture",
+      "pass": true,
+      "attempts": [
+        {
+          "attempt": 1,
+          "gates": [
+            {
+              "gate": "G1",
+              "pass": true,
+              "violations": [],
+              "warnings": []
+            },
+            {
+              "gate": "G2",
+              "pass": true,
+              "violations": [],
+              "warnings": [],
+              "max_overlap_ratio": 0.0,
+              "ngram": 6
+            },
+            {
+              "gate": "G3",
+              "pass": true,
+              "violations": [],
+              "warnings": [],
+              "engine": "code (금칙어·글자 수·구조) — LLM 톤 판정은 1단계"
+            }
+          ]
+        }
+      ],
+      "g4": {
+        "gate": "G4",
+        "pass": true,
+        "violations": [],
+        "warnings": [],
+        "slides": [
+          {
+            "slide": 1,
+            "font_scale": 1.0,
+            "overflow": [],
+            "font": {
+              "loaded_weights": [
+                "600",
+                "700",
+                "800",
+                "900"
+              ],
+              "check_700": true,
+              "check_900": true
+            },
+            "pass": true
+          },
+          {
+            "slide": 2,
+            "font_scale": 1.0,
+            "overflow": [],
+            "font": {
+              "loaded_weights": [
+                "500",
+                "700",
+                "800",
+                "900"
+              ],
+              "check_700": true,
+              "check_900": true
+            },
+            "pass": true
+          },
+          {
+            "slide": 3,
+            "font_scale": 1.0,
+            "overflow": [],
+            "font": {
+              "loaded_weights": [
+                "500",
+                "700",
+                "800",
+                "900"
+              ],
+              "check_700": true,
+              "check_900": true
+            },
+            "pass": true
+          },
+          {
+            "slide": 4,
+            "font_scale": 1.0,
+            "overflow": [],
+            "font": {
+              "loaded_weights": [
+                "500",
+                "700",
+                "800",
+                "900"
+              ],
+              "check_700": true,
+              "check_900": true
+            },
+            "pass": true
+          },
+          {
+            "slide": 5,
+            "font_scale": 1.0,
+            "overflow": [],
+            "font": {
+              "loaded_weights": [
+                "600",
+                "700",
+                "800",
+                "900"
+              ],
+              "check_700": true,
+              "check_900": true
+            },
+            "pass": true
+          },
+          {
+            "slide": 6,
+            "font_scale": 1.0,
+            "overflow": [],
+            "font": {
+              "loaded_weights": [
+                "500",
+                "700",
+                "800",
+                "900"
+              ],
+              "check_700": true,
+              "check_900": true
+            },
+            "pass": true
+          }
+        ]
+      },
+      "steps": [
+        {
+          "step": "소재",
+          "status": "ok",
+          "duration_ms": 0
+        },
+        {
+          "step": "G1·G2·G3 (시도 1)",
+          "status": "ok",
+          "duration_ms": 1
+        },
+        {
+          "step": "렌더러+G4",
+          "status": "ok",
+          "duration_ms": 2477
+        }
+      ]
+    },
+    "mode": "seed",
+    "version": 1
+  },
+  {
+    "post_date": "2026-10-27",
+    "track": "trend",
+    "status": "ready",
+    "title": "포켓몬 화석박물관",
+    "headline": "포켓몬이 박물관에 간다고?",
+    "caption": "포켓몬 화석박물관이 12월 중순 국립광주과학관에 와요(정확한 날짜·예매는 추후 공지). 암나이트 옆에 진짜 암모나이트를 두는 식으로, 게임 속 화석 포켓몬과 실제 화석을 짝지어 보여 준대요. 마침 지난 9월엔 보성에서 나온 공룡 '코리아노사우루스' 골격화석이 천연기념물이 됐어요. 덕질도 깊이 파면 고생물학! 좋아하는 화석 포켓몬의 모티브를 찾아 댓글로 알려 주세요 🦖\n\n🔎 메이저맵에서 더 보기\n· 식목일 기념🌱 지구과학Ⅰ선택과목 연계도서 추천 https://majormap.net/content/533\n· [재학생 인터뷰] 경북대학교 지구과학교육과 https://majormap.net/content/240\n\n📌 출처: 캐릿 · ZDNet Korea · NBC Chicago · 경향신문 (캐릿 트렌드에 메이저맵이 추가 취재를 더해 재구성)\n원문: https://x.com/pokemonkrmkt/status/2110179818520424867\n원문: https://zdnet.co.kr/view/?no=20261014174307\n원문: https://www.nbcchicago.com/news/local/thousands-vie-for-tickets-to-pokemon-fossil-museum-exhibit-on-first-day-of-sales/3902858/?amp=1\n원문: https://www.khan.co.kr/article/202609041136001/",
+    "hashtags": [
+      "#메이저맵",
+      "#포켓몬화석박물관",
+      "#고생물학",
+      "#공룡",
+      "#진로탐색"
+    ],
+    "image_urls": [
+      "/seed/2026-10-27/01.jpg?v=1",
+      "/seed/2026-10-27/02.jpg?v=1",
+      "/seed/2026-10-27/03.jpg?v=1",
+      "/seed/2026-10-27/04.jpg?v=1",
+      "/seed/2026-10-27/05.jpg?v=1",
+      "/seed/2026-10-27/06.jpg?v=1"
+    ],
+    "source_id": "3fc6af6c-8bcc-81e8-ac04-c839720e98e1",
+    "source_url": "https://x.com/pokemonkrmkt/status/2110179818520424867",
+    "source_name": "캐릿 + 추가 취재 4곳",
+    "topic": {
+      "id": "3fc6af6c-8bcc-81e8-ac04-c839720e98e1",
+      "title": "포켓몬 화석박물관",
+      "track": "trend",
+      "source_name": "캐릿",
+      "source_type": "캐릿 마이크로 트렌드",
+      "url": "https://x.com/pokemonkrmkt/status/2110179818520424867",
+      "published": "2026-10-14",
+      "summary": "오는 12월 국립광주과학관에서 '포켓몬 화석박물관' 전시가 열린다는 소식이 화제",
+      "key_points": [
+        "오는 12월 국립광주과학관에서 '포켓몬 화석박물관' 전시가 열린다는 소식이 화제",
+        "행사 공지는 엑스에서 2천 회 넘게 재게시됨",
+        "일본과 미국에서 매진 행렬을 이어간 포켓몬 특별 전시",
+        "게임 속 '화석포켓몬'과 실제 화석을 비교하며 고생물학을 배우도록 구성",
+        "올해 <포켓몬스터> 30주년을 맞아 다양한 이벤트와 굿즈가 쏟아지며 주목받는 중"
+      ],
+      "check_points": [],
+      "evidence": [
+        "포켓몬 화석박물관 = 캐릿, 2026-10-14"
+      ],
+      "keywords": [
+        "엑스"
+      ],
+      "next_teaser_hint": "",
+      "research": [
+        {
+          "claim": "포켓몬코리아와 국립광주과학관이 특별전 '포켓몬 화석박물관'을 2026년 12월 중순 개막해 2027년 여름까지 연다. 정확한 개막일·관람료는 추후 공개",
+          "source": "ZDNet Korea",
+          "date": "2026-10-14",
+          "url": "https://zdnet.co.kr/view/?no=20261014174307"
+        },
+        {
+          "claim": "타르보사우루스 골격 옆에 견고라스, 암모나이트 옆에 암나이트를 두는 식으로 실제 표본과 포켓몬을 나란히 전시한다. 광주는 시카고에 이어 두 번째 해외 개최지다",
+          "source": "ZDNet Korea",
+          "date": "2026-10-14",
+          "url": "https://zdnet.co.kr/view/?no=20261014174307"
+        },
+        {
+          "claim": "미국 시카고 필드박물관 전시는 예매 첫날 온라인 대기열이 2만 3천 명을 넘었다",
+          "source": "NBC Chicago",
+          "date": "2026-03-03",
+          "url": "https://www.nbcchicago.com/news/local/thousands-vie-for-tickets-to-pokemon-fossil-museum-exhibit-on-first-day-of-sales/3902858/?amp=1"
+        },
+        {
+          "claim": "국가유산청이 2026년 9월 '보성 조각류 공룡(코리아노사우루스 보성엔시스) 골격화석'을 천연기념물로 지정했다. 한반도에서 처음 확인된 조각류 골격으로 광주 전남대 한국공룡연구센터가 보관한다",
+          "source": "경향신문",
+          "date": "2026-09-04",
+          "url": "https://www.khan.co.kr/article/202609041136001/"
+        },
+        {
+          "claim": "원조 전시는 일본 국립과학박물관이 기획해 2021년 홋카이도 미카사시립박물관에서 처음 열렸다",
+          "source": "일본 국립과학박물관",
+          "date": "2021-04-20",
+          "url": "https://resemom.jp/release/prtimes/20210420/70761.html"
+        }
+      ],
+      "angle": "게임 속 화석 포켓몬 ↔ 진짜 화석, 그리고 지난달 천연기념물이 된 한국 공룡",
+      "related": [
+        {
+          "id": 533,
+          "title": "식목일 기념🌱 지구과학Ⅰ선택과목 연계도서 추천",
+          "url": "https://majormap.net/content/533",
+          "summary": "식목일 기념 지구과학Ⅰ 유체지구·고체지구·천체 단원 연계 추천 도서 6권",
+          "category": "책추천",
+          "majors": "식물학자, 고생물학자, 천문학자, 물리학자",
+          "views": 1173
+        },
+        {
+          "id": 240,
+          "title": "[재학생 인터뷰] 경북대학교 지구과학교육과",
+          "url": "https://majormap.net/content/240",
+          "summary": "경북대 지구과학교육과의 학과 정보와 17학번 재학생의 수업·진로 인터뷰",
+          "category": "학과탐구",
+          "majors": "지구과학교육과, 지구과학교사, 지구과학자, 기상청 연구원, 지질자원연구원, 환경보존 연구원",
+          "views": 167
+        }
+      ]
+    },
+    "facts": [
+      {
+        "id": "f1",
+        "value": "12월 중순",
+        "claim": "국립광주과학관 '포켓몬 화석박물관' 개막 시기",
+        "source": "ZDNet Korea",
+        "as_of": "2026-10-14",
+        "url": "https://zdnet.co.kr/view/?no=20261014174307",
+        "derived_from": ""
+      },
+      {
+        "id": "f2",
+        "value": "2만 3천 명",
+        "claim": "시카고 전시 예매 첫날 온라인 대기 인원",
+        "source": "NBC Chicago",
+        "as_of": "2026-03-03",
+        "url": "https://www.nbcchicago.com/news/local/thousands-vie-for-tickets-to-pokemon-fossil-museum-exhibit-on-first-day-of-sales/3902858/?amp=1",
+        "derived_from": ""
+      },
+      {
+        "id": "f3",
+        "value": "타르보사우루스",
+        "claim": "견고라스와 짝지어 놓이는 실제 공룡 골격",
+        "source": "ZDNet Korea",
+        "as_of": "2026-10-14",
+        "url": "https://zdnet.co.kr/view/?no=20261014174307",
+        "derived_from": ""
+      },
+      {
+        "id": "f4",
+        "value": "9월",
+        "claim": "코리아노사우루스 골격화석이 천연기념물로 지정된 달 (2026년)",
+        "source": "경향신문",
+        "as_of": "2026-09-04",
+        "url": "https://www.khan.co.kr/article/202609041136001/",
+        "derived_from": ""
+      }
+    ],
+    "script": {
+      "track": "trend",
+      "post_date": "2026-10-27",
+      "topic_id": "3fc6af6c-8bcc-81e8-ac04-c839720e98e1",
+      "topic_title": "포켓몬 화석박물관",
+      "kicker": "TUE · 요즘 뭐가 유행?",
+      "next_label": "내일(수) 입시 브리핑",
+      "source": {
+        "name": "캐릿",
+        "date": "2026-10-14",
+        "url": "https://x.com/pokemonkrmkt/status/2110179818520424867"
+      },
+      "research": [
+        {
+          "claim": "포켓몬코리아와 국립광주과학관이 특별전 '포켓몬 화석박물관'을 2026년 12월 중순 개막해 2027년 여름까지 연다. 정확한 개막일·관람료는 추후 공개",
+          "source": "ZDNet Korea",
+          "date": "2026-10-14",
+          "url": "https://zdnet.co.kr/view/?no=20261014174307"
+        },
+        {
+          "claim": "타르보사우루스 골격 옆에 견고라스, 암모나이트 옆에 암나이트를 두는 식으로 실제 표본과 포켓몬을 나란히 전시한다. 광주는 시카고에 이어 두 번째 해외 개최지다",
+          "source": "ZDNet Korea",
+          "date": "2026-10-14",
+          "url": "https://zdnet.co.kr/view/?no=20261014174307"
+        },
+        {
+          "claim": "미국 시카고 필드박물관 전시는 예매 첫날 온라인 대기열이 2만 3천 명을 넘었다",
+          "source": "NBC Chicago",
+          "date": "2026-03-03",
+          "url": "https://www.nbcchicago.com/news/local/thousands-vie-for-tickets-to-pokemon-fossil-museum-exhibit-on-first-day-of-sales/3902858/?amp=1"
+        },
+        {
+          "claim": "국가유산청이 2026년 9월 '보성 조각류 공룡(코리아노사우루스 보성엔시스) 골격화석'을 천연기념물로 지정했다. 한반도에서 처음 확인된 조각류 골격으로 광주 전남대 한국공룡연구센터가 보관한다",
+          "source": "경향신문",
+          "date": "2026-09-04",
+          "url": "https://www.khan.co.kr/article/202609041136001/"
+        },
+        {
+          "claim": "원조 전시는 일본 국립과학박물관이 기획해 2021년 홋카이도 미카사시립박물관에서 처음 열렸다",
+          "source": "일본 국립과학박물관",
+          "date": "2021-04-20",
+          "url": "https://resemom.jp/release/prtimes/20210420/70761.html"
+        }
+      ],
+      "related": [
+        {
+          "id": 533,
+          "title": "식목일 기념🌱 지구과학Ⅰ선택과목 연계도서 추천",
+          "url": "https://majormap.net/content/533",
+          "summary": "식목일 기념 지구과학Ⅰ 유체지구·고체지구·천체 단원 연계 추천 도서 6권",
+          "category": "책추천",
+          "majors": "식물학자, 고생물학자, 천문학자, 물리학자",
+          "views": 1173
+        },
+        {
+          "id": 240,
+          "title": "[재학생 인터뷰] 경북대학교 지구과학교육과",
+          "url": "https://majormap.net/content/240",
+          "summary": "경북대 지구과학교육과의 학과 정보와 17학번 재학생의 수업·진로 인터뷰",
+          "category": "학과탐구",
+          "majors": "지구과학교육과, 지구과학교사, 지구과학자, 기상청 연구원, 지질자원연구원, 환경보존 연구원",
+          "views": 167
+        }
+      ],
+      "facts": [
+        {
+          "id": "f1",
+          "value": "12월 중순",
+          "claim": "국립광주과학관 '포켓몬 화석박물관' 개막 시기",
+          "source": "ZDNet Korea",
+          "as_of": "2026-10-14",
+          "url": "https://zdnet.co.kr/view/?no=20261014174307",
+          "derived_from": ""
+        },
+        {
+          "id": "f2",
+          "value": "2만 3천 명",
+          "claim": "시카고 전시 예매 첫날 온라인 대기 인원",
+          "source": "NBC Chicago",
+          "as_of": "2026-03-03",
+          "url": "https://www.nbcchicago.com/news/local/thousands-vie-for-tickets-to-pokemon-fossil-museum-exhibit-on-first-day-of-sales/3902858/?amp=1",
+          "derived_from": ""
+        },
+        {
+          "id": "f3",
+          "value": "타르보사우루스",
+          "claim": "견고라스와 짝지어 놓이는 실제 공룡 골격",
+          "source": "ZDNet Korea",
+          "as_of": "2026-10-14",
+          "url": "https://zdnet.co.kr/view/?no=20261014174307",
+          "derived_from": ""
+        },
+        {
+          "id": "f4",
+          "value": "9월",
+          "claim": "코리아노사우루스 골격화석이 천연기념물로 지정된 달 (2026년)",
+          "source": "경향신문",
+          "as_of": "2026-09-04",
+          "url": "https://www.khan.co.kr/article/202609041136001/",
+          "derived_from": ""
+        }
+      ],
+      "slides": [
+        {
+          "layout": "hook",
+          "headline": [
+            "포켓몬이",
+            "박물관에",
+            "간다고?"
+          ],
+          "highlight_line": 3,
+          "sub": "게임 속 화석 포켓몬, 진짜 화석이랑 나란히 선다",
+          "dialogue": [
+            {
+              "who": "polar",
+              "text": "선배, 암나이트가 진짜 있었어요?"
+            },
+            {
+              "who": "may",
+              "text": "…비슷한 건 진짜 있었어. 넘겨 봐."
+            }
+          ],
+          "kicker": "TUE · 요즘 뭐가 유행?",
+          "no": 1
+        },
+        {
+          "layout": "trend_item",
+          "index": 1,
+          "tag": "유행",
+          "name": "포켓몬 화석박물관",
+          "what_label": "이게 뭐냐면",
+          "what": "{f1} 국립광주과학관에서 열리는 특별전. 화석 포켓몬과 진짜 화석을 나란히 봐",
+          "why_label": "얼마나 핫하냐면",
+          "why": "미국 시카고에선 예매 첫날 온라인 대기만 {f2} 넘게. 광주가 두 번째 해외 개최지래",
+          "dialogue": [
+            {
+              "who": "polar",
+              "text": "광주 가는 기차표부터 알아볼게요!"
+            }
+          ],
+          "no": 2
+        },
+        {
+          "layout": "trend_item",
+          "index": 2,
+          "tag": "진짜 과학",
+          "name": "게임 속 vs 진짜",
+          "what_label": "짝꿍 화석",
+          "what": "암나이트 옆엔 암모나이트, 견고라스 옆엔 {f3} 골격이 놓여",
+          "why_label": "알고 보면",
+          "why": "고생물학은 화석으로 옛 생물의 모습과 살던 환경을 복원하는 학문이야",
+          "dialogue": [
+            {
+              "who": "may",
+              "text": "…덕질도 깊이 파면 공부가 돼."
+            }
+          ],
+          "no": 3
+        },
+        {
+          "layout": "trend_item",
+          "index": 3,
+          "tag": "우리나라",
+          "name": "코리아노사우루스",
+          "what_label": "최근 소식",
+          "what": "지난 {f4} 천연기념물이 된 보성 출신 공룡 골격화석",
+          "why_label": "왜 특별하냐면",
+          "why": "한반도에서 처음 확인된 조각류 공룡 골격이야. 광주 전남대가 보관 중",
+          "dialogue": [
+            {
+              "who": "polar",
+              "text": "같은 광주에 진짜 공룡이 있었네요?!"
+            }
+          ],
+          "no": 4
+        },
+        {
+          "layout": "career",
+          "title": "화석 덕후, 진로로 이으면?",
+          "links": [
+            {
+              "field": "지질학과",
+              "reason": "땅과 화석으로 지구의 역사를 읽어"
+            },
+            {
+              "field": "지구과학교육과",
+              "reason": "화석과 지구 이야기를 가르쳐"
+            },
+            {
+              "field": "학예연구사",
+              "reason": "박물관 전시를 기획하고 연구해"
+            }
+          ],
+          "tip": "좋아하는 화석 포켓몬 모티브 찾아보기",
+          "dialogue": [
+            {
+              "who": "may",
+              "text": "…메이저맵에 지구과학교육과 인터뷰도 있어."
+            }
+          ],
+          "no": 5
+        },
+        {
+          "layout": "cta",
+          "headline": "저장해두고 다시 보기",
+          "teaser": "의대 지역 트랙, 중학교 주소가 중요?",
+          "dialogue": [
+            {
+              "who": "polar",
+              "text": "내일 입시 브리핑도 놓치지 마요!"
+            }
+          ],
+          "no": 6
+        }
+      ],
+      "caption": "포켓몬 화석박물관이 {f1} 국립광주과학관에 와요(정확한 날짜·예매는 추후 공지). 암나이트 옆에 진짜 암모나이트를 두는 식으로, 게임 속 화석 포켓몬과 실제 화석을 짝지어 보여 준대요. 마침 지난 {f4}엔 보성에서 나온 공룡 '코리아노사우루스' 골격화석이 천연기념물이 됐어요. 덕질도 깊이 파면 고생물학! 좋아하는 화석 포켓몬의 모티브를 찾아 댓글로 알려 주세요 🦖",
+      "hashtags": [
+        "#메이저맵",
+        "#포켓몬화석박물관",
+        "#고생물학",
+        "#공룡",
+        "#진로탐색"
+      ]
+    },
+    "gate_report": {
+      "post_date": "2026-10-27",
+      "track": "trend",
+      "topic_id": "3fc6af6c-8bcc-81e8-ac04-c839720e98e1",
+      "topic_title": "포켓몬 화석박물관",
+      "mode": "offline-fixture",
+      "pass": true,
+      "attempts": [
+        {
+          "attempt": 1,
+          "gates": [
+            {
+              "gate": "G1",
+              "pass": true,
+              "violations": [],
+              "warnings": []
+            },
+            {
+              "gate": "G2",
+              "pass": true,
+              "violations": [],
+              "warnings": [],
+              "max_overlap_ratio": 0.0,
+              "ngram": 6
+            },
+            {
+              "gate": "G3",
+              "pass": true,
+              "violations": [],
+              "warnings": [],
+              "engine": "code (금칙어·글자 수·구조) — LLM 톤 판정은 1단계"
+            },
+            {
+              "gate": "G5",
+              "pass": true,
+              "violations": [],
+              "warnings": [],
+              "research_sources": 5,
+              "research_facts": [
+                "f1",
+                "f2",
+                "f3",
+                "f4"
+              ],
+              "max_overlap_ratio": 0.0,
+              "ngram": 5
+            }
+          ]
+        }
+      ],
+      "g4": {
+        "gate": "G4",
+        "pass": true,
+        "violations": [],
+        "warnings": [],
+        "slides": [
+          {
+            "slide": 1,
+            "font_scale": 1.0,
+            "overflow": [],
+            "font": {
+              "loaded_weights": [
+                "600",
+                "700",
+                "800",
+                "900"
+              ],
+              "check_700": true,
+              "check_900": true
+            },
+            "pass": true
+          },
+          {
+            "slide": 2,
+            "font_scale": 1.0,
+            "overflow": [],
+            "font": {
+              "loaded_weights": [
+                "500",
+                "700",
+                "800",
+                "900"
+              ],
+              "check_700": true,
+              "check_900": true
+            },
+            "pass": true
+          },
+          {
+            "slide": 3,
+            "font_scale": 1.0,
+            "overflow": [],
+            "font": {
+              "loaded_weights": [
+                "500",
+                "700",
+                "800",
+                "900"
+              ],
+              "check_700": true,
+              "check_900": true
+            },
+            "pass": true
+          },
+          {
+            "slide": 4,
+            "font_scale": 1.0,
+            "overflow": [],
+            "font": {
+              "loaded_weights": [
+                "500",
+                "700",
+                "800",
+                "900"
+              ],
+              "check_700": true,
+              "check_900": true
+            },
+            "pass": true
+          },
+          {
+            "slide": 5,
+            "font_scale": 1.0,
+            "overflow": [],
+            "font": {
+              "loaded_weights": [
+                "600",
+                "700",
+                "800",
+                "900"
+              ],
+              "check_700": true,
+              "check_900": true
+            },
+            "pass": true
+          },
+          {
+            "slide": 6,
+            "font_scale": 1.0,
+            "overflow": [],
+            "font": {
+              "loaded_weights": [
+                "500",
+                "700",
+                "800",
+                "900"
+              ],
+              "check_700": true,
+              "check_900": true
+            },
+            "pass": true
+          }
+        ]
+      },
+      "steps": [
+        {
+          "step": "소재",
+          "status": "ok",
+          "duration_ms": 0
+        },
+        {
+          "step": "G1·G2·G3 (시도 1)",
+          "status": "ok",
+          "duration_ms": 1
+        },
+        {
+          "step": "렌더러+G4",
+          "status": "ok",
+          "duration_ms": 2438
+        }
+      ]
+    },
+    "mode": "seed",
+    "version": 1
+  },
+  {
+    "post_date": "2026-10-28",
+    "track": "admissions",
+    "status": "ready",
+    "title": "의대 — 지역의사제로 '지방·수시' 중심 재편",
+    "headline": "의대 지역 트랙, 중학교부터 따진다",
+    "caption": "2027학년도 의대 정원이 490명 늘었는데, 늘어난 자리는 전부 '지역의사'로 뽑아요. 학비를 지원받는 대신 졸업 후 그 지역에서 10년 일해야 하죠. 의약계열 지역인재는 현 고2부터, 지역의사는 2027학년도부터 중학교를 어디서 다녔는지까지 따져요. 성적만큼 '어디서 학교를 다녔는지'도 중요해진 셈! 의무복무 조건까지 꼼꼼히 읽고 결정해요 🩺\n\n🔎 메이저맵에서 더 보기\n· 의대만 있는 게 아니야! 보건의료계의 숨은 보석 학과 대공개 💎 https://majormap.net/content/720\n· 수능 4등급도 의대 갈 수 있다고? 의대 합격선에 무슨 일이?! https://majormap.net/content/584\n\n📌 출처: 한국경제 · SBS Biz · 아주경제 (수치는 메이저맵이 재가공)\n원문: https://www.veritas-a.com/news/articleView.html?idxno=632029\n원문: https://www.hankyung.com/amp/2026021070857\n원문: https://biz.sbs.co.kr/amp/article/20000332453\n원문: https://www.ajunews.com/view/20260611100711061",
+    "hashtags": [
+      "#메이저맵",
+      "#의대입시",
+      "#지역의사제",
+      "#지역인재",
+      "#고1고2"
+    ],
+    "image_urls": [
+      "/seed/2026-10-28/01.jpg?v=1",
+      "/seed/2026-10-28/02.jpg?v=1",
+      "/seed/2026-10-28/03.jpg?v=1",
+      "/seed/2026-10-28/04.jpg?v=1",
+      "/seed/2026-10-28/05.jpg?v=1",
+      "/seed/2026-10-28/06.jpg?v=1"
+    ],
+    "source_id": "report:3fc6af6c-8bcc-816d-a0c6-c44ad8f126aa#2",
+    "source_url": "https://www.veritas-a.com/news/articleView.html?idxno=632029",
+    "source_name": "메이저맵 입시 트렌드 리포트 + 추가 취재 5곳",
+    "topic": {
+      "id": "report:3fc6af6c-8bcc-816d-a0c6-c44ad8f126aa#2",
+      "title": "의대 — 지역의사제로 '지방·수시' 중심 재편",
+      "track": "admissions",
+      "source_name": "메이저맵 입시 트렌드 리포트",
+      "source_type": "트렌드 리포트",
+      "url": "https://www.veritas-a.com/news/articleView.html?idxno=632029",
+      "published": "2026-10-17",
+      "summary": "2027학년도 의대 증원분은 전부 지역의사로 뽑고, 지역인재·지역의사 모두 중학교 때부터 요건을 따진다.",
+      "key_points": [
+        "보정심(2026-02-10)이 2027 의대 정원을 490명 늘려 3,058명에서 3,548명으로 정했고, 늘어난 자리는 전부 지역의사로 뽑는다.",
+        "지역의사는 서울 8개 의대를 뺀 32개 의대가 뽑는다. 2027년 490명은 진료권 359명과 광역권 131명이다.",
+        "학비를 지원받는 대신 면허를 딴 뒤 해당 지역에서 10년 동안 의무복무해야 한다.",
+        "의약계열 지역인재는 현 고2(2028학년도)부터 중학교 요건이 붙고, 지역의사전형은 중·고교 재학과 거주를 지역 단위로 따진다."
+      ],
+      "check_points": [],
+      "evidence": [
+        "의대 정원 3,058→3,548명(+490명) = 한국경제, 2026-02-10"
+      ],
+      "keywords": [
+        "의약계열",
+        "지역의사제",
+        "지역인재"
+      ],
+      "next_teaser_hint": "",
+      "research": [
+        {
+          "claim": "2027 의대 정원을 490명 늘려 3,058명에서 3,548명으로 정했고, 증원분은 전원 지역의사로 선발한다",
+          "source": "한국경제",
+          "date": "2026-02-10",
+          "url": "https://www.hankyung.com/amp/2026021070857"
+        },
+        {
+          "claim": "서울 8개 의대를 뺀 32개 의대가 지역의사를 뽑고, 2027년 490명은 진료권 359명·광역권 131명이다. 의무복무는 10년이고 복무하지 않으면 학비를 돌려줘야 한다",
+          "source": "SBS Biz",
+          "date": "2026-09",
+          "url": "https://biz.sbs.co.kr/amp/article/20000332453"
+        },
+        {
+          "claim": "2027학년도 지역의사 488명(31개 의대) 중 458명(93.9%)을 수시로 뽑는다",
+          "source": "아주경제(종로학원 분석)",
+          "date": "2026-06-11",
+          "url": "https://www.ajunews.com/view/20260611100711061"
+        },
+        {
+          "claim": "의약계열 지역인재 중학교 요건은 2022년 중학교 입학자(현 고2)부터 적용된다: 비수도권 중학교 졸업, 대학 소재 권역 고교 졸업, 중·고교 재학 기간 거주",
+          "source": "이투데이",
+          "date": "",
+          "url": "https://www.etoday.co.kr/news/view/2395064"
+        },
+        {
+          "claim": "지역의사전형은 2026년 2월 수정안으로 중학교 요건 적용이 2027학년도로 앞당겨지고, 기준 지역이 광역권으로 좁혀졌다",
+          "source": "아시아경제",
+          "date": "2026-02-27",
+          "url": "https://view.asiae.co.kr/article/2026022713073454520"
+        }
+      ],
+      "angle": "",
+      "related": [
+        {
+          "id": 720,
+          "title": "의대만 있는 게 아니야! 보건의료계의 숨은 보석 학과 대공개 💎",
+          "url": "https://majormap.net/content/720",
+          "summary": "의치약 외 보건의료 분야의 숨은 유망 학과와 성적대·취업·입시 준비 팁 소개",
+          "category": "학과탐구",
+          "majors": "",
+          "views": 550
+        },
+        {
+          "id": 584,
+          "title": "수능 4등급도 의대 갈 수 있다고? 의대 합격선에 무슨 일이?!",
+          "url": "https://majormap.net/content/584",
+          "summary": "의대 증원 여파로 하락한 2025학년도 지방 의대 합격선과 2026학년도 입시 유의점 해설",
+          "category": "교육뉴스",
+          "majors": "",
+          "views": 359
+        }
+      ]
+    },
+    "facts": [
+      {
+        "id": "f1",
+        "value": "490명",
+        "claim": "2027학년도 의대 증원 인원 (전원 지역의사)",
+        "source": "한국경제",
+        "as_of": "2026-02-10",
+        "url": "https://www.hankyung.com/amp/2026021070857",
+        "derived_from": ""
+      },
+      {
+        "id": "f2",
+        "value": "3,058명",
+        "claim": "증원 전 의대 정원",
+        "source": "한국경제",
+        "as_of": "2026-02-10",
+        "url": "https://www.hankyung.com/amp/2026021070857",
+        "derived_from": ""
+      },
+      {
+        "id": "f3",
+        "value": "3,548명",
+        "claim": "2027학년도 의대 정원",
+        "source": "한국경제",
+        "as_of": "2026-02-10",
+        "url": "https://www.hankyung.com/amp/2026021070857",
+        "derived_from": ""
+      },
+      {
+        "id": "f4",
+        "value": "359명",
+        "claim": "2027 지역의사 중 진료권 선발",
+        "source": "SBS Biz",
+        "as_of": "2026-09",
+        "url": "https://biz.sbs.co.kr/amp/article/20000332453",
+        "derived_from": ""
+      },
+      {
+        "id": "f5",
+        "value": "131명",
+        "claim": "2027 지역의사 중 광역권 선발",
+        "source": "SBS Biz",
+        "as_of": "2026-09",
+        "url": "https://biz.sbs.co.kr/amp/article/20000332453",
+        "derived_from": ""
+      },
+      {
+        "id": "f6",
+        "value": "10년",
+        "claim": "지역의사 의무복무 기간",
+        "source": "SBS Biz",
+        "as_of": "2026-09",
+        "url": "https://biz.sbs.co.kr/amp/article/20000332453",
+        "derived_from": ""
+      },
+      {
+        "id": "f7",
+        "value": "2027",
+        "claim": "지역의사 첫 선발 학년도",
+        "source": "한국경제",
+        "as_of": "2026-02-10",
+        "url": "https://www.hankyung.com/amp/2026021070857",
+        "derived_from": ""
+      },
+      {
+        "id": "f8",
+        "value": "8곳",
+        "claim": "지역의사를 뽑지 않는 서울 의대 수",
+        "source": "SBS Biz",
+        "as_of": "2026-09",
+        "url": "https://biz.sbs.co.kr/amp/article/20000332453",
+        "derived_from": ""
+      },
+      {
+        "id": "f9",
+        "value": "32곳",
+        "claim": "지역의사를 뽑는 의대 수",
+        "source": "SBS Biz",
+        "as_of": "2026-09",
+        "url": "https://biz.sbs.co.kr/amp/article/20000332453",
+        "derived_from": ""
+      },
+      {
+        "id": "f10",
+        "value": "93.9%",
+        "claim": "2027 지역의사 중 수시 선발 비율",
+        "source": "아주경제",
+        "as_of": "2026-06-11",
+        "url": "https://www.ajunews.com/view/20260611100711061",
+        "derived_from": ""
+      },
+      {
+        "id": "f11",
+        "value": "10명 중 9명",
+        "claim": "93.9%를 쉽게 바꾼 표현",
+        "source": "아주경제",
+        "as_of": "2026-06-11",
+        "url": "https://www.ajunews.com/view/20260611100711061",
+        "derived_from": "f10"
+      }
+    ],
+    "script": {
+      "track": "admissions",
+      "post_date": "2026-10-28",
+      "topic_id": "report:3fc6af6c-8bcc-816d-a0c6-c44ad8f126aa#2",
+      "topic_title": "의대 — 지역의사제로 '지방·수시' 중심 재편",
+      "kicker": "WED · 입시 브리핑",
+      "next_label": "내일(목) 요즘 트렌드",
+      "source": {
+        "name": "메이저맵 입시 트렌드 리포트",
+        "date": "2026-10-17",
+        "url": "https://www.veritas-a.com/news/articleView.html?idxno=632029"
+      },
+      "research": [
+        {
+          "claim": "2027 의대 정원을 490명 늘려 3,058명에서 3,548명으로 정했고, 증원분은 전원 지역의사로 선발한다",
+          "source": "한국경제",
+          "date": "2026-02-10",
+          "url": "https://www.hankyung.com/amp/2026021070857"
+        },
+        {
+          "claim": "서울 8개 의대를 뺀 32개 의대가 지역의사를 뽑고, 2027년 490명은 진료권 359명·광역권 131명이다. 의무복무는 10년이고 복무하지 않으면 학비를 돌려줘야 한다",
+          "source": "SBS Biz",
+          "date": "2026-09",
+          "url": "https://biz.sbs.co.kr/amp/article/20000332453"
+        },
+        {
+          "claim": "2027학년도 지역의사 488명(31개 의대) 중 458명(93.9%)을 수시로 뽑는다",
+          "source": "아주경제(종로학원 분석)",
+          "date": "2026-06-11",
+          "url": "https://www.ajunews.com/view/20260611100711061"
+        },
+        {
+          "claim": "의약계열 지역인재 중학교 요건은 2022년 중학교 입학자(현 고2)부터 적용된다: 비수도권 중학교 졸업, 대학 소재 권역 고교 졸업, 중·고교 재학 기간 거주",
+          "source": "이투데이",
+          "date": "",
+          "url": "https://www.etoday.co.kr/news/view/2395064"
+        },
+        {
+          "claim": "지역의사전형은 2026년 2월 수정안으로 중학교 요건 적용이 2027학년도로 앞당겨지고, 기준 지역이 광역권으로 좁혀졌다",
+          "source": "아시아경제",
+          "date": "2026-02-27",
+          "url": "https://view.asiae.co.kr/article/2026022713073454520"
+        }
+      ],
+      "related": [
+        {
+          "id": 720,
+          "title": "의대만 있는 게 아니야! 보건의료계의 숨은 보석 학과 대공개 💎",
+          "url": "https://majormap.net/content/720",
+          "summary": "의치약 외 보건의료 분야의 숨은 유망 학과와 성적대·취업·입시 준비 팁 소개",
+          "category": "학과탐구",
+          "majors": "",
+          "views": 550
+        },
+        {
+          "id": 584,
+          "title": "수능 4등급도 의대 갈 수 있다고? 의대 합격선에 무슨 일이?!",
+          "url": "https://majormap.net/content/584",
+          "summary": "의대 증원 여파로 하락한 2025학년도 지방 의대 합격선과 2026학년도 입시 유의점 해설",
+          "category": "교육뉴스",
+          "majors": "",
+          "views": 359
+        }
+      ],
+      "facts": [
+        {
+          "id": "f1",
+          "value": "490명",
+          "claim": "2027학년도 의대 증원 인원 (전원 지역의사)",
+          "source": "한국경제",
+          "as_of": "2026-02-10",
+          "url": "https://www.hankyung.com/amp/2026021070857",
+          "derived_from": ""
+        },
+        {
+          "id": "f2",
+          "value": "3,058명",
+          "claim": "증원 전 의대 정원",
+          "source": "한국경제",
+          "as_of": "2026-02-10",
+          "url": "https://www.hankyung.com/amp/2026021070857",
+          "derived_from": ""
+        },
+        {
+          "id": "f3",
+          "value": "3,548명",
+          "claim": "2027학년도 의대 정원",
+          "source": "한국경제",
+          "as_of": "2026-02-10",
+          "url": "https://www.hankyung.com/amp/2026021070857",
+          "derived_from": ""
+        },
+        {
+          "id": "f4",
+          "value": "359명",
+          "claim": "2027 지역의사 중 진료권 선발",
+          "source": "SBS Biz",
+          "as_of": "2026-09",
+          "url": "https://biz.sbs.co.kr/amp/article/20000332453",
+          "derived_from": ""
+        },
+        {
+          "id": "f5",
+          "value": "131명",
+          "claim": "2027 지역의사 중 광역권 선발",
+          "source": "SBS Biz",
+          "as_of": "2026-09",
+          "url": "https://biz.sbs.co.kr/amp/article/20000332453",
+          "derived_from": ""
+        },
+        {
+          "id": "f6",
+          "value": "10년",
+          "claim": "지역의사 의무복무 기간",
+          "source": "SBS Biz",
+          "as_of": "2026-09",
+          "url": "https://biz.sbs.co.kr/amp/article/20000332453",
+          "derived_from": ""
+        },
+        {
+          "id": "f7",
+          "value": "2027",
+          "claim": "지역의사 첫 선발 학년도",
+          "source": "한국경제",
+          "as_of": "2026-02-10",
+          "url": "https://www.hankyung.com/amp/2026021070857",
+          "derived_from": ""
+        },
+        {
+          "id": "f8",
+          "value": "8곳",
+          "claim": "지역의사를 뽑지 않는 서울 의대 수",
+          "source": "SBS Biz",
+          "as_of": "2026-09",
+          "url": "https://biz.sbs.co.kr/amp/article/20000332453",
+          "derived_from": ""
+        },
+        {
+          "id": "f9",
+          "value": "32곳",
+          "claim": "지역의사를 뽑는 의대 수",
+          "source": "SBS Biz",
+          "as_of": "2026-09",
+          "url": "https://biz.sbs.co.kr/amp/article/20000332453",
+          "derived_from": ""
+        },
+        {
+          "id": "f10",
+          "value": "93.9%",
+          "claim": "2027 지역의사 중 수시 선발 비율",
+          "source": "아주경제",
+          "as_of": "2026-06-11",
+          "url": "https://www.ajunews.com/view/20260611100711061",
+          "derived_from": ""
+        },
+        {
+          "id": "f11",
+          "value": "10명 중 9명",
+          "claim": "93.9%를 쉽게 바꾼 표현",
+          "source": "아주경제",
+          "as_of": "2026-06-11",
+          "url": "https://www.ajunews.com/view/20260611100711061",
+          "derived_from": "f10"
+        }
+      ],
+      "slides": [
+        {
+          "layout": "hook",
+          "headline": [
+            "의대 지역 트랙,",
+            "중학교부터",
+            "따진다"
+          ],
+          "highlight_line": 3,
+          "sub": "지역인재·지역의사, 고1·고2가 지금 확인할 것",
+          "dialogue": [
+            {
+              "who": "polar",
+              "text": "선배, 의대는 성적만 좋으면 되는 거 아니에요?"
+            },
+            {
+              "who": "may",
+              "text": "…지역 트랙은 어디서 학교 다녔는지도 봐."
+            }
+          ],
+          "kicker": "WED · 입시 브리핑",
+          "no": 1
+        },
+        {
+          "layout": "big_number",
+          "label": "늘어난 의대 정원, 누구 몫일까?",
+          "number": "{f1}",
+          "line": "증원분 전부 지역의사로",
+          "bar_left": "{f4}",
+          "bar_left_label": "진료권",
+          "bar_right": "{f5}",
+          "bar_right_label": "광역권",
+          "dialogue": [
+            {
+              "who": "may",
+              "text": "…대신 그 지역에서 {f6} 일해야 해."
+            }
+          ],
+          "no": 2
+        },
+        {
+          "layout": "detail",
+          "title": "숫자로 보는 지역의사",
+          "change": {
+            "title": "의대 정원",
+            "before": "{f2}",
+            "after": "{f3}",
+            "note": "{f7}학년도 · 서울 {f8} 빼고 {f9}이 뽑아"
+          },
+          "dots": {
+            "title": "지역의사, 어떻게 뽑아?",
+            "filled": "",
+            "total": "",
+            "note": "{f11}은 수시로 ({f10})"
+          },
+          "dialogue": [
+            {
+              "who": "polar",
+              "text": "수시 준비가 진짜 중요하겠네요!"
+            }
+          ],
+          "no": 3
+        },
+        {
+          "layout": "compare",
+          "title": "지역인재 vs 지역의사",
+          "mode": "versus",
+          "col_now": "지역인재(의약)",
+          "col_next": "지역의사",
+          "rows": [
+            {
+              "item": "중학교 요건",
+              "now": "현 고2부터",
+              "next": "{f7}학년도부터"
+            },
+            {
+              "item": "중학교 위치",
+              "now": "비수도권",
+              "next": "같은 광역권"
+            },
+            {
+              "item": "졸업 후 의무",
+              "now": "없음",
+              "next": "지역 {f6} 복무"
+            }
+          ],
+          "dialogue": [
+            {
+              "who": "may",
+              "text": "…둘 다 중학교부터 따져. 미리 확인해."
+            }
+          ],
+          "no": 4
+        },
+        {
+          "layout": "action",
+          "title": "오늘 해볼 체크",
+          "steps": [
+            {
+              "title": "중학교 확인",
+              "desc": "내 중학교가 어느 지역인지 체크"
+            },
+            {
+              "title": "주소 이력 확인",
+              "desc": "주민등록초본으로 주소 변동 보기"
+            },
+            {
+              "title": "의무 조건 읽기",
+              "desc": "의무복무·학비 반환 조건까지 확인"
+            }
+          ],
+          "dialogue": [
+            {
+              "who": "may",
+              "text": "…이사보다 진로가 먼저야. 의무도 크니까."
+            }
+          ],
+          "no": 5
+        },
+        {
+          "layout": "cta",
+          "headline": "저장해두고 다시 보기",
+          "teaser": "어느 나라에 태어날지 랜덤인 게임?",
+          "dialogue": [
+            {
+              "who": "polar",
+              "text": "내일 것도 기대할게요!"
+            }
+          ],
+          "no": 6
+        }
+      ],
+      "caption": "{f7}학년도 의대 정원이 {f1} 늘었는데, 늘어난 자리는 전부 '지역의사'로 뽑아요. 학비를 지원받는 대신 졸업 후 그 지역에서 {f6} 일해야 하죠. 의약계열 지역인재는 현 고2부터, 지역의사는 {f7}학년도부터 중학교를 어디서 다녔는지까지 따져요. 성적만큼 '어디서 학교를 다녔는지'도 중요해진 셈! 의무복무 조건까지 꼼꼼히 읽고 결정해요 🩺",
+      "hashtags": [
+        "#메이저맵",
+        "#의대입시",
+        "#지역의사제",
+        "#지역인재",
+        "#고1고2"
+      ]
+    },
+    "gate_report": {
+      "post_date": "2026-10-28",
+      "track": "admissions",
+      "topic_id": "report:3fc6af6c-8bcc-816d-a0c6-c44ad8f126aa#2",
+      "topic_title": "의대 — 지역의사제로 '지방·수시' 중심 재편",
+      "mode": "offline-fixture",
+      "pass": true,
+      "attempts": [
+        {
+          "attempt": 1,
+          "gates": [
+            {
+              "gate": "G1",
+              "pass": true,
+              "violations": [],
+              "warnings": [
+                "f11 '10명 중 9명'는 f10의 바꿔 말하기 — 사람이 한 번 확인 권장"
+              ]
+            },
+            {
+              "gate": "G2",
+              "pass": true,
+              "violations": [],
+              "warnings": [],
+              "max_overlap_ratio": 0.0,
+              "ngram": 6
+            },
+            {
+              "gate": "G3",
+              "pass": true,
+              "violations": [],
+              "warnings": [],
+              "engine": "code (금칙어·글자 수·구조) — LLM 톤 판정은 1단계"
+            }
+          ]
+        }
+      ],
+      "g4": {
+        "gate": "G4",
+        "pass": true,
+        "violations": [],
+        "warnings": [],
+        "slides": [
+          {
+            "slide": 1,
+            "font_scale": 1.0,
+            "overflow": [],
+            "font": {
+              "loaded_weights": [
+                "600",
+                "700",
+                "800",
+                "900"
+              ],
+              "check_700": true,
+              "check_900": true
+            },
+            "pass": true
+          },
+          {
+            "slide": 2,
+            "font_scale": 1.0,
+            "overflow": [],
+            "font": {
+              "loaded_weights": [
+                "500",
+                "700",
+                "800",
+                "900"
+              ],
+              "check_700": true,
+              "check_900": true
+            },
+            "pass": true
+          },
+          {
+            "slide": 3,
+            "font_scale": 1.0,
+            "overflow": [],
+            "font": {
+              "loaded_weights": [
+                "500",
+                "700",
+                "800",
+                "900"
+              ],
+              "check_700": true,
+              "check_900": true
+            },
+            "pass": true
+          },
+          {
+            "slide": 4,
+            "font_scale": 1.0,
+            "overflow": [],
+            "font": {
+              "loaded_weights": [
+                "500",
+                "700",
+                "800",
+                "900"
+              ],
+              "check_700": true,
+              "check_900": true
+            },
+            "pass": true
+          },
+          {
+            "slide": 5,
+            "font_scale": 1.0,
+            "overflow": [],
+            "font": {
+              "loaded_weights": [
+                "600",
+                "700",
+                "800",
+                "900"
+              ],
+              "check_700": true,
+              "check_900": true
+            },
+            "pass": true
+          },
+          {
+            "slide": 6,
+            "font_scale": 1.0,
+            "overflow": [],
+            "font": {
+              "loaded_weights": [
+                "500",
+                "700",
+                "800",
+                "900"
+              ],
+              "check_700": true,
+              "check_900": true
+            },
+            "pass": true
+          }
+        ]
+      },
+      "steps": [
+        {
+          "step": "소재",
+          "status": "ok",
+          "duration_ms": 0
+        },
+        {
+          "step": "G1·G2·G3 (시도 1)",
+          "status": "ok",
+          "duration_ms": 0
+        },
+        {
+          "step": "렌더러+G4",
+          "status": "ok",
+          "duration_ms": 2538
+        }
+      ]
+    },
+    "mode": "seed",
+    "version": 1
+  },
+  {
+    "post_date": "2026-10-29",
+    "track": "trend",
+    "status": "ready",
+    "title": "80억분의 1",
+    "headline": "어느 나라에 태어날지 랜덤이라면?",
+    "caption": "어느 나라에 태어날지 랜덤으로 정해지는 웹게임 '80억 분의 1'이 화제예요. UN·WHO·세계은행 통계로 만들어서, 하다 보면 기대수명이나 어린이 사망률이 나라마다 얼마나 다른지 체감하게 돼요. (15세 이상 권장, 무거운 장면 포함) 게임이 끝났다면 KOSIS에서 진짜 숫자로 비교해 보기! '왜 다를까?' 한 줄이 세특 탐구 주제의 씨앗이 돼요 📊\n\n🔎 메이저맵에서 더 보기\n· 탐구 주제 고민 끝! 진로 분야별 통계 사이트 & 예시 총정리 https://majormap.net/content/982\n· 재미있고 실용적인 통계학과 소개📊 https://majormap.net/content/532\n\n📌 출처: 캐릿 · 경향신문 · 국가데이터처 · 세계은행 · WHO (캐릿 트렌드에 메이저맵이 추가 취재를 더해 재구성)\n원문: https://www.khan.co.kr/article/202610171000001/\n원문: https://www.newsis.com/view/NISX20251203_0003426271\n원문: https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=NG\n원문: https://www.who.int/news-room/fact-sheets/detail/child-mortality-under-5-years\n원문: https://eiec.kdi.re.kr/policy/materialView.do?num=285815",
+    "hashtags": [
+      "#메이저맵",
+      "#80억분의1",
+      "#통계",
+      "#세특주제",
+      "#진로탐색"
+    ],
+    "image_urls": [
+      "/seed/2026-10-29/01.jpg?v=1",
+      "/seed/2026-10-29/02.jpg?v=1",
+      "/seed/2026-10-29/03.jpg?v=1",
+      "/seed/2026-10-29/04.jpg?v=1",
+      "/seed/2026-10-29/05.jpg?v=1",
+      "/seed/2026-10-29/06.jpg?v=1"
+    ],
+    "source_id": "3fc6af6c-8bcc-81ee-a07b-ea40e9724c0e",
+    "source_url": null,
+    "source_name": "캐릿 + 추가 취재 5곳",
+    "topic": {
+      "id": "3fc6af6c-8bcc-81ee-a07b-ea40e9724c0e",
+      "title": "80억분의 1",
+      "track": "trend",
+      "source_name": "캐릿",
+      "source_type": "캐릿 마이크로 트렌드",
+      "url": "",
+      "published": "2026-10-08",
+      "summary": "세계 인구 80억 명 중 한 아이로 태어나 생을 마칠 때까지 살아보는 시뮬레이션 게임이 화제",
+      "key_points": [
+        "세계 인구 80억 명 중 한 아이로 태어나 생을 마칠 때까지 살아보는 시뮬레이션 게임이 화제",
+        "게임을 시작하면 141개국 중 한 곳에서 무작위로 태어나게 됨",
+        "해당 국가의 실제 통계를 바탕으로 생애주기를 체험하는 방식",
+        "자라면서 취미·직업·투자 성향 등 질문에 어떻게 답하느냐에 따라 아이의 미래가 달라짐",
+        "커뮤니티에는 직접 해본 사람들의 후기가 쏟아지는 중"
+      ],
+      "check_points": [],
+      "evidence": [
+        "80억분의 1 = 캐릿, 2026-10-08"
+      ],
+      "keywords": [
+        "스레드",
+        "커뮤니티"
+      ],
+      "next_teaser_hint": "",
+      "research": [
+        {
+          "claim": "웹게임 '80억 분의 1'은 141개국 중 한 곳에 출생 통계 비중대로 태어나며 UN·WHO·세계은행 통계를 쓴다. 한 사람의 일생이 약 1시간 동안 진행되고 15세 이상 이용을 권장한다",
+          "source": "경향신문",
+          "date": "2026-10-17",
+          "url": "https://www.khan.co.kr/article/202610171000001/"
+        },
+        {
+          "claim": "UN은 2022년 11월 15일을 세계 인구 80억의 날로 정했다",
+          "source": "UN",
+          "date": "2022-11-15",
+          "url": "https://www.un.org/en/dayof8billion"
+        },
+        {
+          "claim": "2024년 출생아의 기대수명은 83.7년으로 역대 최고다",
+          "source": "국가데이터처",
+          "date": "2025-12-03",
+          "url": "https://www.newsis.com/view/NISX20251203_0003426271"
+        },
+        {
+          "claim": "나이지리아의 기대수명은 약 55세다(2024)",
+          "source": "세계은행",
+          "date": "2024",
+          "url": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=NG"
+        },
+        {
+          "claim": "사하라 이남 아프리카의 5세 미만 사망률은 1,000명당 71.6명으로 유럽·북미의 약 14배다",
+          "source": "WHO",
+          "date": "2026-03-18",
+          "url": "https://www.who.int/news-room/fact-sheets/detail/child-mortality-under-5-years"
+        },
+        {
+          "claim": "2025년 한국 합계출산율은 0.80명이다",
+          "source": "국가데이터처",
+          "date": "2026-08-26",
+          "url": "https://eiec.kdi.re.kr/policy/materialView.do?num=285815"
+        }
+      ],
+      "angle": "같은 날 태어나도 나라마다 인생 그래프가 다르다 — 그 차이를 숫자로 읽는 진로",
+      "related": [
+        {
+          "id": 982,
+          "title": "탐구 주제 고민 끝! 진로 분야별 통계 사이트 & 예시 총정리",
+          "url": "https://majormap.net/content/982",
+          "summary": "경영·사회·심리·의학 등 진로 분야별 통계 사이트와 통계 분석 탐구 주제 예시 총정리",
+          "category": "탐구주제",
+          "majors": "경영학과, 경제학과, 사회학과, 심리학과, 미디어학과, 교육학과, 간호학과, 의예과",
+          "views": 1481
+        },
+        {
+          "id": 532,
+          "title": "재미있고 실용적인 통계학과 소개📊",
+          "url": "https://majormap.net/content/532",
+          "summary": "일상 속 통계 사례로 본 통계학과의 학습 과목·분석 프로그램, 졸업 후 진로와 유망 복수전공 소개",
+          "category": "학과탐구",
+          "majors": "통계학과, 데이터 분석가, 보험계리사, 금융 데이터 분석가, AI·머신러닝 엔지니어, 정부 통계직, 마케팅 전략가",
+          "views": 239
+        }
+      ]
+    },
+    "facts": [
+      {
+        "id": "f1",
+        "value": "80억 분의 1",
+        "claim": "화제가 된 생애 시뮬레이션 웹게임 이름",
+        "source": "경향신문",
+        "as_of": "2026-10-17",
+        "url": "https://www.khan.co.kr/article/202610171000001/",
+        "derived_from": ""
+      },
+      {
+        "id": "f2",
+        "value": "141개국",
+        "claim": "게임에서 태어날 수 있는 나라 수",
+        "source": "경향신문",
+        "as_of": "2026-10-17",
+        "url": "https://www.khan.co.kr/article/202610171000001/",
+        "derived_from": ""
+      },
+      {
+        "id": "f3",
+        "value": "약 1시간",
+        "claim": "게임 속 한 사람의 일생이 진행되는 시간",
+        "source": "경향신문",
+        "as_of": "2026-10-17",
+        "url": "https://www.khan.co.kr/article/202610171000001/",
+        "derived_from": ""
+      },
+      {
+        "id": "f4",
+        "value": "15세",
+        "claim": "게임 이용 권장 나이",
+        "source": "경향신문",
+        "as_of": "2026-10-17",
+        "url": "https://www.khan.co.kr/article/202610171000001/",
+        "derived_from": ""
+      },
+      {
+        "id": "f5",
+        "value": "83.7년",
+        "claim": "한국 2024년 출생아의 기대수명",
+        "source": "국가데이터처",
+        "as_of": "2025-12-03",
+        "url": "https://www.newsis.com/view/NISX20251203_0003426271",
+        "derived_from": ""
+      },
+      {
+        "id": "f6",
+        "value": "약 55년",
+        "claim": "나이지리아 기대수명 (2024)",
+        "source": "세계은행",
+        "as_of": "2024",
+        "url": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=NG",
+        "derived_from": ""
+      },
+      {
+        "id": "f7",
+        "value": "약 14배",
+        "claim": "사하라 이남 아프리카 5세 미만 사망률이 유럽·북미보다 높은 정도",
+        "source": "WHO",
+        "as_of": "2026-03-18",
+        "url": "https://www.who.int/news-room/fact-sheets/detail/child-mortality-under-5-years",
+        "derived_from": ""
+      },
+      {
+        "id": "f8",
+        "value": "0.80명",
+        "claim": "2025년 한국 합계출산율",
+        "source": "국가데이터처",
+        "as_of": "2026-08-26",
+        "url": "https://eiec.kdi.re.kr/policy/materialView.do?num=285815",
+        "derived_from": ""
+      }
+    ],
+    "script": {
+      "track": "trend",
+      "post_date": "2026-10-29",
+      "topic_id": "3fc6af6c-8bcc-81ee-a07b-ea40e9724c0e",
+      "topic_title": "80억분의 1",
+      "kicker": "THU · 요즘 뭐가 유행?",
+      "next_label": "내일(금) 입시 브리핑",
+      "source": {
+        "name": "캐릿",
+        "date": "2026-10-08",
+        "url": ""
+      },
+      "research": [
+        {
+          "claim": "웹게임 '80억 분의 1'은 141개국 중 한 곳에 출생 통계 비중대로 태어나며 UN·WHO·세계은행 통계를 쓴다. 한 사람의 일생이 약 1시간 동안 진행되고 15세 이상 이용을 권장한다",
+          "source": "경향신문",
+          "date": "2026-10-17",
+          "url": "https://www.khan.co.kr/article/202610171000001/"
+        },
+        {
+          "claim": "UN은 2022년 11월 15일을 세계 인구 80억의 날로 정했다",
+          "source": "UN",
+          "date": "2022-11-15",
+          "url": "https://www.un.org/en/dayof8billion"
+        },
+        {
+          "claim": "2024년 출생아의 기대수명은 83.7년으로 역대 최고다",
+          "source": "국가데이터처",
+          "date": "2025-12-03",
+          "url": "https://www.newsis.com/view/NISX20251203_0003426271"
+        },
+        {
+          "claim": "나이지리아의 기대수명은 약 55세다(2024)",
+          "source": "세계은행",
+          "date": "2024",
+          "url": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=NG"
+        },
+        {
+          "claim": "사하라 이남 아프리카의 5세 미만 사망률은 1,000명당 71.6명으로 유럽·북미의 약 14배다",
+          "source": "WHO",
+          "date": "2026-03-18",
+          "url": "https://www.who.int/news-room/fact-sheets/detail/child-mortality-under-5-years"
+        },
+        {
+          "claim": "2025년 한국 합계출산율은 0.80명이다",
+          "source": "국가데이터처",
+          "date": "2026-08-26",
+          "url": "https://eiec.kdi.re.kr/policy/materialView.do?num=285815"
+        }
+      ],
+      "related": [
+        {
+          "id": 982,
+          "title": "탐구 주제 고민 끝! 진로 분야별 통계 사이트 & 예시 총정리",
+          "url": "https://majormap.net/content/982",
+          "summary": "경영·사회·심리·의학 등 진로 분야별 통계 사이트와 통계 분석 탐구 주제 예시 총정리",
+          "category": "탐구주제",
+          "majors": "경영학과, 경제학과, 사회학과, 심리학과, 미디어학과, 교육학과, 간호학과, 의예과",
+          "views": 1481
+        },
+        {
+          "id": 532,
+          "title": "재미있고 실용적인 통계학과 소개📊",
+          "url": "https://majormap.net/content/532",
+          "summary": "일상 속 통계 사례로 본 통계학과의 학습 과목·분석 프로그램, 졸업 후 진로와 유망 복수전공 소개",
+          "category": "학과탐구",
+          "majors": "통계학과, 데이터 분석가, 보험계리사, 금융 데이터 분석가, AI·머신러닝 엔지니어, 정부 통계직, 마케팅 전략가",
+          "views": 239
+        }
+      ],
+      "facts": [
+        {
+          "id": "f1",
+          "value": "80억 분의 1",
+          "claim": "화제가 된 생애 시뮬레이션 웹게임 이름",
+          "source": "경향신문",
+          "as_of": "2026-10-17",
+          "url": "https://www.khan.co.kr/article/202610171000001/",
+          "derived_from": ""
+        },
+        {
+          "id": "f2",
+          "value": "141개국",
+          "claim": "게임에서 태어날 수 있는 나라 수",
+          "source": "경향신문",
+          "as_of": "2026-10-17",
+          "url": "https://www.khan.co.kr/article/202610171000001/",
+          "derived_from": ""
+        },
+        {
+          "id": "f3",
+          "value": "약 1시간",
+          "claim": "게임 속 한 사람의 일생이 진행되는 시간",
+          "source": "경향신문",
+          "as_of": "2026-10-17",
+          "url": "https://www.khan.co.kr/article/202610171000001/",
+          "derived_from": ""
+        },
+        {
+          "id": "f4",
+          "value": "15세",
+          "claim": "게임 이용 권장 나이",
+          "source": "경향신문",
+          "as_of": "2026-10-17",
+          "url": "https://www.khan.co.kr/article/202610171000001/",
+          "derived_from": ""
+        },
+        {
+          "id": "f5",
+          "value": "83.7년",
+          "claim": "한국 2024년 출생아의 기대수명",
+          "source": "국가데이터처",
+          "as_of": "2025-12-03",
+          "url": "https://www.newsis.com/view/NISX20251203_0003426271",
+          "derived_from": ""
+        },
+        {
+          "id": "f6",
+          "value": "약 55년",
+          "claim": "나이지리아 기대수명 (2024)",
+          "source": "세계은행",
+          "as_of": "2024",
+          "url": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=NG",
+          "derived_from": ""
+        },
+        {
+          "id": "f7",
+          "value": "약 14배",
+          "claim": "사하라 이남 아프리카 5세 미만 사망률이 유럽·북미보다 높은 정도",
+          "source": "WHO",
+          "as_of": "2026-03-18",
+          "url": "https://www.who.int/news-room/fact-sheets/detail/child-mortality-under-5-years",
+          "derived_from": ""
+        },
+        {
+          "id": "f8",
+          "value": "0.80명",
+          "claim": "2025년 한국 합계출산율",
+          "source": "국가데이터처",
+          "as_of": "2026-08-26",
+          "url": "https://eiec.kdi.re.kr/policy/materialView.do?num=285815",
+          "derived_from": ""
+        }
+      ],
+      "slides": [
+        {
+          "layout": "hook",
+          "headline": [
+            "어느 나라에",
+            "태어날지",
+            "랜덤이라면?"
+          ],
+          "highlight_line": 3,
+          "sub": "실제 통계로 한 사람의 일생을 살아 보는 게임이 화제",
+          "dialogue": [
+            {
+              "who": "polar",
+              "text": "선배, 저 이번 판엔 다른 대륙에서 태어났어요!"
+            },
+            {
+              "who": "may",
+              "text": "…그 차이, 진짜 숫자로 보면 더 선명해."
+            }
+          ],
+          "kicker": "THU · 요즘 뭐가 유행?",
+          "no": 1
+        },
+        {
+          "layout": "trend_item",
+          "index": 1,
+          "tag": "유행",
+          "name": "'{f1}' 게임",
+          "what_label": "이게 뭐냐면",
+          "what": "{f2} 중 한 곳에 랜덤으로 태어나 실제 통계대로 자라는 웹게임",
+          "why_label": "알고 보면",
+          "why": "UN·WHO·세계은행 통계로 만들었고, 한 판이 {f3}이야",
+          "dialogue": [
+            {
+              "who": "may",
+              "text": "…{f4} 이상 권장이야. 무거운 장면도 있어."
+            }
+          ],
+          "no": 2
+        },
+        {
+          "layout": "trend_item",
+          "index": 2,
+          "tag": "진짜 통계",
+          "name": "출발선이 달라",
+          "what_label": "기대수명",
+          "what": "한국 아기는 {f5}, 나이지리아는 {f6}. 태어난 나라에 따라 이만큼 달라",
+          "why_label": "더 보면",
+          "why": "다섯 살 전 사망률, 사하라 이남 아프리카가 유럽·북미의 {f7}",
+          "dialogue": [
+            {
+              "who": "polar",
+              "text": "게임이 아니라 진짜 현실이네요…"
+            }
+          ],
+          "no": 3
+        },
+        {
+          "layout": "trend_item",
+          "index": 3,
+          "tag": "직접 해보기",
+          "name": "통계로 비교하기",
+          "what_label": "어디서",
+          "what": "KOSIS ‘세계 속의 한국’에서 우리나라와 다른 나라를 비교할 수 있어",
+          "why_label": "예를 들면",
+          "why": "한국 합계출산율 {f8}. 다른 나라와 비교해 '왜?'를 적으면 탐구 주제 완성",
+          "dialogue": [
+            {
+              "who": "may",
+              "text": "…세특 주제는 이렇게 찾는 거야."
+            }
+          ],
+          "no": 4
+        },
+        {
+          "layout": "career",
+          "title": "숫자로 세상 읽는 진로",
+          "links": [
+            {
+              "field": "통계학과",
+              "reason": "데이터로 사회의 차이를 읽어 내"
+            },
+            {
+              "field": "사회학과",
+              "reason": "불평등이 왜 생기는지 연구해"
+            },
+            {
+              "field": "국제개발협력 전문가",
+              "reason": "다른 나라 사람들의 삶을 돕는 일을 해"
+            }
+          ],
+          "tip": "KOSIS에서 한국과 한 나라 비교해 보기",
+          "dialogue": [
+            {
+              "who": "polar",
+              "text": "메이저맵 통계 사이트 정리도 볼게요!"
+            }
+          ],
+          "no": 5
+        },
+        {
+          "layout": "cta",
+          "headline": "저장해두고 다시 보기",
+          "teaser": "지방국립대 등록금, 공짜가 된다고?",
+          "dialogue": [
+            {
+              "who": "polar",
+              "text": "내일 입시 브리핑도 볼게요!"
+            }
+          ],
+          "no": 6
+        }
+      ],
+      "caption": "어느 나라에 태어날지 랜덤으로 정해지는 웹게임 '{f1}'이 화제예요. UN·WHO·세계은행 통계로 만들어서, 하다 보면 기대수명이나 어린이 사망률이 나라마다 얼마나 다른지 체감하게 돼요. ({f4} 이상 권장, 무거운 장면 포함) 게임이 끝났다면 KOSIS에서 진짜 숫자로 비교해 보기! '왜 다를까?' 한 줄이 세특 탐구 주제의 씨앗이 돼요 📊",
+      "hashtags": [
+        "#메이저맵",
+        "#80억분의1",
+        "#통계",
+        "#세특주제",
+        "#진로탐색"
+      ]
+    },
+    "gate_report": {
+      "post_date": "2026-10-29",
+      "track": "trend",
+      "topic_id": "3fc6af6c-8bcc-81ee-a07b-ea40e9724c0e",
+      "topic_title": "80억분의 1",
+      "mode": "offline-fixture",
+      "pass": true,
+      "attempts": [
+        {
+          "attempt": 1,
+          "gates": [
+            {
+              "gate": "G1",
+              "pass": true,
+              "violations": [],
+              "warnings": []
+            },
+            {
+              "gate": "G2",
+              "pass": true,
+              "violations": [],
+              "warnings": [],
+              "max_overlap_ratio": 0.0,
+              "ngram": 6
+            },
+            {
+              "gate": "G3",
+              "pass": true,
+              "violations": [],
+              "warnings": [],
+              "engine": "code (금칙어·글자 수·구조) — LLM 톤 판정은 1단계"
+            },
+            {
+              "gate": "G5",
+              "pass": true,
+              "violations": [],
+              "warnings": [],
+              "research_sources": 6,
+              "research_facts": [
+                "f1",
+                "f2",
+                "f3",
+                "f4",
+                "f5",
+                "f6",
+                "f7",
+                "f8"
+              ],
+              "max_overlap_ratio": 0.0,
+              "ngram": 5
+            }
+          ]
+        }
+      ],
+      "g4": {
+        "gate": "G4",
+        "pass": true,
+        "violations": [],
+        "warnings": [
+          "03장: 글자 0.9배로 축소됨"
+        ],
+        "slides": [
+          {
+            "slide": 1,
+            "font_scale": 1.0,
+            "overflow": [],
+            "font": {
+              "loaded_weights": [
+                "600",
+                "700",
+                "800",
+                "900"
+              ],
+              "check_700": true,
+              "check_900": true
+            },
+            "pass": true
+          },
+          {
+            "slide": 2,
+            "font_scale": 1.0,
+            "overflow": [],
+            "font": {
+              "loaded_weights": [
+                "500",
+                "700",
+                "800",
+                "900"
+              ],
+              "check_700": true,
+              "check_900": true
+            },
+            "pass": true
+          },
+          {
+            "slide": 3,
+            "font_scale": 0.9,
+            "overflow": [],
+            "font": {
+              "loaded_weights": [
+                "500",
+                "700",
+                "800",
+                "900"
+              ],
+              "check_700": true,
+              "check_900": true
+            },
+            "pass": true
+          },
+          {
+            "slide": 4,
+            "font_scale": 1.0,
+            "overflow": [],
+            "font": {
+              "loaded_weights": [
+                "500",
+                "700",
+                "800",
+                "900"
+              ],
+              "check_700": true,
+              "check_900": true
+            },
+            "pass": true
+          },
+          {
+            "slide": 5,
+            "font_scale": 1.0,
+            "overflow": [],
+            "font": {
+              "loaded_weights": [
+                "600",
+                "700",
+                "800",
+                "900"
+              ],
+              "check_700": true,
+              "check_900": true
+            },
+            "pass": true
+          },
+          {
+            "slide": 6,
+            "font_scale": 1.0,
+            "overflow": [],
+            "font": {
+              "loaded_weights": [
+                "500",
+                "700",
+                "800",
+                "900"
+              ],
+              "check_700": true,
+              "check_900": true
+            },
+            "pass": true
+          }
+        ]
+      },
+      "steps": [
+        {
+          "step": "소재",
+          "status": "ok",
+          "duration_ms": 0
+        },
+        {
+          "step": "G1·G2·G3 (시도 1)",
+          "status": "ok",
+          "duration_ms": 1
+        },
+        {
+          "step": "렌더러+G4",
+          "status": "ok",
+          "duration_ms": 2520
+        }
+      ]
+    },
+    "mode": "seed",
+    "version": 1
+  },
+  {
+    "post_date": "2026-10-30",
+    "track": "admissions",
+    "status": "ready",
+    "title": "수시 지원 흐름 — 안정지원과 지방국립대 '등록금 0원'",
+    "headline": "지방국립대 등록금 0원 시대?",
+    "caption": "정부 예산안에 담긴 지방국립대 등록금 전액 지원, 아직은 정부안이라 국회 확정(처리 시한 12월 2일)을 기다려야 해요. 계획대로면 2027학년도 신입생부터 시작하고, 현 고2·고1도 해당될 수 있어요. 단, 국가장학금 신청은 필수! 의·치·약·수의대는 빠지고, 계속 받으려면 대학에서도 12학점 이수·B학점 이상을 지켜야 해요. 관심 학과 두 곳의 등록금부터 찾아보기 📌\n\n🔎 메이저맵에서 더 보기\n· [입시 꿀팁] 입학하면 장학금 받을 수 있는 숨겨진 학과들 : 이공계열 편! https://majormap.net/content/288\n· 부산 자유전공학과 소개 : 부산대, 부산외대, 동의대, 동아대, 동서대, 국립부경대 https://majormap.net/content/460\n\n📌 출처: 경향신문 · 한국경제 · 교수신문 · 머니투데이 · 뉴스핌 (수치는 메이저맵이 재가공)\n원문: https://www.veritas-a.com/news/articleView.html?idxno=631443\n원문: https://khan.co.kr/article/202608281721001\n원문: https://www.hankyung.com/article/2026100818451\n원문: https://www.kyosu.net/news/articleView.html?idxno=209404\n원문: https://www.mt.co.kr/policy/2026/08/28/2026082814382133389\n원문: https://www.newspim.com/news/view/20261007000421",
+    "hashtags": [
+      "#메이저맵",
+      "#지방국립대",
+      "#등록금",
+      "#대학입시",
+      "#고1고2"
+    ],
+    "image_urls": [
+      "/seed/2026-10-30/01.jpg?v=1",
+      "/seed/2026-10-30/02.jpg?v=1",
+      "/seed/2026-10-30/03.jpg?v=1",
+      "/seed/2026-10-30/04.jpg?v=1",
+      "/seed/2026-10-30/05.jpg?v=1",
+      "/seed/2026-10-30/06.jpg?v=1"
+    ],
+    "source_id": "report:3fc6af6c-8bcc-816d-a0c6-c44ad8f126aa#3",
+    "source_url": "https://www.veritas-a.com/news/articleView.html?idxno=631443",
+    "source_name": "메이저맵 입시 트렌드 리포트 + 추가 취재 6곳",
+    "topic": {
+      "id": "report:3fc6af6c-8bcc-816d-a0c6-c44ad8f126aa#3",
+      "title": "수시 지원 흐름 — 안정지원과 지방국립대 '등록금 0원'",
+      "track": "admissions",
+      "source_name": "메이저맵 입시 트렌드 리포트",
+      "source_type": "트렌드 리포트",
+      "url": "https://www.veritas-a.com/news/articleView.html?idxno=631443",
+      "published": "2026-10-17",
+      "summary": "정부가 2027 신입생부터 지방국립대 30곳 등록금 전액 지원을 추진하는 가운데, 9개 지거국 수시에 수도권 출신 지원이 12% 늘었다.",
+      "key_points": [
+        "2027 수시에서 서울대(-8%)·연세대(-8.3%) 지원자는 줄고 중위권 대학 지원은 늘었다.",
+        "9개 지거국 수도권 고교 출신 지원은 46,504명에서 52,062명으로 12% 늘었다. 부산대는 수도권 출신 지원이 126.7% 늘었다(의대 일반논술 신설 등).",
+        "정부 '청년 예산 언박싱 2027'(8/28): 2027 신입생부터 지방국립대 30곳 등록금 전액 지원(의약계열 제외, 성적 기준 충족 시 최대 8회, 중도 이탈 시 추가지원금 반환).",
+        "지방사립대 지역인재장학금은 출신 고교 지역 제한을 없애고 최대 800만원까지 지원한다."
+      ],
+      "check_points": [],
+      "evidence": [
+        "9개 지거국 수도권 출신 지원 +12% = 베리타스알파, 2026-10-17"
+      ],
+      "keywords": [
+        "수시 지원",
+        "지방국립대",
+        "장학금·학비"
+      ],
+      "next_teaser_hint": "",
+      "research": [
+        {
+          "claim": "2027학년도 지방국립대 30곳 신입생은 국가장학금을 신청하면 소득과 관계없이 등록금 전액을 지원받는다(의·치·약·수의대 제외). 중도 이탈하면 추가 지원금만 반환한다",
+          "source": "경향신문",
+          "date": "2026-08-28",
+          "url": "https://khan.co.kr/article/202608281721001"
+        },
+        {
+          "claim": "1학년 1학기는 조건 없이 지급하고, 2학기부터는 직전 학기 12학점 이상·B학점(80점) 이상이 필요하다. 4년제 기준 최대 8회",
+          "source": "교수신문",
+          "date": "2026-08",
+          "url": "https://www.kyosu.net/news/articleView.html?idxno=209404"
+        },
+        {
+          "claim": "지원 학년은 2028년 1~2학년, 2029년 1~3학년, 2030년 전 학년으로 넓어질 계획이지만 해마다 국회 예산 통과가 필요하다",
+          "source": "이투데이",
+          "date": "2026-08",
+          "url": "https://www.etoday.co.kr/news/view/2620304"
+        },
+        {
+          "claim": "지방사립대 지역인재장학금은 출신 고교 지역 제한을 없애고 연간 최대 800만원, 신규 선발 인원을 4,000명에서 1만명으로 늘린다",
+          "source": "머니투데이",
+          "date": "2026-08-28",
+          "url": "https://www.mt.co.kr/policy/2026/08/28/2026082814382133389"
+        },
+        {
+          "claim": "9개 지거국 수도권 고교 출신 수시 지원자는 52,062명으로 12.0% 늘었고, 부산대는 1,372명에서 3,110명(+126.7%)으로 늘었다",
+          "source": "한국경제",
+          "date": "2026-10-08",
+          "url": "https://www.hankyung.com/article/2026100818451"
+        },
+        {
+          "claim": "예산안은 9월 국무회의를 거쳐 국회에 냈고, 국회 법정 처리 시한은 12월 2일이다",
+          "source": "뉴스핌",
+          "date": "2026-10-07",
+          "url": "https://www.newspim.com/news/view/20261007000421"
+        }
+      ],
+      "angle": "",
+      "related": [
+        {
+          "id": 288,
+          "title": "[입시 꿀팁] 입학하면 장학금 받을 수 있는 숨겨진 학과들 : 이공계열 편!",
+          "url": "https://majormap.net/content/288",
+          "summary": "신입생 장학금과 취업 경쟁력을 갖춘 숨은 이공계 학과 3곳 소개",
+          "category": "학과탐구",
+          "majors": "",
+          "views": 636
+        },
+        {
+          "id": 460,
+          "title": "부산 자유전공학과 소개 : 부산대, 부산외대, 동의대, 동아대, 동서대, 국립부경대",
+          "url": "https://majormap.net/content/460",
+          "summary": "2025학년도 정시 지원 가능한 부산 지역 7개 대학 자유전공학부의 모집군·인원·전공 선택·장학 혜택 정리",
+          "category": "학과탐구",
+          "majors": "",
+          "views": 933
+        }
+      ]
+    },
+    "facts": [
+      {
+        "id": "f1",
+        "value": "0원",
+        "claim": "지방국립대 등록금 전액 지원 (이른바 '등록금 0원', 정부안)",
+        "source": "경향신문",
+        "as_of": "2026-08-28",
+        "url": "https://khan.co.kr/article/202608281721001",
+        "derived_from": ""
+      },
+      {
+        "id": "f2",
+        "value": "2027",
+        "claim": "지원이 시작되는 학년도",
+        "source": "경향신문",
+        "as_of": "2026-08-28",
+        "url": "https://khan.co.kr/article/202608281721001",
+        "derived_from": ""
+      },
+      {
+        "id": "f3",
+        "value": "30곳",
+        "claim": "지원 대상 지방국립대 수",
+        "source": "경향신문",
+        "as_of": "2026-08-28",
+        "url": "https://khan.co.kr/article/202608281721001",
+        "derived_from": ""
+      },
+      {
+        "id": "f4",
+        "value": "+12.0%",
+        "claim": "9개 지거국 수도권 출신 수시 지원 증가율",
+        "source": "한국경제",
+        "as_of": "2026-10-08",
+        "url": "https://www.hankyung.com/article/2026100818451",
+        "derived_from": ""
+      },
+      {
+        "id": "f5",
+        "value": "52,062명",
+        "claim": "9개 지거국 수도권 출신 수시 지원자",
+        "source": "한국경제",
+        "as_of": "2026-10-08",
+        "url": "https://www.hankyung.com/article/2026100818451",
+        "derived_from": ""
+      },
+      {
+        "id": "f6",
+        "value": "9개",
+        "claim": "지역거점국립대 수",
+        "source": "한국경제",
+        "as_of": "2026-10-08",
+        "url": "https://www.hankyung.com/article/2026100818451",
+        "derived_from": ""
+      },
+      {
+        "id": "f7",
+        "value": "1,372명",
+        "claim": "부산대 수도권 출신 수시 지원자 (전년)",
+        "source": "한국경제",
+        "as_of": "2026-10-08",
+        "url": "https://www.hankyung.com/article/2026100818451",
+        "derived_from": ""
+      },
+      {
+        "id": "f8",
+        "value": "3,110명",
+        "claim": "부산대 수도권 출신 수시 지원자 (2027)",
+        "source": "한국경제",
+        "as_of": "2026-10-08",
+        "url": "https://www.hankyung.com/article/2026100818451",
+        "derived_from": ""
+      },
+      {
+        "id": "f9",
+        "value": "126.7%",
+        "claim": "부산대 수도권 출신 지원 증가율",
+        "source": "한국경제",
+        "as_of": "2026-10-08",
+        "url": "https://www.hankyung.com/article/2026100818451",
+        "derived_from": ""
+      },
+      {
+        "id": "f10",
+        "value": "12학점",
+        "claim": "계속 지원받으려면 필요한 직전 학기 이수 학점",
+        "source": "교수신문",
+        "as_of": "2026-08",
+        "url": "https://www.kyosu.net/news/articleView.html?idxno=209404",
+        "derived_from": ""
+      },
+      {
+        "id": "f11",
+        "value": "B학점",
+        "claim": "계속 지원받으려면 필요한 직전 학기 성적",
+        "source": "교수신문",
+        "as_of": "2026-08",
+        "url": "https://www.kyosu.net/news/articleView.html?idxno=209404",
+        "derived_from": ""
+      },
+      {
+        "id": "f12",
+        "value": "800만원",
+        "claim": "지방사립대 지역인재장학금 연간 상한",
+        "source": "머니투데이",
+        "as_of": "2026-08-28",
+        "url": "https://www.mt.co.kr/policy/2026/08/28/2026082814382133389",
+        "derived_from": ""
+      },
+      {
+        "id": "f13",
+        "value": "1만 명",
+        "claim": "지역인재장학금 신규 선발 인원 (확대 후)",
+        "source": "머니투데이",
+        "as_of": "2026-08-28",
+        "url": "https://www.mt.co.kr/policy/2026/08/28/2026082814382133389",
+        "derived_from": ""
+      },
+      {
+        "id": "f14",
+        "value": "12월 2일",
+        "claim": "국회 예산 법정 처리 시한",
+        "source": "뉴스핌",
+        "as_of": "2026-10-07",
+        "url": "https://www.newspim.com/news/view/20261007000421",
+        "derived_from": ""
+      }
+    ],
+    "script": {
+      "track": "admissions",
+      "post_date": "2026-10-30",
+      "topic_id": "report:3fc6af6c-8bcc-816d-a0c6-c44ad8f126aa#3",
+      "topic_title": "수시 지원 흐름 — 안정지원과 지방국립대 '등록금 0원'",
+      "kicker": "FRI · 입시 브리핑",
+      "next_label": "다음 주 월요일 입시 브리핑",
+      "source": {
+        "name": "메이저맵 입시 트렌드 리포트",
+        "date": "2026-10-17",
+        "url": "https://www.veritas-a.com/news/articleView.html?idxno=631443"
+      },
+      "research": [
+        {
+          "claim": "2027학년도 지방국립대 30곳 신입생은 국가장학금을 신청하면 소득과 관계없이 등록금 전액을 지원받는다(의·치·약·수의대 제외). 중도 이탈하면 추가 지원금만 반환한다",
+          "source": "경향신문",
+          "date": "2026-08-28",
+          "url": "https://khan.co.kr/article/202608281721001"
+        },
+        {
+          "claim": "1학년 1학기는 조건 없이 지급하고, 2학기부터는 직전 학기 12학점 이상·B학점(80점) 이상이 필요하다. 4년제 기준 최대 8회",
+          "source": "교수신문",
+          "date": "2026-08",
+          "url": "https://www.kyosu.net/news/articleView.html?idxno=209404"
+        },
+        {
+          "claim": "지원 학년은 2028년 1~2학년, 2029년 1~3학년, 2030년 전 학년으로 넓어질 계획이지만 해마다 국회 예산 통과가 필요하다",
+          "source": "이투데이",
+          "date": "2026-08",
+          "url": "https://www.etoday.co.kr/news/view/2620304"
+        },
+        {
+          "claim": "지방사립대 지역인재장학금은 출신 고교 지역 제한을 없애고 연간 최대 800만원, 신규 선발 인원을 4,000명에서 1만명으로 늘린다",
+          "source": "머니투데이",
+          "date": "2026-08-28",
+          "url": "https://www.mt.co.kr/policy/2026/08/28/2026082814382133389"
+        },
+        {
+          "claim": "9개 지거국 수도권 고교 출신 수시 지원자는 52,062명으로 12.0% 늘었고, 부산대는 1,372명에서 3,110명(+126.7%)으로 늘었다",
+          "source": "한국경제",
+          "date": "2026-10-08",
+          "url": "https://www.hankyung.com/article/2026100818451"
+        },
+        {
+          "claim": "예산안은 9월 국무회의를 거쳐 국회에 냈고, 국회 법정 처리 시한은 12월 2일이다",
+          "source": "뉴스핌",
+          "date": "2026-10-07",
+          "url": "https://www.newspim.com/news/view/20261007000421"
+        }
+      ],
+      "related": [
+        {
+          "id": 288,
+          "title": "[입시 꿀팁] 입학하면 장학금 받을 수 있는 숨겨진 학과들 : 이공계열 편!",
+          "url": "https://majormap.net/content/288",
+          "summary": "신입생 장학금과 취업 경쟁력을 갖춘 숨은 이공계 학과 3곳 소개",
+          "category": "학과탐구",
+          "majors": "",
+          "views": 636
+        },
+        {
+          "id": 460,
+          "title": "부산 자유전공학과 소개 : 부산대, 부산외대, 동의대, 동아대, 동서대, 국립부경대",
+          "url": "https://majormap.net/content/460",
+          "summary": "2025학년도 정시 지원 가능한 부산 지역 7개 대학 자유전공학부의 모집군·인원·전공 선택·장학 혜택 정리",
+          "category": "학과탐구",
+          "majors": "",
+          "views": 933
+        }
+      ],
+      "facts": [
+        {
+          "id": "f1",
+          "value": "0원",
+          "claim": "지방국립대 등록금 전액 지원 (이른바 '등록금 0원', 정부안)",
+          "source": "경향신문",
+          "as_of": "2026-08-28",
+          "url": "https://khan.co.kr/article/202608281721001",
+          "derived_from": ""
+        },
+        {
+          "id": "f2",
+          "value": "2027",
+          "claim": "지원이 시작되는 학년도",
+          "source": "경향신문",
+          "as_of": "2026-08-28",
+          "url": "https://khan.co.kr/article/202608281721001",
+          "derived_from": ""
+        },
+        {
+          "id": "f3",
+          "value": "30곳",
+          "claim": "지원 대상 지방국립대 수",
+          "source": "경향신문",
+          "as_of": "2026-08-28",
+          "url": "https://khan.co.kr/article/202608281721001",
+          "derived_from": ""
+        },
+        {
+          "id": "f4",
+          "value": "+12.0%",
+          "claim": "9개 지거국 수도권 출신 수시 지원 증가율",
+          "source": "한국경제",
+          "as_of": "2026-10-08",
+          "url": "https://www.hankyung.com/article/2026100818451",
+          "derived_from": ""
+        },
+        {
+          "id": "f5",
+          "value": "52,062명",
+          "claim": "9개 지거국 수도권 출신 수시 지원자",
+          "source": "한국경제",
+          "as_of": "2026-10-08",
+          "url": "https://www.hankyung.com/article/2026100818451",
+          "derived_from": ""
+        },
+        {
+          "id": "f6",
+          "value": "9개",
+          "claim": "지역거점국립대 수",
+          "source": "한국경제",
+          "as_of": "2026-10-08",
+          "url": "https://www.hankyung.com/article/2026100818451",
+          "derived_from": ""
+        },
+        {
+          "id": "f7",
+          "value": "1,372명",
+          "claim": "부산대 수도권 출신 수시 지원자 (전년)",
+          "source": "한국경제",
+          "as_of": "2026-10-08",
+          "url": "https://www.hankyung.com/article/2026100818451",
+          "derived_from": ""
+        },
+        {
+          "id": "f8",
+          "value": "3,110명",
+          "claim": "부산대 수도권 출신 수시 지원자 (2027)",
+          "source": "한국경제",
+          "as_of": "2026-10-08",
+          "url": "https://www.hankyung.com/article/2026100818451",
+          "derived_from": ""
+        },
+        {
+          "id": "f9",
+          "value": "126.7%",
+          "claim": "부산대 수도권 출신 지원 증가율",
+          "source": "한국경제",
+          "as_of": "2026-10-08",
+          "url": "https://www.hankyung.com/article/2026100818451",
+          "derived_from": ""
+        },
+        {
+          "id": "f10",
+          "value": "12학점",
+          "claim": "계속 지원받으려면 필요한 직전 학기 이수 학점",
+          "source": "교수신문",
+          "as_of": "2026-08",
+          "url": "https://www.kyosu.net/news/articleView.html?idxno=209404",
+          "derived_from": ""
+        },
+        {
+          "id": "f11",
+          "value": "B학점",
+          "claim": "계속 지원받으려면 필요한 직전 학기 성적",
+          "source": "교수신문",
+          "as_of": "2026-08",
+          "url": "https://www.kyosu.net/news/articleView.html?idxno=209404",
+          "derived_from": ""
+        },
+        {
+          "id": "f12",
+          "value": "800만원",
+          "claim": "지방사립대 지역인재장학금 연간 상한",
+          "source": "머니투데이",
+          "as_of": "2026-08-28",
+          "url": "https://www.mt.co.kr/policy/2026/08/28/2026082814382133389",
+          "derived_from": ""
+        },
+        {
+          "id": "f13",
+          "value": "1만 명",
+          "claim": "지역인재장학금 신규 선발 인원 (확대 후)",
+          "source": "머니투데이",
+          "as_of": "2026-08-28",
+          "url": "https://www.mt.co.kr/policy/2026/08/28/2026082814382133389",
+          "derived_from": ""
+        },
+        {
+          "id": "f14",
+          "value": "12월 2일",
+          "claim": "국회 예산 법정 처리 시한",
+          "source": "뉴스핌",
+          "as_of": "2026-10-07",
+          "url": "https://www.newspim.com/news/view/20261007000421",
+          "derived_from": ""
+        }
+      ],
+      "slides": [
+        {
+          "layout": "hook",
+          "headline": [
+            "지방국립대",
+            "등록금",
+            "{f1} 시대?"
+          ],
+          "highlight_line": 3,
+          "sub": "정부안이 국회 심사 중. 고1·고2가 알아둘 조건 정리",
+          "dialogue": [
+            {
+              "who": "polar",
+              "text": "선배, 국립대 가면 등록금 진짜 안 내요?"
+            },
+            {
+              "who": "may",
+              "text": "…조건이 붙어. 끝까지 넘겨 봐."
+            }
+          ],
+          "kicker": "FRI · 입시 브리핑",
+          "no": 1
+        },
+        {
+          "layout": "big_number",
+          "label": "{f6} 지거국 수시, 수도권 출신 지원은?",
+          "number": "{f4}",
+          "line": "전년보다 늘었어 · {f5}",
+          "bar_left": "",
+          "bar_left_label": "",
+          "bar_right": "",
+          "bar_right_label": "",
+          "dialogue": [
+            {
+              "who": "may",
+              "text": "…다만 등록금 하나 때문이라고 단정은 못 해."
+            }
+          ],
+          "no": 2
+        },
+        {
+          "layout": "detail",
+          "title": "부산대는 두 배 넘게",
+          "change": {
+            "title": "부산대 수도권 출신 지원",
+            "before": "{f7}",
+            "after": "{f8}",
+            "note": "{f9} 증가 · 의대 논술 신설도 영향"
+          },
+          "dots": {
+            "title": "계속 받으려면?",
+            "filled": "",
+            "total": "",
+            "note": "둘째 학기부터 {f10} 이수·{f11} 이상"
+          },
+          "dialogue": [
+            {
+              "who": "polar",
+              "text": "대학 가서도 학점 관리 해야 하네요!"
+            }
+          ],
+          "no": 3
+        },
+        {
+          "layout": "compare",
+          "title": "지방국립대 vs 지방사립대",
+          "mode": "versus",
+          "col_now": "지방국립대",
+          "col_next": "지방사립대",
+          "rows": [
+            {
+              "item": "지원 내용",
+              "now": "등록금 전액",
+              "next": "연 최대 {f12}"
+            },
+            {
+              "item": "누가",
+              "now": "{f2}학년도 신입생부터",
+              "next": "출신 고교 지역 제한 없음"
+            },
+            {
+              "item": "규모",
+              "now": "{f3}",
+              "next": "{f13}으로 확대"
+            },
+            {
+              "item": "주의",
+              "now": "의·치·약·수의대 제외",
+              "next": "비싸면 차액은 본인 부담"
+            }
+          ],
+          "dialogue": [
+            {
+              "who": "may",
+              "text": "…둘 다 매년 예산이 통과돼야 해."
+            }
+          ],
+          "no": 4
+        },
+        {
+          "layout": "action",
+          "title": "지금 해볼 것",
+          "steps": [
+            {
+              "title": "학과 두 곳 고르기",
+              "desc": "지방국립대 중 관심 학과 두 곳 찜"
+            },
+            {
+              "title": "등록금 찾아보기",
+              "desc": "대학알리미에서 연간 등록금 확인"
+            },
+            {
+              "title": "확정 소식 체크",
+              "desc": "국회 처리 시한은 {f14}"
+            }
+          ],
+          "dialogue": [
+            {
+              "who": "polar",
+              "text": "국가장학금 신청도 꼭 해야 한대요!"
+            }
+          ],
+          "no": 5
+        },
+        {
+          "layout": "cta",
+          "headline": "저장해두고 다시 보기",
+          "teaser": "다음 주도 입시 소식 빠르게 정리해 줄게",
+          "dialogue": [
+            {
+              "who": "polar",
+              "text": "다음 주도 기다릴게요!"
+            }
+          ],
+          "no": 6
+        }
+      ],
+      "caption": "정부 예산안에 담긴 지방국립대 등록금 전액 지원, 아직은 정부안이라 국회 확정(처리 시한 {f14})을 기다려야 해요. 계획대로면 {f2}학년도 신입생부터 시작하고, 현 고2·고1도 해당될 수 있어요. 단, 국가장학금 신청은 필수! 의·치·약·수의대는 빠지고, 계속 받으려면 대학에서도 {f10} 이수·{f11} 이상을 지켜야 해요. 관심 학과 두 곳의 등록금부터 찾아보기 📌",
+      "hashtags": [
+        "#메이저맵",
+        "#지방국립대",
+        "#등록금",
+        "#대학입시",
+        "#고1고2"
+      ]
+    },
+    "gate_report": {
+      "post_date": "2026-10-30",
+      "track": "admissions",
+      "topic_id": "report:3fc6af6c-8bcc-816d-a0c6-c44ad8f126aa#3",
+      "topic_title": "수시 지원 흐름 — 안정지원과 지방국립대 '등록금 0원'",
+      "mode": "offline-fixture",
+      "pass": true,
+      "attempts": [
+        {
+          "attempt": 1,
+          "gates": [
+            {
+              "gate": "G1",
+              "pass": true,
+              "violations": [],
+              "warnings": []
+            },
+            {
+              "gate": "G2",
+              "pass": true,
+              "violations": [],
+              "warnings": [],
+              "max_overlap_ratio": 0.0,
+              "ngram": 6
+            },
+            {
+              "gate": "G3",
+              "pass": true,
+              "violations": [],
+              "warnings": [],
+              "engine": "code (금칙어·글자 수·구조) — LLM 톤 판정은 1단계"
+            }
+          ]
+        }
+      ],
+      "g4": {
+        "gate": "G4",
+        "pass": true,
+        "violations": [],
+        "warnings": [],
+        "slides": [
+          {
+            "slide": 1,
+            "font_scale": 1.0,
+            "overflow": [],
+            "font": {
+              "loaded_weights": [
+                "500",
+                "600",
+                "700",
+                "800",
+                "900"
+              ],
+              "check_700": true,
+              "check_900": true
+            },
+            "pass": true
+          },
+          {
+            "slide": 2,
+            "font_scale": 1.0,
+            "overflow": [],
+            "font": {
+              "loaded_weights": [
+                "500",
+                "700",
+                "800",
+                "900"
+              ],
+              "check_700": true,
+              "check_900": true
+            },
+            "pass": true
+          },
+          {
+            "slide": 3,
+            "font_scale": 1.0,
+            "overflow": [],
+            "font": {
+              "loaded_weights": [
+                "500",
+                "700",
+                "800",
+                "900"
+              ],
+              "check_700": true,
+              "check_900": true
+            },
+            "pass": true
+          },
+          {
+            "slide": 4,
+            "font_scale": 1.0,
+            "overflow": [],
+            "font": {
+              "loaded_weights": [
+                "500",
+                "700",
+                "800",
+                "900"
+              ],
+              "check_700": true,
+              "check_900": true
+            },
+            "pass": true
+          },
+          {
+            "slide": 5,
+            "font_scale": 1.0,
+            "overflow": [],
+            "font": {
+              "loaded_weights": [
+                "500",
+                "600",
+                "700",
+                "800",
+                "900"
+              ],
+              "check_700": true,
+              "check_900": true
+            },
+            "pass": true
+          },
+          {
+            "slide": 6,
+            "font_scale": 1.0,
+            "overflow": [],
+            "font": {
+              "loaded_weights": [
+                "500",
+                "700",
+                "800",
+                "900"
+              ],
+              "check_700": true,
+              "check_900": true
+            },
+            "pass": true
+          }
+        ]
+      },
+      "steps": [
+        {
+          "step": "소재",
+          "status": "ok",
+          "duration_ms": 0
+        },
+        {
+          "step": "G1·G2·G3 (시도 1)",
+          "status": "ok",
+          "duration_ms": 1
+        },
+        {
+          "step": "렌더러+G4",
+          "status": "ok",
+          "duration_ms": 2444
         }
       ]
     },

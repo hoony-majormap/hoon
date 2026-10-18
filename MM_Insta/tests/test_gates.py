@@ -7,7 +7,7 @@ from pathlib import Path
 
 import pytest
 
-from mm_insta.gates.text_gates import g1_facts, g2_similarity, g3_tone_limits
+from mm_insta.gates.text_gates import g1_facts, g2_similarity, g3_tone_limits, g5_mix, run_text_gates
 from mm_insta.models import FactSheet, WriterOutput, resolve, to_script
 from mm_insta.sources.local import load_topic
 
@@ -99,7 +99,9 @@ def test_writer_schema_is_structured_output_compatible():
 
     from mm_insta.models import TrendWriterOutput
 
-    for model in (WriterOutput, TrendWriterOutput, FactSheet):
+    from mm_insta.agents.researcher import ResearchPack
+
+    for model in (WriterOutput, TrendWriterOutput, FactSheet, ResearchPack):
         schema = transform_schema(model)
         assert json.dumps(schema)
 
@@ -116,10 +118,16 @@ def load_seed(day: str):
     return topic, to_script(topic, facts, draft, "TUE · 요즘 뭐가 유행?", "내일(수) 입시 브리핑", day)
 
 
-@pytest.mark.parametrize("day", ["2026-10-19", "2026-10-20", "2026-10-21", "2026-10-22", "2026-10-23"])
-def test_seed_week_passes_text_gates(day):
+SEED_DAYS = ["2026-10-19", "2026-10-20", "2026-10-21", "2026-10-22", "2026-10-23",
+             "2026-10-26", "2026-10-27", "2026-10-28", "2026-10-29", "2026-10-30"]
+
+
+@pytest.mark.parametrize("day", SEED_DAYS)
+def test_seed_weeks_pass_text_gates(day):
     topic, script = load_seed(day)
-    for gate in (g1_facts(script, topic), g2_similarity(script, topic), g3_tone_limits(script)):
+    results = run_text_gates(script, topic)
+    assert [r["gate"] for r in results] == (["G1", "G2", "G3", "G5"] if topic.track == "trend" else ["G1", "G2", "G3"])
+    for gate in results:
         assert gate["pass"], gate["violations"]
 
 
@@ -142,3 +150,47 @@ def test_trend_typed_number_blocked():
     topic, script = load_seed("2026-10-22")
     script["slides"][2]["why"] = "엑스에서 조회수 5천만 회를 넘겨서"
     assert not g1_facts(script, topic)["pass"]
+
+
+# ── G5: 캐릿 소재는 그대로 올리지 않는다 ─────────────────────────
+def test_g5_blocks_careet_only_topic():
+    topic, script = load_seed("2026-10-27")
+    topic.research = []
+    v = g5_mix(script, topic)["violations"]
+    assert any("캐릿 밖 리서치 출처가 없음" in m for m in v)
+
+
+def test_g5_research_link_to_careet_does_not_count():
+    topic, script = load_seed("2026-10-27")
+    for n in topic.research:
+        n.url = "https://www.careet.net/2001"
+    assert not g5_mix(script, topic)["pass"]
+
+
+def test_g5_blocks_cards_without_research_fact():
+    topic, script = load_seed("2026-10-20")
+    for f in script["facts"]:
+        f["source"], f["url"] = "캐릿", ""
+    v = g5_mix(script, topic)["violations"]
+    assert any("캐릿 밖 출처의 팩트가 없음" in m for m in v)
+
+
+def test_g5_is_stricter_than_g2_on_careet_text():
+    topic, script = load_seed("2026-10-20")
+    slide(script, "trend_item")["why"] = "타자 게임에 요즘 인기 취미인 걸 섞어서"  # 캐릿 원문 5어절
+    assert g2_similarity(script, topic)["pass"]
+    v = g5_mix(script, topic)["violations"]
+    assert any("캐릿 원문과 5어절" in m for m in v)
+
+
+def test_g5_warns_without_majormap_link():
+    topic, script = load_seed("2026-10-29")
+    topic.related = []
+    r = g5_mix(script, topic)
+    assert r["pass"] and any("메이저맵 연결 콘텐츠 없음" in w for w in r["warnings"])
+
+
+def test_g3_trend_label_limits():
+    _, script = load_seed("2026-10-27")
+    slide(script, "trend_item")["why_label"] = "왜 이렇게까지 뜨는 거냐면"
+    assert any("why_label" in m for m in g3_tone_limits(script)["violations"])

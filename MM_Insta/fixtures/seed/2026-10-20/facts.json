@@ -1,1 +1,58 @@
-{"facts": []}
+{
+  "facts": [
+    {
+      "id": "f1",
+      "value": "653만 회",
+      "claim": "메트로 타이핑 소개 게시물의 엑스 조회수",
+      "source": "캐릿",
+      "as_of": "2026-10-07",
+      "url": "",
+      "derived_from": ""
+    },
+    {
+      "id": "f2",
+      "value": "2025년 2월",
+      "claim": "카파시가 '바이브코딩'이란 말을 처음 쓴 때",
+      "source": "카파시 X 게시물",
+      "as_of": "2025-02-02",
+      "url": "https://x.com/karpathy/status/1886192184808149383",
+      "derived_from": ""
+    },
+    {
+      "id": "f3",
+      "value": "2025년 올해의 단어",
+      "claim": "콜린스 사전이 vibe coding에 붙인 타이틀",
+      "source": "콜린스 사전",
+      "as_of": "2025-11-06",
+      "url": "https://blog.collinsdictionary.com/language-lovers/collins-word-of-the-year-2025-ai-meets-authenticity-as-society-shifts/",
+      "derived_from": ""
+    },
+    {
+      "id": "f4",
+      "value": "84%",
+      "claim": "AI 도구를 쓰거나 쓸 계획인 개발자 비율",
+      "source": "스택오버플로 개발자 설문",
+      "as_of": "2025-07-29",
+      "url": "https://stackoverflow.co/company/press/archive/stack-overflow-2025-developer-survey/",
+      "derived_from": ""
+    },
+    {
+      "id": "f5",
+      "value": "46%",
+      "claim": "AI 결과물의 정확성을 믿지 않는 개발자 비율",
+      "source": "스택오버플로 개발자 설문",
+      "as_of": "2025-07-29",
+      "url": "https://stackoverflow.co/company/press/archive/stack-overflow-2025-developer-survey/",
+      "derived_from": ""
+    },
+    {
+      "id": "f6",
+      "value": "45%",
+      "claim": "보안업체 실험에서 AI가 위험한 코드 방식을 고른 과제 비율",
+      "source": "베라코드",
+      "as_of": "2025-07-30",
+      "url": "https://www.businesswire.com/news/home/20250730694951/en/AI-Generated-Code-Poses-Major-Security-Risks-in-Nearly-Half-of-All-Development-Tasks-Veracode-Research-Reveals",
+      "derived_from": ""
+    }
+  ]
+}

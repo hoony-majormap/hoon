@@ -28,5 +28,25 @@
     "수능최저",
     "상위15개대"
   ],
-  "next_teaser_hint": ""
+  "next_teaser_hint": "",
+  "related": [
+    {
+      "id": 963,
+      "title": "2028 대입 변화: 서울대가 예고한 합격의 열쇠 '과목'과 '태도'",
+      "url": "https://majormap.net/content/963",
+      "summary": "내신 5등급제 2028 대입에서 서울대가 강조한 교과 이수 충실도·전공 연계성과 학업 태도 정리",
+      "category": "교육뉴스",
+      "majors": "",
+      "views": 410
+    },
+    {
+      "id": 723,
+      "title": "고1 고교학점제 선택과목 가이드: 도대체 어떤 과목을 골라야할지 고민이라면(feat.신규 서비스 '나만의 과목 지도' 활용하기!✨)",
+      "url": "https://majormap.net/content/723",
+      "summary": "고교학점제 혼란 속 고1을 위한 서울대 가이드 활용 ‘교집합 과목’ 선택법과 내신 전략",
+      "category": "교육뉴스",
+      "majors": "",
+      "views": 661
+    }
+  ]
 }

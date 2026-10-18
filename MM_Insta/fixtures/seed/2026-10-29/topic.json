@@ -1,0 +1,85 @@
+{
+  "track": "trend",
+  "id": "3fc6af6c-8bcc-81ee-a07b-ea40e9724c0e",
+  "title": "80억분의 1",
+  "source_name": "캐릿",
+  "source_type": "캐릿 마이크로 트렌드",
+  "url": "",
+  "published": "2026-10-08",
+  "summary": "세계 인구 80억 명 중 한 아이로 태어나 생을 마칠 때까지 살아보는 시뮬레이션 게임이 화제",
+  "key_points": [
+    "세계 인구 80억 명 중 한 아이로 태어나 생을 마칠 때까지 살아보는 시뮬레이션 게임이 화제",
+    "게임을 시작하면 141개국 중 한 곳에서 무작위로 태어나게 됨",
+    "해당 국가의 실제 통계를 바탕으로 생애주기를 체험하는 방식",
+    "자라면서 취미·직업·투자 성향 등 질문에 어떻게 답하느냐에 따라 아이의 미래가 달라짐",
+    "커뮤니티에는 직접 해본 사람들의 후기가 쏟아지는 중"
+  ],
+  "check_points": [],
+  "evidence": [
+    "80억분의 1 = 캐릿, 2026-10-08"
+  ],
+  "keywords": [
+    "스레드",
+    "커뮤니티"
+  ],
+  "next_teaser_hint": "",
+  "research": [
+    {
+      "claim": "웹게임 '80억 분의 1'은 141개국 중 한 곳에 출생 통계 비중대로 태어나며 UN·WHO·세계은행 통계를 쓴다. 한 사람의 일생이 약 1시간 동안 진행되고 15세 이상 이용을 권장한다",
+      "source": "경향신문",
+      "date": "2026-10-17",
+      "url": "https://www.khan.co.kr/article/202610171000001/"
+    },
+    {
+      "claim": "UN은 2022년 11월 15일을 세계 인구 80억의 날로 정했다",
+      "source": "UN",
+      "date": "2022-11-15",
+      "url": "https://www.un.org/en/dayof8billion"
+    },
+    {
+      "claim": "2024년 출생아의 기대수명은 83.7년으로 역대 최고다",
+      "source": "국가데이터처",
+      "date": "2025-12-03",
+      "url": "https://www.newsis.com/view/NISX20251203_0003426271"
+    },
+    {
+      "claim": "나이지리아의 기대수명은 약 55세다(2024)",
+      "source": "세계은행",
+      "date": "2024",
+      "url": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=NG"
+    },
+    {
+      "claim": "사하라 이남 아프리카의 5세 미만 사망률은 1,000명당 71.6명으로 유럽·북미의 약 14배다",
+      "source": "WHO",
+      "date": "2026-03-18",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/child-mortality-under-5-years"
+    },
+    {
+      "claim": "2025년 한국 합계출산율은 0.80명이다",
+      "source": "국가데이터처",
+      "date": "2026-08-26",
+      "url": "https://eiec.kdi.re.kr/policy/materialView.do?num=285815"
+    }
+  ],
+  "angle": "같은 날 태어나도 나라마다 인생 그래프가 다르다 — 그 차이를 숫자로 읽는 진로",
+  "related": [
+    {
+      "id": 982,
+      "title": "탐구 주제 고민 끝! 진로 분야별 통계 사이트 & 예시 총정리",
+      "url": "https://majormap.net/content/982",
+      "summary": "경영·사회·심리·의학 등 진로 분야별 통계 사이트와 통계 분석 탐구 주제 예시 총정리",
+      "category": "탐구주제",
+      "majors": "경영학과, 경제학과, 사회학과, 심리학과, 미디어학과, 교육학과, 간호학과, 의예과",
+      "views": 1481
+    },
+    {
+      "id": 532,
+      "title": "재미있고 실용적인 통계학과 소개📊",
+      "url": "https://majormap.net/content/532",
+      "summary": "일상 속 통계 사례로 본 통계학과의 학습 과목·분석 프로그램, 졸업 후 진로와 유망 복수전공 소개",
+      "category": "학과탐구",
+      "majors": "통계학과, 데이터 분석가, 보험계리사, 금융 데이터 분석가, AI·머신러닝 엔지니어, 정부 통계직, 마케팅 전략가",
+      "views": 239
+    }
+  ]
+}

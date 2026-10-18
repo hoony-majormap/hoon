@@ -1,0 +1,121 @@
+{
+  "facts": [
+    {
+      "id": "f1",
+      "value": "28.53:1",
+      "claim": "2027학년도 수시 반도체 계약학과 5곳 경쟁률 (역대 최고)",
+      "source": "머니투데이",
+      "as_of": "2026-09-11",
+      "url": "https://www.mt.co.kr/policy/2026/09/11/2026091121522046272",
+      "derived_from": ""
+    },
+    {
+      "id": "f2",
+      "value": "2027",
+      "claim": "반도체 계약학과 경쟁률의 기준 학년도",
+      "source": "머니투데이",
+      "as_of": "2026-09-11",
+      "url": "https://www.mt.co.kr/policy/2026/09/11/2026091121522046272",
+      "derived_from": ""
+    },
+    {
+      "id": "f3",
+      "value": "6.6%",
+      "claim": "2024학년도 무전공 선발 비율 (수도권대·국립대)",
+      "source": "교육부",
+      "as_of": "2024-05-30",
+      "url": "https://www.seoul.co.kr/news/society/education-news/2024/05/31/20240531008008",
+      "derived_from": ""
+    },
+    {
+      "id": "f4",
+      "value": "28.6%",
+      "claim": "2025학년도 무전공 선발 비율 (수도권대·국립대 73개교)",
+      "source": "교육부",
+      "as_of": "2024-05-30",
+      "url": "https://www.seoul.co.kr/news/society/education-news/2024/05/31/20240531008008",
+      "derived_from": ""
+    },
+    {
+      "id": "f5",
+      "value": "3.8배",
+      "claim": "무전공 선발 인원 증가 폭 (9,925명→37,935명)",
+      "source": "교육부",
+      "as_of": "2024-05-30",
+      "url": "https://www.seoul.co.kr/news/society/education-news/2024/05/31/20240531008008",
+      "derived_from": ""
+    },
+    {
+      "id": "f6",
+      "value": "2025",
+      "claim": "무전공 선발이 크게 늘어난 학년도",
+      "source": "교육부",
+      "as_of": "2024-05-30",
+      "url": "https://www.seoul.co.kr/news/society/education-news/2024/05/31/20240531008008",
+      "derived_from": ""
+    },
+    {
+      "id": "f7",
+      "value": "1곳",
+      "claim": "2022년 인문 1위가 무전공인 상위15개대 수",
+      "source": "베리타스알파",
+      "as_of": "2026-10-17",
+      "url": "https://www.veritas-a.com/news/articleView.html?idxno=630604",
+      "derived_from": ""
+    },
+    {
+      "id": "f8",
+      "value": "5곳",
+      "claim": "2026년 인문 1위가 무전공인 상위15개대 수 (공동 포함)",
+      "source": "베리타스알파",
+      "as_of": "2026-10-17",
+      "url": "https://www.veritas-a.com/news/articleView.html?idxno=630604",
+      "derived_from": ""
+    },
+    {
+      "id": "f9",
+      "value": "15개대",
+      "claim": "비교 대상 상위 대학 수",
+      "source": "베리타스알파",
+      "as_of": "2026-10-17",
+      "url": "https://www.veritas-a.com/news/articleView.html?idxno=630604",
+      "derived_from": ""
+    },
+    {
+      "id": "f10",
+      "value": "2022",
+      "claim": "비교 시작 연도",
+      "source": "베리타스알파",
+      "as_of": "2026-10-17",
+      "url": "https://www.veritas-a.com/news/articleView.html?idxno=630604",
+      "derived_from": ""
+    },
+    {
+      "id": "f11",
+      "value": "2026",
+      "claim": "비교 끝 연도",
+      "source": "베리타스알파",
+      "as_of": "2026-10-17",
+      "url": "https://www.veritas-a.com/news/articleView.html?idxno=630604",
+      "derived_from": ""
+    },
+    {
+      "id": "f12",
+      "value": "12개대",
+      "claim": "의약계열을 둔 상위15개대 수",
+      "source": "베리타스알파",
+      "as_of": "2026-10-17",
+      "url": "https://www.veritas-a.com/news/articleView.html?idxno=631785",
+      "derived_from": ""
+    },
+    {
+      "id": "f13",
+      "value": "60자리",
+      "claim": "다섯 해 동안의 자연 1위 자리 수 (전부 의약계열)",
+      "source": "베리타스알파",
+      "as_of": "2026-10-17",
+      "url": "https://www.veritas-a.com/news/articleView.html?idxno=631785",
+      "derived_from": ""
+    }
+  ]
+}

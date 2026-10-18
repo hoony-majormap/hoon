@@ -1,19 +1,78 @@
 {
-  "id": "3fc6af6c-8bcc-8163-8508-d33361fe29db",
-  "title": "바이브코딩으로 앱스토어 1위, 나도 가능할까? SNS에서 바이럴된 웹사이트 아이디어 모음",
   "track": "trend",
+  "id": "3fc6af6c-8bcc-81c0-9abd-ef9f9cf12841",
+  "title": "세계관오류",
   "source_name": "캐릿",
-  "source_type": "캐릿 아카이브",
-  "url": "https://www.careet.net/2006",
+  "source_type": "캐릿 마이크로 트렌드",
+  "url": "",
   "published": "2026-10-08",
-  "summary": "개인이 아이디어만으로 서비스를 만들어 앱스토어 상위권까지 오르는 '바이브코딩' 사례가 늘어나는 흐름",
+  "summary": "AI로 만든 콘텐츠를 주로 올리는 유튜브 채널 '세계관오류'가 주목받는 중",
   "key_points": [
-    "개인이 아이디어만으로 서비스를 만들어 앱스토어 상위권까지 오르는 '바이브코딩' 사례가 늘어나는 흐름",
-    "빈지브라우즈, 플레이 뮤직 띠어리, 메쿠루 등 콘셉트가 뚜렷한 웹사이트 소개",
-    "일본 '이미지 튀김(画像揚げ)'은 엑스 조회수 4천만 회 이상을 기록하며 바이럴",
-    "번 시디, 브러시 째무, 흔들흔들 쉐이커 스튜디오처럼 아날로그·감성 경험을 웹으로 옮긴 사례",
-    "태국 점성술, 색감 인지 테스트(dialed.gg), 링크 부케 등 테스트·선물형 사이트도 인기"
+    "AI로 만든 콘텐츠를 주로 올리는 유튜브 채널 '세계관오류'가 주목받는 중",
+    "세종대왕, 안중근 의사 등 역사 인물이 현대 한국에 나타나면 어떤 일이 생길지 AI로 구현한 영상이 대표적",
+    "반대로 핫팩·치킨 같은 현대 물건을 과거로 가져갔을 때의 상황을 상상한 영상도 제작",
+    "10월 초에 올라온 영상들이 60만~70만 조회수를 기록하며 급부상",
+    "AI로 로맨스 판타지처럼 현실에서 찍기 어려운 장면을 구현한 콘텐츠가 잇달아 화제가 되는 흐름"
   ],
-  "evidence": ["바이브코딩으로 앱스토어 1위, 나도 가능할까? = 캐릿, 2026-10-08"],
-  "keywords": ["일반"]
+  "check_points": [],
+  "evidence": [
+    "세계관오류 = 캐릿, 2026-10-08"
+  ],
+  "keywords": [
+    "유튜브"
+  ],
+  "next_teaser_hint": "",
+  "research": [
+    {
+      "claim": "AI 기본법이 2026년 1월 22일부터 시행됐다",
+      "source": "정책브리핑",
+      "date": "2026-01-21",
+      "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148958380"
+    },
+    {
+      "claim": "AI 기본법 제31조는 생성형 AI 결과물임을 표시하고, 실제와 구분하기 어려운 딥페이크는 이용자가 분명히 알아보게 표시하도록 한다",
+      "source": "국가법령정보센터",
+      "date": "",
+      "url": "https://www.law.go.kr/LSW//lsSideInfoP.do?lsiSeq=282791&joNo=0031&joBrNo=00&docCls=jo&urlMode=lsScJoRltInfoR"
+    },
+    {
+      "claim": "표시 의무는 AI 사업자에게 있고, 개인 이용자나 유튜버는 의무 대상이 아니다",
+      "source": "과학기술정보통신부",
+      "date": "2026-01-22",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156740669"
+    },
+    {
+      "claim": "유튜브는 2026년 5월 AI 라벨을 개편해 쇼츠는 화면 위에 라벨을 띄우고, 공개하지 않은 영상에도 자동으로 라벨이 붙을 수 있게 했다",
+      "source": "YouTube 공식 블로그",
+      "date": "2026-05-27",
+      "url": "https://blog.youtube/news-and-events/improving-ai-labels-for-viewers-and-creators/"
+    },
+    {
+      "claim": "성적 허위영상물은 알면서 소지·시청만 해도 처벌하도록 성폭력처벌법이 바뀌었다",
+      "source": "뉴시스",
+      "date": "2024-09-25",
+      "url": "https://mobile.newsis.com/view/NISX20240925_0002898631"
+    }
+  ],
+  "angle": "라벨이 없다고 진짜는 아니다 — 재밌게 보되 거르는 힘은 보는 사람 몫",
+  "related": [
+    {
+      "id": 336,
+      "title": "[주제탐구] 불법합성방, 딥페이크 범죄 | 인공지능과 윤리적 교육, 피해자 상담과 법률",
+      "url": "https://majormap.net/content/336",
+      "summary": "텔레그램 불법합성방·딥페이크 범죄 이슈 정리와 윤리·법·상담 탐구주제 제시",
+      "category": "탐구주제",
+      "majors": "법학, 상담심리, 인공지능",
+      "views": 591
+    },
+    {
+      "id": 906,
+      "title": "😺: “AI 시대, 우린 무엇을 해야 할까?” (대체불가 역량 5가지)",
+      "url": "https://majormap.net/content/906",
+      "summary": "AI 시대 대체불가 인재가 되기 위한 핵심역량 5가지 소개",
+      "category": "트렌드",
+      "majors": "",
+      "views": 380
+    }
+  ]
 }

@@ -1,7 +1,8 @@
-"""out/seed/<날짜>/ 결과물 → insta_posts 행 (JSON + SQL). 초기 1주치 시드용.
+"""out/seed/<날짜>/ 결과물 → insta_posts 행 (JSON + SQL). 초기 2주치(10/19~10/30) 시드용.
 
 이미지는 웹앱 public/seed/<날짜>/ 에 함께 배포하고 image_urls는 상대경로로 둔다.
   python scripts/seed_rows.py            # supabase/seed/insta_posts_seed.{json,sql} 생성
+SQL은 아직 시드(mode='seed')인 행만 덮어쓴다 — Actions가 만든 행은 건드리지 않는다.
 """
 from __future__ import annotations
 
@@ -15,7 +16,10 @@ sys.path.insert(0, str(ROOT))
 
 from mm_insta.models import Topic, fact_map, resolve  # noqa: E402
 
-DAYS = ["2026-10-19", "2026-10-20", "2026-10-21", "2026-10-22", "2026-10-23"]
+DAYS = ["2026-10-19", "2026-10-20", "2026-10-21", "2026-10-22", "2026-10-23",
+        "2026-10-26", "2026-10-27", "2026-10-28", "2026-10-29", "2026-10-30"]
+# 1주차는 캐릭터 교체·편성 변경(10/20·10/22 교체)으로 다시 렌더한 v2 — 이미지 캐시도 버전으로 끊는다
+REVISED = set(DAYS[:5])
 
 
 def row(day: str) -> dict:
@@ -26,6 +30,8 @@ def row(day: str) -> dict:
     assert report["pass"], f"{day} 게이트 실패 — 시드로 쓸 수 없음"
     facts = fact_map(script)
     hook = next(s for s in script["slides"] if s["layout"] == "hook")
+    version = 2 if day in REVISED else 1
+    n_research = len({r.source for r in topic.research})
     return {
         "post_date": day,
         "track": topic.track,
@@ -34,16 +40,16 @@ def row(day: str) -> dict:
         "headline": " ".join(resolve(line, facts) for line in hook["headline"]),
         "caption": (out / "caption.txt").read_text(),
         "hashtags": script["hashtags"],
-        "image_urls": [f"/seed/{day}/{i:02d}.jpg" for i in range(1, 7)],
+        "image_urls": [f"/seed/{day}/{i:02d}.jpg?v={version}" for i in range(1, 7)],
         "source_id": topic.id,
         "source_url": topic.url or None,
-        "source_name": topic.source_name,
+        "source_name": topic.source_name + (f" + 추가 취재 {n_research}곳" if n_research else ""),
         "topic": topic.model_dump(),
         "facts": script["facts"],
         "script": script,
         "gate_report": report,
         "mode": "seed",
-        "version": 1,
+        "version": version,
     }
 
 
@@ -72,9 +78,11 @@ def main():
         for c in cols:
             v = r[c]
             vals.append(sql_literal(v) if c not in jsonb_cols else "'" + json.dumps(v, ensure_ascii=False).replace("'", "''") + "'::jsonb")
+        updates = ", ".join(f"{c} = excluded.{c}" for c in cols if c != "post_date")
         stmts.append(
             f"insert into public.insta_posts ({', '.join(cols)}) values ({', '.join(vals)})\n"
-            f"on conflict (post_date) do nothing;"
+            f"on conflict (post_date) do update set {updates}, updated_at = now()\n"
+            f"where public.insta_posts.mode = 'seed';"
         )
     (dest / "insta_posts_seed.sql").write_text("\n\n".join(stmts) + "\n")
     print(f"{len(rows)}행 → {dest}")

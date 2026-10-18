@@ -1,0 +1,76 @@
+{
+  "facts": [
+    {
+      "id": "f1",
+      "value": "80억 분의 1",
+      "claim": "화제가 된 생애 시뮬레이션 웹게임 이름",
+      "source": "경향신문",
+      "as_of": "2026-10-17",
+      "url": "https://www.khan.co.kr/article/202610171000001/",
+      "derived_from": ""
+    },
+    {
+      "id": "f2",
+      "value": "141개국",
+      "claim": "게임에서 태어날 수 있는 나라 수",
+      "source": "경향신문",
+      "as_of": "2026-10-17",
+      "url": "https://www.khan.co.kr/article/202610171000001/",
+      "derived_from": ""
+    },
+    {
+      "id": "f3",
+      "value": "약 1시간",
+      "claim": "게임 속 한 사람의 일생이 진행되는 시간",
+      "source": "경향신문",
+      "as_of": "2026-10-17",
+      "url": "https://www.khan.co.kr/article/202610171000001/",
+      "derived_from": ""
+    },
+    {
+      "id": "f4",
+      "value": "15세",
+      "claim": "게임 이용 권장 나이",
+      "source": "경향신문",
+      "as_of": "2026-10-17",
+      "url": "https://www.khan.co.kr/article/202610171000001/",
+      "derived_from": ""
+    },
+    {
+      "id": "f5",
+      "value": "83.7년",
+      "claim": "한국 2024년 출생아의 기대수명",
+      "source": "국가데이터처",
+      "as_of": "2025-12-03",
+      "url": "https://www.newsis.com/view/NISX20251203_0003426271",
+      "derived_from": ""
+    },
+    {
+      "id": "f6",
+      "value": "약 55년",
+      "claim": "나이지리아 기대수명 (2024)",
+      "source": "세계은행",
+      "as_of": "2024",
+      "url": "https://data.worldbank.org/indicator/SP.DYN.LE00.IN?locations=NG",
+      "derived_from": ""
+    },
+    {
+      "id": "f7",
+      "value": "약 14배",
+      "claim": "사하라 이남 아프리카 5세 미만 사망률이 유럽·북미보다 높은 정도",
+      "source": "WHO",
+      "as_of": "2026-03-18",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/child-mortality-under-5-years",
+      "derived_from": ""
+    },
+    {
+      "id": "f8",
+      "value": "0.80명",
+      "claim": "2025년 한국 합계출산율",
+      "source": "국가데이터처",
+      "as_of": "2026-08-26",
+      "url": "https://eiec.kdi.re.kr/policy/materialView.do?num=285815",
+      "derived_from": ""
+    }
+  ]
+}

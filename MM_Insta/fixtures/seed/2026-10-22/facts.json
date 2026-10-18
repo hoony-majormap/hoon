@@ -1,5 +1,31 @@
 {
   "facts": [
-    {"id": "f1", "value": "4천만 회", "claim": "일본 '이미지 튀김' 사이트의 엑스 조회수", "source": "캐릿", "as_of": "2026-10-08", "url": "https://www.careet.net/2006", "derived_from": ""}
+    {
+      "id": "f1",
+      "value": "2026년 1월",
+      "claim": "AI 기본법 시행 시점",
+      "source": "정책브리핑",
+      "as_of": "2026-01-21",
+      "url": "https://www.korea.kr/news/policyNewsView.do?newsId=148958380",
+      "derived_from": ""
+    },
+    {
+      "id": "f2",
+      "value": "AI 사업자",
+      "claim": "AI 결과물 표시 의무가 있는 쪽 (개인 이용자·유튜버는 대상 아님)",
+      "source": "과학기술정보통신부",
+      "as_of": "2026-01-22",
+      "url": "https://www.korea.kr/briefing/pressReleaseView.do?newsId=156740669",
+      "derived_from": ""
+    },
+    {
+      "id": "f3",
+      "value": "2026년 5월",
+      "claim": "유튜브가 AI 라벨 표시 방식을 바꾼 때",
+      "source": "YouTube 공식 블로그",
+      "as_of": "2026-05-27",
+      "url": "https://blog.youtube/news-and-events/improving-ai-labels-for-viewers-and-creators/",
+      "derived_from": ""
+    }
   ]
 }

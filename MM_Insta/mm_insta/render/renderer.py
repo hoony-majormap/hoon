@@ -90,8 +90,11 @@ def _uri(path: Path) -> str:
 
 
 def _fmt_date(iso: str) -> str:
-    m = re.match(r"(\d{4})-(\d{2})-(\d{2})", iso or "")
-    return f"{m.group(1)}.{int(m.group(2))}.{int(m.group(3))}" if m else iso
+    """2026-10-17 → 2026.10.17, 날짜를 모르는 출처는 2026-08 → 2026.8"""
+    m = re.match(r"(\d{4})-(\d{2})(?:-(\d{2}))?", iso or "")
+    if not m:
+        return iso
+    return ".".join([m.group(1), str(int(m.group(2)))] + ([str(int(m.group(3)))] if m.group(3) else []))
 
 
 def _sources(fact_ids: set[str], facts: dict[str, dict]) -> list[str]:
@@ -144,7 +147,7 @@ def build_html(script: dict, html_dir: Path) -> list[Path]:
         "site": BRAND["site"],
         "next_label": script.get("next_label") or "다음 회",
         "all_sources": " · ".join(all_sources),
-        "source_note": "내용은 메이저맵이 학생 눈높이로 재구성했습니다." if trend else "수치는 메이저맵이 재가공했습니다.",
+        "source_note": "캐릿 트렌드에 메이저맵이 추가 취재를 더해 재구성했습니다." if trend else "수치는 메이저맵이 재가공했습니다.",
     }
     html_dir.mkdir(parents=True, exist_ok=True)
     paths = []
@@ -166,10 +169,13 @@ def build_html(script: dict, html_dir: Path) -> list[Path]:
             # 8개 이하는 한 줄, 그 이상은 두 줄
             slide["dots_cols"] = max(slide["dots_total"], 1) if slide["dots_total"] <= 8 else math.ceil(slide["dots_total"] / 2)
         source_line = ""
-        if refs and layout != "cta":
+        if trend and layout == "trend_item" and src.get("name"):
+            # 유행 장은 캐릿 + 그 장에 쓴 리서치 출처를 함께 적는다
+            main = f"{src['name']}({_fmt_date(src.get('date', ''))})"
+            extra = [s for s in _sources(refs, facts) if not s.startswith(src["name"])] if refs else []
+            source_line = "출처: " + " · ".join([main, *extra]) + " · 메이저맵 재구성"
+        elif refs and layout != "cta":
             source_line = "출처: " + " · ".join(_sources(refs, facts)) + " · 메이저맵 재가공"
-        elif trend and layout == "trend_item" and src.get("name"):
-            source_line = f"출처: {src['name']}({_fmt_date(src.get('date', ''))}) · 메이저맵 재구성"
         bg = TREND_ITEM_BACKGROUNDS[(slide["index"] - 1) % 3] if layout == "trend_item" else BACKGROUNDS[layout]
         html = env.get_template(TEMPLATE_FILES[layout]).render(
             slide=slide, bg=bg, logo=LOGOS[bg], source_line=source_line, **common

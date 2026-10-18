@@ -1,19 +1,77 @@
 {
-  "id": "3fc6af6c-8bcc-81f2-b4e3-cbba1f0cd34e",
-  "title": "‘L을 가져가’가 대체 무슨 뜻? 요즘 밈 해독해 드림",
   "track": "trend",
+  "id": "3fc6af6c-8bcc-81aa-acb4-cb787504d763",
+  "title": "뜨개질 타이핑 사이트",
   "source_name": "캐릿",
-  "source_type": "캐릿 아카이브",
-  "url": "https://www.careet.net/2008",
-  "published": "2026-10-15",
-  "summary": "'L을 가져가'는 영어 'Take the L(패배를 인정해)'에서 온 표현으로 실패·손해 상황에 쓰임",
+  "source_type": "캐릿 마이크로 트렌드",
+  "url": "",
+  "published": "2026-10-07",
+  "summary": "SNS에서 타자 게임 형식의 바이브 코딩 사이트들이 꾸준히 바이럴되는 중",
   "key_points": [
-    "'L을 가져가'는 영어 'Take the L(패배를 인정해)'에서 온 표현으로 실패·손해 상황에 쓰임",
-    "'늙크크 말투'는 '안 봐도 비디오다'처럼 윗세대 말투를 흉내 내는 콘텐츠 유행",
-    "'부라는 게 숨긴다고 숨겨지는 것도 아니고'는 은근한 자랑을 재치 있게 표현하는 댓글 밈",
-    "래퍼 스윙스 칭찬 글에서 파생된 '멋있는 것 같아... 팬은 ❌' 밈",
-    "치이카와 캐릭터 관련 밈도 함께 정리"
+    "SNS에서 타자 게임 형식의 바이브 코딩 사이트들이 꾸준히 바이럴되는 중",
+    "대표 사례인 '메트로 타이핑'은 지하철역 이름을 빠르게 입력하는 게임으로, 소개 게시물이 엑스에서 653만 회 조회",
+    "최근엔 글자를 입력하면 그 글자가 뜨개질로 떠지는 사이트가 SNS에서 화제",
+    "타자 게임에 요즘 인기 취미인 뜨개질을 더한 콘셉트로 좋은 반응을 얻음"
   ],
-  "evidence": ["‘L을 가져가’가 대체 무슨 뜻? 요즘 밈 해독해 드림 = 캐릿, 2026-10-15"],
-  "keywords": ["요즘 뜨는 밈", "유행중"]
+  "check_points": [],
+  "evidence": [
+    "뜨개질 타이핑 사이트 = 캐릿, 2026-10-07"
+  ],
+  "keywords": [
+    "인스타그램"
+  ],
+  "next_teaser_hint": "",
+  "research": [
+    {
+      "claim": "안드레이 카파시가 2025년 2월 X 글에서 '바이브코딩'이라는 말을 처음 썼다",
+      "source": "카파시 X 게시물",
+      "date": "2025-02-02",
+      "url": "https://x.com/karpathy/status/1886192184808149383"
+    },
+    {
+      "claim": "콜린스 사전이 2025년 올해의 단어로 'vibe coding'을 골랐다. 뜻은 자연어로 지시해 AI가 코드 작성을 돕게 하는 것",
+      "source": "콜린스 사전",
+      "date": "2025-11-06",
+      "url": "https://blog.collinsdictionary.com/language-lovers/collins-word-of-the-year-2025-ai-meets-authenticity-as-society-shifts/"
+    },
+    {
+      "claim": "개발자 84%가 개발에 AI 도구를 쓰고 있거나 쓸 계획이고, 46%는 AI 결과물의 정확성을 믿지 않는다",
+      "source": "스택오버플로 개발자 설문",
+      "date": "2025-07-29",
+      "url": "https://stackoverflow.co/company/press/archive/stack-overflow-2025-developer-survey/"
+    },
+    {
+      "claim": "100개 넘는 AI 모델에 코딩 과제를 시킨 실험에서 안전한 방법 대신 위험한 방법을 고른 비율이 45%였다",
+      "source": "베라코드",
+      "date": "2025-07-30",
+      "url": "https://www.businesswire.com/news/home/20250730694951/en/AI-Generated-Code-Poses-Major-Security-Risks-in-Nearly-Half-of-All-Development-Tasks-Veracode-Research-Reveals"
+    },
+    {
+      "claim": "메트로 타이핑은 지하철역 이름을 순서대로 치며 노선을 달리는 타자 게임 앱이다",
+      "source": "App Store",
+      "date": "",
+      "url": "https://apps.apple.com/kr/app/%EB%A9%94%ED%8A%B8%EB%A1%9C-%ED%83%80%EC%9D%B4%ED%95%91/id6791242489"
+    }
+  ],
+  "angle": "말로 앱 만드는 시대, 그래도 코드를 읽을 줄 아는 사람이 이긴다",
+  "related": [
+    {
+      "id": 528,
+      "title": "무료로 똑똑하게! 고등학생을 위한 AI 툴 추천 리스트 (2025 최신판)",
+      "url": "https://majormap.net/content/528",
+      "summary": "고등학생이 무료로 활용할 수 있는 상황별 AI 툴(요약·검색·이미지·글쓰기·번역·발표) 추천 리스트",
+      "category": "트렌드",
+      "majors": "",
+      "views": 2132
+    },
+    {
+      "id": 505,
+      "title": "2025학년도 경쟁률 1위! AI학과 & 인공지능학과, 소개 및 준비 방법(근데 재학생들의 이야기를 곁들인🔥)",
+      "url": "https://majormap.net/content/505",
+      "summary": "2025학년도 경쟁률 1위 AI학과·인공지능학과의 배우는 내용, 재학생 경험, 고교 준비 방법 소개",
+      "category": "학과탐구",
+      "majors": "AI학과, 인공지능학과, AI·빅데이터학과, AI 전문가",
+      "views": 595
+    }
+  ]
 }

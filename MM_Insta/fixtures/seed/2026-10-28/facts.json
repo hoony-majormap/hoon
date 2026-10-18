@@ -1,0 +1,103 @@
+{
+  "facts": [
+    {
+      "id": "f1",
+      "value": "490명",
+      "claim": "2027학년도 의대 증원 인원 (전원 지역의사)",
+      "source": "한국경제",
+      "as_of": "2026-02-10",
+      "url": "https://www.hankyung.com/amp/2026021070857",
+      "derived_from": ""
+    },
+    {
+      "id": "f2",
+      "value": "3,058명",
+      "claim": "증원 전 의대 정원",
+      "source": "한국경제",
+      "as_of": "2026-02-10",
+      "url": "https://www.hankyung.com/amp/2026021070857",
+      "derived_from": ""
+    },
+    {
+      "id": "f3",
+      "value": "3,548명",
+      "claim": "2027학년도 의대 정원",
+      "source": "한국경제",
+      "as_of": "2026-02-10",
+      "url": "https://www.hankyung.com/amp/2026021070857",
+      "derived_from": ""
+    },
+    {
+      "id": "f4",
+      "value": "359명",
+      "claim": "2027 지역의사 중 진료권 선발",
+      "source": "SBS Biz",
+      "as_of": "2026-09",
+      "url": "https://biz.sbs.co.kr/amp/article/20000332453",
+      "derived_from": ""
+    },
+    {
+      "id": "f5",
+      "value": "131명",
+      "claim": "2027 지역의사 중 광역권 선발",
+      "source": "SBS Biz",
+      "as_of": "2026-09",
+      "url": "https://biz.sbs.co.kr/amp/article/20000332453",
+      "derived_from": ""
+    },
+    {
+      "id": "f6",
+      "value": "10년",
+      "claim": "지역의사 의무복무 기간",
+      "source": "SBS Biz",
+      "as_of": "2026-09",
+      "url": "https://biz.sbs.co.kr/amp/article/20000332453",
+      "derived_from": ""
+    },
+    {
+      "id": "f7",
+      "value": "2027",
+      "claim": "지역의사 첫 선발 학년도",
+      "source": "한국경제",
+      "as_of": "2026-02-10",
+      "url": "https://www.hankyung.com/amp/2026021070857",
+      "derived_from": ""
+    },
+    {
+      "id": "f8",
+      "value": "8곳",
+      "claim": "지역의사를 뽑지 않는 서울 의대 수",
+      "source": "SBS Biz",
+      "as_of": "2026-09",
+      "url": "https://biz.sbs.co.kr/amp/article/20000332453",
+      "derived_from": ""
+    },
+    {
+      "id": "f9",
+      "value": "32곳",
+      "claim": "지역의사를 뽑는 의대 수",
+      "source": "SBS Biz",
+      "as_of": "2026-09",
+      "url": "https://biz.sbs.co.kr/amp/article/20000332453",
+      "derived_from": ""
+    },
+    {
+      "id": "f10",
+      "value": "93.9%",
+      "claim": "2027 지역의사 중 수시 선발 비율",
+      "source": "아주경제",
+      "as_of": "2026-06-11",
+      "url": "https://www.ajunews.com/view/20260611100711061",
+      "derived_from": ""
+    },
+    {
+      "id": "f11",
+      "value": "10명 중 9명",
+      "claim": "93.9%를 쉽게 바꾼 표현",
+      "source": "아주경제",
+      "as_of": "2026-06-11",
+      "url": "https://www.ajunews.com/view/20260611100711061",
+      "derived_from": "f10"
+    }
+  ]
+}

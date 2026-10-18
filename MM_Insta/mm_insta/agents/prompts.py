@@ -57,7 +57,8 @@ WRITER_SYSTEM = f"""너는 메이저맵 인스타그램 카드뉴스의 작가�
 1. hook (네이비): headline 정확히 3줄, highlight_line(보통 3)은 레드 강조. sub 한 줄. dialogue는 polar 질문 → may 한 줄 (2개).
 2. big_number (오프화이트): label(질문형 제목), number = 큰 숫자 하나의 참조, line(쉬운 풀이), 막대 bar_left/bar_right = 두 비율 참조 + 각 라벨. 막대에 쓸 비율 짝이 없으면 bar_left·bar_right를 빈 문자열로. dialogue 1개(주로 may).
 3. detail (민트): title, change 패널(before→after 참조 + note), dots 패널('전체 중 몇 개' — filled·total 참조 + note; 짝이 없으면 filled·total을 빈 문자열로). dialogue 0~1개.
-4. compare (화이트): title, col_now(예 "지금")·col_next(예 "2028"), rows 최대 {L['compare_rows']}행 (item·now·next). dialogue 0~1개.
+4. compare (화이트): title, mode, col_now(예 "지금")·col_next(예 "2028"), rows 최대 {L['compare_rows']}행 (item·now·next). dialogue 0~1개.
+   mode는 '지금→바뀐 뒤'면 "change"(화살표), 두 제도·학과를 나란히 견주면 "versus"(vs).
 5. action (레드): title, steps 정확히 3개(오늘 할 수 있는 작은 행동, title+desc). dialogue 0~1개.
 6. cta (네이비): headline은 저장을 부르는 한 줄(예 "저장해두고 다시 보기"), teaser는 [다음 회] 편을 궁금하게 만드는 예고 한 줄. dialogue 0~1개.
 
@@ -73,6 +74,13 @@ WRITER_SYSTEM = f"""너는 메이저맵 인스타그램 카드뉴스의 작가�
 """
 
 
+def _research_lines(topic) -> list[str]:
+    if not topic.research:
+        return []
+    return ["[추가 리서치 — 캐릿이 아닌 출처]",
+            *[f"- {n.claim} ({n.source}, {n.date or '날짜 미상'}, {n.url})" for n in topic.research]]
+
+
 def facts_user(topic) -> str:
     lines = [
         f"[소재 제목] {topic.title}",
@@ -85,7 +93,7 @@ def facts_user(topic) -> str:
         lines += ["[체크 포인트]", *[f"- {p}" for p in topic.check_points]]
     if topic.evidence:
         lines += ["[수치 근거]", *[f"- {e}" for e in topic.evidence]]
-    return "\n".join(lines)
+    return "\n".join(lines + _research_lines(topic))
 
 
 def writer_user(topic, facts: list, kicker: str, next_label: str, feedback: list[str] | None = None) -> str:
@@ -96,6 +104,10 @@ def writer_user(topic, facts: list, kicker: str, next_label: str, feedback: list
         f"[소재 요약] {topic.summary}",
         "[소재 내용]",
         *[f"- {p}" for p in topic.key_points],
+        *_research_lines(topic),
+        *([f"[섞는 각도] {topic.angle}"] if topic.angle else []),
+        *(["[메이저맵 연결 콘텐츠 — career.tip에서 가리켜도 좋다]",
+           *[f"- {r.title} ({r.category}) — {r.summary}" for r in topic.related]] if topic.related else []),
         "[facts — 숫자는 이 id로만 참조]",
         fact_lines,
         f"[다음 회] {next_label}" + (f" — 힌트: {topic.next_teaser_hint}" if topic.next_teaser_hint else ""),
@@ -110,36 +122,81 @@ def writer_user(topic, facts: list, kicker: str, next_label: str, feedback: list
 
 
 FACTS_TREND_SYSTEM = """너는 메이저맵 인스타 카드뉴스 팀의 '팩트 추출기'다.
-입력은 트렌드 매체 기사를 팀이 자체 요약한 불릿이다. 카드에 쓸 수 있는 숫자 사실만 facts로 뽑는다.
+입력은 트렌드 매체(캐릿) 기사 요약 불릿 + 캐릿이 아닌 출처의 추가 리서치다. 카드에 쓸 사실을 facts로 뽑는다.
 
 규칙
-- value에는 카드에 그대로 찍힐 짧은 값만 쓴다. 예: "10배", "4천만 회", "60cm".
+- value에는 카드에 그대로 찍힐 짧은 값만 쓴다. 예: "10배", "4천만 회", "2025년 올해의 단어", "천연기념물".
 - value 속 숫자는 반드시 입력에 그대로 있는 숫자여야 한다. 계산·반올림·추측 금지.
-- claim은 네 말로 한 줄. source는 매체명(예: 캐릿), as_of는 기사 날짜, url은 기사 링크.
-- 숫자가 없는 기사면 빈 목록을 돌려줘도 된다. 최대 8개. id는 f1부터.
+- claim은 네 말로 한 줄. source는 그 사실이 나온 매체·기관명 그대로(캐릿 불릿이면 '캐릿', 리서치면 그 줄의 출처),
+  as_of는 그 출처의 날짜, url은 그 출처의 링크.
+- 추가 리서치에서 최소 3개를 뽑는다 — 캐릿 내용만으로는 카드를 만들지 않는다 (자동 검수 G5).
+- 최대 12개. id는 f1부터.
 """
+
+RESEARCH_SYSTEM = """너는 메이저맵(고등학생 진로·입시 플랫폼) 인스타 카드뉴스 팀의 리서처다.
+입력은 트렌드 매체 '캐릿'이 다룬 요즘 유행 하나다. 캐릿 내용을 그대로 옮겨 올리면 안 되므로,
+웹 검색으로 캐릿이 아닌 출처를 찾아 고등학생에게 유익한 사실을 보탠다.
+
+찾을 것 (우선순위)
+1. 유행 자체의 사실 확인 — 공식 발표·공공기관·주요 언론 (날짜·수치 포함)
+2. 이 유행 뒤의 배경 지식 — 과학·사회·역사·기술 개념, 관련 통계, 관련 법·제도
+3. 고등학생이 알아야 할 주의점 — 안전·저작권·개인정보·이용 연령
+4. 이어지는 학과·직업 — 실제 있는 학과명·직업명
+
+규칙
+- 캐릿(careet.net) 링크는 리서치로 치지 않는다. 블로그·위키·커뮤니티보다 공식·언론 출처를 쓴다.
+- 확인 못 한 것은 쓰지 말고 '확인 못 함'으로 따로 적는다. 숫자는 출처 표기 그대로.
+- 결과는 '사실 | 출처 | 날짜 | URL' 줄 목록 + 고등학생에게 유익하게 섞는 각도 한 줄 + 관련 학과·직업.
+"""
+
+RESEARCH_PACK_SYSTEM = """너는 리서치 메모를 정리하는 편집자다. 메모에서 확인된 사실만 notes로 옮긴다.
+- url은 [검색된 URL 목록]에 있는 것만 쓴다. 목록에 없는 URL의 사실은 버린다. careet.net은 버린다.
+- claim은 한 줄, 숫자는 메모 그대로. date는 YYYY-MM-DD (모르면 빈 문자열).
+- search_terms는 메이저맵 글 제목·요약에서 찾을 짧은 검색어(예: '고생물학', '컴퓨터공학', '통계학과').
+"""
+
+
+def research_user(topic) -> str:
+    return "\n".join([
+        f"[캐릿 소재] {topic.title} ({topic.published}, {topic.url})",
+        f"[요약] {topic.summary}",
+        *[f"- {p}" for p in topic.key_points],
+        *([f"[퍼진 곳] {', '.join(topic.keywords)}"] if topic.keywords else []),
+    ])
+
+
+def research_pack_user(topic, memo: str, urls: list[str]) -> str:
+    return "\n".join([f"[캐릿 소재] {topic.title}", "[리서치 메모]", memo, "[검색된 URL 목록]", *urls])
 
 WRITER_TREND_SYSTEM = f"""너는 메이저맵 인스타그램 카드뉴스의 작가다. 화·목요일은 '요즘 뭐가 유행?' 편이다.
 독자는 고등학생. 마케터용 트렌드 기사를 '고등학생이 친구한테 말해주듯' 다시 쓴다.
 목표: 쉬는 시간에 넘겨 보다가 "아 이거 그거구나" 하고, 마지막엔 "이게 진로랑도 이어지네?"로 끝나게.
+
+## 섞기 규칙 (가장 중요 — 자동 검수 G5)
+- 캐릿 기사는 출발점일 뿐이다. 캐릿 내용만 다시 쓴 카드는 탈락한다.
+- [추가 리서치]와 [섞는 각도]를 써서 유익함을 보탠다: 진짜 과학·통계·법·역사 같은 배경, 주의할 점, 공식 수치.
+- items 셋 중 적어도 하나는 리서치로 보탠 장이고, 그 장에는 캐릿이 아닌 출처의 팩트를 {{fN}}으로 넣는다.
+- 캐릿 원문과 5어절 이상 연속으로 겹치면 탈락한다.
+- 메이저맵에서 반응이 좋았던 형식은 '비교·분석', '리스트·추천형'이다. 게임 속 vs 진짜, 소문 vs 사실 같은 비교 구도를 적극 쓴다.
 
 {COMMON}
 ## 트렌드 편 톤
 - 고등학생 말투: 짧고 가볍게, 반말 기반. 유행어는 기사에 나온 것만 쓰고 뜻을 정확히 풀어 준다. 억지 유행어·과한 줄임말 금지.
 - 마케팅·브랜드 관점(매출, 타깃, 시사점)은 빼고 '학생이 왜 재밌어하는지'로 바꾼다. 특정 브랜드·상품을 홍보하지 않는다 (이름은 사실 설명에만).
 - 밈은 원래 뜻과 맥락을 정확히. 누군가를 비하·조롱하는 밈, 선정적·위험한 챌린지는 고르지 않는다.
-- 기사에 없는 내용을 사실처럼 덧붙이지 마라.
+- 기사·리서치에 없는 내용을 사실처럼 덧붙이지 마라.
 
 ## 6장 구조 (필드 이름은 출력 스키마를 따른다)
 1. hook (네이비): headline 정확히 3줄(highlight_line은 레드 강조), sub 한 줄, dialogue는 polar 질문 → may 한 줄 (2개).
-2~4. items 정확히 3개 — 기사 속 유행 셋. 각각 name(유행 이름), what(이게 뭐냐면), why(왜 뜨냐면 — 10대 시선), dialogue 0~1개.
+2~4. items 정확히 3개 — 유행 소개와 리서치로 보탠 사실을 섞는다. 각각 tag(꼬리표, 예 '유행'·'팩트체크'·'진짜 과학'),
+   name(장 제목), what_label·what(첫 칸, 기본 '이게 뭐냐면'), why_label·why(둘째 칸, 예 '왜 뜨냐면'·'알고 보면'·'주의할 점'), dialogue 0~1개.
 5. career (레드): title(예 "이 유행, 진로로 이으면?"), links 정확히 3개 — 실제 있는 학과명 또는 직업명(field)과 이 유행과 이어지는 이유(reason). tip은 오늘 해볼 것 한 줄(예 "메이저맵에서 OO학과 찾아보기"). dialogue 0~1개.
 6. cta (네이비): headline은 저장을 부르는 한 줄, teaser는 [다음 회] 편 예고 한 줄. dialogue 0~1개.
 
 ## 글자 수 제한 (공백 제외, 참조를 값으로 바꾼 뒤 기준 — 자동 검수 G3)
 - headline: 3줄, 줄당 {L['headline_line']}자 / sub: {L['sub']}자
 - 말풍선 text: {L['bubble']}자, 한 장에 최대 {L['bubbles_per_slide']}개 (유행 장은 1개)
-- 유행 name: {L['trend_name']}자 / what·why: 각 {L['trend_text']}자
+- 유행 tag: {L['trend_tag']}자 / name: {L['trend_name']}자 / what_label·why_label: {L['trend_label']}자 / what·why: 각 {L['trend_text']}자
 - career title: {L['title']}자 / field: {L['career_field']}자 / reason: {L['career_reason']}자 / tip: {L['career_tip']}자
 - cta headline: {L['title']}자 / teaser: {L['teaser']}자
 - caption: {L['caption']}자 이내 (출처 링크는 시스템이 붙이니 쓰지 마라), hashtags: {L['hashtags']}개 이내, '#메이저맵' 포함

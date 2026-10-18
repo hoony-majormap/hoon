@@ -47,6 +47,12 @@ FONT_SHRINK_STEP = 0.9  # G4 넘침 시 1단계 축소 비율
 # ── LLM ─────────────────────────────────────────────────────────
 MODEL_WRITER = os.environ.get("MM_MODEL_WRITER", "claude-sonnet-5-5")
 MODEL_FACTS = os.environ.get("MM_MODEL_FACTS", "claude-sonnet-5-5")
+MODEL_RESEARCH = os.environ.get("MM_MODEL_RESEARCH", "claude-sonnet-5-5")
+WEB_SEARCH_TOOL = os.environ.get("MM_WEB_SEARCH_TOOL", "web_search_20260209")
+
+# ── 메이저맵 콘텐츠 (캡션 '메이저맵에서 더 보기') ──────────────────
+MM_CONTENT_URL = "https://majormap.net/content/{id}"
+RELATED_MAX = 2
 
 # ── 요일별 트랙 (월·수·금 입시 / 화·목 트렌드) ───────────────────
 TRACKS = {
@@ -100,7 +106,9 @@ LIMITS = {
     "teaser": 24,
     "caption": 300,
     # 트렌드 트랙
+    "trend_tag": 6,
     "trend_name": 14,
+    "trend_label": 8,
     "trend_text": 40,
     "career_field": 12,
     "career_reason": 26,
@@ -117,3 +125,6 @@ BANNED_PHRASES = [
 
 # G2: 원문과 연속 어절 n개 이상 겹치면 실패
 G2_NGRAM = 6
+# G5: 캐릿 소재는 더 엄격하게 (5어절) + 캐릿 밖 리서치 출처가 카드에 실려야 게시
+G5_NGRAM = 5
+CAREET_DOMAINS = ("careet.net",)

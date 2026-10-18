@@ -1,0 +1,40 @@
+{
+  "facts": [
+    {
+      "id": "f1",
+      "value": "12월 중순",
+      "claim": "국립광주과학관 '포켓몬 화석박물관' 개막 시기",
+      "source": "ZDNet Korea",
+      "as_of": "2026-10-14",
+      "url": "https://zdnet.co.kr/view/?no=20261014174307",
+      "derived_from": ""
+    },
+    {
+      "id": "f2",
+      "value": "2만 3천 명",
+      "claim": "시카고 전시 예매 첫날 온라인 대기 인원",
+      "source": "NBC Chicago",
+      "as_of": "2026-03-03",
+      "url": "https://www.nbcchicago.com/news/local/thousands-vie-for-tickets-to-pokemon-fossil-museum-exhibit-on-first-day-of-sales/3902858/?amp=1",
+      "derived_from": ""
+    },
+    {
+      "id": "f3",
+      "value": "타르보사우루스",
+      "claim": "견고라스와 짝지어 놓이는 실제 공룡 골격",
+      "source": "ZDNet Korea",
+      "as_of": "2026-10-14",
+      "url": "https://zdnet.co.kr/view/?no=20261014174307",
+      "derived_from": ""
+    },
+    {
+      "id": "f4",
+      "value": "9월",
+      "claim": "코리아노사우루스 골격화석이 천연기념물로 지정된 달 (2026년)",
+      "source": "경향신문",
+      "as_of": "2026-09-04",
+      "url": "https://www.khan.co.kr/article/202609041136001/",
+      "derived_from": ""
+    }
+  ]
+}

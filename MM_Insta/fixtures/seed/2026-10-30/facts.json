@@ -1,0 +1,130 @@
+{
+  "facts": [
+    {
+      "id": "f1",
+      "value": "0원",
+      "claim": "지방국립대 등록금 전액 지원 (이른바 '등록금 0원', 정부안)",
+      "source": "경향신문",
+      "as_of": "2026-08-28",
+      "url": "https://khan.co.kr/article/202608281721001",
+      "derived_from": ""
+    },
+    {
+      "id": "f2",
+      "value": "2027",
+      "claim": "지원이 시작되는 학년도",
+      "source": "경향신문",
+      "as_of": "2026-08-28",
+      "url": "https://khan.co.kr/article/202608281721001",
+      "derived_from": ""
+    },
+    {
+      "id": "f3",
+      "value": "30곳",
+      "claim": "지원 대상 지방국립대 수",
+      "source": "경향신문",
+      "as_of": "2026-08-28",
+      "url": "https://khan.co.kr/article/202608281721001",
+      "derived_from": ""
+    },
+    {
+      "id": "f4",
+      "value": "+12.0%",
+      "claim": "9개 지거국 수도권 출신 수시 지원 증가율",
+      "source": "한국경제",
+      "as_of": "2026-10-08",
+      "url": "https://www.hankyung.com/article/2026100818451",
+      "derived_from": ""
+    },
+    {
+      "id": "f5",
+      "value": "52,062명",
+      "claim": "9개 지거국 수도권 출신 수시 지원자",
+      "source": "한국경제",
+      "as_of": "2026-10-08",
+      "url": "https://www.hankyung.com/article/2026100818451",
+      "derived_from": ""
+    },
+    {
+      "id": "f6",
+      "value": "9개",
+      "claim": "지역거점국립대 수",
+      "source": "한국경제",
+      "as_of": "2026-10-08",
+      "url": "https://www.hankyung.com/article/2026100818451",
+      "derived_from": ""
+    },
+    {
+      "id": "f7",
+      "value": "1,372명",
+      "claim": "부산대 수도권 출신 수시 지원자 (전년)",
+      "source": "한국경제",
+      "as_of": "2026-10-08",
+      "url": "https://www.hankyung.com/article/2026100818451",
+      "derived_from": ""
+    },
+    {
+      "id": "f8",
+      "value": "3,110명",
+      "claim": "부산대 수도권 출신 수시 지원자 (2027)",
+      "source": "한국경제",
+      "as_of": "2026-10-08",
+      "url": "https://www.hankyung.com/article/2026100818451",
+      "derived_from": ""
+    },
+    {
+      "id": "f9",
+      "value": "126.7%",
+      "claim": "부산대 수도권 출신 지원 증가율",
+      "source": "한국경제",
+      "as_of": "2026-10-08",
+      "url": "https://www.hankyung.com/article/2026100818451",
+      "derived_from": ""
+    },
+    {
+      "id": "f10",
+      "value": "12학점",
+      "claim": "계속 지원받으려면 필요한 직전 학기 이수 학점",
+      "source": "교수신문",
+      "as_of": "2026-08",
+      "url": "https://www.kyosu.net/news/articleView.html?idxno=209404",
+      "derived_from": ""
+    },
+    {
+      "id": "f11",
+      "value": "B학점",
+      "claim": "계속 지원받으려면 필요한 직전 학기 성적",
+      "source": "교수신문",
+      "as_of": "2026-08",
+      "url": "https://www.kyosu.net/news/articleView.html?idxno=209404",
+      "derived_from": ""
+    },
+    {
+      "id": "f12",
+      "value": "800만원",
+      "claim": "지방사립대 지역인재장학금 연간 상한",
+      "source": "머니투데이",
+      "as_of": "2026-08-28",
+      "url": "https://www.mt.co.kr/policy/2026/08/28/2026082814382133389",
+      "derived_from": ""
+    },
+    {
+      "id": "f13",
+      "value": "1만 명",
+      "claim": "지역인재장학금 신규 선발 인원 (확대 후)",
+      "source": "머니투데이",
+      "as_of": "2026-08-28",
+      "url": "https://www.mt.co.kr/policy/2026/08/28/2026082814382133389",
+      "derived_from": ""
+    },
+    {
+      "id": "f14",
+      "value": "12월 2일",
+      "claim": "국회 예산 법정 처리 시한",
+      "source": "뉴스핌",
+      "as_of": "2026-10-07",
+      "url": "https://www.newspim.com/news/view/20261007000421",
+      "derived_from": ""
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 # 메이저맵 인스타 카드뉴스 — 평일 아침 자동 생성 → Supabase 저장 → 웹(인스타 스튜디오)에서 복사해 업로드
-# 월·수·금 = 입시 브리핑 / 화·목 = 요즘 트렌드
+# 월·수·금 = 입시 브리핑 / 화·목 = 요즘 트렌드 (캐릿 소재 + 웹 리서치로 캐릿 밖 근거를 섞어서만 게시)
 # 필요 Secrets: ANTHROPIC_API_KEY, NOTION_TOKEN, SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY
 name: MM_Insta · 카드뉴스 생성
 

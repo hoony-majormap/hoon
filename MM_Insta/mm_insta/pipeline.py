@@ -21,7 +21,7 @@ import time
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
-from .config import OUT_DIR, TRACKS, kicker_for, load_dotenv, next_label, track_for
+from .config import OUT_DIR, RELATED_MAX, TRACKS, kicker_for, load_dotenv, next_label, track_for
 from .gates.text_gates import feedback, run_text_gates
 from .models import FactSheet, Topic, TrendWriterOutput, WriterOutput, fact_map, refs_in, resolve, to_script
 
@@ -63,25 +63,52 @@ def _local_used() -> set[str]:
     return set(json.loads(USED_FILE.read_text())) if USED_FILE.exists() else set()
 
 
+RESEARCH_TRIES = 3  # 리서치가 안 붙는 캐릿 소재는 건너뛰고 다음 후보로
+
+
 def load_topic(args, track: str, store) -> Topic:
+    """소재 1건. 노션에서 고르면 트렌드 편은 웹 리서치를, 두 편 모두 메이저맵 연결 콘텐츠를 붙인다.
+    로컬 소재 파일(--topic-file)은 research·related를 이미 담고 있다고 본다."""
     if args.topic_file:
         from .sources.local import load_topic as load
 
         topic = load(args.topic_file)
-    else:
-        from .sources import notion
+        topic.track = track
+        return topic
 
-        if args.page:
-            topic = notion.fetch(args.page, track)
-        else:
-            used = store.used_source_ids(track) if store else _local_used()
-            topic = notion.pick(track, used)
-    topic.track = track
+    from .sources import notion
+
+    if args.page:
+        pool = iter([notion.fetch(args.page, track)])
+    else:
+        used = store.used_source_ids(track) if store else _local_used()
+        pool = notion.candidates(track, used)
+    terms: list[str] = []
+    for tries, topic in enumerate(pool, start=1):
+        topic.track = track
+        if track != "trend" or args.offline:
+            terms = [k for k in topic.keywords if k != "트렌드 리포트"] or topic.title.split()[:3]
+            break
+        from .agents.researcher import research
+
+        pack = research(topic)
+        print(f"   리서치 {topic.title} → 캐릿 밖 출처 {len(pack.notes)}개")
+        if pack.notes:
+            topic.research, topic.angle, terms = pack.notes, pack.angle, pack.search_terms
+            break
+        if tries >= RESEARCH_TRIES or args.page:
+            raise RuntimeError("캐릿 밖 출처로 확인되는 트렌드 소재를 찾지 못했습니다 (캐릿만으로는 게시하지 않음).")
+    else:
+        raise RuntimeError("안 쓴 소재가 없습니다.")
+    try:
+        topic.related = notion.related_contents(terms, RELATED_MAX)
+    except Exception as e:  # noqa: BLE001 — 연결 콘텐츠는 없어도 게시는 한다 (G5 경고로 남김)
+        print(f"   메이저맵 콘텐츠 검색 실패: {e}")
     return topic
 
 
 def build_caption(script: dict, topic: Topic) -> str:
-    """인스타 본문(출처 포함). 해시태그는 따로 복사할 수 있게 분리한다."""
+    """인스타 본문(출처 + 메이저맵 연결 글). 해시태그는 따로 복사할 수 있게 분리한다."""
     facts = fact_map(script)
     refs = sorted(refs_in(script["slides"]) | refs_in(script["caption"]), key=lambda x: int(x[1:]))
     sources = [topic.source_name] if topic.track == "trend" else []
@@ -92,8 +119,10 @@ def build_caption(script: dict, topic: Topic) -> str:
     for u in [topic.url, *(facts[fid]["url"] for fid in refs)]:
         if u and u not in urls:
             urls.append(u)
-    note = "내용은 메이저맵이 학생 눈높이로 재구성" if topic.track == "trend" else "수치는 메이저맵이 재가공"
+    note = "캐릿 트렌드에 메이저맵이 추가 취재를 더해 재구성" if topic.track == "trend" else "수치는 메이저맵이 재가공"
     lines = [resolve(script["caption"], facts).strip(), ""]
+    if topic.related:
+        lines += ["🔎 메이저맵에서 더 보기", *[f"· {r.title} {r.url}" for r in topic.related], ""]
     if sources:
         lines.append(f"📌 출처: {' · '.join(sources)} ({note})")
     lines += [f"원문: {u}" for u in urls]
@@ -174,7 +203,7 @@ def _row(topic: Topic, post_date: date, result: dict, mode: str) -> dict:
         "hashtags": result["script"]["hashtags"],
         "source_id": topic.id,
         "source_url": topic.url or None,
-        "source_name": topic.source_name,
+        "source_name": topic.source_name + (f" + 추가 취재 {n}곳" if (n := len({r.source for r in topic.research})) else ""),
         "topic": topic.model_dump(),
         "facts": [f.model_dump() for f in result["facts"]],
         "script": result["script"],
